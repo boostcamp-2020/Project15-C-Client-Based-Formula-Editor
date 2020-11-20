@@ -1,5 +1,13 @@
 # Project15-C-Client-Based-Formula-Editor
 C팀 클라이언트 수식 계산기
+## 📌 프로젝트 소개
+>수식 셰프는 웹 사이트 어느 곳에서나 수식편집기 서비스를 제공하는 프로젝트입니다.
+
+### [간단한 다운로드를 통해 수식 셰프를 경험해보세요!](https://chrome.google.com/webstore/search/%EC%88%98%EC%8B%9D%20%EC%85%B0%ED%94%84?hl=ko)
+실시간으로 브라우저 위에서 수식을 입력하고, 그리며 화면에 적용할 수 있습니다.
+
+## ⚒️ Tech
+
 ## 🗂 Directory
 
 <details>
@@ -55,3 +63,5 @@ C팀 클라이언트 수식 계산기
   
   </div>
 </details>
+
+## 👩‍👩‍👧‍👦Members
