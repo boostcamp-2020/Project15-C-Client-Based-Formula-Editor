@@ -17,6 +17,7 @@
 ## ⚒️ Tech Stack
 
 ![Javascript](https://img.shields.io/badge/javascript-ES6+-yellow?logo=javascript)
+![Typescript](https://img.shileds.io/badge/Typescript-4.0?blue=typescript)
 ![React](https://img.shields.io/badge/react-17.0.1-1cf?logo=react)
 ![Redux](https://img.shields.io/badge/redux-4.0.5-purple?logo=redux)
 ![NodeJS](https://img.shields.io/badge/node.js-v15.2.1-green?logo=node.js)
