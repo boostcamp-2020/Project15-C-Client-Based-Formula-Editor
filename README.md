@@ -1,9 +1,9 @@
 # Project15-C-Client-Based-Formula-Editor
 C팀 클라이언트 수식 계산기
 
-### [HomePage URL]()
-### [프로젝트 실행 화면]()
-### [Wiki 보러가기](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki)
+### 🏠 [HomePage URL]()
+### 📷 [프로젝트 실행 화면]()
+### 📚 [Wiki 보러가기](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki)
 
 ## 📌 프로젝트 소개
 >수식 셰프는 웨일 브라우저 확장프로그램을 통해 웹 사이트 어느 곳에서나 수식편집기 서비스를 제공합니다!
