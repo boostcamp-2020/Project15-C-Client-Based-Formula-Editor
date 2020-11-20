@@ -75,4 +75,4 @@ C팀 클라이언트 수식 계산기
 ## 👩‍👩‍👧‍👦Members
 
 ## ⭐ Show your support
-Give a 🌟 if this project helped you
+Please ⭐️ this repository if this project helped you!
