@@ -12,7 +12,7 @@
 실시간으로 브라우저 위에서 수식을 입력하고, 그리며 화면에 적용할 수 있습니다.
 
 ## 📺 Demo Video
-> 클릭하시면 youtube로 이동합니다👀
+> 클릭하시면 youtube로 이동합니다💨
 
 ## ⚒️ Tech Stack
 
@@ -21,6 +21,7 @@
 ![Redux](https://img.shields.io/badge/redux-4.0.5-purple?logo=redux)
 ![NodeJS](https://img.shields.io/badge/node.js-v15.2.1-green?logo=node.js)
 ![MySQL](https://img.shields.io/badge/mysql-v5.7.32-blue?logo=mysql)
+![Emotion](https://img.shields.io/badge/emotion-11.0.0-pink?logo=emotion)
 
 ## 🗂 Directory
 
