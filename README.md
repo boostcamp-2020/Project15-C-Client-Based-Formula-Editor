@@ -73,10 +73,11 @@
 </details>
 
 ## 👩‍👩‍👧‍👦Members
-| J032 김동현 | J067 문건우 | J073 박기호 | J175 장우영 |
+| 🖥️ Full Stack Web Developer | 🖥️ Web | 🖥️ Web | 🖥️ Web |
 | :----------: |  :--------:  |  :---------: |  :---------: |
 |![image](https://user-images.githubusercontent.com/23556120/99749140-41a24200-2b21-11eb-992a-6221872b3e5e.png)|![image](https://user-images.githubusercontent.com/23556120/99749193-58489900-2b21-11eb-9271-145b292a6080.png)|![image](https://user-images.githubusercontent.com/23556120/99749230-6a2a3c00-2b21-11eb-9801-4e39472ee4a3.png)|![image](https://user-images.githubusercontent.com/23556120/99749255-77472b00-2b21-11eb-8c63-d66d5c73f002.png)|
-| 김동현[(dooking)](https://github.com/dooking)| 문건우[(geonwoomun)](https://github.com/geonwoomun) | 박기호[(qkrrlgh519)](https://github.com/qkrrlgh519) | 장우영[(Woo-Dong93)](https://github.com/Woo-Dong93) |
+| [J032 김동현](https://github.com/dooking) | [J067 문건우](https://github.com/geonwoomun) | [J073 박기호](https://github.com/qkrrlgh519) | [J175 장우영](https://github.com/Woo-Dong93) |
+| 소개 | 소개  | 소개 | 소개 |
 
 
 ## ⭐ Show your support
