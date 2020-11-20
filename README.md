@@ -1,5 +1,17 @@
 # Project15-C-Client-Based-Formula-Editor
+
 >수식 셰프는 웨일 브라우저 확장프로그램을 통해 웹 사이트 어느 곳에서나 수식편집기 서비스를 제공합니다!
+<p align="center"><img src="https://user-images.githubusercontent.com/60457112/99751593-dd35b180-2b25-11eb-886d-65bb2e2ecaf4.png"/></p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/javascript-ES6+-yellow?logo=javascript"/>
+  <img src="https://img.shields.io/badge/react-17.0.1-1cf?logo=react"/>
+  <img src="https://img.shields.io/badge/redux-4.0.5-purple?logo=redux"/>
+  <img src="https://img.shields.io/badge/node.js-v15.2.1-green?logo=node.js"/>
+  <img src="https://img.shields.io/badge/mysql-v5.7.32-blue?logo=mysql"/>
+  <img src="https://img.shields.io/badge/emotion-11.0.0-pink?logo=emotion"/>
+</p>
+
 ### 🏠 [HomePage URL]()
 
 ### 📷 [프로젝트 실행 화면]()
@@ -16,13 +28,6 @@
 
 ## ⚒️ Tech Stack
 
-![Javascript](https://img.shields.io/badge/javascript-ES6+-yellow?logo=javascript)
-![Typescript](https://img.shileds.io/badge/Typescript-4.0?blue=typescript)
-![React](https://img.shields.io/badge/react-17.0.1-1cf?logo=react)
-![Redux](https://img.shields.io/badge/redux-4.0.5-purple?logo=redux)
-![NodeJS](https://img.shields.io/badge/node.js-v15.2.1-green?logo=node.js)
-![MySQL](https://img.shields.io/badge/mysql-v5.7.32-blue?logo=mysql)
-![Emotion](https://img.shields.io/badge/emotion-11.0.0-pink?logo=emotion)
 
 
 ## 🗂 Directory
