@@ -78,7 +78,7 @@
   </div>
 </details>
 
-## 👩‍👩‍👧‍👦Members
+## 👩🏻‍💻 Members
 | 🖥️ Full Stack Web Developer | 🖥️ Web | 🖥️ Web | 🖥️ Web |
 | :----------: |  :--------:  |  :---------: |  :---------: |
 |![image](https://user-images.githubusercontent.com/23556120/99749140-41a24200-2b21-11eb-992a-6221872b3e5e.png)|![image](https://user-images.githubusercontent.com/23556120/99749193-58489900-2b21-11eb-9271-145b292a6080.png)|![image](https://user-images.githubusercontent.com/23556120/99749230-6a2a3c00-2b21-11eb-9801-4e39472ee4a3.png)|![image](https://user-images.githubusercontent.com/23556120/99749255-77472b00-2b21-11eb-8c63-d66d5c73f002.png)|
