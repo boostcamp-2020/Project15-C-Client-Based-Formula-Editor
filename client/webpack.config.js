@@ -23,6 +23,10 @@ module.exports = {
       },
       { test: /\.tsx?$/, loader: 'ts-loader' },
       {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
         test: /\.png|jpg|gif|svg$/,
         loader: 'url-loader',
         options: {
@@ -48,23 +52,7 @@ module.exports = {
       ],
     }),
   ],
-  optimization: {
-    minimizer:
-      mode === 'production'
-        ? [
-            new TerserPlugin({
-              terserOptions: {
-                compress: {
-                  drop_console: true,
-                },
-              },
-            }),
-          ]
-        : [],
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
+  optimization: {},
 
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
