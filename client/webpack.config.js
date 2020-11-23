@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const mode = process.env.NODE_ENV || 'development';
-const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode,
@@ -49,6 +48,7 @@ module.exports = {
         { from: './public/background.js', to: './' },
         { from: './public/manifest.json', to: './' },
         { from: './public/icon.png', to: './' },
+        { from: './public/content.css', to: './' },
       ],
     }),
   ],

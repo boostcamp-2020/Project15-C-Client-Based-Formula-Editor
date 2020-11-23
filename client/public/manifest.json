@@ -15,5 +15,6 @@
       "css": [],
       "js": ["/main.js"]
     }
-  ]
+  ],
+  "web_accessible_resources": ["/content.css"]
 }

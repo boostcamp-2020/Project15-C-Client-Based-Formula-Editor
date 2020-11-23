@@ -8,10 +8,14 @@ interface AppProps {
 const App: React.FC<AppProps> = (props) => {
   const { name } = props;
   return (
-    <Frame>
+    <Frame
+      head={[
+        <link type="text/css" rel="stylesheet" href={chrome.runtime.getURL('/content.css')}></link>,
+      ]}
+    >
       <FrameContextConsumer>
         {({ document, window }) => {
-          return <Content name={name} />;
+          return <Content />;
         }}
       </FrameContextConsumer>
     </Frame>
