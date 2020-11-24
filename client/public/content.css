@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /*
  * MathQuill v0.11.0, by Han, Jeanine, and Mary
  * http://mathquill.com | maintainers@mathquill.com

@@ -49,6 +49,7 @@ module.exports = {
         { from: './public/manifest.json', to: './' },
         { from: './public/icon.png', to: './' },
         { from: './public/content.css', to: './' },
+        { from: './public/image', to: './image' },
       ],
     }),
   ],
