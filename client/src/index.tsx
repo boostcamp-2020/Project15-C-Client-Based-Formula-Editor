@@ -1,6 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import App from './App';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './contexts';
+
 // import '../public/root.css';
 
 // const app = document.createElement('div');
@@ -21,5 +25,11 @@ import App from './App';
 //     app.style.display = 'none';
 //   }
 // }
+const store = createStore(rootReducer);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
