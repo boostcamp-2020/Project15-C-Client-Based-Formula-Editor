@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
-import { EditableMathField, MathField, addStyles } from 'react-mathquill';
+import { useDispatch, useSelector } from 'react-redux';
+import { addLatex } from '../contexts/latex';
+import { RootState } from '../contexts/index';
+import { EditableMathField, MathField } from 'react-mathquill';
+
 function Content() {
-  addStyles();
+  // const { latex } = useSelector((state: RootState) => state.latex);
+  // // {latex: []}
+  // const dispatch = useDispatch();
+
   const [latex, setLatex] = useState('');
   const [mathfieldInput, setMathfieldInput] = useState<MathField | string>('');
+
   const injectMathFunction = (latexString: any) => {
     if (typeof mathfieldInput !== 'string') {
       mathfieldInput.write(latexString);
@@ -17,7 +25,7 @@ function Content() {
       <EditableMathField
         mathquillDidMount={initmathInput}
         latex={latex} // latex value for the input field
-        onChange={(mathField) => {
+        onChange={(mathField: MathField) => {
           setLatex(mathField.latex());
           mathField.focus();
         }}
