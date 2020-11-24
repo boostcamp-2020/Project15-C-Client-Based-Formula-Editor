@@ -1,6 +1,7 @@
 #my-extension {
   width: 100%;
-  height: 350px;
+  height: 35%;
+  min-height: 200px;
   position: fixed;
   bottom: 0px;
   left: 0px;
