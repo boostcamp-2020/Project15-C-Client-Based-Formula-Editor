@@ -15,3 +15,7 @@
   height: 100%;
   border: none;
 }
+
+#my-extension iframe body {
+  height: 100%;
+}

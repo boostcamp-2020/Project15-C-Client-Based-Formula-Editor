@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addLatex } from '../contexts/latex';
-import { RootState } from '../contexts/index';
+import { addLatex } from '../../../contexts/latex';
+import { RootState } from '../../../contexts/index';
 import { EditableMathField, MathField } from 'react-mathquill';
 
 function Content() {
