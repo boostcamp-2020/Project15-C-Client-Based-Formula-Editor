@@ -5,4 +5,5 @@ export const InputAreaContainer = styled.div`
   display: flex;
   flex-grow: 4;
   min-width: 450px;
+  margin-right: 15px;
 `;

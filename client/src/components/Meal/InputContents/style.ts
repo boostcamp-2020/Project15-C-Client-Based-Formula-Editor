@@ -6,9 +6,11 @@ export const ContentsContainer = styled.div`
 
   & > div {
     height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   & .tab {
-    height: 81%;
     padding: 7px !important;
+    height: 100%;
   }
 `;
