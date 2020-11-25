@@ -1,8 +1,19 @@
 import React from 'react';
-import OutputContentsContainer from './style';
+import * as S from './style';
+import TextArea from '../../Ingredients/TextAreaItem';
+import TemplateButtons from '../TemplateButtons';
 
 function OutputContents() {
-  return <OutputContentsContainer></OutputContentsContainer>;
+  return (
+    <S.ContentsContainer>
+      <S.ContentsHeader>
+        <TemplateButtons></TemplateButtons>
+      </S.ContentsHeader>
+      <S.ContentsBox>
+        <TextArea></TextArea>
+      </S.ContentsBox>
+    </S.ContentsContainer>
+  );
 }
 
 export default OutputContents;
