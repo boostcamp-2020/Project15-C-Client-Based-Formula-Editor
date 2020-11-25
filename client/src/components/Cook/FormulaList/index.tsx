@@ -53,13 +53,11 @@ function FormulaList() {
           ))}
         </S.SymbolHeaderWrapper>
       </S.FormulaContainer>
-      <S.ContentsWrapper onMouseLeave={leaveHandler}>
-        <S.Contents ref={formulaRef}>
-          {nowFormulas.map((latexInfo, index) => (
-            <FormulaItem key={index} latexInfo={latexInfo}></FormulaItem>
-          ))}
-        </S.Contents>
-      </S.ContentsWrapper>
+      <S.Contents ref={formulaRef} onMouseLeave={leaveHandler}>
+        {nowFormulas.map((latexInfo, index) => (
+          <FormulaItem key={index} latexInfo={latexInfo}></FormulaItem>
+        ))}
+      </S.Contents>
     </>
   );
 }
