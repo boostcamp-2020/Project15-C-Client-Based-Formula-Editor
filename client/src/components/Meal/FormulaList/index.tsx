@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Header, Popup, Grid } from 'semantic-ui-react';
 // import * as ButtonImage from '../../../../public/image/math.svg';
-import DropDownItem from '../../Materials/DropDownItem';
+import DropDownItem from '../../Ingredients/DropDownItem';
 import {
   FORMULA_HEADER,
   SYMBOL_HEADER,
@@ -9,7 +9,7 @@ import {
   LatexContent,
 } from '../../../lib/constants/latex-header';
 import * as S from './style';
-import FormulaItem from '../../Materials/FormulaItem';
+import FormulaItem from '../../Ingredients/FormulaItem';
 
 function FormulaList() {
   const formulaRef = useRef<null | HTMLHeadingElement>(null);

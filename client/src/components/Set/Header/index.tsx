@@ -1,5 +1,5 @@
 import React from 'react';
-import FormulaList from '../../Cook/FormulaList';
+import FormulaList from '../../Meal/FormulaList';
 import HeaderContainer from './style';
 function Header() {
   return (
