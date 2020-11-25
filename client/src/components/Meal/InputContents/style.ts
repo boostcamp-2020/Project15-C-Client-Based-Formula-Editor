@@ -1,18 +1,14 @@
 import styled from '@emotion/styled';
 
 export const ContentsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  border: 1px solid red;
-`;
-
-export const ContentsHeader = styled.div`
-  flex-basis: 50px;
-  border: 1px solid red;
-`;
-
-export const ContentsBox = styled.div`
-  border: 1px solid blue;
   height: 100%;
+
+  & > div {
+    height: 100%;
+  }
+  & .tab {
+    height: 81%;
+    padding: 7px !important;
+  }
 `;

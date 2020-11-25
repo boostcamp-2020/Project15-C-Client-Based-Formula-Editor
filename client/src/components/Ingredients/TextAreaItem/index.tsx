@@ -2,7 +2,7 @@ import React from 'react';
 import { TextArea } from './style';
 
 function TextAreaItem() {
-  return <TextArea placeholder="Tell us more" />;
+  return <TextArea />;
 }
 
 export default TextArea;
