@@ -25,6 +25,8 @@ body {
 .mq-editable-field {
   display: -moz-inline-box;
   display: inline-block;
+  width: 400px;
+  height: 50px;
 }
 .mq-editable-field .mq-cursor {
   border-left: 1px solid black;

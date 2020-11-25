@@ -21,7 +21,7 @@ function Content() {
     setMathfieldInput(mathField);
   };
   return (
-    <div style={{ marginTop: 50, marginLeft: 30 }}>
+    <div>
       <EditableMathField
         mathquillDidMount={initmathInput}
         latex={latex} // latex value for the input field
