@@ -1,6 +1,13 @@
-import { addLatex } from './actions';
+import { editLatex } from './actions';
 
-export type LatexAction = ReturnType<typeof addLatex>;
+export interface TabInfo {
+  id: number;
+  latex: string;
+}
+
+export type LatexAction = ReturnType<typeof editLatex>;
+
 export interface LatexState {
-  totalLatex: string;
+  currentTab: number;
+  totalLatex: TabInfo[];
 }
