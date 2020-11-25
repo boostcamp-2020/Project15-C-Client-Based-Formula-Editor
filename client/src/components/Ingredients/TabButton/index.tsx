@@ -8,7 +8,7 @@ interface TabButtonProps {
 function TabButton({ index }: TabButtonProps) {
   return (
     <TabButtonContaner>
-      <Button icon labelPosition="right" size="tiny">
+      <Button icon labelPosition="right" size="mini">
         수식 {index}
         <Icon name="times rectangle" />
       </Button>

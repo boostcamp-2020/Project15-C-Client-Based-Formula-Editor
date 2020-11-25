@@ -8,9 +8,12 @@ export const InputContentsContainer = styled.div`
 `;
 
 export const TapWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   flex-shrink: 0;
   flex-basis: 100px;
   border: 2px solid red;
+  align-items: center;
 `;
 
 export const ContentsWrapper = styled.div`

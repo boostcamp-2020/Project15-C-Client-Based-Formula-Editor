@@ -5,6 +5,7 @@ const MainContentsContainer = styled.div`
   border: 2px solid red;
   display: flex;
   width: 100%;
+  padding: 10px;
 `;
 
 export default MainContentsContainer;
