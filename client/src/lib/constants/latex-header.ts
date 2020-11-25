@@ -774,5 +774,29 @@ const LATEX_HEADER: LatexHeader[] = [
       },
     ],
   },
+  {
+    header: `12-btn.svg`,
+    content: [],
+  },
+  {
+    header: `13-btn.svg`,
+    content: [],
+  },
+  {
+    header: `14-btn.svg`,
+    content: [],
+  },
+  {
+    header: `15-btn.svg`,
+    content: [],
+  },
+  {
+    header: `16-btn.svg`,
+    content: [],
+  },
+  {
+    header: `17-btn.svg`,
+    content: [],
+  },
 ];
 export { LATEX_HEADER, LatexHeader, LatexContent };
