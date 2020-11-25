@@ -1,8 +1,14 @@
 import React from 'react';
-import InputContentsContainer from './style';
+import * as S from './style';
+import TabButton from '../../Ingredients/TabButton';
 
 function InputContents() {
-  return <InputContentsContainer></InputContentsContainer>;
+  return (
+    <S.InputContentsContainer>
+      <S.TapWrapper></S.TapWrapper>
+      <S.ContentsWrapper></S.ContentsWrapper>
+    </S.InputContentsContainer>
+  );
 }
 
-export default InputContentsContainer;
+export default InputContents;
