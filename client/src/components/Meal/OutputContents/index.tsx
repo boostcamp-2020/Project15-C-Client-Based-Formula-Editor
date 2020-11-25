@@ -1,8 +1,13 @@
 import React from 'react';
-import OutputContentsContainer from './style';
+import * as S from './style';
 
 function OutputContents() {
-  return <OutputContentsContainer></OutputContentsContainer>;
+  return (
+    <S.ContentsContainer>
+      <S.ContentsHeader>header</S.ContentsHeader>
+      <S.ContentsBox>contentbox</S.ContentsBox>
+    </S.ContentsContainer>
+  );
 }
 
 export default OutputContents;
