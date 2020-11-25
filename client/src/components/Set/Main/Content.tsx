@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addLatex } from '../contexts/latex';
-import { RootState } from '../contexts/index';
+import { editLatex } from '../../../contexts/latex';
+import { RootState } from '../../../contexts/index';
 import { EditableMathField, MathField } from 'react-mathquill';
 
 function Content() {
-  // const { latex } = useSelector((state: RootState) => state.latex);
-  // // {latex: []}
-  // const dispatch = useDispatch();
+  const { currentTab, totalLatex } = useSelector((state: RootState) => state.latex);
+  const dispatch = useDispatch();
 
   const [latex, setLatex] = useState('');
   const [mathfieldInput, setMathfieldInput] = useState<MathField | string>('');
@@ -26,7 +25,8 @@ function Content() {
         mathquillDidMount={initmathInput}
         latex={latex} // latex value for the input field
         onChange={(mathField: MathField) => {
-          setLatex(mathField.latex());
+          dispatch(editLatex(mathField.latex()));
+          // setLatex(mathField.latex());
           mathField.focus();
         }}
       />
@@ -35,7 +35,7 @@ function Content() {
       <button onClick={() => injectMathFunction('\\alpha')}>alpha</button>
       <button onClick={() => injectMathFunction('\\fleft( x \right)')}>func</button>
       <button onClick={() => injectMathFunction('\\int{}{}')}>int</button>
-      <p>{latex}</p>
+      <p>{totalLatex[+currentTab - 1].latex}</p>
     </div>
   );
 }

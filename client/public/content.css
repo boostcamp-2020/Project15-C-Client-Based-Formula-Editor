@@ -8,6 +8,14 @@ body {
   height: 7px !important; /* 가로축 스크롤바 길이 */
 }
 
+.frame-root {
+  height: 100%;
+}
+
+.frame-content {
+  height: 100%;
+}
+
 /*
  * MathQuill v0.11.0, by Han, Jeanine, and Mary
  * http://mathquill.com | maintainers@mathquill.com

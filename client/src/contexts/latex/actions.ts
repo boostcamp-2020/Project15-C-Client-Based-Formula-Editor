@@ -1,6 +1,6 @@
-export const ADD_LATEX = 'latex/ADD' as const;
+export const EDIT_LATEX = 'latex/EDIT' as const;
 
-export const addLatex = (latex: string) => ({
-  type: ADD_LATEX,
+export const editLatex = (latex: string) => ({
+  type: EDIT_LATEX,
   payload: latex,
 });
