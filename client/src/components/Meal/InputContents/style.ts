@@ -1,22 +1,18 @@
 import styled from '@emotion/styled';
 
-export const InputContentsContainer = styled.div`
-  height: 100%;
-  border: 2px solid red;
-  display: flex;
-  flex-grow: 6;
-`;
-
-export const TapWrapper = styled.div`
+export const ContentsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
-  flex-basis: 100px;
-  border: 2px solid red;
-  align-items: center;
+  width: 100%;
+  border: 1px solid red;
 `;
 
-export const ContentsWrapper = styled.div`
-  width: 100%;
-  border: 2px solid red;
+export const ContentsHeader = styled.div`
+  flex-basis: 50px;
+  border: 1px solid red;
+`;
+
+export const ContentsBox = styled.div`
+  border: 1px solid red;
+  height: 100%;
 `;

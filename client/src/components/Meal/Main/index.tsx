@@ -1,13 +1,13 @@
 import React from 'react';
 import MainContentsContainer from './style';
-import InputContents from '../InputContents';
+import InputArea from '../InputArea';
 import OutputContents from '../OutputContents';
 import styled from '@emotion/styled';
 
 function MainContents() {
   return (
     <MainContentsContainer>
-      <InputContents></InputContents>
+      <InputArea></InputArea>
       <OutputContents></OutputContents>
     </MainContentsContainer>
   );
