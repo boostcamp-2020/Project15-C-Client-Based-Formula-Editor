@@ -575,7 +575,7 @@ const FORMULA_HEADER: LatexHeader[] = [
         latex: `\\lim _{n\\to \\infty }^{ }\\combi{ }`,
       },
       {
-        image: `/9/10.svg`,
+        image: `/9/10-b.svg`,
         latex: `\\lim _{n\\to \\infty }^{ }\\left(a_n\\pm b_n\\right)`,
       },
       {

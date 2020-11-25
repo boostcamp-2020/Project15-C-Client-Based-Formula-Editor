@@ -5,14 +5,13 @@ interface FormulaItemStyleProps {
 
 export const FormulaItem = styled.button<FormulaItemStyleProps>`
   background: url(${(props) => `./image/${props.image}`});
-  width: 60px;
-  height: 60px;
+  width: ${(props) => (props.image.includes('b') ? '140px' : '70px')};
+  height: 70px;
   background-position: center;
   cursor: pointer;
   border: 4px solid transparent;
   background-repeat: no-repeat;
   &:hover {
-    /* filter: invert(14%) sepia(100%) saturate(7493%) hue-rotate(1deg) brightness(106%) contrast(110%); */
     border: 4px dashed #6d9eeb;
   }
 `;

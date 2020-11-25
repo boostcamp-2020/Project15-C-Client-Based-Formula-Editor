@@ -46,5 +46,5 @@ export const Contents = styled.div`
   margin: 10px auto;
   position: relative;
   overflow-y: auto;
-  max-height: 120px;
+  max-height: 140px;
 `;
