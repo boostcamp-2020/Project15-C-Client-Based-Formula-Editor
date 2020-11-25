@@ -5,10 +5,10 @@ import InputContents from '../InputContents';
 
 function InputArea() {
   return (
-    <S.InputContentsContainer>
+    <S.InputAreaContainer>
       <Tab></Tab>
       <InputContents></InputContents>
-    </S.InputContentsContainer>
+    </S.InputAreaContainer>
   );
 }
 

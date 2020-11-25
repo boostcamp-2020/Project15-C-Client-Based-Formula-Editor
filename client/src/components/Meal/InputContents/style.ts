@@ -13,6 +13,6 @@ export const ContentsHeader = styled.div`
 `;
 
 export const ContentsBox = styled.div`
-  border: 1px solid red;
+  border: 1px solid blue;
   height: 100%;
 `;
