@@ -8,7 +8,7 @@ interface LatexContent {
   image: string;
   latex: string | any;
 }
-const LATEX_HEADER: LatexHeader[] = [
+const FORMULA_HEADER: LatexHeader[] = [
   {
     header: `1-btn.svg`,
     content: [
@@ -575,7 +575,7 @@ const LATEX_HEADER: LatexHeader[] = [
         latex: `\\lim _{n\\to \\infty }^{ }\\combi{ }`,
       },
       {
-        image: `/9/10.svg`,
+        image: `/9/10-b.svg`,
         latex: `\\lim _{n\\to \\infty }^{ }\\left(a_n\\pm b_n\\right)`,
       },
       {
@@ -774,6 +774,9 @@ const LATEX_HEADER: LatexHeader[] = [
       },
     ],
   },
+];
+
+const SYMBOL_HEADER: LatexHeader[] = [
   {
     header: `12-btn.svg`,
     content: [],
@@ -799,4 +802,4 @@ const LATEX_HEADER: LatexHeader[] = [
     content: [],
   },
 ];
-export { LATEX_HEADER, LatexHeader, LatexContent };
+export { FORMULA_HEADER, SYMBOL_HEADER, LatexHeader, LatexContent };
