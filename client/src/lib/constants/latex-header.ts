@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 interface LatexHeader {
   header: string;
   content: LatexContent[];
@@ -13,7 +15,7 @@ const LATEX_HEADER: LatexHeader[] = [
     content: [
       {
         image: `/1/1.svg`,
-        latex: `\frac{ }{ }`,
+        latex: '\\frac{ }{ }',
       },
       {
         image: `/1/2.svg`,
@@ -478,15 +480,15 @@ const LATEX_HEADER: LatexHeader[] = [
       },
       {
         image: `/8/13.svg`,
-        latex: `\underbrace{\ }{ }`,
+        latex: `\\underbrace{\ }{ }`,
       },
       {
         image: `/8/14.svg`,
-        latex: `\overbrace{ }{ }`,
+        latex: `\\overbrace{ }{ }`,
       },
       {
         image: `/8/15.svg`,
-        latex: `\underbrace{ }{ }`,
+        latex: `\\underbrace{ }{ }`,
       },
       {
         image: `/8/16.svg`,
@@ -514,7 +516,7 @@ const LATEX_HEADER: LatexHeader[] = [
       },
       {
         image: `/8/22.svg`,
-        latex: `\underline { }`,
+        latex: `\\underline { }`,
       },
       {
         image: `/8/23.svg`,
@@ -624,27 +626,27 @@ const LATEX_HEADER: LatexHeader[] = [
       },
       {
         image: `/10/8.svg`,
-        latex: `\xleftarrow {\ }{ }`,
+        latex: `\\xleftarrow {\ }{ }`,
       },
       {
         image: `/10/9.svg`,
-        latex: `\xrightarrow {\ }{ }`,
+        latex: `\\xrightarrow {\ }{ }`,
       },
       {
         image: `/10/10.svg`,
-        latex: `\xleftarrow { }{\ }`,
+        latex: `\\xleftarrow { }{\ }`,
       },
       {
         image: `/10/11.svg`,
-        latex: `\xrightarrow { }{\ }`,
+        latex: `\\xrightarrow { }{\ }`,
       },
       {
         image: `/10/12.svg`,
-        latex: `\xleftarrow { }{ }`,
+        latex: `\\xleftarrow { }{ }`,
       },
       {
         image: `/10/13.svg`,
-        latex: `\xrightarrow { }{ }`,
+        latex: `\\xrightarrow { }{ }`,
       },
       {
         image: `/10/14.svg`,
@@ -672,15 +674,15 @@ const LATEX_HEADER: LatexHeader[] = [
       },
       {
         image: `/10/20.svg`,
-        latex: `\xleftrightarrow {\ }{ }`,
+        latex: `\\xleftrightarrow {\ }{ }`,
       },
       {
         image: `/10/21.svg`,
-        latex: `\xleftrightarrow { }{\ }`,
+        latex: `\\xleftrightarrow { }{\ }`,
       },
       {
         image: `/10/22.svg`,
-        latex: `\xleftrightarrow { }{ }`,
+        latex: `\\xleftrightarrow { }{ }`,
       },
       {
         image: `/10/23.svg`,
@@ -696,15 +698,15 @@ const LATEX_HEADER: LatexHeader[] = [
       },
       {
         image: `/10/26.svg`,
-        latex: `\xrightarrow {yields}{\ }`,
+        latex: `\\xrightarrow {yields}{\ }`,
       },
       {
         image: `/10/27.svg`,
-        latex: `\xrightarrow {\triangle }{\ }`,
+        latex: `\\xrightarrow {\triangle }{\ }`,
       },
       {
         image: `/10/28.svg`,
-        latex: `\xleftrightarrow {전개}{인수분해}`,
+        latex: `\\xleftrightarrow {전개}{인수분해}`,
       },
       {
         image: `/10/29.svg`,

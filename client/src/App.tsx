@@ -12,6 +12,10 @@ function App() {
       <Frame
         head={[
           // <link type="text/css" rel="stylesheet" href={chrome.runtime.getURL('/content.css')}></link>,
+          <link
+            rel="stylesheet"
+            href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css"
+          />,
           <link type="text/css" rel="stylesheet" href={'content.css'} key={1}></link>,
         ]}
       >

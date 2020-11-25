@@ -50,7 +50,7 @@ function FormulaList() {
             return (
               <>
                 <img src={`image/${el.image}`} />
-                <p>{el.latex}|</p>
+                <p>{el.latex}</p>
               </>
             );
           })}
