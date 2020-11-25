@@ -7,17 +7,7 @@ export const FormulaContainer = styled.div`
   background-color: white;
   height: 100%;
 `;
-export const Contents = styled.div`
-  display: none;
-  flex-wrap: wrap;
-  background: lightgrey;
-  width: 70%;
-  max-width: 1000px;
-  margin: 10px auto;
-  position: relative;
-  overflow-y: auto;
-  max-height: 160px;
-`;
+
 export const ContentsWrapper = styled.div`
   width: 100%;
   position: fixed;
@@ -29,7 +19,7 @@ export const FormulaHeaderWrapper = styled.div`
   border-right: 1px solid grey;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  padding: 0.4rem;
+  padding: 0.3rem;
   overflow-x: auto;
   white-space: nowrap;
 `;
@@ -39,10 +29,22 @@ export const SymbolHeaderWrapper = styled.div`
   border-right: 1px solid grey;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  padding: 0.4rem;
+  padding: 0.3rem;
   overflow-x: auto;
   white-space: nowrap;
   & button {
     background-size: contain;
   }
+`;
+
+export const Contents = styled.div`
+  display: none;
+  flex-wrap: wrap;
+  background: lightgrey;
+  width: 70%;
+  max-width: 1000px;
+  margin: 10px auto;
+  position: relative;
+  overflow-y: auto;
+  max-height: 120px;
 `;

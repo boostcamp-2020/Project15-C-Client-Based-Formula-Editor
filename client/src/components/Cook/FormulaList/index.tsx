@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Header, Popup, Grid } from 'semantic-ui-react';
 // import * as ButtonImage from '../../../../public/image/math.svg';
-import Button from '../../Materials/Button';
+import DropDownItem from '../../Materials/DropDownItem';
 import {
   FORMULA_HEADER,
   SYMBOL_HEADER,
@@ -9,6 +9,7 @@ import {
   LatexContent,
 } from '../../../lib/constants/latex-header';
 import * as S from './style';
+import FormulaItem from '../../Materials/FormulaItem';
 
 function FormulaList() {
   const formulaRef = useRef<null | HTMLHeadingElement>(null);
@@ -33,34 +34,30 @@ function FormulaList() {
       <S.FormulaContainer>
         <S.FormulaHeaderWrapper>
           {FORMULA_HEADER.map((latex, index) => (
-            <Button
+            <DropDownItem
               latex={latex}
               key={index}
               onMouseOver={mouseHandler}
               setNowFormula={setNowFormula}
-            ></Button>
+            ></DropDownItem>
           ))}
         </S.FormulaHeaderWrapper>
         <S.SymbolHeaderWrapper>
           {SYMBOL_HEADER.map((latex, index) => (
-            <Button
+            <DropDownItem
               latex={latex}
               key={index}
               onMouseOver={mouseHandler}
               setNowFormula={setNowFormula}
-            ></Button>
+            ></DropDownItem>
           ))}
         </S.SymbolHeaderWrapper>
       </S.FormulaContainer>
       <S.ContentsWrapper onMouseLeave={leaveHandler}>
         <S.Contents ref={formulaRef}>
-          {nowFormulas.map((el) => {
-            return (
-              <>
-                <img src={`image/${el.image}`} />
-              </>
-            );
-          })}
+          {nowFormulas.map((latexInfo, index) => (
+            <FormulaItem key={index} latexInfo={latexInfo}></FormulaItem>
+          ))}
         </S.Contents>
       </S.ContentsWrapper>
     </>
