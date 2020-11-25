@@ -1,7 +1,7 @@
 import React from 'react';
 import MainContainer from './style';
-import MainContents from '../../Cook/Main';
-import SaveButtons from '../../Cook/SaveButtons';
+import MainContents from '../../Meal/Main';
+import SaveButtons from '../../Meal/SaveButtons';
 
 function Main() {
   return (

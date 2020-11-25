@@ -14,8 +14,8 @@ function MainPage() {
   return (
     <MainContainer>
       <Header />
-      <Test />
-      {/* <Content /> */}
+      {/* <Test /> */}
+      <Content />
     </MainContainer>
   );
 }
