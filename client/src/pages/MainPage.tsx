@@ -33,7 +33,7 @@ function MainPage() {
     <MainContainer>
       <Header />
       {/* <Content /> */}
-      <TabExampleMenuPositionRight />
+      {/* <TabExampleMenuPositionRight /> */}
     </MainContainer>
   );
 }

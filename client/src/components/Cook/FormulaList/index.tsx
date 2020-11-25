@@ -1,30 +1,21 @@
 import React, { useRef, useState } from 'react';
 import { Header, Popup, Grid } from 'semantic-ui-react';
-import FormulaContainer from './style';
 // import * as ButtonImage from '../../../../public/image/math.svg';
 import Button from '../../Materials/Button';
-import { LATEX_HEADER, LatexHeader, LatexContent } from '../../../lib/constants/latex-header';
-import styled from '@emotion/styled';
+import {
+  FORMULA_HEADER,
+  SYMBOL_HEADER,
+  LatexHeader,
+  LatexContent,
+} from '../../../lib/constants/latex-header';
+import * as S from './style';
 
-const Content = styled.div`
-  display: none;
-  background: gainsboro;
-  width: 80%;
-  margin: 20px auto;
-  position: relative;
-  height: 80px;
-`;
-const WhiteDiv = styled.div`
-  width: 100%;
-  position: fixed;
-  top: 70px;
-`;
 function FormulaList() {
   const formulaRef = useRef<null | HTMLHeadingElement>(null);
   const [nowFormulas, setNowFormula] = useState<LatexContent[]>([]);
   const mouseHandler = (event: React.MouseEvent) => {
     if (formulaRef.current) {
-      formulaRef.current.style.display = 'block';
+      formulaRef.current.style.display = 'flex';
     }
   };
   const leaveHandler = (event: React.MouseEvent) => {
@@ -39,28 +30,39 @@ function FormulaList() {
   });
   return (
     <>
-      <FormulaContainer>
-        {LATEX_HEADER.map((latex, index) => (
-          <Button
-            latex={latex}
-            key={index}
-            onMouseOver={mouseHandler}
-            setNowFormula={setNowFormula}
-          ></Button>
-        ))}
-      </FormulaContainer>
-      <WhiteDiv onMouseLeave={leaveHandler}>
-        <Content ref={formulaRef}>
+      <S.FormulaContainer>
+        <S.FormulaHeaderWrapper>
+          {FORMULA_HEADER.map((latex, index) => (
+            <Button
+              latex={latex}
+              key={index}
+              onMouseOver={mouseHandler}
+              setNowFormula={setNowFormula}
+            ></Button>
+          ))}
+        </S.FormulaHeaderWrapper>
+        <S.SymbolHeaderWrapper>
+          {SYMBOL_HEADER.map((latex, index) => (
+            <Button
+              latex={latex}
+              key={index}
+              onMouseOver={mouseHandler}
+              setNowFormula={setNowFormula}
+            ></Button>
+          ))}
+        </S.SymbolHeaderWrapper>
+      </S.FormulaContainer>
+      <S.ContentsWrapper onMouseLeave={leaveHandler}>
+        <S.Contents ref={formulaRef}>
           {nowFormulas.map((el) => {
             return (
               <>
                 <img src={`image/${el.image}`} />
-                <p>{el.latex}</p>
               </>
             );
           })}
-        </Content>
-      </WhiteDiv>
+        </S.Contents>
+      </S.ContentsWrapper>
     </>
   );
 }
