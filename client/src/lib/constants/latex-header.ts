@@ -1,5 +1,4 @@
-// @ts-nocheck
-
+/* eslint-disable no-useless-escape */
 interface LatexHeader {
   header: string;
   content: LatexContent[];
@@ -15,7 +14,7 @@ const LATEX_HEADER: LatexHeader[] = [
     content: [
       {
         image: `/1/1.svg`,
-        latex: '\\frac{ }{ }',
+        latex: `\\frac{ }{ }`,
       },
       {
         image: `/1/2.svg`,
@@ -23,11 +22,11 @@ const LATEX_HEADER: LatexHeader[] = [
       },
       {
         image: `/1/3.svg`,
-        latex: `\frac{dy}{dx}`,
+        latex: `\\frac{dy}{dx}`,
       },
       {
         image: `/1/4.svg`,
-        latex: `\frac{\triangle y}{\triangle x}`,
+        latex: `\\frac{\\triangle y}{\\triangle x}`,
       },
     ],
   },
@@ -36,19 +35,19 @@ const LATEX_HEADER: LatexHeader[] = [
     content: [
       {
         image: `/2/1.svg`,
-        latex: `\sqrt{ }`,
+        latex: `\\sqrt{ }`,
       },
       {
         image: `/2/2.svg`,
-        latex: `\sqrt[]{}`,
+        latex: `\\sqrt[]{}`,
       },
       {
         image: `/2/3.svg`,
-        latex: `\sqrt{\frac{ }{ }}`,
+        latex: `\\sqrt{\\frac{ }{ }}`,
       },
       {
         image: `/2/4.svg`,
-        latex: `\frac{\sqrt{ }}{\sqrt{ }}`,
+        latex: `\\frac{\\sqrt{ }}{\\sqrt{ }}`,
       },
     ],
   },
@@ -57,27 +56,27 @@ const LATEX_HEADER: LatexHeader[] = [
     content: [
       {
         image: `/3/1.svg`,
-        latex: `\combi{ }^{ }`,
+        latex: `\\combi{ }^{ }`,
       },
       {
         image: `/3/2.svg`,
-        latex: `\combi{ }_{ }`,
+        latex: `\\combi{ }_{ }`,
       },
       {
         image: `/3/3.svg`,
-        latex: `\combi{ }_{ }^{ }`,
+        latex: `\\combi{ }_{ }^{ }`,
       },
       {
         image: `/3/4.svg`,
-        latex: `\combi{\ }_{ }^{ }\combi{ }`,
+        latex: `\\combi{\\ }_{ }^{ }\\combi{ }`,
       },
       {
         image: `/3/5.svg`,
-        latex: `\combi{\ }_{ }\combi{ }_{ }`,
+        latex: `\\combi{\\ }_{ }\\combi{ }_{ }`,
       },
       {
         image: `/3/6.svg`,
-        latex: `\combi{\ }_{ }^{ }\combi{ }_{ }^{ }`,
+        latex: `\\combi{\\ }_{ }^{ }\\combi{ }_{ }^{ }`,
       },
       {
         image: `/3/7.svg`,
@@ -89,19 +88,19 @@ const LATEX_HEADER: LatexHeader[] = [
       },
       {
         image: `/3/9.svg`,
-        latex: `\left(\right)^2`,
+        latex: `\\left(\\right)^2`,
       },
       {
         image: `/3/10.svg`,
-        latex: `\left(\frac{ }{ }\right)^2`,
+        latex: `\\left(\\frac{ }{ }\\right)^2`,
       },
       {
         image: `/3/11.svg`,
-        latex: `\frac{1}{\combi{ }^{ }}`,
+        latex: `\\frac{1}{\\combi{ }^{ }}`,
       },
       {
         image: `/3/12.svg`,
-        latex: `\frac{\combi{ }^{ }}{\combi{ }^{ }}`,
+        latex: `\\frac{\\combi{ }^{ }}{\\combi{ }^{ }}`,
       },
     ],
   },
@@ -110,63 +109,63 @@ const LATEX_HEADER: LatexHeader[] = [
     content: [
       {
         image: `/4/1.svg`,
-        latex: `\int _{\ }^{\ }`,
+        latex: `\\int _{\\ }^{\\ }`,
       },
       {
         image: `/4/2.svg`,
-        latex: `\int _{ }^{ }`,
+        latex: `\\int _{ }^{ }`,
       },
       {
         image: `/4/3.svg`,
-        latex: `\iint _{\ }^{\ }`,
+        latex: `\\iint _{\\ }^{\\ }`,
       },
       {
         image: `/4/4.svg`,
-        latex: `\iint _{ }^{ }`,
+        latex: `\\iint _{ }^{ }`,
       },
       {
         image: `/4/5.svg`,
-        latex: `\oint _{\ }^{\ }`,
+        latex: `\\oint _{\\ }^{\\ }`,
       },
       {
         image: `/4/6.svg`,
-        latex: `\oint _{ }^{ }`,
+        latex: `\\oint _{ }^{ }`,
       },
       {
         image: `/4/7.svg`,
-        latex: `\oiint _{\ }^{\ }`,
+        latex: `\\oiint _{\\ }^{\\ }`,
       },
       {
         image: `/4/8.svg`,
-        latex: `\oiint _{ }^{ }`,
+        latex: `\\oiint _{ }^{ }`,
       },
       {
         image: `/4/9.svg`,
-        latex: `\oiiint _{\ }^{\ }`,
+        latex: `\\oiiint _{\\ }^{\\ }`,
       },
       {
         image: `/4/10.svg`,
-        latex: `\oiiint _{ }^{ }`,
+        latex: `\\oiiint _{ }^{ }`,
       },
       {
         image: `/4/11.svg`,
-        latex: `\left\lceil \right\rceil _{ }^{ }`,
+        latex: `\\left\\lceil \\right\\rceil _{ }^{ }`,
       },
       {
         image: `/4/12.svg`,
-        latex: `\frac{dy}{dx}`,
+        latex: `\\frac{dy}{dx}`,
       },
       {
         image: `/4/13.svg`,
-        latex: `\frac{\triangle y}{\triangle x}`,
+        latex: `\\frac{\\triangle y}{\\triangle x}`,
       },
       {
         image: `/4/14.svg`,
-        latex: `\int _{\ }^{\ }f\left(x\right)dx}`,
+        latex: `\\int _{\\ }^{\\ }f\\left(x\\right)dx}`,
       },
       {
         image: `/4/15.svg`,
-        latex: `\frac{d}{dx}\int _a^sf\left(t\right)dt`,
+        latex: `\\frac{d}{dx}\\int _a^sf\\left(t\\right)dt`,
       },
     ],
   },
@@ -175,71 +174,71 @@ const LATEX_HEADER: LatexHeader[] = [
     content: [
       {
         image: `/5/1.svg`,
-        latex: `\sum _{\ }^{\ }`,
+        latex: `\\sum _{\\ }^{\\ }`,
       },
       {
         image: `/5/2.svg`,
-        latex: `\sum _{ }^{ }`,
+        latex: `\\sum _{ }^{ }`,
       },
       {
         image: `/5/3.svg`,
-        latex: `\prod _{\ }^{\ }`,
+        latex: `\\prod _{\\ }^{\\ }`,
       },
       {
         image: `/5/4.svg`,
-        latex: `\prod _{ }^{ }`,
+        latex: `\\prod _{ }^{ }`,
       },
       {
         image: `/5/5.svg`,
-        latex: `\bigcup _{\ }^{\ }`,
+        latex: `\\bigcup _{\\ }^{\\ }`,
       },
       {
         image: `/5/6.svg`,
-        latex: `\bigcup _{ }^{ }`,
+        latex: `\\bigcup _{ }^{ }`,
       },
       {
         image: `/5/7.svg`,
-        latex: `\bigcap _{\ }^{\ }`,
+        latex: `\\bigcap _{\\ }^{\\ }`,
       },
       {
         image: `/5/8.svg`,
-        latex: `\bigcap _{ }^{ }`,
+        latex: `\\bigcap _{ }^{ }`,
       },
       {
         image: `/5/9.svg`,
-        latex: `\bigvee _{\ }^{\ }`,
+        latex: `\\bigvee _{\\ }^{\\ }`,
       },
       {
         image: `/5/10.svg`,
-        latex: `\bigvee _{ }^{ }`,
+        latex: `\\bigvee _{ }^{ }`,
       },
       {
         image: `/5/11.svg`,
-        latex: `\bigwedge _{\ }^{\ }`,
+        latex: `\\bigwedge _{\\ }^{\\ }`,
       },
       {
         image: `/5/12.svg`,
-        latex: `\bigwedge _{ }^{ }`,
+        latex: `\\bigwedge _{ }^{ }`,
       },
       {
         image: `/5/13.svg`,
-        latex: `\sum _{i=0}^n`,
+        latex: `\\sum _{i=0}^n`,
       },
       {
         image: `/5/14.svg`,
-        latex: `\sum _{k=1}^n`,
+        latex: `\\sum _{k=1}^n`,
       },
       {
         image: `/5/15.svg`,
-        latex: `\sum _{k=1}^{\infty }`,
+        latex: `\\sum _{k=1}^{\\infty }`,
       },
       {
         image: `/5/16.svg`,
-        latex: `\sum _{k=1}^{\infty }\left(\frac{1}{n}\right)^n`,
+        latex: `\\sum _{k=1}^{\\infty }\\left(\\frac{1}{n}\\right)^n`,
       },
       {
         image: `/5/17.svg`,
-        latex: `\sum _{k=1}^{\infty }\log `,
+        latex: `\\sum _{k=1}^{\\infty }\\log `,
       },
     ],
   },
@@ -248,71 +247,71 @@ const LATEX_HEADER: LatexHeader[] = [
     content: [
       {
         image: `/6/1.svg`,
-        latex: `\left(\combi{ }\right)`,
+        latex: `\\left(\\combi{ }\\right)`,
       },
       {
         image: `/6/2.svg`,
-        latex: `\left[\combi{ }\right]`,
+        latex: `\\left[\\combi{ }\\right]`,
       },
       {
         image: `/6/3.svg`,
-        latex: `\left\{\combi{ }\right\}`,
+        latex: `\\left\{\\combi{ }\\right\\}`,
       },
       {
         image: `/6/4.svg`,
-        latex: `<\combi{ }>`,
+        latex: `<\\combi{ }>`,
       },
       {
         image: `/6/5.svg`,
-        latex: `\left\lfloor \combi{ }\right\rfloor `,
+        latex: `\\left\\lfloor \\combi{ }\\right\\rfloor `,
       },
       {
         image: `/6/6.svg`,
-        latex: `\left\lceil \combi{ }\right\rceil `,
+        latex: `\\left\\lceil \\combi{ }\\right\\rceil `,
       },
       {
         image: `/6/7.svg`,
-        latex: `\left|\combi{ }\right|`,
+        latex: `\\left|\\combi{ }\\right|`,
       },
       {
         image: `/6/8.svg`,
-        latex: `\left|\left|\combi{ }\right|\right|`,
+        latex: `\\left|\\left|\\combi{ }\\right|\\right|`,
       },
       {
         image: `/6/9.svg`,
-        latex: `[[\combi{ }]]`,
+        latex: `[[\\combi{ }]]`,
       },
       {
         image: `/6/10.svg`,
-        latex: `\left(\combi{ }|\combi{ }\right)`,
+        latex: `\\left(\\combi{ }|\\combi{ }\\right)`,
       },
       {
         image: `/6/11.svg`,
-        latex: `\left\{\combi{ }|\combi{ }\right\}`,
+        latex: `\\left\\{\\combi{ }|\\combi{ }\\right\\}`,
       },
       {
         image: `/6/12.svg`,
-        latex: `<\combi{ }|\combi{ }>`,
+        latex: `<\\combi{ }|\\combi{ }>`,
       },
       {
         image: `/6/13.svg`,
-        latex: `<\combi{ }|\combi{ }|\combi{ }>`,
+        latex: `<\\combi{ }|\\combi{ }|\\combi{ }>`,
       },
       {
         image: `/6/14.svg`,
-        latex: `\left|x\right|`,
+        latex: `\\left|x\\right|`,
       },
       {
         image: `/6/15.svg`,
-        latex: `\left|f(x)\right|`,
+        latex: `\\left|f(x)\\right|`,
       },
       {
         image: `/6/16.svg`,
-        latex: `f\left(\left|x\right|\right)`,
+        latex: `f\\left(\\left|x\\right|\\right)`,
       },
       {
         image: `/6/17.svg`,
-        latex: `\left[\right]_a^b`,
+        latex: `\\left[\\right]_a^b`,
       },
     ],
   },
@@ -333,71 +332,71 @@ const LATEX_HEADER: LatexHeader[] = [
       },
       {
         image: `/7/4.svg`,
-        latex: `f^{ }\left(x\right)`,
+        latex: `f^{ }\\left(x\\right)`,
       },
       {
         image: `/7/5.svg`,
-        latex: `g^{ }\left(x\right)`,
+        latex: `g^{ }\\left(x\\right)`,
       },
       {
         image: `/7/6.svg`,
-        latex: `h^{ }\left(x\right)`,
+        latex: `h^{ }\\left(x\\right)`,
       },
       {
         image: `/7/7.svg`,
-        latex: `\sin `,
+        latex: `\\sin `,
       },
       {
         image: `/7/8.svg`,
-        latex: `\cos `,
+        latex: `\\cos `,
       },
       {
         image: `/7/9.svg`,
-        latex: `\tan `,
+        latex: `\\tan `,
       },
       {
         image: `/7/10.svg`,
-        latex: `\csc`,
+        latex: `\\csc`,
       },
       {
         image: `/7/11.svg`,
-        latex: `\sec`,
+        latex: `\\sec`,
       },
       {
         image: `/7/12.svg`,
-        latex: `\cot `,
+        latex: `\\cot `,
       },
       {
         image: `/7/13.svg`,
-        latex: `\sin ^{ }`,
+        latex: `\\sin ^{ }`,
       },
       {
         image: `/7/14.svg`,
-        latex: `\cos ^{ }`,
+        latex: `\\cos ^{ }`,
       },
       {
         image: `/7/15.svg`,
-        latex: `\tan ^{ }`,
+        latex: `\\tan ^{ }`,
       },
       {
         image: `/7/16.svg`,
-        latex: `\csc ^{ }`,
+        latex: `\\csc ^{ }`,
       },
       {
         image: `/7/17.svg`,
-        latex: `\sec ^{ }`,
+        latex: `\\sec ^{ }`,
       },
       {
         image: `/7/18.svg`,
-        latex: `\cot ^{ }`,
+        latex: `\\cot ^{ }`,
       },
       {
         image: `/7/19.svg`,
-        latex: `\left(f\circ g\right)\left(x\right)`,
+        latex: `\\left(f\\circ g\\right)\\left(x\\right)`,
       },
       {
         image: `/7/20.svg`,
-        latex: `\left(f\circ f\right)\circ f`,
+        latex: `\\left(f\\circ f\\right)\\circ f`,
       },
       {
         image: `/7/21.svg`,
@@ -405,25 +404,25 @@ const LATEX_HEADER: LatexHeader[] = [
       },
       {
         image: `/7/22.svg`,
-        latex: `\left(f^{-1}\right)^{-1}`,
+        latex: `\\left(f^{-1}\\right)^{-1}`,
       },
       {
         image: `/7/23.svg`,
         // Todo f'\left(x\right) => f\'\left(x\right)
         // Todo 백틱으로 표현
-        latex: `f'\left(x\right)`,
+        latex: `f'\\left(x\\right)`,
       },
       {
         image: `/7/24.svg`,
-        latex: `\sin \theta `,
+        latex: `\\sin \\theta `,
       },
       {
         image: `/7/25.svg`,
-        latex: `\cos \theta `,
+        latex: `\\cos \\theta `,
       },
       {
         image: `/7/26.svg`,
-        latex: `\tan \theta `,
+        latex: `\\tan \\theta `,
       },
     ],
   },
@@ -432,55 +431,55 @@ const LATEX_HEADER: LatexHeader[] = [
     content: [
       {
         image: `/8/1.svg`,
-        latex: `\dot{ }`,
+        latex: `\\dot{ }`,
       },
       {
         image: `/8/2.svg`,
-        latex: `\ddot{ }`,
+        latex: `\\ddot{ }`,
       },
       {
         image: `/8/3.svg`,
-        latex: `\dddot{ }`,
+        latex: `\\dddot{ }`,
       },
       {
         image: `/8/4.svg`,
-        latex: `\hat{ }`,
+        latex: `\\hat{ }`,
       },
       {
         image: `/8/5.svg`,
-        latex: `\check{ }`,
+        latex: `\\check{ }`,
       },
       {
         image: `/8/6.svg`,
-        latex: `\acute{ }`,
+        latex: `\\acute{ }`,
       },
       {
         image: `/8/7.svg`,
-        latex: `\grave{ }`,
+        latex: `\\grave{ }`,
       },
       {
         image: `/8/8.svg`,
-        latex: `\breve{ }`,
+        latex: `\\breve{ }`,
       },
       {
         image: `/8/9.svg`,
-        latex: `\tilde{ }`,
+        latex: `\\tilde{ }`,
       },
       {
         image: `/8/10.svg`,
-        latex: `\overline { }`,
+        latex: `\\overline { }`,
       },
       {
         image: `/8/11.svg`,
-        latex: `\bbar{ }`,
+        latex: `\\bbar{ }`,
       },
       {
         image: `/8/12.svg`,
-        latex: `\overbrace{ }{\ }`,
+        latex: `\\overbrace{ }{\\ }`,
       },
       {
         image: `/8/13.svg`,
-        latex: `\\underbrace{\ }{ }`,
+        latex: `\\underbrace{\\ }{ }`,
       },
       {
         image: `/8/14.svg`,
@@ -492,27 +491,27 @@ const LATEX_HEADER: LatexHeader[] = [
       },
       {
         image: `/8/16.svg`,
-        latex: `\overleftarrow{ }`,
+        latex: `\\overleftarrow{ }`,
       },
       {
         image: `/8/17.svg`,
-        latex: `\overrightarrow{ }`,
+        latex: `\\overrightarrow{ }`,
       },
       {
         image: `/8/18.svg`,
-        latex: `\overleftrightarrow{ }`,
+        latex: `\\overleftrightarrow{ }`,
       },
       {
         image: `/8/19.svg`,
-        latex: `\overleftharpoonup{ }`,
+        latex: `\\overleftharpoonup{ }`,
       },
       {
         image: `/8/20.svg`,
-        latex: `\overrightharpoonup{ }`,
+        latex: `\\overrightharpoonup{ }`,
       },
       {
         image: `/8/21.svg`,
-        latex: `\overline { }`,
+        latex: `\\overline { }`,
       },
       {
         image: `/8/22.svg`,
@@ -520,19 +519,19 @@ const LATEX_HEADER: LatexHeader[] = [
       },
       {
         image: `/8/23.svg`,
-        latex: `\boxed{ }`,
+        latex: `\\boxed{ }`,
       },
       {
         image: `/8/24.svg`,
-        latex: `\overline {AB}`,
+        latex: `\\overline {AB}`,
       },
       {
         image: `/8/25.svg`,
-        latex: `\overline {X}`,
+        latex: `\\overline {X}`,
       },
       {
         image: `/8/26.svg`,
-        latex: `\overrightarrow{AB}`,
+        latex: `\\overrightarrow{AB}`,
       },
     ],
   },
@@ -541,55 +540,55 @@ const LATEX_HEADER: LatexHeader[] = [
     content: [
       {
         image: `/9/1.svg`,
-        latex: `\log _{ }\combi{ }`,
+        latex: `\\log _{ }\\combi{ }`,
       },
       {
         image: `/9/2.svg`,
-        latex: `\log \combi{ }`,
+        latex: `\\log \\combi{ }`,
       },
       {
         image: `/9/3.svg`,
-        latex: `\ln \combi{ }`,
+        latex: `\\ln \\combi{ }`,
       },
       {
         image: `/9/4.svg`,
-        latex: `\lim _{ }^{ }\combi{ }`,
+        latex: `\\lim _{ }^{ }\\combi{ }`,
       },
       {
         image: `/9/5.svg`,
-        latex: `\lim _{\combi{ }\to \combi{ }}^{ }\combi{ }`,
+        latex: `\\lim _{\\combi{ }\\to \\combi{ }}^{ }\\combi{ }`,
       },
       {
         image: `/9/6.svg`,
-        latex: `\min _{ }^{ }\combi{ }`,
+        latex: `\\min _{ }^{ }\\combi{ }`,
       },
       {
         image: `/9/7.svg`,
-        latex: `\max _{ }^{ }\combi{ }`,
+        latex: `\\max _{ }^{ }\\combi{ }`,
       },
       {
         image: `/9/8.svg`,
-        latex: `a^{\log _bx}`,
+        latex: `a^{\\log _bx}`,
       },
       {
         image: `/9/9.svg`,
-        latex: `\lim _{n\to \infty }^{ }\combi{ }`,
+        latex: `\\lim _{n\\to \\infty }^{ }\\combi{ }`,
       },
       {
         image: `/9/10.svg`,
-        latex: `\lim _{n\to \infty }^{ }\left(a_n\pm b_n\right)`,
+        latex: `\\lim _{n\\to \\infty }^{ }\\left(a_n\\pm b_n\\right)`,
       },
       {
         image: `/9/11.svg`,
-        latex: `\lim _{\righttriangle x\to 0}^{ }\frac{\righttriangle y}{\righttriangle x}`,
+        latex: `\\lim _{\\righttriangle x\\to 0}^{ }\\frac{\\righttriangle y}{\\righttriangle x}`,
       },
       {
         image: `/9/12.svg`,
-        latex: `\lim _{n\to \infty }^{ }\left(1+\frac{1}{n}\right)^n`,
+        latex: `\\lim _{n\\to \\infty }^{ }\\left(1+\\frac{1}{n}\\right)^n`,
       },
       {
         image: `/9/13.svg`,
-        latex: `\lim _{n\to \infty }^{ }\sum _{k=1}^n\combi{ }`,
+        latex: `\\lim _{n\\to \\infty }^{ }\\sum _{k=1}^n\\combi{ }`,
       },
     ],
   },
@@ -614,31 +613,31 @@ const LATEX_HEADER: LatexHeader[] = [
       },
       {
         image: `/10/5.svg`,
-        latex: `\defequal `,
+        latex: `\\defequal `,
       },
       {
         image: `/10/6.svg`,
-        latex: `\mequal `,
+        latex: `\\mequal `,
       },
       {
         image: `/10/7.svg`,
-        latex: `\deltaequal `,
+        latex: `\\deltaequal `,
       },
       {
         image: `/10/8.svg`,
-        latex: `\\xleftarrow {\ }{ }`,
+        latex: `\\xleftarrow {\\ }{ }`,
       },
       {
         image: `/10/9.svg`,
-        latex: `\\xrightarrow {\ }{ }`,
+        latex: `\\xrightarrow {\\ }{ }`,
       },
       {
         image: `/10/10.svg`,
-        latex: `\\xleftarrow { }{\ }`,
+        latex: `\\xleftarrow { }{\\ }`,
       },
       {
         image: `/10/11.svg`,
-        latex: `\\xrightarrow { }{\ }`,
+        latex: `\\xrightarrow { }{\\ }`,
       },
       {
         image: `/10/12.svg`,
@@ -650,35 +649,35 @@ const LATEX_HEADER: LatexHeader[] = [
       },
       {
         image: `/10/14.svg`,
-        latex: `\Xleftarrow {\ }{ }`,
+        latex: `\\Xleftarrow {\\ }{ }`,
       },
       {
         image: `/10/15.svg`,
-        latex: `\Xrightarrow {\ }{ }`,
+        latex: `\\Xrightarrow {\\ }{ }`,
       },
       {
         image: `/10/16.svg`,
-        latex: `\Xleftarrow { }{\ }`,
+        latex: `\\Xleftarrow { }{\\ }`,
       },
       {
         image: `/10/17.svg`,
-        latex: `\Xrightarrow { }{\ }`,
+        latex: `\\Xrightarrow { }{\\ }`,
       },
       {
         image: `/10/18.svg`,
-        latex: `\Xleftarrow { }{ }`,
+        latex: `\\Xleftarrow { }{ }`,
       },
       {
         image: `/10/19.svg`,
-        latex: `\Xrightarrow { }{ }`,
+        latex: `\\Xrightarrow { }{ }`,
       },
       {
         image: `/10/20.svg`,
-        latex: `\\xleftrightarrow {\ }{ }`,
+        latex: `\\xleftrightarrow {\\ }{ }`,
       },
       {
         image: `/10/21.svg`,
-        latex: `\\xleftrightarrow { }{\ }`,
+        latex: `\\xleftrightarrow { }{\\ }`,
       },
       {
         image: `/10/22.svg`,
@@ -686,23 +685,23 @@ const LATEX_HEADER: LatexHeader[] = [
       },
       {
         image: `/10/23.svg`,
-        latex: `\Xleftrightarrow {\ }{ }`,
+        latex: `\\Xleftrightarrow {\\ }{ }`,
       },
       {
         image: `/10/24.svg`,
-        latex: `\Xleftrightarrow { }{\ }`,
+        latex: `\\Xleftrightarrow { }{\\ }`,
       },
       {
         image: `/10/25.svg`,
-        latex: `\Xleftrightarrow { }{ }`,
+        latex: `\\Xleftrightarrow { }{ }`,
       },
       {
         image: `/10/26.svg`,
-        latex: `\\xrightarrow {yields}{\ }`,
+        latex: `\\xrightarrow {yields}{\\ }`,
       },
       {
         image: `/10/27.svg`,
-        latex: `\\xrightarrow {\triangle }{\ }`,
+        latex: `\\xrightarrow {\\triangle }{\\ }`,
       },
       {
         image: `/10/28.svg`,
@@ -710,7 +709,7 @@ const LATEX_HEADER: LatexHeader[] = [
       },
       {
         image: `/10/29.svg`,
-        latex: `\Xrightarrow {부정}{\ }`,
+        latex: `\\Xrightarrow {부정}{\\ }`,
       },
     ],
   },
@@ -719,47 +718,47 @@ const LATEX_HEADER: LatexHeader[] = [
     content: [
       {
         image: `/11/1.svg`,
-        latex: `\begin{matrix}&\end{matrix}`,
+        latex: `\\begin{matrix}&\\end{matrix}`,
       },
       {
         image: `/11/2.svg`,
-        latex: `\begin{matrix}\\\end{matrix}`,
+        latex: `\\begin{matrix}\\\\\\end{matrix}`,
       },
       {
         image: `/11/3.svg`,
-        latex: `\begin{matrix}&\\&\end{matrix}`,
+        latex: `\\begin{matrix}&\\\\&\\end{matrix}`,
       },
       {
         image: `/11/4.svg`,
-        latex: `\begin{matrix}&&\\&&\end{matrix}`,
+        latex: `\\begin{matrix}&&\\\\&&\\end{matrix}`,
       },
       {
         image: `/11/5.svg`,
-        latex: `\begin{matrix}&\\&\\&\end{matrix}`,
+        latex: `\\begin{matrix}&\\\\&\\\\&\\end{matrix}`,
       },
       {
         image: `/11/6.svg`,
-        latex: `\begin{matrix}&&\\&&\\&&\end{matrix}`,
+        latex: `\\begin{matrix}&&\\\\&&\\\\&&\\end{matrix}`,
       },
       {
         image: `/11/7.svg`,
-        latex: `\begin{cases}\\\end{cases}`,
+        latex: `\\begin{cases}\\\\\\end{cases}`,
       },
       {
         image: `/11/8.svg`,
-        latex: `\begin{cases}\\\\\end{cases}`,
+        latex: `\\begin{cases}\\\\\\\\\\end{cases}`,
       },
       {
         image: `/11/9.svg`,
-        latex: `\begin{pmatrix}&\\&\end{pmatrix}`,
+        latex: `\\begin{pmatrix}&\\\\&\\end{pmatrix}`,
       },
       {
         image: `/11/10.svg`,
-        latex: `\begin{bmatrix}&\\&\end{bmatrix}`,
+        latex: `\\begin{bmatrix}&\\\\&\\end{bmatrix}`,
       },
       {
         image: `/11/11.svg`,
-        latex: `\begin{vmatrix}&\\&\end{vmatrix}`,
+        latex: `\\begin{vmatrix}&\\\\&\\end{vmatrix}`,
       },
       {
         image: `/11/12.svg`,
@@ -771,9 +770,33 @@ const LATEX_HEADER: LatexHeader[] = [
       },
       {
         image: `/11/14.svg`,
-        latex: `\begin{pmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\end{pmatrix}`,
+        latex: `\\begin{pmatrix}a_{11}&a_{12}\\\\a_{21}&a_{22}\\end{pmatrix}`,
       },
     ],
+  },
+  {
+    header: `12-btn.svg`,
+    content: [],
+  },
+  {
+    header: `13-btn.svg`,
+    content: [],
+  },
+  {
+    header: `14-btn.svg`,
+    content: [],
+  },
+  {
+    header: `15-btn.svg`,
+    content: [],
+  },
+  {
+    header: `16-btn.svg`,
+    content: [],
+  },
+  {
+    header: `17-btn.svg`,
+    content: [],
   },
 ];
 export { LATEX_HEADER, LatexHeader, LatexContent };
