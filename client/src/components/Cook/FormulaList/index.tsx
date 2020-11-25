@@ -40,8 +40,13 @@ function FormulaList() {
   return (
     <>
       <FormulaContainer>
-        {LATEX_HEADER.map((latex) => (
-          <Button latex={latex} onMouseOver={mouseHandler} setNowFormula={setNowFormula}></Button>
+        {LATEX_HEADER.map((latex, index) => (
+          <Button
+            latex={latex}
+            key={index}
+            onMouseOver={mouseHandler}
+            setNowFormula={setNowFormula}
+          ></Button>
         ))}
       </FormulaContainer>
       <WhiteDiv onMouseLeave={leaveHandler}>
@@ -50,7 +55,7 @@ function FormulaList() {
             return (
               <>
                 <img src={`image/${el.image}`} />
-                <p>{el.latex}|</p>
+                <p>{el.latex}</p>
               </>
             );
           })}
