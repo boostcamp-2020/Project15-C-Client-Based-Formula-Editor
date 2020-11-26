@@ -1,4 +1,4 @@
-import { MathField } from 'react-mathquill';
+import { MathField } from 'boost-mathquill';
 import { addTab, changeTab, editLatex, removeTab } from './actions';
 import { initLatex } from './actions';
 

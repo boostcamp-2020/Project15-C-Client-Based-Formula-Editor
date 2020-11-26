@@ -1,4 +1,4 @@
-import { MathField } from 'react-mathquill';
+import { MathField } from 'boost-mathquill';
 import { createAction } from '../../lib/utils/util';
 //TODO: 리팩토링 하기
 
