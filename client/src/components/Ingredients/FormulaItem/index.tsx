@@ -15,7 +15,6 @@ function FormulaItem({ latexInfo }: FormulaItemProps) {
     if (typeof mathfield !== 'string') {
       mathfield.write(latexInfo.latex);
     }
-    dispatch(editLatex(latexInfo.latex));
   };
 
   return <S.FormulaItem onClick={onClick} image={latexInfo.image}></S.FormulaItem>;

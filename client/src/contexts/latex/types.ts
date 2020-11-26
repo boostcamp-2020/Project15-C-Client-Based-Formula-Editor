@@ -12,5 +12,5 @@ export type LatexAction = ReturnType<typeof editLatex> | ReturnType<typeof initL
 export interface LatexState {
   currentTab: number;
   totalLatex: TabInfo[];
-  mathfield: MathField | string;
+  mathfield: MathField | null;
 }

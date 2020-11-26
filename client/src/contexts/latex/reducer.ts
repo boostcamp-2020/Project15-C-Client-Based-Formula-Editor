@@ -9,7 +9,7 @@ const initialState: LatexState = {
       latex: '',
     },
   ],
-  mathfield: '',
+  mathfield: null,
 };
 
 function reducer(state: LatexState = initialState, action: LatexAction): LatexState {

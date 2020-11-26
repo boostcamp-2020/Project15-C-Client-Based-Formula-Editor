@@ -9,10 +9,10 @@ function Content() {
   const dispatch = useDispatch();
 
   const [latex, setLatex] = useState('');
-  const [mathfieldInput, setMathfieldInput] = useState<MathField | string>('');
+  const [mathfieldInput, setMathfieldInput] = useState<MathField | null>(null);
 
   const injectMathFunction = (latexString: any) => {
-    if (typeof mathfieldInput !== 'string') {
+    if (mathfieldInput) {
       mathfieldInput.write(latexString);
     }
   };
