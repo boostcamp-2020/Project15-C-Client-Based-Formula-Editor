@@ -5,15 +5,15 @@ export const ContentsContainer = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
-  border: 1px solid red;
 `;
 
 export const ContentsHeader = styled.div`
   flex-basis: 50px;
-  border: 1px solid red;
 `;
 
 export const ContentsBox = styled.div`
-  border: 1px solid blue;
+  border: 1px solid #d4d4d5;
+  border-radius: 0 5px 5px 5px;
   height: 100%;
+  padding: 7px;
 `;

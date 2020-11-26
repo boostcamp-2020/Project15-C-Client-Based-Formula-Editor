@@ -7,9 +7,9 @@ function SaveButtons() {
   return (
     <SaveButtonsContainer>
       <Button.Group basic vertical>
-        <Button content="이미지로 저장" size="medium" />
-        <Button content="텍스트로 저장" />
-        <Button content="화면에 저장" />
+        <Button content="이미지 저장" size="mini" />
+        <Button content="텍스트 저장" />
+        <Button content="화면 저장" />
       </Button.Group>
     </SaveButtonsContainer>
   );

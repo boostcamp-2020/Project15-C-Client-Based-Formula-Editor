@@ -1,10 +1,16 @@
 import styled from '@emotion/styled';
 
-const InputContentsContainer = styled.div`
+export const ContentsContainer = styled.div`
+  width: 100%;
   height: 100%;
-  border: 2px solid red;
-  display: flex;
-  flex-grow: 6;
-`;
 
-export default InputContentsContainer;
+  & > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  & .tab {
+    padding: 7px !important;
+    height: 100%;
+  }
+`;
