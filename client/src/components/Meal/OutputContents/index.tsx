@@ -10,9 +10,7 @@ function OutputContents() {
       <S.ContentsHeader>
         <TemplateButtons></TemplateButtons>
       </S.ContentsHeader>
-      <S.ContentsBox>
-        <Content></Content>
-      </S.ContentsBox>
+      <Content />
     </S.ContentsContainer>
   );
 }
