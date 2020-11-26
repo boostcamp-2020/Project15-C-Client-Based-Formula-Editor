@@ -29,7 +29,9 @@ function Tab() {
           }
         })}
       </Menu>
-      <Button icon={'plus'} size={'mini'} handler={addTabHandler}></Button>
+      {totalLatex.length < 4 && (
+        <Button icon={'plus'} size={'mini'} handler={addTabHandler}></Button>
+      )}
     </TabContainer>
   );
 }
