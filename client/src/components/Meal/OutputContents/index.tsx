@@ -1,7 +1,8 @@
 import React from 'react';
 import * as S from './style';
-import TextArea from '../../Ingredients/TextAreaItem';
+// import TextArea from '../../Ingredients/TextAreaItem';
 import TemplateButtons from '../TemplateButtons';
+import Content from '../../Set/Main/Content';
 
 function OutputContents() {
   return (
@@ -10,7 +11,7 @@ function OutputContents() {
         <TemplateButtons></TemplateButtons>
       </S.ContentsHeader>
       <S.ContentsBox>
-        <TextArea></TextArea>
+        <Content></Content>
       </S.ContentsBox>
     </S.ContentsContainer>
   );
