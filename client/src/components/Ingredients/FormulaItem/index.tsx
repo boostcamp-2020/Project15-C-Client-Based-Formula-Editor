@@ -1,8 +1,7 @@
 import React from 'react';
 import { LatexContent } from '../../../lib/constants/latex-header';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RootState } from '../../../contexts/index';
-import { editLatex } from '../../../contexts/latex';
 import * as S from './style';
 interface FormulaItemProps {
   latexInfo: LatexContent;
@@ -10,9 +9,9 @@ interface FormulaItemProps {
 
 function FormulaItem({ latexInfo }: FormulaItemProps) {
   const { mathfield } = useSelector((state: RootState) => state.latex);
-  const dispatch = useDispatch();
+
   const onClick = () => {
-    if (typeof mathfield !== 'string') {
+    if (mathfield) {
       mathfield.write(latexInfo.latex);
     }
   };

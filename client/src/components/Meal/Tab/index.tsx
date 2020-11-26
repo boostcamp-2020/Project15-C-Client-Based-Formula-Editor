@@ -1,53 +1,31 @@
-import React, { useState } from 'react';
-import { Label, Menu } from 'semantic-ui-react';
+import React from 'react';
+import { Menu } from 'semantic-ui-react';
 import { TabContainer } from './style';
-import { Icon } from 'semantic-ui-react';
 import Button from '../../Ingredients/ButtonItem';
+import { useDispatch, useSelector } from 'react-redux';
+import { addTab } from '../../../contexts/latex';
+import { RootState } from '../../../contexts';
+import MenuItem from './MenuItem';
 
-interface TabType {
-  id: number;
-  name: string;
-}
+// interface TabType {
+//   id: number;
+//   name: string;
+// }
 
 function Tab() {
-  const [tabState, setTabState] = useState({ activeItem: 1 });
-  const handleItemClick = (id: number) => setTabState({ activeItem: id });
-  const [tabListState, setTabListState] = useState<(TabType | undefined)[]>([
-    { id: 1, name: '수식' },
-  ]);
+  const dispatch = useDispatch();
+  const { currentTab, totalLatex } = useSelector((state: RootState) => state.latex);
+
   const addTabHandler = () => {
-    const index = tabListState.length + 1;
-    setTabListState([...tabListState, { id: index, name: '수식' }]);
-  };
-  const removeTabHandloer = (id: number) => {
-    console.log('dd');
-    const tabList: (TabType | undefined)[] = tabListState.filter((item: TabType | undefined) => {
-      if (item && id !== item.id) {
-        if (item.id > id) item.id -= 1;
-        return item;
-      }
-    });
-    setTabListState([...tabList]);
+    dispatch(addTab());
   };
 
   return (
     <TabContainer>
       <Menu pointing vertical>
-        {tabListState.map((item: TabType | undefined, index) => {
+        {totalLatex.map((item, index) => {
           if (item) {
-            return (
-              <Menu.Item
-                key={index}
-                name={item.name}
-                active={tabState.activeItem === item.id}
-                onClick={() => handleItemClick(item.id)}
-              >
-                <Label size="mini" color="teal" onClick={() => removeTabHandloer(item.id)}>
-                  X
-                </Label>
-                수식 {item.id}
-              </Menu.Item>
-            );
+            return <MenuItem key={item.id} item={item} index={index} currentTab={currentTab} />;
           }
         })}
       </Menu>
