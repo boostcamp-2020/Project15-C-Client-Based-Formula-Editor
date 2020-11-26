@@ -8,12 +8,6 @@ export const FormulaContainer = styled.div`
   height: 100%;
 `;
 
-export const ContentsWrapper = styled.div`
-  width: 100%;
-  position: fixed;
-  top: 70px;
-  z-index: 99999;
-`;
 export const FormulaHeaderWrapper = styled.div`
   border-left: 1px solid grey;
   border-right: 1px solid grey;
@@ -47,4 +41,5 @@ export const Contents = styled.div`
   position: relative;
   overflow-y: auto;
   max-height: 140px;
+  z-index: 99999;
 `;

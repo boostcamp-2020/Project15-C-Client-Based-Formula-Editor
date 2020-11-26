@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { editLatex } from '../../../contexts/latex';
+import { editLatex, initLatex } from '../../../contexts/latex';
 import { RootState } from '../../../contexts/index';
-import { EditableMathField, MathField } from 'react-mathquill';
+import { EditableMathField, MathField, StaticMathField } from 'react-mathquill';
 
 function Content() {
   const { currentTab, totalLatex } = useSelector((state: RootState) => state.latex);
   const dispatch = useDispatch();
 
   const [latex, setLatex] = useState('');
-  const [mathfieldInput, setMathfieldInput] = useState<MathField | string>('');
+  const [mathfieldInput, setMathfieldInput] = useState<MathField | null>(null);
 
   const injectMathFunction = (latexString: any) => {
-    if (typeof mathfieldInput !== 'string') {
+    if (mathfieldInput) {
       mathfieldInput.write(latexString);
     }
   };
   const initmathInput = (mathField: MathField) => {
+    dispatch(initLatex(mathField));
     setMathfieldInput(mathField);
   };
   return (
@@ -26,16 +27,17 @@ function Content() {
         latex={latex} // latex value for the input field
         onChange={(mathField: MathField) => {
           dispatch(editLatex(mathField.latex()));
-          // setLatex(mathField.latex());
+          setLatex(mathField.latex());
           mathField.focus();
         }}
       />
+      <StaticMathField>{'\\lim _{\\combi{ }\\to \\combi{ }}^{ }\\combi{ }'}</StaticMathField>
       <button onClick={() => injectMathFunction('\\sqrt{}')}>√</button>
       <button onClick={() => injectMathFunction('\\cos{}')}>cos</button>
       <button onClick={() => injectMathFunction('\\alpha')}>alpha</button>
       <button onClick={() => injectMathFunction('\\fleft( x \right)')}>func</button>
-      <button onClick={() => injectMathFunction('\\int{}{}')}>int</button>
-      <p>{totalLatex[+currentTab - 1].latex}</p>
+      <button onClick={() => injectMathFunction('\\iint{ }')}>int</button>
+      <p>{totalLatex[currentTab].latex}</p>
     </div>
   );
 }
