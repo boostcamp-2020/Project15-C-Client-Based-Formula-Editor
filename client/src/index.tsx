@@ -26,7 +26,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 //     app.style.display = 'none';
 //   }
 // }
-const store = createStore(rootReducer, applyMiddleware(logger));
+const store = createStore(rootReducer, composeWithDevTools());
 
 ReactDOM.render(
   <Provider store={store}>
