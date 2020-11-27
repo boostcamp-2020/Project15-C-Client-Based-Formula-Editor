@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { editLatex, initLatex } from '../../../contexts/latex';
 import { RootState } from '../../../contexts/index';
 import { EditableMathField, MathField } from 'boost-mathquill';
-import { ContentsBox } from './style';
+import { ContentsWrapper, ContentsBox } from './style';
 
 function Content() {
   const dispatch = useDispatch();
@@ -21,13 +21,15 @@ function Content() {
   };
 
   return (
-    <ContentsBox onClick={onClickHandler}>
-      <EditableMathField
-        mathquillDidMount={initmathInput}
-        latex={nowLatexInfo.latex}
-        onChange={onChangeHandler}
-      />
-    </ContentsBox>
+    <ContentsWrapper onClick={onClickHandler}>
+      <ContentsBox>
+        <EditableMathField
+          mathquillDidMount={initmathInput}
+          latex={nowLatexInfo.latex}
+          onChange={onChangeHandler}
+        />
+      </ContentsBox>
+    </ContentsWrapper>
   );
 }
 export default Content;

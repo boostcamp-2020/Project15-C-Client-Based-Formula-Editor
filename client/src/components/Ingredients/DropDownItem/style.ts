@@ -11,8 +11,8 @@ export const DropDownItemStyle = styled.button<DropDownItemStyleProps>`
   cursor: pointer;
   border: 4px solid transparent;
   background-repeat: no-repeat;
+  filter: invert(28%) sepia(9%) saturate(10%) hue-rotate(1deg) brightness(91%) contrast(83%);
   &:hover {
-    /* filter: invert(14%) sepia(100%) saturate(7493%) hue-rotate(1deg) brightness(106%) contrast(110%); */
     border: 4px dashed #6d9eeb;
   }
 `;
