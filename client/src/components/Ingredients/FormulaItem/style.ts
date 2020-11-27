@@ -9,7 +9,9 @@ export const FormulaItem = styled.button<FormulaItemStyleProps>`
   height: 70px;
   background-position: center;
   cursor: pointer;
-  border: 4px solid transparent;
+  border: none;
+  border-right: 0.5px solid #d5d5d5;
+  border-bottom: 0.5px solid #d5d5d5;
   background-repeat: no-repeat;
   &:hover {
     border: 4px dashed #6d9eeb;

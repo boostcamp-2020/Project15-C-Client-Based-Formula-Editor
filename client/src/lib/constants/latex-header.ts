@@ -160,11 +160,11 @@ const FORMULA_HEADER: LatexHeader[] = [
         latex: `\\frac{\\triangle y}{\\triangle x}`,
       },
       {
-        image: `/4/14.svg`,
+        image: `/4/14-b.svg`,
         latex: `\\int _{\\ }^{\\ }f\\left(x\\right)dx}`,
       },
       {
-        image: `/4/15.svg`,
+        image: `/4/15-b.svg`,
         latex: `\\frac{d}{dx}\\int _a^sf\\left(t\\right)dt`,
       },
     ],
@@ -695,22 +695,22 @@ const FORMULA_HEADER: LatexHeader[] = [
         image: `/10/25.svg`,
         latex: `\\Xleftrightarrow { }{ }`,
       },
-      {
-        image: `/10/26.svg`,
-        latex: `\\xrightarrow {yields}{\\ }`,
-      },
+      // {
+      //   image: `/10/26.svg`,
+      //   latex: `\\xrightarrow {yields}{\\ }`,
+      // },
       {
         image: `/10/27.svg`,
         latex: `\\xrightarrow {\\triangle }{\\ }`,
       },
-      {
-        image: `/10/28.svg`,
-        latex: `\\xleftrightarrow {전개}{인수분해}`,
-      },
-      {
-        image: `/10/29.svg`,
-        latex: `\\Xrightarrow {부정}{\\ }`,
-      },
+      // {
+      //   image: `/10/28.svg`,
+      //   latex: `\\xleftrightarrow {전개}{인수분해}`,
+      // },
+      // {
+      //   image: `/10/29.svg`,
+      //   latex: `\\Xrightarrow {부정}{\\ }`,
+      // },
     ],
   },
   {

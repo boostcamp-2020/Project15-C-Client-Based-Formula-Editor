@@ -9,4 +9,5 @@ export const ContentsContainer = styled.div`
 
 export const ContentsHeader = styled.div`
   flex-basis: 50px;
+  margin-top: -5px;
 `;
