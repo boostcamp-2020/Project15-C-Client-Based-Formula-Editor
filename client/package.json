@@ -21,11 +21,11 @@
     "@types/react-frame-component": "^4.1.1",
     "@types/react-redux": "^7.1.11",
     "axios": "^0.21.0",
+    "boost-mathquill": "^1.0.7",
     "emotion": "^11.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-frame-component": "^4.1.3",
-    "react-mathquill": "^1.0.1",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5"
   },
