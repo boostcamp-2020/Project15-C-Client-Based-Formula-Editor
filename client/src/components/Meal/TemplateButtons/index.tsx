@@ -13,6 +13,9 @@ function TemplateButtons() {
         <Button icon="align left" />
         <Button icon="align center" />
         <Button icon="align right" />
+      </Button.Group>{' '}
+      <Button.Group basic>
+        <Button icon="eraser" />
       </Button.Group>
     </S.TemplateButtonsContainer>
   );
