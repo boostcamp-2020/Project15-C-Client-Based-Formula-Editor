@@ -53,7 +53,7 @@ function reducer(state: LatexState = initialState, action: LatexAction): LatexSt
     }
 
     case REMOVE_TAB: {
-      const isLengthOne = state.totalLatex.length === 1;
+      const isLengthOne: boolean = state.totalLatex.length === 1;
       // 길이가 1개였을 때 삭제하면 초기화.
       if (isLengthOne) {
         const nextId = state.maxId + 1;
@@ -73,9 +73,10 @@ function reducer(state: LatexState = initialState, action: LatexAction): LatexSt
         };
       }
 
-      const currnetIndex = state.totalLatex.findIndex((latex) => latex.id === action.payload);
-      const isLast = currnetIndex === state.totalLatex.length - 1;
-
+      const currnetIndex: number = state.totalLatex.findIndex(
+        (latex) => latex.id === action.payload
+      );
+      const isLast: boolean = currnetIndex === state.totalLatex.length - 1;
       if (isLast) {
         return {
           ...state,
