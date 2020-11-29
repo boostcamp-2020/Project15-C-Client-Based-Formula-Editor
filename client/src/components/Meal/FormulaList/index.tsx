@@ -10,39 +10,18 @@ import {
 } from '../../../lib/constants/latex-header';
 import * as S from './style';
 import FormulaItem from '../../Ingredients/FormulaItem';
+import useFormulaList from './useFormulaList';
 
 function FormulaList() {
-  const formulaRef = useRef<null | HTMLHeadingElement>(null);
-  const containerRef = useRef<null | HTMLDivElement>(null);
-  const timer = useRef<any>(null);
-  const [nowFormulas, setNowFormula] = useState<LatexContent[]>([]);
-
-  const displayFormula = () => {
-    if (formulaRef.current) {
-      formulaRef.current.style.display = 'flex';
-      timer.current = setTimeout(() => {
-        formulaRef.current!.style.display = 'none';
-      }, 500);
-    }
-  };
-
-  const clearHiddenTimemout = () => {
-    clearTimeout(timer.current);
-  };
-
-  const hiddenFormula = () => {
-    if (formulaRef.current) {
-      formulaRef.current.style.display = 'none';
-    }
-  };
-
-  useEffect(() => {
-    document.body.addEventListener('mouseleave', () => {
-      if (formulaRef.current) {
-        formulaRef.current.style.display = 'none';
-      }
-    });
-  }, []);
+  const {
+    formulaRef,
+    containerRef,
+    displayFormula,
+    clearHiddenTimemout,
+    hiddenFormula,
+    nowFormulas,
+    setNowFormula,
+  } = useFormulaList();
 
   return (
     <>
@@ -57,6 +36,7 @@ function FormulaList() {
             ></DropDownItem>
           ))}
         </S.FormulaHeaderWrapper>
+
         <S.SymbolHeaderWrapper>
           {SYMBOL_HEADER.map((latex, index) => (
             <DropDownItem
@@ -68,6 +48,7 @@ function FormulaList() {
           ))}
         </S.SymbolHeaderWrapper>
       </S.FormulaContainer>
+
       <S.Contents ref={formulaRef} onMouseLeave={hiddenFormula} onMouseOver={clearHiddenTimemout}>
         {nowFormulas.map((latexInfo, index) => (
           <FormulaItem

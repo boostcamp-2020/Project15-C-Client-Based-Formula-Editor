@@ -1,7 +1,7 @@
 import React from 'react';
-import * as S from './style';
-import { Tab } from 'semantic-ui-react';
 import TextAreaItem from '../../Ingredients/TextAreaItem';
+import { Tab } from 'semantic-ui-react';
+import * as S from './style';
 
 const panes = [
   {

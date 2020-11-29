@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from '../components/Set/Header';
 import styled from '@emotion/styled';
 import Content from '../components/Set/Main';
-import Test from '../components/Set/Main/Content';
+// import Test from '../components/Meal/Main/Content';
 
 const MainContainer = styled.section`
   display: flex;

@@ -13,6 +13,7 @@ function DropDownItem({ children, onMouseOver, latex, setNowFormula }: DropDownI
     onMouseOver(e);
     setNowFormula(latex.content);
   };
+
   return (
     <S.DropDownItemStyle header={latex.header} onMouseOver={customMouseOver}>
       {children}

@@ -1,6 +1,6 @@
 import React from 'react';
-import * as S from './style';
 import OutputContents from '../OutputContents';
+import * as S from './style';
 
 function OutputArea() {
   return (

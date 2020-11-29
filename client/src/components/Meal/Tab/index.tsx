@@ -1,24 +1,12 @@
 import React from 'react';
-import { Menu } from 'semantic-ui-react';
-import { TabContainer } from './style';
 import Button from '../../Ingredients/ButtonItem';
-import { useDispatch, useSelector } from 'react-redux';
-import { addTab } from '../../../contexts/latex';
-import { RootState } from '../../../contexts';
 import MenuItem from './MenuItem';
-
-// interface TabType {
-//   id: number;
-//   name: string;
-// }
+import useTab from './useTab';
+import { TabContainer } from './style';
+import { Menu } from 'semantic-ui-react';
 
 function Tab() {
-  const dispatch = useDispatch();
-  const { currentTab, totalLatex } = useSelector((state: RootState) => state.latex);
-
-  const addTabHandler = () => {
-    dispatch(addTab());
-  };
+  const { addTabHandler, currentTab, totalLatex } = useTab();
 
   return (
     <TabContainer>
