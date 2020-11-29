@@ -19,7 +19,6 @@ function Tab() {
   const addTabHandler = () => {
     dispatch(addTab());
   };
-
   return (
     <TabContainer>
       <Menu pointing vertical>

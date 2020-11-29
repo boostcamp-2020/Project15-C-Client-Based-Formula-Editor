@@ -24,7 +24,6 @@ function MenuItem({ item, currentTab, index }: MenuItemProps) {
     e.stopPropagation();
     removeTabHandler(item.id);
   };
-
   return (
     <Menu.Item
       key={item.id}
