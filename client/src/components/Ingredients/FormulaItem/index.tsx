@@ -5,14 +5,16 @@ import { RootState } from '../../../contexts/index';
 import * as S from './style';
 interface FormulaItemProps {
   latexInfo: LatexContent;
+  hiddenFormula: () => void;
 }
 
-function FormulaItem({ latexInfo }: FormulaItemProps) {
+function FormulaItem({ latexInfo, hiddenFormula }: FormulaItemProps) {
   const { mathfield } = useSelector((state: RootState) => state.latex);
 
   const onClick = () => {
     if (mathfield) {
       mathfield.write(latexInfo.latex);
+      hiddenFormula();
     }
   };
 
