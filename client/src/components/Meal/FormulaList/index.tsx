@@ -1,13 +1,6 @@
 import React, { useRef, useState } from 'react';
-import { Header, Popup, Grid } from 'semantic-ui-react';
-// import * as ButtonImage from '../../../../public/image/math.svg';
-import DropDownItem from '../../Ingredients/DropDownItem';
-import {
-  FORMULA_HEADER,
-  SYMBOL_HEADER,
-  LatexHeader,
-  LatexContent,
-} from '../../../lib/constants/latex-header';
+import DropDownItem from '@ingredients/DropDownItem';
+import { FORMULA_HEADER, SYMBOL_HEADER, LatexContent } from '../../../lib/constants/latex-header';
 import * as S from './style';
 import FormulaItem from '../../Ingredients/FormulaItem';
 
@@ -55,7 +48,7 @@ function FormulaList() {
       </S.FormulaContainer>
       <S.Contents ref={formulaRef} onMouseLeave={leaveHandler}>
         {nowFormulas.map((latexInfo, index) => (
-          <FormulaItem key={index} latexInfo={latexInfo}></FormulaItem>
+          <FormulaItem key={index} latexInfo={latexInfo} formulaRef={formulaRef}></FormulaItem>
         ))}
       </S.Contents>
     </>
