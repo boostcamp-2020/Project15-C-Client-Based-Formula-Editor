@@ -39,6 +39,7 @@ function reducer(state: LatexState = initialState, action: LatexAction): LatexSt
       return {
         ...state,
         maxId: nextId,
+        currentTab: nextId,
         totalLatex: [
           ...state.totalLatex,
           {
