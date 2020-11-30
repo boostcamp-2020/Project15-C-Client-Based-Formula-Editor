@@ -1,10 +1,17 @@
 import { TabInfo, LatexAction, LatexState } from './types';
-import { EDIT_LATEX, INIT_LATEX, ADD_TAB, CHANGE_TAB, REMOVE_TAB } from './actions';
+import {
+  EDIT_LATEX,
+  INIT_LATEX,
+  ADD_TAB,
+  CHANGE_TAB,
+  REMOVE_TAB,
+  CHANGE_FONTSIZE,
+} from './actions';
 const initTotalLatex = (id: number): TabInfo => {
   return {
     id,
     latex: '',
-    fontSize: 11,
+    fontSize: '11',
     fontColor: 'black',
     textAlign: 'left',
   };
@@ -76,6 +83,17 @@ function reducer(state: LatexState = initialState, action: LatexAction): LatexSt
       };
     }
 
+    case CHANGE_FONTSIZE: {
+      console.log('pay : ', action.payload);
+      return {
+        ...state,
+        totalLatex: state.totalLatex.map((latexItem) => {
+          return latexItem.id === state.currentTab
+            ? { ...latexItem, fontSize: action.payload }
+            : latexItem;
+        }),
+      };
+    }
     default:
       return state;
   }

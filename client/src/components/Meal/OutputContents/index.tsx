@@ -1,5 +1,5 @@
 import React from 'react';
-import TemplateButtons from '../TemplateButtons';
+import TemplateButtons from '../FormatButtons';
 import Content from '../OutputFormula';
 import * as S from './style';
 
