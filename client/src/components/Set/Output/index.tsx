@@ -1,5 +1,5 @@
 import React from 'react';
-import OutputContents from '../OutputContents';
+import OutputContents from '../../Meal/OutputContents';
 import * as S from './style';
 
 function OutputArea() {

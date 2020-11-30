@@ -38,8 +38,8 @@ module.exports = {
   resolve: {
     alias: {
       '@ingredients': path.resolve(__dirname, 'src/components/Ingredients'),
-      '@meal': path.resolve(__dirname, 'src/components/meal'),
-      '@set': path.resolve(__dirname, 'src/components/set'),
+      '@meal': path.resolve(__dirname, 'src/components/Meal'),
+      '@set': path.resolve(__dirname, 'src/components/Set'),
       '@apis': path.resolve(__dirname, 'src/lib/apis'),
       '@constants': path.resolve(__dirname, 'src/lib/constants'),
       '@utils': path.resolve(__dirname, 'src/lib/utils'),

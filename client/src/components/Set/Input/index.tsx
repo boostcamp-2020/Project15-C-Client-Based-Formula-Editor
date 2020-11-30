@@ -1,8 +1,7 @@
 import React from 'react';
-import Tab from '../Tab';
-import InputContents from '../InputContents';
+import Tab from '../../Meal/PageTab';
+import InputContents from '../../Meal/InputContents';
 import * as S from './style';
-
 function InputArea() {
   return (
     <S.InputAreaContainer>

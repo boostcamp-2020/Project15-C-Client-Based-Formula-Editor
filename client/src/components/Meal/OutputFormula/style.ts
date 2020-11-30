@@ -1,11 +1,6 @@
 import styled from '@emotion/styled';
 
-const MainContainer = styled.div`
-  height: 100%;
-  display: flex;
-`;
-
-export const ContentsWrapper = styled.div`
+export const OutputFormulaWrapper = styled.div`
   border: 1px solid #d4d4d5;
   border-radius: 0 5px 5px 5px;
   height: 100%;
@@ -13,10 +8,8 @@ export const ContentsWrapper = styled.div`
   position: relative;
 `;
 
-export const ContentsBox = styled.div`
+export const OutputFormulaBox = styled.div`
   border: 1px solid #bdbdbd;
   height: 100%;
   padding: 10px;
 `;
-
-export default MainContainer;

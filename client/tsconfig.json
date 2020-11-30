@@ -11,8 +11,8 @@
     "paths": {
       "@/*": ["src/*"],
       "@ingredients/*": ["src/components/Ingredients/*"],
-      "@meal/*": ["src/components/meal/*"],
-      "@set/*": ["src/components/set/*"],
+      "@meal/*": ["src/components/Meal/*"],
+      "@set/*": ["src/components/Set/*"],
       "@apis/*": ["src/lib/apis/*"],
       "@constants/*": ["src/lib/constants/*"],
       "@utils/*": ["src/lib/utils/*"],
