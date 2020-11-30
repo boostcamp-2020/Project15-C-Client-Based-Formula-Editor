@@ -8,6 +8,7 @@ interface LatexContent {
   image: string;
   latex: string | any;
 }
+
 const FORMULA_HEADER: LatexHeader[] = [
   {
     header: `1-btn.svg`,
