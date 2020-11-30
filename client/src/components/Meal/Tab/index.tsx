@@ -1,24 +1,14 @@
 import React from 'react';
-import { Menu } from 'semantic-ui-react';
-import { TabContainer } from './style';
 import Button from '../../Ingredients/ButtonItem';
-import { useDispatch, useSelector } from 'react-redux';
-import { addTab } from '../../../contexts/latex';
-import { RootState } from '../../../contexts';
 import MenuItem from './MenuItem';
+import useTab from './useTab';
+import { TabContainer } from './style';
+import { Menu } from 'semantic-ui-react';
 import { TAB_LIMIT } from '@constants/constants';
-// interface TabType {
-//   id: number;
-//   name: string;
-// }
 
 function Tab() {
-  const dispatch = useDispatch();
-  const { currentTab, totalLatex } = useSelector((state: RootState) => state.latex);
+  const { addTabHandler, currentTab, totalLatex } = useTab();
 
-  const addTabHandler = () => {
-    dispatch(addTab());
-  };
   return (
     <TabContainer>
       <Menu pointing vertical>

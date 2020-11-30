@@ -1,7 +1,7 @@
 import React from 'react';
-import * as S from './style';
 import Tab from '../Tab';
 import InputContents from '../InputContents';
+import * as S from './style';
 
 function InputArea() {
   return (

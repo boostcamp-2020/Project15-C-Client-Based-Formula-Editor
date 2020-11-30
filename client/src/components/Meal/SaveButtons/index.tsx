@@ -1,7 +1,6 @@
 import React from 'react';
 import SaveButtonsContainer from './style';
 import { Button } from 'semantic-ui-react';
-import styled from '@emotion/styled';
 
 function SaveButtons() {
   return (

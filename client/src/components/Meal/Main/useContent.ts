@@ -1,11 +1,9 @@
-import React from 'react';
+import { MathField } from 'boost-mathquill';
 import { useDispatch, useSelector } from 'react-redux';
 import { editLatex, initLatex } from '../../../contexts/latex';
-import { RootState } from '../../../contexts/index';
-import { EditableMathField, MathField } from 'boost-mathquill';
-import { ContentsWrapper, ContentsBox } from './style';
+import { RootState } from '../../../contexts';
 
-function Content() {
+const useContent = () => {
   const dispatch = useDispatch();
   const { currentTab, totalLatex, mathfield } = useSelector((state: RootState) => state.latex);
   const nowLatexInfo = totalLatex.filter((latex) => latex.id === currentTab)[0];
@@ -20,16 +18,12 @@ function Content() {
     if (mathfield) mathfield.focus();
   };
 
-  return (
-    <ContentsWrapper onClick={onClickHandler}>
-      <ContentsBox>
-        <EditableMathField
-          mathquillDidMount={initmathInput}
-          latex={nowLatexInfo.latex}
-          onChange={onChangeHandler}
-        />
-      </ContentsBox>
-    </ContentsWrapper>
-  );
-}
-export default Content;
+  return {
+    nowLatexInfo,
+    initmathInput,
+    onChangeHandler,
+    onClickHandler,
+  };
+};
+
+export default useContent;

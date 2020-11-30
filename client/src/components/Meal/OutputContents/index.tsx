@@ -1,8 +1,7 @@
 import React from 'react';
-import * as S from './style';
-// import TextArea from '../../Ingredients/TextAreaItem';
 import TemplateButtons from '../TemplateButtons';
-import Content from '../../Set/Main/Content';
+import Content from '../Main/Content';
+import * as S from './style';
 
 function OutputContents() {
   return (
