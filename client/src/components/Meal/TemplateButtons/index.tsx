@@ -1,8 +1,11 @@
 import React from 'react';
 import * as S from './style';
 import { Button, Icon } from 'semantic-ui-react';
+import useTemplateButtons from './useTemplateButtons';
 
 function TemplateButtons() {
+  const { clearOutput } = useTemplateButtons();
+
   return (
     <S.TemplateButtonsContainer>
       <Button.Group basic>
@@ -15,7 +18,7 @@ function TemplateButtons() {
         <Button icon="align right" />
       </Button.Group>{' '}
       <Button.Group basic>
-        <Button icon="eraser" />
+        <Button icon="eraser" onClick={clearOutput} />
       </Button.Group>
     </S.TemplateButtonsContainer>
   );
