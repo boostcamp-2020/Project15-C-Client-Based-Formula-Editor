@@ -1,18 +1,19 @@
-import { LatexAction, LatexState } from './types';
+import { TabInfo, LatexAction, LatexState } from './types';
 import { EDIT_LATEX, INIT_LATEX, ADD_TAB, CHANGE_TAB, REMOVE_TAB } from './actions';
+const initTotalLatex = (id: number): TabInfo => {
+  return {
+    id,
+    latex: '',
+    fontSize: 11,
+    fontColor: 'black',
+    textAlign: 'left',
+  };
+};
 
 const initialState: LatexState = {
   maxId: 0,
   currentTab: 0,
-  totalLatex: [
-    {
-      id: 0,
-      latex: '',
-      fontSize: 11,
-      fontColor: 'black',
-      textAlign: 'left',
-    },
-  ],
+  totalLatex: [initTotalLatex(0)],
   mathfield: null,
 };
 
@@ -39,54 +40,31 @@ function reducer(state: LatexState = initialState, action: LatexAction): LatexSt
       return {
         ...state,
         maxId: nextId,
-        totalLatex: [
-          ...state.totalLatex,
-          {
-            id: nextId,
-            latex: '',
-            fontSize: 11,
-            fontColor: 'black',
-            textAlign: 'left',
-          },
-        ],
+        currentTab: nextId,
+        totalLatex: [...state.totalLatex, initTotalLatex(nextId)],
       };
     }
 
     case REMOVE_TAB: {
-      const isLengthOne = state.totalLatex.length === 1;
+      const isLengthOne: boolean = state.totalLatex.length === 1;
       // 길이가 1개였을 때 삭제하면 초기화.
       if (isLengthOne) {
-        const nextId = state.maxId + 1;
+        const nextId: number = state.maxId + 1;
         return {
           ...state,
           maxId: nextId,
           currentTab: nextId,
-          totalLatex: [
-            {
-              id: nextId,
-              latex: '',
-              fontSize: 11,
-              fontColor: 'black',
-              textAlign: 'left',
-            },
-          ],
+          totalLatex: [initTotalLatex(nextId)],
         };
       }
 
-      const currnetIndex = state.totalLatex.findIndex((latex) => latex.id === action.payload);
-      const isLast = currnetIndex === state.totalLatex.length - 1;
-
-      if (isLast) {
-        return {
-          ...state,
-          currentTab: state.totalLatex[currnetIndex - 1].id,
-          totalLatex: state.totalLatex.filter((latex) => latex.id !== action.payload),
-        };
-      }
-
+      const currnetIndex: number = state.totalLatex.findIndex(
+        (latex) => latex.id === action.payload
+      );
+      const isLastIndex: boolean = currnetIndex === state.totalLatex.length - 1;
       return {
         ...state,
-        currentTab: state.totalLatex[currnetIndex + 1].id,
+        currentTab: state.totalLatex[isLastIndex ? currnetIndex - 1 : currnetIndex + 1].id,
         totalLatex: state.totalLatex.filter((latex) => latex.id !== action.payload),
       };
     }

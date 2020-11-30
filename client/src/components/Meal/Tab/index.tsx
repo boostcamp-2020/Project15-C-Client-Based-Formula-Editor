@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addTab } from '../../../contexts/latex';
 import { RootState } from '../../../contexts';
 import MenuItem from './MenuItem';
-
+import { TAB_LIMIT } from '@constants/constants';
 // interface TabType {
 //   id: number;
 //   name: string;
@@ -19,7 +19,6 @@ function Tab() {
   const addTabHandler = () => {
     dispatch(addTab());
   };
-
   return (
     <TabContainer>
       <Menu pointing vertical>
@@ -29,7 +28,7 @@ function Tab() {
           }
         })}
       </Menu>
-      {totalLatex.length < 4 && (
+      {totalLatex.length < TAB_LIMIT && (
         <Button icon={'plus'} size={'mini'} handler={addTabHandler}></Button>
       )}
     </TabContainer>
