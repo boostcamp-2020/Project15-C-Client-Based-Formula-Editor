@@ -5,6 +5,10 @@ import { RootState } from '@contexts/index';
 import * as S from './style';
 interface FormulaItemProps {
   latexInfo: LatexContent;
+  hiddenFormula: () => void;
+}
+
+function FormulaItem({ latexInfo, hiddenFormula }: FormulaItemProps) {
   formulaRef: React.MutableRefObject<HTMLHeadingElement | null>;
 }
 
@@ -12,9 +16,9 @@ function FormulaItem({ latexInfo, formulaRef }: FormulaItemProps) {
   const { mathfield } = useSelector((state: RootState) => state.latex);
 
   const onClick = () => {
-    if (mathfield && formulaRef.current) {
+    if (mathfield) {
       mathfield.write(latexInfo.latex);
-      formulaRef.current.style.display = 'none';
+      hiddenFormula();
     }
   };
 
