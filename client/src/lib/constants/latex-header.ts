@@ -583,11 +583,11 @@ const FORMULA_HEADER: LatexHeader[] = [
         latex: `\\lim _{\\righttriangle x\\to 0}^{ }\\frac{\\righttriangle y}{\\righttriangle x}`,
       },
       {
-        image: `/9/12.svg`,
+        image: `/9/12-b.svg`,
         latex: `\\lim _{n\\to \\infty }^{ }\\left(1+\\frac{1}{n}\\right)^n`,
       },
       {
-        image: `/9/13.svg`,
+        image: `/9/13-b.svg`,
         latex: `\\lim _{n\\to \\infty }^{ }\\sum _{k=1}^n\\combi{ }`,
       },
     ],
