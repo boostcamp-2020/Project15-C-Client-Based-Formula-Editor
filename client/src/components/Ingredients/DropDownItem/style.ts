@@ -7,6 +7,7 @@ export const DropDownItemStyle = styled.button<DropDownItemStyleProps>`
   background: url(${(props) => `./image/${props.header}`});
   width: 60px;
   height: 60px;
+  padding-bottom: 6px;
   font-size: 2rem;
   font-weight: bold;
   background-position: center;
