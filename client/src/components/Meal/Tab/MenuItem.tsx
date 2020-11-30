@@ -12,7 +12,7 @@ interface MenuItemProps {
 
 function MenuItem({ item, currentTab, index }: MenuItemProps) {
   const { handleItemClick, onRemoveTab } = useMenuItem({ item });
-
+  
   return (
     <Menu.Item
       key={item.id}

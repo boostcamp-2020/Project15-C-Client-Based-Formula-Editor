@@ -4,6 +4,7 @@ import MenuItem from './MenuItem';
 import useTab from './useTab';
 import { TabContainer } from './style';
 import { Menu } from 'semantic-ui-react';
+import { TAB_LIMIT } from '@constants/constants';
 
 function Tab() {
   const { addTabHandler, currentTab, totalLatex } = useTab();
@@ -17,7 +18,7 @@ function Tab() {
           }
         })}
       </Menu>
-      {totalLatex.length < 4 && (
+      {totalLatex.length < TAB_LIMIT && (
         <Button icon={'plus'} size={'mini'} handler={addTabHandler}></Button>
       )}
     </TabContainer>

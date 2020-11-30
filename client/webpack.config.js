@@ -36,6 +36,16 @@ module.exports = {
     ],
   },
   resolve: {
+    alias: {
+      '@ingredients': path.resolve(__dirname, 'src/components/Ingredients'),
+      '@meal': path.resolve(__dirname, 'src/components/meal'),
+      '@set': path.resolve(__dirname, 'src/components/set'),
+      '@apis': path.resolve(__dirname, 'src/lib/apis'),
+      '@constants': path.resolve(__dirname, 'src/lib/constants'),
+      '@utils': path.resolve(__dirname, 'src/lib/utils'),
+      '@contexts': path.resolve(__dirname, 'src/contexts'),
+      '@test': path.resolve(__dirname, 'src/__test__'),
+    },
     extensions: ['.ts', '.tsx', '.js'],
   },
   plugins: [
