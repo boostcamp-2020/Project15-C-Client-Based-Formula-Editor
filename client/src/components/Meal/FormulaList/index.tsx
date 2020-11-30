@@ -13,6 +13,8 @@ function FormulaList() {
     clearHiddenTimemout,
     hiddenFormula,
     reserveHiddenFormula,
+    nowHeader,
+    setNowHeader,
     nowFormulas,
     setNowFormula,
   } = useFormulaList();
@@ -30,6 +32,7 @@ function FormulaList() {
               latex={latex}
               key={index}
               onMouseOver={displayFormula}
+              setNowHeader={setNowHeader}
               setNowFormula={setNowFormula}
             ></DropDownItem>
           ))}
@@ -41,6 +44,7 @@ function FormulaList() {
               latex={latex}
               key={index}
               onMouseOver={displayFormula}
+              setNowHeader={setNowHeader}
               setNowFormula={setNowFormula}
             >
               {latex.header}
@@ -54,6 +58,7 @@ function FormulaList() {
         onMouseLeave={hiddenFormula}
         onMouseOver={clearHiddenTimemout}
         length={nowFormulas.length}
+        header={nowHeader}
       >
         {nowFormulas.map((latexInfo, index) => (
           <FormulaItem
