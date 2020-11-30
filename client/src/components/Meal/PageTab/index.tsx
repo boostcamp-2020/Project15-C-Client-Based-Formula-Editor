@@ -1,12 +1,12 @@
 import React from 'react';
 import Button from '../../Ingredients/ButtonItem';
-import MenuItem from './MenuItem';
-import useTab from './useTab';
+import MenuItem from '../../Ingredients/PageTabItem';
+import useTab from './usePageTab';
 import { TabContainer } from './style';
 import { Menu } from 'semantic-ui-react';
 import { TAB_LIMIT } from '@constants/constants';
 
-function Tab() {
+function PageTab() {
   const { addTabHandler, currentTab, totalLatex } = useTab();
 
   return (
@@ -25,4 +25,4 @@ function Tab() {
   );
 }
 
-export default Tab;
+export default PageTab;

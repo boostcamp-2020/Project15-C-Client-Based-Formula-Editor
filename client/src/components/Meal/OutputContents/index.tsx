@@ -1,6 +1,6 @@
 import React from 'react';
 import TemplateButtons from '../TemplateButtons';
-import Content from '../Main/Content';
+import Content from '../OutputFormula';
 import * as S from './style';
 
 function OutputContents() {

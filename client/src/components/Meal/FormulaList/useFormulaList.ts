@@ -31,6 +31,7 @@ const useFormulaList = () => {
 
   useEffect(() => {
     document.body.addEventListener('mouseleave', () => {
+      clearHiddenTimemout();
       hiddenFormula();
     });
   }, []);

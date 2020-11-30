@@ -1,21 +1,21 @@
 import React from 'react';
 import { EditableMathField } from 'boost-mathquill';
-import { ContentsWrapper, ContentsBox } from '../../Set/Main/style';
-import useContent from './useContent';
+import useContent from './useOutputFormula';
+import * as S from './style';
 
-function Content() {
+function OutputFormula() {
   const { initmathInput, nowLatexInfo, onChangeHandler, onClickHandler } = useContent();
 
   return (
-    <ContentsWrapper onClick={onClickHandler}>
-      <ContentsBox>
+    <S.OutputFormulaWrapper onClick={onClickHandler}>
+      <S.OutputFormulaBox>
         <EditableMathField
           mathquillDidMount={initmathInput}
           latex={nowLatexInfo.latex}
           onChange={onChangeHandler}
         />
-      </ContentsBox>
-    </ContentsWrapper>
+      </S.OutputFormulaBox>
+    </S.OutputFormulaWrapper>
   );
 }
-export default Content;
+export default OutputFormula;

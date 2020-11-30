@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Label, Menu } from 'semantic-ui-react';
 import { changeTab, removeTab, TabInfo } from '../../../contexts/latex';
-import useMenuItem from './useMenuItem';
+import useMenuItem from './usePageTabItem';
 
 interface MenuItemProps {
   item: TabInfo;
@@ -10,9 +10,9 @@ interface MenuItemProps {
   index: number;
 }
 
-function MenuItem({ item, currentTab, index }: MenuItemProps) {
+function PageTabItem({ item, currentTab, index }: MenuItemProps) {
   const { handleItemClick, onRemoveTab } = useMenuItem({ item });
-  
+
   return (
     <Menu.Item
       key={item.id}
@@ -28,4 +28,4 @@ function MenuItem({ item, currentTab, index }: MenuItemProps) {
   );
 }
 
-export default MenuItem;
+export default PageTabItem;
