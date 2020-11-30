@@ -8,12 +8,12 @@ import * as S from './style';
 function OutputFormula() {
   const { initmathInput, nowLatexInfo, onChangeHandler, onClickHandler } = useContent();
   const { currentTab, totalLatex } = useSelector((state: RootState) => state.latex);
+  const currentFormat = totalLatex[currentTab];
+  const { fontSize, textAlign } = currentFormat;
 
-  const currentFontSize = totalLatex[currentTab].fontSize;
-  console.log('cur: ', currentFontSize);
   return (
     <S.OutputFormulaWrapper onClick={onClickHandler}>
-      <S.OutputFormulaBox fontSize={currentFontSize}>
+      <S.OutputFormulaBox fontSize={fontSize} textAlign={textAlign}>
         <EditableMathField
           mathquillDidMount={initmathInput}
           latex={nowLatexInfo.latex}

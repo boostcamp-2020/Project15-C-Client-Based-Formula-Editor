@@ -7,7 +7,9 @@ interface FontListType {
   size: string;
   checked: boolean;
 }
-
+interface FontSizeProps {
+  fontSizeHandler: () => void;
+}
 const sizeLists = [
   { size: '11', checked: false },
   { size: '15', checked: true },
@@ -39,11 +41,12 @@ export const FontWapper = styled.div`
   }
 `;
 
-function FontSizeList() {
+function FontSizeList({ fontSizeHandler }: FontSizeProps) {
   const dispatch = useDispatch();
   const [stateList, setStateList] = useState<FontListType[]>(sizeLists);
   const clickHandler = (index: number, fontSize: string) => {
     dispatch(changeFontSize(fontSize));
+    fontSizeHandler();
     setStateList(
       stateList.map((item) => {
         if (item.checked) {
