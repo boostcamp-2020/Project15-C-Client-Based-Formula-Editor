@@ -20,7 +20,7 @@ function TemplateButtons() {
           <Button icon="text height" onClick={fontSizeHandler} />
           {fontSizeState && <FontSizeList />}
           <Button icon="tint" onClick={fontColorHandler} />
-          {fontColoreState && <FontColor />}
+          {fontColoreState && <FontColor handler={fontColorHandler} />}
         </Button.Group>{' '}
         <Button.Group basic>
           <Button icon="align left" />
