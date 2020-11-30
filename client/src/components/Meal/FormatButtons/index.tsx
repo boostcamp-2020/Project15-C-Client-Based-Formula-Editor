@@ -12,7 +12,7 @@ function TemplateButtons() {
       <S.TemplateButtonsContainer>
         <Button.Group basic>
           <Button icon="text height" onClick={() => toggleSizeMenu()} />
-          {sizeMenu && <FontSizeList fontSizeHandler={toggleSizeMenu} />}
+          {sizeMenu && <FontSizeList toggleSizeMenu={toggleSizeMenu} />}
           <Button icon="tint" />
         </Button.Group>{' '}
         <Button.Group basic>

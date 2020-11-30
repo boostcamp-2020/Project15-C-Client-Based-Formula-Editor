@@ -1,42 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Icon } from 'semantic-ui-react';
-import { useDispatch } from 'react-redux';
-import { changeFontSize } from '@contexts/latex';
+import { FONT_SIZE_LISTS } from '@constants/constants';
 import * as S from './style';
-interface FontSizeListType {
+import useFontSizeList from './useFontSizeList';
+
+export interface FontSizeListType {
   size: string;
   checked: boolean;
 }
-interface FontSizeMenuProps {
+export interface FontSizeMenuProps {
   toggleSizeMenu: () => void;
 }
-const sizeLists = [
-  { size: '11', checked: false },
-  { size: '15', checked: true },
-  { size: '20', checked: false },
-  { size: '25', checked: false },
-  { size: '30', checked: false },
-];
 
 function FontSizeList({ toggleSizeMenu }: FontSizeMenuProps) {
-  const dispatch = useDispatch();
-  const [stateList, setStateList] = useState<FontSizeListType[]>(sizeLists);
-  const clickHandler = (index: number, fontSize: string) => {
-    dispatch(changeFontSize(fontSize));
-    toggleSizeMenu();
-    setStateList(
-      stateList.map((item) => {
-        if (item.checked) {
-          item.checked = false;
-        }
-        return item;
-      })
-    );
-    stateList[index].checked = true;
-  };
+  const { clickHandler } = useFontSizeList({ toggleSizeMenu });
+
   return (
     <S.FontContainer>
-      {sizeLists.map((sizeList, index: number) => {
+      {FONT_SIZE_LISTS.map((sizeList: FontSizeListType, index: number) => {
         return (
           <S.FontWapper
             key={index}
