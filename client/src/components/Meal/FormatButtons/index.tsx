@@ -1,24 +1,18 @@
-import React, { useState } from 'react';
-import * as S from './style';
+import React from 'react';
 import { Button } from 'semantic-ui-react';
 import FontSizeList from '@ingredients/FontSizeList';
-import { useDispatch } from 'react-redux';
-import { changeTextAlign } from '@contexts/latex';
+import useFormatButtons from './useFormatButtons';
+import * as S from './style';
+
 function TemplateButtons() {
-  const dispatch = useDispatch();
-  const [fontSizeState, setFontSizeState] = useState(false);
-  const fontSizeHandler = (): void => {
-    setFontSizeState(!fontSizeState);
-  };
-  const alignHandler = (direction: string): void => {
-    dispatch(changeTextAlign(direction));
-  };
+  const { sizeMenu, toggleSizeMenu, alignHandler, clearHandler } = useFormatButtons();
+
   return (
     <>
       <S.TemplateButtonsContainer>
         <Button.Group basic>
-          <Button icon="text height" onClick={fontSizeHandler} />
-          {fontSizeState && <FontSizeList fontSizeHandler={fontSizeHandler} />}
+          <Button icon="text height" onClick={() => toggleSizeMenu()} />
+          {sizeMenu && <FontSizeList fontSizeHandler={toggleSizeMenu} />}
           <Button icon="tint" />
         </Button.Group>{' '}
         <Button.Group basic>
@@ -27,7 +21,7 @@ function TemplateButtons() {
           <Button icon="align right" onClick={() => alignHandler('right')} />
         </Button.Group>{' '}
         <Button.Group basic>
-          <Button icon="eraser" />
+          <Button icon="eraser" onClick={clearHandler} />
         </Button.Group>
       </S.TemplateButtonsContainer>
     </>

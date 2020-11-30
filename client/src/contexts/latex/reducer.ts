@@ -2,6 +2,7 @@ import { TabInfo, LatexAction, LatexState } from './types';
 import {
   EDIT_LATEX,
   INIT_LATEX,
+  CLEAR_LATEX,
   ADD_TAB,
   CHANGE_TAB,
   REMOVE_TAB,
@@ -41,7 +42,14 @@ function reducer(state: LatexState = initialState, action: LatexAction): LatexSt
         }),
       };
     }
-
+    case CLEAR_LATEX: {
+      return {
+        ...state,
+        totalLatex: state.totalLatex.map((latexItem) => {
+          return latexItem.id === state.currentTab ? { ...latexItem, latex: '' } : latexItem;
+        }),
+      };
+    }
     case ADD_TAB: {
       const nextId = state.maxId + 1;
 
