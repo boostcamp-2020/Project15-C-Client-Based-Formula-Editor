@@ -6,7 +6,19 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@ingredients/*": ["src/components/Ingredients/*"],
+      "@meal/*": ["src/components/meal/*"],
+      "@set/*": ["src/components/set/*"],
+      "@apis/*": ["src/lib/apis/*"],
+      "@constants/*": ["src/lib/constants/*"],
+      "@utils/*": ["src/lib/utils/*"],
+      "@contexts/*": ["src/contexts/*"],
+      "@test/*": ["src/__test__/*"]
+    }
   },
   "include": ["./src/**/*"]
 }
