@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { LatexContent } from '../../../lib/constants/latex-header';
 
 const useFormulaList = () => {
-  const formulaRef = useRef<null | HTMLHeadingElement>(null);
+  const formulaRef = useRef<null | HTMLUListElement>(null);
   const containerRef = useRef<null | HTMLDivElement>(null);
   const timer = useRef<any>(null);
   const [nowFormulas, setNowFormula] = useState<LatexContent[]>([]);

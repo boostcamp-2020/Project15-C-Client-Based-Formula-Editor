@@ -14,11 +14,10 @@ function DropDownItem({ children, onMouseOver, latex, setNowFormula }: DropDownI
     setNowFormula(latex.content);
   };
 
-  return (
-    <S.DropDownItemStyle header={latex.header} onMouseOver={customMouseOver}>
-      {children}
-    </S.DropDownItemStyle>
-  );
+  if (children) {
+    return <S.DropDownItemStyle onMouseOver={customMouseOver}>{children}</S.DropDownItemStyle>;
+  }
+  return <S.DropDownItemStyle header={latex.header} onMouseOver={customMouseOver} />;
 }
 
 export default DropDownItem;

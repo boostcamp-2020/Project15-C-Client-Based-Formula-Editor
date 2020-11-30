@@ -1,12 +1,14 @@
 import styled from '@emotion/styled';
 interface DropDownItemStyleProps {
-  header: string;
+  header?: string;
 }
 
 export const DropDownItemStyle = styled.button<DropDownItemStyleProps>`
   background: url(${(props) => `./image/${props.header}`});
   width: 60px;
-  height: 100%;
+  height: 60px;
+  font-size: 2rem;
+  font-weight: bold;
   background-position: center;
   cursor: pointer;
   border: 4px solid transparent;

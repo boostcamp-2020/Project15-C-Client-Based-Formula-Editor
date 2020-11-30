@@ -15,6 +15,7 @@ export const FormulaHeaderWrapper = styled.div`
   border-bottom-left-radius: 10px;
   padding: 0.3rem;
   overflow-x: auto;
+  overflow-y: hidden;
   white-space: nowrap;
   padding-right: 20px;
 `;
@@ -32,16 +33,21 @@ export const SymbolHeaderWrapper = styled.div`
   padding-left: 10px;
 `;
 
-export const Contents = styled.div`
+interface FormulaListFrops {
+  length: number;
+}
+
+export const FormulaList = styled.ul<FormulaListFrops>`
   display: none;
-  border: 1px solid #bdbdbd;
   flex-wrap: wrap;
-  background: #eaeaea;
-  width: 70%;
-  max-width: 983px;
-  margin: 10px auto;
+  max-width: ${(props) => (props.length > 20 ? '712px' : '702px')};
+  max-height: 142px;
   position: relative;
+  margin: 10px auto;
+  padding: 0;
+  border: 1px solid #bdbdbd;
+  background: #eaeaea;
   overflow-y: auto;
-  max-height: 160px;
   z-index: 99999;
+  list-style: none;
 `;
