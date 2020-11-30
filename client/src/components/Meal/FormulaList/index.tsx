@@ -1,16 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Header, Popup, Grid } from 'semantic-ui-react';
-// import * as ButtonImage from '../../../../public/image/math.svg';
+import React from 'react';
 import DropDownItem from '../../Ingredients/DropDownItem';
-import {
-  FORMULA_HEADER,
-  SYMBOL_HEADER,
-  LatexHeader,
-  LatexContent,
-} from '../../../lib/constants/latex-header';
-import * as S from './style';
+import { FORMULA_HEADER, SYMBOL_HEADER } from '../../../lib/constants/latex-header';
 import FormulaItem from '../../Ingredients/FormulaItem';
 import useFormulaList from './useFormulaList';
+import * as S from './style';
 
 function FormulaList() {
   const {
@@ -19,13 +12,18 @@ function FormulaList() {
     displayFormula,
     clearHiddenTimemout,
     hiddenFormula,
+    reserveHiddenFormula,
     nowFormulas,
     setNowFormula,
   } = useFormulaList();
 
   return (
     <>
-      <S.FormulaContainer ref={containerRef} className="formula_container">
+      <S.FormulaContainer
+        ref={containerRef}
+        className="formula_container"
+        onMouseLeave={reserveHiddenFormula}
+      >
         <S.FormulaHeaderWrapper>
           {FORMULA_HEADER.map((latex, index) => (
             <DropDownItem

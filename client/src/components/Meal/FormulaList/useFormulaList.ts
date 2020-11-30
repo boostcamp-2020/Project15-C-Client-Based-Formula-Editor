@@ -10,10 +10,13 @@ const useFormulaList = () => {
   const displayFormula = () => {
     if (formulaRef.current) {
       formulaRef.current.style.display = 'flex';
-      timer.current = setTimeout(() => {
-        formulaRef.current!.style.display = 'none';
-      }, 500);
     }
+  };
+
+  const reserveHiddenFormula = () => {
+    timer.current = setTimeout(() => {
+      formulaRef.current!.style.display = 'none';
+    }, 400);
   };
 
   const clearHiddenTimemout = () => {
@@ -42,6 +45,7 @@ const useFormulaList = () => {
     displayFormula,
     clearHiddenTimemout,
     hiddenFormula,
+    reserveHiddenFormula,
   };
 };
 
