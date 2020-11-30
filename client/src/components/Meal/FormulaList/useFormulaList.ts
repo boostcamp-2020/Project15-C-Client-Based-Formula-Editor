@@ -13,9 +13,15 @@ const useFormulaList = () => {
     }
   };
 
+  const hiddenFormula = () => {
+    if (formulaRef.current) {
+      formulaRef.current.style.display = 'none';
+    }
+  };
+
   const reserveHiddenFormula = () => {
     timer.current = setTimeout(() => {
-      formulaRef.current!.style.display = 'none';
+      hiddenFormula();
     }, 400);
   };
 
@@ -23,17 +29,9 @@ const useFormulaList = () => {
     clearTimeout(timer.current);
   };
 
-  const hiddenFormula = () => {
-    if (formulaRef.current) {
-      formulaRef.current.style.display = 'none';
-    }
-  };
-
   useEffect(() => {
     document.body.addEventListener('mouseleave', () => {
-      if (formulaRef.current) {
-        formulaRef.current.style.display = 'none';
-      }
+      hiddenFormula();
     });
   }, []);
 
