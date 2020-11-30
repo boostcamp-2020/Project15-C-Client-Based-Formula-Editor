@@ -3,12 +3,12 @@ import { Icon } from 'semantic-ui-react';
 import { useDispatch } from 'react-redux';
 import { changeFontSize } from '@contexts/latex';
 import * as S from './style';
-interface FontListType {
+interface FontSizeListType {
   size: string;
   checked: boolean;
 }
-interface FontSizeProps {
-  fontSizeHandler: () => void;
+interface FontSizeMenuProps {
+  toggleSizeMenu: () => void;
 }
 const sizeLists = [
   { size: '11', checked: false },
@@ -18,12 +18,12 @@ const sizeLists = [
   { size: '30', checked: false },
 ];
 
-function FontSizeList({ fontSizeHandler }: FontSizeProps) {
+function FontSizeList({ toggleSizeMenu }: FontSizeMenuProps) {
   const dispatch = useDispatch();
-  const [stateList, setStateList] = useState<FontListType[]>(sizeLists);
+  const [stateList, setStateList] = useState<FontSizeListType[]>(sizeLists);
   const clickHandler = (index: number, fontSize: string) => {
     dispatch(changeFontSize(fontSize));
-    fontSizeHandler();
+    toggleSizeMenu();
     setStateList(
       stateList.map((item) => {
         if (item.checked) {

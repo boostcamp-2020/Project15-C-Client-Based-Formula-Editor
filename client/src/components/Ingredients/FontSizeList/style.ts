@@ -19,6 +19,7 @@ export const FontWapper = styled.div`
   padding: 5px 2px 5px 7px;
   text-align: left;
   z-index: 99999;
+  cursor: pointer;
   span {
     background: white;
   }
