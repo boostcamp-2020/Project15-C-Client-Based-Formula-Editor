@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "lib": ["es2015", "es2016", "es2017", "es2018", "es2019", "es2020"],
+    "outDir": "./dist",
+    "target": "es5",
+    "sourceMap": true,
+
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+
+    "baseUrl": "."
+    // "paths": {
+    //   "@constants/*": ["src/common/constants/*"],
+    //   "@error/*": ["src/common/error/*"],
+    //   "@middleware/*": ["src/common/middleware/*"],
+    //   "@utils/*": ["src/common/utils/*"],
+    //   "@controller/*": ["src/controller/*"],
+    //   "@model/*": ["src/model/*"],
+    //   "@repository/*": ["src/repository/*"],
+    //   "@router/*": ["src/router/*"],
+    //   "@service/*": ["src/service/*"],
+    //   "@config/*":["src/common/config/*"],
+    // }
+  }
+}

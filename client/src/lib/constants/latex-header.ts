@@ -1014,24 +1014,1129 @@ const SYMBOL_HEADER: LatexHeader[] = [
     ],
   },
   {
-    header: `+`,
-    content: [],
+    header: `α`,
+    content: [
+      {
+        image: 'α',
+        latex: `\\alpha`,
+      },
+      {
+        image: 'β',
+        latex: `\\beta`,
+      },
+      {
+        image: 'γ',
+        latex: `\\gamma`,
+      },
+      {
+        image: 'δ',
+        latex: `\\delta`,
+      },
+      {
+        image: 'ε',
+        latex: `\\epsilon`,
+      },
+      {
+        image: 'ζ',
+        latex: `\\zeta`,
+      },
+      {
+        image: 'η',
+        latex: `\\eta`,
+      },
+      {
+        image: 'θ',
+        latex: `\\theta`,
+      },
+      {
+        image: 'ι',
+        latex: `\\iota`,
+      },
+      {
+        image: 'κ',
+        latex: `\\kappa`,
+      },
+      {
+        image: 'λ',
+        latex: `\\lambda`,
+      },
+      {
+        image: 'μ',
+        latex: `\\mu`,
+      },
+      {
+        image: 'ν',
+        latex: `\\nu`,
+      },
+      {
+        image: 'ξ',
+        latex: `\\xi`,
+      },
+      {
+        image: 'ο', // X
+        latex: `\\omikron`,
+      },
+      {
+        image: 'π',
+        latex: `\\pi`,
+      },
+      {
+        image: 'ρ',
+        latex: `\\rho`,
+      },
+      {
+        image: 'σ',
+        latex: `\\sigma`,
+      },
+      {
+        image: 'τ',
+        latex: `\\tau`,
+      },
+      {
+        image: 'υ',
+        latex: `\\upsilon`,
+      },
+      {
+        image: '𝜑',
+        latex: `\\phi`,
+      },
+      {
+        image: 'χ',
+        latex: `\\chi`,
+      },
+      {
+        image: '𝜑',
+        latex: `\\psi`,
+      },
+      {
+        image: 'ψ',
+        latex: `\\omega`,
+      },
+      {
+        image: 'Α', // X
+        latex: `\\Alpha`,
+      },
+      {
+        image: 'Β', // X
+        latex: `\\Beta`,
+      },
+      {
+        image: 'Γ',
+        latex: `\\Gamma`,
+      },
+      {
+        image: 'Δ',
+        latex: `\\Delta`,
+      },
+      {
+        image: 'Ε', // X
+        latex: `\\Epsilon`,
+      },
+      {
+        image: 'Ζ', // X
+        latex: `\\Zeta`,
+      },
+      {
+        image: 'Η', // X
+        latex: `\\Eta`,
+      },
+      {
+        image: 'Θ',
+        latex: `\\Theta`,
+      },
+      {
+        image: 'Ι', // X
+        latex: `\\Iota`,
+      },
+      {
+        image: 'Κ', // X
+        latex: `\\Kappa`,
+      },
+      {
+        image: 'Λ',
+        latex: `\\Lambda`,
+      },
+      {
+        image: 'Μ', // X
+        latex: `\\Mu`,
+      },
+      {
+        image: 'Ν', // X
+        latex: `\\Nu`,
+      },
+      {
+        image: 'Ξ',
+        latex: `\\Xi`,
+      },
+      {
+        image: 'Ο', // X
+        latex: `\\Omikron`,
+      },
+      {
+        image: 'Π',
+        latex: `\\Pi`,
+      },
+      {
+        image: 'Ρ', // X
+        latex: `\\Rho`,
+      },
+      {
+        image: 'Σ',
+        latex: `\\Sigma`,
+      },
+      {
+        image: 'Τ', // X
+        latex: `\\Tau`,
+      },
+      {
+        image: 'ϒ',
+        latex: `\\Upsilon`,
+      },
+      {
+        image: 'Φ',
+        latex: `\\Phi`,
+      },
+      {
+        image: 'Χ', // X
+        latex: `\\Chi`,
+      },
+      {
+        image: 'Ψ',
+        latex: `\\Psi`,
+      },
+      {
+        image: 'Ω',
+        latex: `\\Omega`,
+      },
+      {
+        image: 'ϵ',
+        latex: `\\varepsilon`,
+      },
+      {
+        image: 'ϑ',
+        latex: `\\vartheta`,
+      },
+      {
+        image: 'ϖ',
+        latex: `\\varpi`,
+      },
+      {
+        image: 'ϱ',
+        latex: `\\varrho`,
+      },
+      {
+        image: 'ς',
+        latex: `\\varsigma`,
+      },
+      {
+        image: 'φ',
+        latex: `\\varphi`,
+      },
+    ],
   },
   {
-    header: `+`,
-    content: [],
+    header: `ℇ`,
+    content: [
+      {
+        image: '∀',
+        latex: `\\forall`,
+      },
+      {
+        image: 'ð', // X
+        latex: `\\eth`,
+      },
+      {
+        image: 'ℊ', // X
+        latex: `\\g`,
+      },
+      {
+        image: '℩', // X
+        latex: `\\variota`,
+      },
+      {
+        image: 'ι', // X
+        latex: `\\i`,
+      },
+      {
+        image: 'j', // X
+        latex: `\\j`,
+      },
+      {
+        image: 'ℓ',
+        latex: `\\ell`,
+      },
+      {
+        image: 'ϰ',
+        latex: `\\varkappa`,
+      },
+      {
+        image: 'ℏ',
+        latex: `\\hbar`,
+      },
+      {
+        image: 'ơ', // X
+        latex: `\\varnothing`,
+      },
+      {
+        image: 'ℱ', // X
+        latex: `\\F`,
+      },
+      {
+        image: 'ℒ', // X
+        latex: `\\L`,
+      },
+      {
+        image: '∂',
+        latex: `\\partial`,
+      },
+      {
+        image: '∁', // X
+        latex: `\\complement`,
+      },
+      {
+        image: 'ℑ',
+        latex: `\\Im`,
+      },
+      {
+        image: '℘',
+        latex: `\\wp`,
+      },
+      {
+        image: 'ℬ', // X
+        latex: `\\B`,
+      },
+      {
+        image: 'ℇ', // X
+        latex: `\\E`,
+      },
+      {
+        image: '𝕳', // X, 클릭 시 \mathbb{H} 라고 나오고 모양 좀 다름
+        latex: `\\H`, // 클릭시 나오는 latex와 입력 latex가 다름
+      },
+      {
+        image: '℧', // X
+        latex: `\\mho`,
+      },
+      {
+        image: 'Å', //보류, 클릭시 \text\AA 라고 나오고 모양 좀 다름
+        latex: `\\AA`, // 클릭시 나오는 latex와 입력 latex가 다름
+      },
+      {
+        image: 'ℰ', // X
+        latex: `\\Ep`,
+      },
+      {
+        image: '℮', // X
+        latex: `\\e`,
+      },
+      {
+        image: 'ℵ',
+        latex: `\\aleph`,
+      },
+      {
+        image: 'ℶ', // X
+        latex: `\\beth`,
+      },
+      {
+        image: 'ℷ', // X
+        latex: `\\m`,
+      },
+      {
+        image: 'ℸ', // X
+        latex: `\\daleth`,
+      },
+    ],
   },
   {
-    header: `+`,
-    content: [],
+    header: `%`, // 다 안됨
+    content: [
+      {
+        image: '㎜', // X
+        latex: `\\㎜`,
+      },
+      {
+        image: 'cm', // X
+        latex: `\\cm`,
+      },
+      {
+        image: 'm', // X
+        latex: `\\meter`,
+      },
+      {
+        image: 'km', // X
+        latex: `\\km`,
+      },
+      {
+        image: 'mg', // X
+        latex: `\\mg`,
+      },
+      {
+        image: 'g', // X
+        latex: `\\gram`,
+      },
+      {
+        image: 'kg', // X
+        latex: `\\kg`,
+      },
+      {
+        image: '㎠', // X
+        latex: `\\cmx`,
+      },
+      {
+        image: '㎡', // X
+        latex: `\\mx`,
+      },
+      {
+        image: '㎢', // X
+        latex: `\\kmx`,
+      },
+      {
+        image: '㎤', // X
+        latex: `\\cmxx`,
+      },
+      {
+        image: '㎥', // X
+        latex: `\\mxx`,
+      },
+      {
+        image: '㎦', // X
+        latex: `\\kmxx`,
+      },
+      {
+        image: '㎗', // X
+        latex: `\\dl`,
+      },
+      {
+        image: '㎖', // X
+        latex: `\\ml`,
+      },
+      {
+        image: 'ℓ', // X
+        latex: `\\liter`,
+      },
+      {
+        image: '㏄', // X
+        latex: `\\cc`,
+      },
+      {
+        image: '℃', // X
+        latex: `\\celsius`,
+      },
+      {
+        image: '℉', // X
+        latex: `\\fahren`,
+      },
+      {
+        image: 'K', // X
+        latex: `\\kelvin`,
+      },
+      {
+        image: '%', // X
+        latex: `\\percent`,
+      },
+      {
+        image: '‰', // X
+        latex: `\\permill`,
+      },
+      {
+        image: '‱', // X
+        latex: `\\basispoint`,
+      },
+      {
+        image: '°', // X
+        latex: `\\cir`,
+      },
+    ],
   },
   {
-    header: `+`,
-    content: [],
+    header: `←`,
+    content: [
+      {
+        image: '←',
+        latex: `\\gets`,
+      },
+      {
+        image: '→',
+        latex: `\\to`,
+      },
+      {
+        image: '↑',
+        latex: '\\uparrow',
+      },
+      {
+        image: '↓',
+        latex: '\\downarrow',
+      },
+      {
+        image: '↔',
+        latex: '\\leftrightarrow',
+      },
+      {
+        image: '↕',
+        latex: '\\updownarrow',
+      },
+      {
+        image: '⇐',
+        latex: '\\Leftarrow',
+      },
+      {
+        image: '⇒',
+        latex: '\\Rightarrow',
+      },
+      {
+        image: '⇑',
+        latex: '\\Uparrow',
+      },
+      {
+        image: '⇓',
+        latex: '\\Downarrow',
+      },
+      {
+        image: '⇔',
+        latex: '\\Leftrightarrow',
+      },
+      {
+        image: '⇕',
+        latex: '\\Updownarrow',
+      },
+      {
+        image: '↗',
+        latex: '\\nearrow',
+      },
+      {
+        image: '↖',
+        latex: '\\nwarrow',
+      },
+      {
+        image: '↘',
+        latex: '\\searrow',
+      },
+      {
+        image: '↙',
+        latex: '\\swarrow',
+      },
+      {
+        image: '↚', // X
+        latex: '\\nleftarrow',
+      },
+      {
+        image: '↛', // X
+        latex: '\\nrightarrow',
+      },
+      {
+        image: '↮', // X
+        latex: '\\nleftrightarrow',
+      },
+      {
+        image: '⇍', // X
+        latex: '\\nLeftarrow',
+      },
+      {
+        image: '⇏', // X
+        latex: '\\nRightarrow',
+      },
+      {
+        image: '⇎', // X
+        latex: '\\nLeftrightarrow',
+      },
+      {
+        image: '⇠', // X
+        latex: '\\dashleftarrow',
+      },
+      {
+        image: '⇢', // X
+        latex: '\\dasharrow',
+      },
+      {
+        image: '↤', // X
+        latex: '\\mapgets',
+      },
+      {
+        image: '↦',
+        latex: '\\mapsto',
+      },
+      {
+        image: '↩',
+        latex: '\\hookleftarrow',
+      },
+      {
+        image: '↪',
+        latex: '\\hookrightarrow',
+      },
+      {
+        image: '⇋', // X
+        latex: '\\leftrightharpoons',
+      },
+      {
+        image: '⇌', // X
+        latex: '\\rightleftharpoons',
+      },
+      {
+        image: '⇇', // X
+        latex: '\\leftleftarrows',
+      },
+      {
+        image: '⇉', // X
+        latex: '\\rightrightarrows',
+      },
+      {
+        image: '⇆', // X
+        latex: '\\leftrightarrows',
+      },
+      {
+        image: '⇄', // X
+        latex: '\\leftrightarrows',
+      },
+      {
+        image: '⇈', //x
+        latex: '\\upuparrows',
+      },
+      {
+        image: '⇊', //x
+        latex: '\\downdownarrows',
+      },
+      {
+        image: '↫', //x
+        latex: '\\looparrowleft',
+      },
+      {
+        image: '↬', //x
+        latex: '\\looparrowright',
+      },
+      {
+        image: '↢', //x
+        latex: '\\leftarrowtail',
+      },
+      {
+        image: '↣', //x
+        latex: '\\rightarrowtail',
+      },
+      {
+        image: '↰', //x
+        latex: '\\Lsh',
+      },
+      {
+        image: '↱', //x
+        latex: '\\Rsh',
+      },
+      {
+        image: '↲', //x
+        latex: '\\Ldsh',
+      },
+      {
+        image: '↳', //x
+        latex: '\\Rdsh',
+      },
+      {
+        image: '⇚', //x
+        latex: '\\Lleftarrow',
+      },
+      {
+        image: '⇛', //x
+        latex: '\\Rrightarrow',
+      },
+      {
+        image: '↞', //x
+        latex: '\\twoheadleftarrow',
+      },
+      {
+        image: '↠', //x
+        latex: '\\twoheadrightarrow',
+      },
+      {
+        image: '↶', //x
+        latex: '\\curvearrowleft',
+      },
+      {
+        image: '↷', //x
+        latex: '\\curvearrowright',
+      },
+      {
+        image: '↺', //x
+        latex: '\\circlearrowleft',
+      },
+      {
+        image: '↻', //x
+        latex: '\\circlearrowright',
+      },
+      {
+        image: '⊸', //x
+        latex: '\\multimap',
+      },
+      {
+        image: '↭', //x
+        latex: '\\leftrightsquigarrow',
+      },
+      {
+        image: '↜', //x
+        latex: `\\leadsgets`,
+      },
+      {
+        image: '↝', //x
+        latex: '\\leadsto',
+      },
+      {
+        image: '⇜', //x
+        latex: '\\leftsquigarrow',
+      },
+      {
+        image: '⇝', //x
+        latex: '\\rightsquigarrow',
+      },
+    ],
   },
   {
-    header: `+`,
-    content: [],
+    header: `<`,
+    content: [
+      {
+        image: '=',
+        latex: `=`,
+      },
+      {
+        image: '≑', //x
+        latex: `\\doteqdot`,
+      },
+      {
+        image: '≒', //x
+        latex: `\\fallingdotseq`,
+      },
+      {
+        image: '≓', //x
+        latex: `\\risingdotseq`,
+      },
+      {
+        image: '<', //x
+        latex: `<`,
+      },
+      {
+        image: '>', //x
+        latex: `>`,
+      },
+      {
+        image: '≤',
+        latex: `\\le`,
+      },
+      {
+        image: '≥',
+        latex: `\\ge`,
+      },
+      {
+        image: '⋜', //x
+        latex: `\\el`,
+      },
+      {
+        image: '⋝', //x
+        latex: `\\eg`,
+      },
+      {
+        image: '≲', //x
+        latex: `\\lesssim`,
+      },
+      {
+        image: '≳', //x
+        latex: `\\gtrsim`,
+      },
+      {
+        image: '≡',
+        latex: `\\equiv`,
+      },
+      {
+        image: '∼', //x
+        latex: `\\backsim`,
+      },
+      {
+        image: '≃', //x
+        latex: `\\backsimeq`,
+      },
+      {
+        image: '≈',
+        latex: `\\approx`,
+      },
+      {
+        image: '≅',
+        latex: `\\cong`,
+      },
+      {
+        image: '∝',
+        latex: `\\propto`,
+      },
+      {
+        image: '≪',
+        latex: `\\ll`,
+      },
+      {
+        image: '≫',
+        latex: `\\gg`,
+      },
+      {
+        image: '∈',
+        latex: `\\in`,
+      },
+      {
+        image: '∋',
+        latex: `\\ni`,
+      },
+      {
+        image: '⊂',
+        latex: `\\subset`,
+      },
+      {
+        image: '⊃',
+        latex: `\\supset`,
+      },
+      {
+        image: '⊆',
+        latex: `\\subseteq`,
+      },
+      {
+        image: '⊇',
+        latex: `\\supseteq`,
+      },
+      {
+        image: '≺',
+        latex: `\\prec`,
+      },
+      {
+        image: '≻',
+        latex: `\\succ`,
+      },
+      {
+        image: '≼', //x
+        latex: `\\preccurlyeq`,
+      },
+      {
+        image: '≽', //x
+        latex: `\\succcurlyeq`,
+      },
+      {
+        image: '≾', //x
+        latex: `\\precsim`,
+      },
+      {
+        image: '≿', //x
+        latex: `\\succsim`,
+      },
+      {
+        image: '⊏',
+        latex: `\\sqsubset`,
+      },
+      {
+        image: '⊐',
+        latex: `\\sqsupset`,
+      },
+      {
+        image: '⊑',
+        latex: `\\sqsubseteq`,
+      },
+      {
+        image: '⊒',
+        latex: `\\sqsupseteq`,
+      },
+      {
+        image: '⊦',
+        latex: `\\vdash`,
+      },
+      {
+        image: '⊣',
+        latex: `\\dashv`,
+      },
+      {
+        image: '⊨', //x
+        latex: `\\Dash`,
+      },
+      {
+        image: '⊩', //x
+        latex: `\\force`,
+      },
+      {
+        image: '⋈', //x
+        latex: `\\Join`,
+      },
+      {
+        image: '≍', //x
+        latex: `\\asymp`, //approx 로 나옴?
+      },
+      {
+        image: '∴',
+        latex: `\\therefore`,
+      },
+      {
+        image: '∵',
+        latex: `\\because`,
+      },
+      {
+        image: '⋘', //x
+        latex: `\\lll`,
+      },
+      {
+        image: '⋙', //x
+        latex: `\\ggg`,
+      },
+      {
+        image: '⊲', //x
+        latex: `\\lhd`,
+      },
+      {
+        image: '⊳', //x
+        latex: `\\rhd`,
+      },
+      {
+        image: '⊴', //x
+        latex: `\\unlhd`,
+      },
+      {
+        image: '⊵', //x
+        latex: `\\unrhd`,
+      },
+      {
+        image: '≖', //x
+        latex: `\\eqcirc`,
+      },
+      {
+        image: '≗', //x
+        latex: `\\circeq`,
+      },
+      {
+        image: '≜', //x
+        latex: `\\deltaeq`,
+      },
+      {
+        image: '≐',
+        latex: `\\doteq`,
+      },
+      {
+        image: '≏', //x
+        latex: `\\bumpeq`,
+      },
+      {
+        image: '≎', //x
+        latex: `\\Bumpeq`,
+      },
+      {
+        image: '⋔', //x
+        latex: `\\pitchfork`,
+      },
+      {
+        image: '≬', //x
+        latex: `\\between`,
+      },
+      {
+        image: '∃',
+        latex: `\\exists`,
+      },
+      {
+        image: '≠',
+        latex: `\\ne`,
+      },
+      {
+        image: '≮',
+        latex: `\\nless`,
+      },
+      {
+        image: '≯',
+        latex: `\\ngtr`,
+      },
+      {
+        image: '≰', //x
+        latex: `\\nleq`,
+      },
+      {
+        image: '≱', //x
+        latex: `\\ngeq`,
+      },
+      {
+        image: '≨', //x
+        latex: `\\lneq`,
+      },
+      {
+        image: '≩', //x
+        latex: `\\gneq`,
+      },
+      {
+        image: '⋦', //x
+        latex: `\\lnsim`,
+      },
+      {
+        image: '⋧', //x
+        latex: `\\gnsim`,
+      },
+      {
+        image: '≢', //x
+        latex: `\\nequiv`,
+      },
+      {
+        image: '≁', //x
+        latex: `\\nsim`,
+      },
+      {
+        image: '≄', //x
+        latex: `\\nbacksimeq`,
+      },
+      {
+        image: '≉', //x
+        latex: `\\napprox`,
+      },
+      {
+        image: '≇', //x
+        latex: `\\ncong`,
+      },
+      {
+        image: '∉', //x
+        latex: `\\nin`,
+      },
+      {
+        image: '∌', //x
+        latex: `\\nni`,
+      },
+      {
+        image: '⊄', //  \not\subet으로 떴다가 엔터치면 \neg\subset으로바뀜
+        latex: `\\nsubset`,
+      },
+      {
+        image: '⊅',
+        latex: `\\nsupset`,
+      },
+      {
+        image: '⊈',
+        latex: `\\nsubseteq`,
+      },
+      {
+        image: '⊉',
+        latex: `\\nsupseteq`,
+      },
+      {
+        image: '⊀', //x
+        latex: `\\nprec`,
+      },
+      {
+        image: '⊁', //x
+        latex: `\\nsucc`,
+      },
+      {
+        image: '⋠', //x
+        latex: `\\npreccurlyeq`,
+      },
+      {
+        image: '⋡', //x
+        latex: `\\nsucccurlyeq`,
+      },
+      {
+        image: '⋨', //x
+        latex: `\\nlesssim`,
+      },
+      {
+        image: '⋩', //x
+        latex: `\\ngtrsim`,
+      },
+      {
+        image: '⋢', //x
+        latex: `\\nsqsubseteq`,
+      },
+      {
+        image: '⋣', //x
+        latex: `\\nsqsupseteq`,
+      },
+      {
+        image: '⊬', //x
+        latex: `\\nvdash`,
+      },
+      {
+        image: '⊭', //x
+        latex: `\\nvDash`,
+      },
+      {
+        image: '⊮', //x
+        latex: `\\nVdash`,
+      },
+      {
+        image: '≭', //x
+        latex: `\\nasymp`,
+      },
+      {
+        image: '⋪', //x
+        latex: `\\ntriangleleft`,
+      },
+      {
+        image: '⋫', //x
+        latex: `\\ntriangleright`,
+      },
+      {
+        image: '⋬', //x
+        latex: `\\ntrianglelefteq`,
+      },
+      {
+        image: '⋭', //x
+        latex: `\\ntrianglerighteq`,
+      },
+      {
+        image: '∄',
+        latex: `\\nexists`,
+      },
+      {
+        image: '∟', //x
+        latex: `\\rightangle`,
+      },
+      {
+        image: '∠',
+        latex: `\\angle`,
+      },
+      {
+        image: '∡',
+        latex: `\\measuredangle`,
+      },
+      {
+        image: '∢', //x
+        latex: '\\sphericalangle',
+      },
+      {
+        image: '⊾', //x
+        latex: '\\rightanglearc',
+      },
+      {
+        image: '⊿', //x
+        latex: '\\righttriangle ',
+      },
+      {
+        image: '□',
+        latex: '\\square',
+      },
+      {
+        image: '△',
+        latex: '\\triangle',
+      },
+      {
+        image: '⊥',
+        latex: '\\perp',
+      },
+      {
+        image: '∥', //x
+        latex: '\\nmid',
+      },
+      {
+        image: '∦',
+        latex: '\\parallel ',
+      },
+      {
+        image: '♯',
+        latex: '\\nparallel ',
+      },
+      {
+        image: '∶', //x
+        latex: '\\ratio',
+      },
+      {
+        image: '∷', //x
+        latex: '\\proportion',
+      },
+      {
+        image: '∴',
+        latex: '\\therefore',
+      },
+      {
+        image: '∵',
+        latex: '\\because',
+      },
+    ],
   },
 ];
 

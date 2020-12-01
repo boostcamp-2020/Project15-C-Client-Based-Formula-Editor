@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import useFontColorMenu from './useFontColorMenu';
-import useToggle from '@hooks/useToggle';
 import * as S from './style';
 
 function FontColorMenu() {
   const { currentTabInfo, handleChangeComplete } = useFontColorMenu();
+
   return (
     <>
       <S.FontColorPicker

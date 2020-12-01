@@ -10,6 +10,7 @@ function App() {
   return (
     <div id="my-extension">
       <Frame
+        id="iframe"
         head={[
           // <link type="text/css" rel="stylesheet" href={chrome.runtime.getURL('/content.css')}></link>,
           <link

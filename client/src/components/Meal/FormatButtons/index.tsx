@@ -9,6 +9,7 @@ function TemplateButtons() {
   const {
     sizeMenu,
     toggleSizeMenu,
+    setSizeMenu,
     colorMenu,
     toggleColorMenu,
     alignHandler,
@@ -20,7 +21,7 @@ function TemplateButtons() {
       <S.TemplateButtonsContainer>
         <Button.Group basic>
           <Button icon="text height" onClick={() => toggleSizeMenu()} />
-          {sizeMenu && <FontSizeMenu toggleSizeMenu={toggleSizeMenu} />}
+          {sizeMenu && <FontSizeMenu toggleSizeMenu={toggleSizeMenu} setSizeMenu={setSizeMenu} />}
 
           <S.CololrDiv>
             <Button icon="tint" />

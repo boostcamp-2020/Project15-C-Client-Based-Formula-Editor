@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { SetStateAction } from 'react';
 import { Icon } from 'semantic-ui-react';
 import { FONT_SIZE_LISTS } from '@constants/constants';
 import * as S from './style';
@@ -10,13 +10,14 @@ export interface FontSizeListType {
 }
 export interface FontSizeMenuProps {
   toggleSizeMenu: () => void;
+  setSizeMenu: React.Dispatch<SetStateAction<boolean>>;
 }
 
-function FontSizeList({ toggleSizeMenu }: FontSizeMenuProps) {
-  const { clickHandler } = useFontSizeMenu({ toggleSizeMenu });
-
+function FontSizeList({ toggleSizeMenu, setSizeMenu }: FontSizeMenuProps) {
+  const { clickHandler, menuRef } = useFontSizeMenu({ toggleSizeMenu, setSizeMenu });
+  console.log(menuRef);
   return (
-    <S.FontContainer>
+    <S.FontContainer ref={menuRef}>
       {FONT_SIZE_LISTS.map((sizeList: FontSizeListType, index: number) => {
         return (
           <S.FontWapper

@@ -4,12 +4,18 @@ import {
   changeTab,
   editLatex,
   removeTab,
-  changeFontSize,
-  changeFontColor,
-  changeTextAlign,
+  // changeFontSize,
+  // changeFontColor,
+  // changeTextAlign,
 } from './actions';
 import { initLatex } from './actions';
 
+export interface EditTabInfo {
+  latex?: string;
+  fontSize?: string;
+  fontColor?: string;
+  textAlign?: string;
+}
 export interface TabInfo {
   id: number;
   latex: string;
@@ -23,10 +29,10 @@ export type LatexAction =
   | ReturnType<typeof initLatex>
   | ReturnType<typeof addTab>
   | ReturnType<typeof changeTab>
-  | ReturnType<typeof removeTab>
-  | ReturnType<typeof changeFontSize>
-  | ReturnType<typeof changeFontColor>
-  | ReturnType<typeof changeTextAlign>;
+  | ReturnType<typeof removeTab>;
+// | ReturnType<typeof changeFontSize>
+// | ReturnType<typeof changeFontColor>
+// | ReturnType<typeof changeTextAlign>;
 
 export interface LatexState {
   maxId: number;
