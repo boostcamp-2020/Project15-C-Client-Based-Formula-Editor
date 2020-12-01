@@ -14,6 +14,13 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'prettier'],
   ignorePatterns: ['dist/', 'node_modules/'],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
+      },
+    },
+  },
   rules: {
     'linebreak-style': ['error', OS.EOL === '\r\n' ? 'windows' : 'unix'],
     'prettier/prettier': [
@@ -24,6 +31,7 @@ module.exports = {
     ],
     '@typescript-eslint/no-explicit-any': 'off',
     'class-methods-use-this': 0,
+    'import/extensions': 'off',
   },
   overrides: [
     {
