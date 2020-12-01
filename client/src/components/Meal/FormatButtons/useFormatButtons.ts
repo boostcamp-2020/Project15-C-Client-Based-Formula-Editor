@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { changeTextAlign, clearLatex } from '@contexts/latex';
+import { changeTextAlign, editLatex } from '@contexts/latex';
 import useToggle from '@hooks/useToggle';
 
 const useFormatButtons = () => {
@@ -10,7 +10,7 @@ const useFormatButtons = () => {
     dispatch(changeTextAlign(direction));
   };
   const clearHandler = (): void => {
-    dispatch(clearLatex());
+    dispatch(editLatex(''));
   };
 
   return {

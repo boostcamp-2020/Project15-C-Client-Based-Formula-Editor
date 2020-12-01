@@ -3,7 +3,6 @@ import {
   addTab,
   changeTab,
   editLatex,
-  clearLatex,
   removeTab,
   changeFontSize,
   changeTextAlign,
@@ -21,7 +20,6 @@ export interface TabInfo {
 export type LatexAction =
   | ReturnType<typeof editLatex>
   | ReturnType<typeof initLatex>
-  | ReturnType<typeof clearLatex>
   | ReturnType<typeof addTab>
   | ReturnType<typeof changeTab>
   | ReturnType<typeof removeTab>

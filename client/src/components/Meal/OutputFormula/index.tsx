@@ -8,7 +8,7 @@ import * as S from './style';
 function OutputFormula() {
   const { initmathInput, nowLatexInfo, onChangeHandler, onClickHandler } = useContent();
   const { currentTab, totalLatex } = useSelector((state: RootState) => state.latex);
-  const currentFormat = totalLatex[currentTab];
+  const currentFormat = totalLatex.filter((latex) => latex.id === currentTab)[0];
   const { fontSize, textAlign } = currentFormat;
 
   return (
