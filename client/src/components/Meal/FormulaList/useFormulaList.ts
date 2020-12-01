@@ -23,7 +23,7 @@ const useFormulaList = () => {
   const reserveHiddenFormula = () => {
     timer.current = setTimeout(() => {
       hiddenFormula();
-    }, 400);
+    }, 600);
   };
 
   const clearHiddenTimemout = () => {
