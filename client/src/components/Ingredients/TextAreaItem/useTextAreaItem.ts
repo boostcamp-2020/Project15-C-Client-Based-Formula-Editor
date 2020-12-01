@@ -1,17 +1,16 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../../contexts';
+import { useDispatch } from 'react-redux';
 import { editLatex } from '../../../contexts/latex';
+import useCurrentTab from '@hooks/useCurrentTab';
 
 const useTextAreaItem = () => {
   const dispatch = useDispatch();
-  const { currentTab, totalLatex } = useSelector((state: RootState) => state.latex);
-  const currentText = totalLatex.filter((tabinfo) => tabinfo.id === currentTab)[0].latex;
+  const { currentTabInfo } = useCurrentTab();
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     dispatch(editLatex(e.target.value));
   };
 
-  return { currentText, onChangeHandler };
+  return { currentTabInfo, onChangeHandler };
 };
 
 export default useTextAreaItem;
