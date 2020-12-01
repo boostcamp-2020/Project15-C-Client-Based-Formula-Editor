@@ -1,4 +1,4 @@
-import React, { SetStateAction } from 'react';
+import React, { SetStateAction, useCallback } from 'react';
 import { Icon } from 'semantic-ui-react';
 import { FONT_SIZE_LISTS } from '@constants/constants';
 import * as S from './style';
@@ -10,22 +10,22 @@ export interface FontSizeListType {
 }
 export interface FontSizeMenuProps {
   toggleSizeMenu: () => void;
-  setSizeMenu: React.Dispatch<SetStateAction<boolean>>;
 }
 
-function FontSizeList({ toggleSizeMenu, setSizeMenu }: FontSizeMenuProps) {
-  const { clickHandler, menuRef } = useFontSizeMenu({ toggleSizeMenu, setSizeMenu });
-  console.log(menuRef);
+function FontSizeMenu({ toggleSizeMenu }: FontSizeMenuProps) {
+  const { clickHandler, menuRef } = useFontSizeMenu({ toggleSizeMenu });
+  const changeSizeHandler = useCallback(
+    (index: number, size: string) => () => {
+      clickHandler(index, size);
+    },
+    []
+  );
+
   return (
     <S.FontContainer ref={menuRef}>
       {FONT_SIZE_LISTS.map((sizeList: FontSizeListType, index: number) => {
         return (
-          <S.FontWapper
-            key={index}
-            onClick={() => {
-              clickHandler(index, sizeList.size);
-            }}
-          >
+          <S.FontWapper key={index} onClick={changeSizeHandler(index, sizeList.size)}>
             <S.FontSizeText>{sizeList.size}</S.FontSizeText>
             <S.FontSizeClicked>{sizeList.checked && <Icon name="check" />}</S.FontSizeClicked>
           </S.FontWapper>
@@ -35,4 +35,4 @@ function FontSizeList({ toggleSizeMenu, setSizeMenu }: FontSizeMenuProps) {
   );
 }
 
-export default FontSizeList;
+export default React.memo(FontSizeMenu);

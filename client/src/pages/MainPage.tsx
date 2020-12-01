@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import Input from '@set/Input';
 import Output from '@set/Output';
 import SaveButtons from '@set/SaveButtons';
-import test from '../lib/utils/util';
+import { observer } from '../lib/utils/util';
 
 const MainContainer = styled.section`
   display: flex;
@@ -24,7 +24,7 @@ const ContentsContainer = styled.div`
 
 function MainPage() {
   return (
-    <MainContainer onClick={test.onClick}>
+    <MainContainer onClick={observer.notify}>
       <Header />
       <Main>
         <ContentsContainer>

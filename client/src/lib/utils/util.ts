@@ -11,19 +11,19 @@ export function createAction<T, P>(type: T) {
   };
 }
 
-function closer() {
-  const subscriber: any[] = [];
+function observe() {
+  const subscriber = new Set<any>();
   const subscribe = (callback: any) => {
-    subscriber.push(callback);
+    subscriber.add(callback);
   };
-  const onClick = (e: React.MouseEvent) => {
+  const notify = (e: React.MouseEvent) => {
     subscriber.forEach((fn) => fn(e.target));
   };
 
   return {
     subscribe,
-    onClick,
+    notify,
   };
 }
 
-export default closer();
+export const observer = observe();
