@@ -1,4 +1,4 @@
-export const TAB_LIMIT: number = 4;
+export const TAB_LIMIT = 4;
 export const FONT_SIZE_LISTS = [
   { size: '10', checked: false },
   { size: '15', checked: true },
