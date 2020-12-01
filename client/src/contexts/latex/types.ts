@@ -6,6 +6,7 @@ import {
   removeTab,
   changeFontSize,
   changeFontColor,
+  changeTextAlign,
 } from './actions';
 import { initLatex } from './actions';
 
@@ -25,6 +26,7 @@ export type LatexAction =
   | ReturnType<typeof removeTab>
   | ReturnType<typeof changeFontSize>
   | ReturnType<typeof changeFontColor>;
+  | ReturnType<typeof changeTextAlign>;
 
 export interface LatexState {
   maxId: number;

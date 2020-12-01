@@ -8,6 +8,7 @@ interface LatexContent {
   image: string;
   latex: string | any;
 }
+
 const FORMULA_HEADER: LatexHeader[] = [
   {
     header: `1-btn.svg`,
@@ -575,12 +576,12 @@ const FORMULA_HEADER: LatexHeader[] = [
         latex: `\\lim _{n\\to \\infty }^{ }\\combi{ }`,
       },
       {
-        image: `/9/10-b.svg`,
-        latex: `\\lim _{n\\to \\infty }^{ }\\left(a_n\\pm b_n\\right)`,
-      },
-      {
         image: `/9/11.svg`,
         latex: `\\lim _{\\righttriangle x\\to 0}^{ }\\frac{\\righttriangle y}{\\righttriangle x}`,
+      },
+      {
+        image: `/9/10-b.svg`,
+        latex: `\\lim _{n\\to \\infty }^{ }\\left(a_n\\pm b_n\\right)`,
       },
       {
         image: `/9/12-b.svg`,
@@ -778,28 +779,260 @@ const FORMULA_HEADER: LatexHeader[] = [
 
 const SYMBOL_HEADER: LatexHeader[] = [
   {
-    header: `12-btn.svg`,
+    header: `+`,
+    content: [
+      {
+        image: '+',
+        latex: `+`,
+      },
+      {
+        image: '−',
+        latex: `−`,
+      },
+      {
+        image: '×',
+        latex: `\\times`,
+      },
+      {
+        image: '÷',
+        latex: `\\div`,
+      },
+      {
+        image: '±',
+        latex: `\\pm`,
+      },
+      {
+        image: '∓',
+        latex: `\\mp`,
+      },
+      {
+        image: '/',
+        latex: `/`,
+      },
+      {
+        image: '*',
+        latex: `*`,
+      },
+      {
+        image: '∘',
+        latex: `\\circ`,
+      },
+      {
+        image: '·',
+        latex: `\\cdot`,
+      },
+      {
+        image: '⋆',
+        latex: `\\star`,
+      },
+      {
+        image: '⋄',
+        latex: `\\diamond`,
+      },
+      {
+        image: '⊙',
+        latex: `\\odot`,
+      },
+      {
+        image: '⊗',
+        latex: `\\otimes`,
+      },
+      {
+        image: '⊕',
+        latex: `\\oplus`,
+      },
+      {
+        image: '⊖',
+        latex: `\\ominus`,
+      },
+      {
+        image: '⊘',
+        latex: `\\oslash`,
+      },
+      {
+        image: '∩',
+        latex: `\\cap`,
+      },
+      {
+        image: '∪',
+        latex: `\\cup`,
+      },
+      {
+        image: '⋒',
+        latex: `\\Cap`,
+      },
+
+      {
+        image: '⋓',
+        latex: `\\Cup`,
+      },
+      {
+        image: '⊎',
+        latex: `\\plusunion`,
+      },
+      {
+        image: '⊓',
+        latex: `\\sqcap`,
+      },
+      {
+        image: '⊔',
+        latex: `\\wedge`,
+      },
+      {
+        image: '∧',
+        latex: `\\wedge`,
+      },
+      {
+        image: '∨',
+        latex: `\\vee`,
+      },
+      {
+        image: 'Σ',
+        latex: `\\Sigma`,
+      },
+      {
+        image: '∫',
+        latex: `\\sint`,
+      },
+      {
+        image: '∬',
+        latex: `\\siint`,
+      },
+      {
+        image: '∭',
+        latex: `\\siiint`,
+      },
+      {
+        image: '∮',
+        latex: `\\soint`,
+      },
+      {
+        image: '∯',
+        latex: `\\soiint`,
+      },
+      {
+        image: '∰',
+        latex: `\\soiiint`,
+      },
+      {
+        image: '∱',
+        latex: `\\tint`,
+      },
+      {
+        image: '∲',
+        latex: `\\tlint`,
+      },
+      {
+        image: '∳',
+        latex: `\\ctlint`,
+      },
+      {
+        image: '∇',
+        latex: `\\nabla`,
+      },
+      {
+        image: '∏',
+        latex: `\\sprod`,
+      },
+      {
+        image: '∐',
+        latex: `\\amalg`,
+      },
+      {
+        image: '∩',
+        latex: `\\lcap`,
+      },
+      {
+        image: '∪',
+        latex: `\\lcup`,
+      },
+      {
+        image: '⋀',
+        latex: `\\And`,
+      },
+      {
+        image: '⋁',
+        latex: `\\Or`,
+      },
+      {
+        image: '⨄',
+        latex: `\\uplus`,
+      },
+
+      {
+        image: '⨃',
+        latex: `\\dotunion`,
+      },
+      {
+        image: '∔',
+        latex: `\\dotplus`,
+      },
+      {
+        image: '∸',
+        latex: `\\dotminus`,
+      },
+      {
+        image: '∖',
+        latex: `\\setminus`,
+      },
+      {
+        image: '⋇',
+        latex: `\\dm`,
+      },
+      {
+        image: '⋉',
+        latex: `\\ltimes`,
+      },
+      {
+        image: '⋊',
+        latex: `\\rtimes`,
+      },
+      {
+        image: 'Ｔ',
+        latex: `\\top`,
+      },
+      {
+        image: '≀',
+        latex: `\\wr`,
+      },
+      {
+        image: '†',
+        latex: `\\dagger`,
+      },
+      {
+        image: '‡',
+        latex: `\\ddagger`,
+      },
+      {
+        image: '∞',
+        latex: `\\infty`,
+      },
+      {
+        image: '∅',
+        latex: `\\dotminus`,
+      },
+    ],
+  },
+  {
+    header: `+`,
     content: [],
   },
   {
-    header: `13-btn.svg`,
+    header: `+`,
     content: [],
   },
   {
-    header: `14-btn.svg`,
+    header: `+`,
     content: [],
   },
   {
-    header: `15-btn.svg`,
+    header: `+`,
     content: [],
   },
   {
-    header: `16-btn.svg`,
-    content: [],
-  },
-  {
-    header: `17-btn.svg`,
+    header: `+`,
     content: [],
   },
 ];
+
 export { FORMULA_HEADER, SYMBOL_HEADER, LatexHeader, LatexContent };

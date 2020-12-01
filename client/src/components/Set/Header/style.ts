@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
 const header = styled.div`
-  height: 20vh;
+  height: 74px;
 `;
 export default header;

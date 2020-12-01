@@ -44,6 +44,7 @@ module.exports = {
       '@constants': path.resolve(__dirname, 'src/lib/constants'),
       '@utils': path.resolve(__dirname, 'src/lib/utils'),
       '@contexts': path.resolve(__dirname, 'src/contexts'),
+      '@hooks': path.resolve(__dirname, 'src/hooks'),
       '@test': path.resolve(__dirname, 'src/__test__'),
     },
     extensions: ['.ts', '.tsx', '.js'],

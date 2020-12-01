@@ -1,64 +1,25 @@
-import React, { useState } from 'react';
-import styled from '@emotion/styled';
+import React from 'react';
 import { Icon } from 'semantic-ui-react';
-import { useDispatch } from 'react-redux';
-import { changeFontSize } from '@contexts/latex';
-interface FontListType {
+import { FONT_SIZE_LISTS } from '@constants/constants';
+import * as S from './style';
+import useFontSizeList from './useFontSizeList';
+
+export interface FontSizeListType {
   size: string;
   checked: boolean;
 }
+export interface FontSizeMenuProps {
+  toggleSizeMenu: () => void;
+}
 
-const sizeLists = [
-  { size: '11', checked: false },
-  { size: '15', checked: true },
-  { size: '20', checked: false },
-  { size: '25', checked: false },
-  { size: '30', checked: false },
-];
-export const FontContainer = styled.div`
-  margin: 0;
-  padding: 0;
-  border: 1px solid red;
-  position: absolute;
-  width: 70px;
-  margin-top: 35px;
-  background: white;
-  z-index: 99999;
-`;
+function FontSizeList({ toggleSizeMenu }: FontSizeMenuProps) {
+  const { clickHandler } = useFontSizeList({ toggleSizeMenu });
 
-export const FontWapper = styled.div`
-  display: flex;
-  border: 1px solid red;
-  color: red;
-  font-size: 14px;
-  padding: 5px 2px 5px 7px;
-  text-align: left;
-  z-index: 99999;
-  span {
-    background: white;
-  }
-`;
-
-function FontSizeList() {
-  const dispatch = useDispatch();
-  const [stateList, setStateList] = useState<FontListType[]>(sizeLists);
-  const clickHandler = (index: number, fontSize: string) => {
-    dispatch(changeFontSize(fontSize));
-    setStateList(
-      stateList.map((item) => {
-        if (item.checked) {
-          item.checked = false;
-        }
-        return item;
-      })
-    );
-    stateList[index].checked = true;
-  };
   return (
-    <FontContainer>
-      {sizeLists.map((sizeList, index: number) => {
+    <S.FontContainer>
+      {FONT_SIZE_LISTS.map((sizeList: FontSizeListType, index: number) => {
         return (
-          <FontWapper
+          <S.FontWapper
             key={index}
             onClick={() => {
               clickHandler(index, sizeList.size);
@@ -66,10 +27,10 @@ function FontSizeList() {
           >
             <span>{sizeList.size}</span>
             <span>{sizeList.checked && <Icon name="check" />}</span>
-          </FontWapper>
+          </S.FontWapper>
         );
       })}
-    </FontContainer>
+    </S.FontContainer>
   );
 }
 

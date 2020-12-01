@@ -1,34 +1,34 @@
-import React, { useState } from 'react';
-import * as S from './style';
+import React from 'react';
 import { Button } from 'semantic-ui-react';
 import FontSizeList from '@ingredients/FontSizeList';
 import FontColor from '@ingredients/FontColor';
+import useFormatButtons from './useFormatButtons';
+import * as S from './style';
 
 function TemplateButtons() {
-  const [fontSizeState, setFontSizeState] = useState(false);
-  const fontSizeHandler = () => {
-    setFontSizeState(!fontSizeState);
+  const { sizeMenu, toggleSizeMenu, alignHandler, clearHandler } = useFormatButtons();
+  const [fontColorState, setFontColorState] = useState(false);
+  const fontColorHandler = () => {
+    setFontColorState(!fontColorState);
   };
-  const [FontColorState, setFontColorState] = useState(false);
-  const FontColorHandler = () => {
-    setFontColorState(!FontColorState);
-  };
+  
   return (
     <>
       <S.TemplateButtonsContainer>
         <Button.Group basic>
-          <Button icon="text height" onClick={fontSizeHandler} />
-          {fontSizeState && <FontSizeList />}
-          <Button icon="tint" onClick={FontColorHandler} />
-          {FontColorState && <FontColor />}
+          <Button icon="text height" onClick={() => toggleSizeMenu()} />
+          {sizeMenu && <FontSizeList toggleSizeMenu={toggleSizeMenu} />}
+          <Button icon="tint" onClick={fontColorHandler} />
+          {fontColorState && <FontColor />}
+          <Button icon="tint" />
         </Button.Group>{' '}
         <Button.Group basic>
-          <Button icon="align left" />
-          <Button icon="align center" />
-          <Button icon="align right" />
+          <Button icon="align left" onClick={() => alignHandler('left')} />
+          <Button icon="align center" onClick={() => alignHandler('center')} />
+          <Button icon="align right" onClick={() => alignHandler('right')} />
         </Button.Group>{' '}
         <Button.Group basic>
-          <Button icon="eraser" />
+          <Button icon="eraser" onClick={clearHandler} />
         </Button.Group>
       </S.TemplateButtonsContainer>
     </>

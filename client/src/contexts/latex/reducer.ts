@@ -7,6 +7,7 @@ import {
   REMOVE_TAB,
   CHANGE_FONTSIZE,
   CHANGE_FONTCOLOR,
+  CHANGE_TEXTALIGN,
 } from './actions';
 const initTotalLatex = (id: number): TabInfo => {
   return {
@@ -41,7 +42,6 @@ function reducer(state: LatexState = initialState, action: LatexAction): LatexSt
         }),
       };
     }
-
     case ADD_TAB: {
       const nextId = state.maxId + 1;
 
@@ -85,7 +85,6 @@ function reducer(state: LatexState = initialState, action: LatexAction): LatexSt
     }
 
     case CHANGE_FONTSIZE: {
-      console.log('pay : ', action.payload);
       return {
         ...state,
         totalLatex: state.totalLatex.map((latexItem) => {
@@ -95,7 +94,6 @@ function reducer(state: LatexState = initialState, action: LatexAction): LatexSt
         }),
       };
     }
-
     case CHANGE_FONTCOLOR: {
       return {
         ...state,
@@ -106,7 +104,16 @@ function reducer(state: LatexState = initialState, action: LatexAction): LatexSt
         }),
       };
     }
-
+    case CHANGE_TEXTALIGN: {
+      return {
+        ...state,
+        totalLatex: state.totalLatex.map((latexItem) => {
+          return latexItem.id === state.currentTab
+            ? { ...latexItem, textAlign: action.payload }
+            : latexItem;
+        }),
+      };
+    }
     default:
       return state;
   }
