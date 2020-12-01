@@ -9,11 +9,11 @@ function OutputFormula() {
   const { initmathInput, nowLatexInfo, onChangeHandler, onClickHandler } = useContent();
   const { currentTab, totalLatex } = useSelector((state: RootState) => state.latex);
   const currentFormat = totalLatex.filter((latex) => latex.id === currentTab)[0];
-  const { fontSize, textAlign } = currentFormat;
+  const { fontSize, fontColor, textAlign } = currentFormat;
 
   return (
     <S.OutputFormulaWrapper onClick={onClickHandler}>
-      <S.OutputFormulaBox fontSize={fontSize} textAlign={textAlign}>
+      <S.OutputFormulaBox fontSize={fontSize} fontColor={fontColor} textAlign={textAlign}>
         <EditableMathField
           mathquillDidMount={initmathInput}
           latex={nowLatexInfo.latex}
@@ -23,4 +23,5 @@ function OutputFormula() {
     </S.OutputFormulaWrapper>
   );
 }
+
 export default OutputFormula;

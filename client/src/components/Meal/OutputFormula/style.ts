@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 interface FormulaProps {
   fontSize?: string;
+  fontColor?: string;
   textAlign?: string;
 }
 export const OutputFormulaWrapper = styled.div`
@@ -16,5 +17,6 @@ export const OutputFormulaBox = styled.div<FormulaProps>`
   height: 100%;
   padding: 10px;
   font-size: ${(props) => props.fontSize}px;
+  color: ${(props) => props.fontColor};
   text-align: ${(props) => props.textAlign};
 `;
