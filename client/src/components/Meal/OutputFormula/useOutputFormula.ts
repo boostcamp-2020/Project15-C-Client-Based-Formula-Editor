@@ -2,11 +2,12 @@ import { MathField } from 'boost-mathquill';
 import { useDispatch, useSelector } from 'react-redux';
 import { editLatex, initLatex } from '../../../contexts/latex';
 import { RootState } from '../../../contexts';
+import useCurrentTab from '@hooks/useCurrentTab';
 
 const useContent = () => {
   const dispatch = useDispatch();
-  const { currentTab, totalLatex, mathfield } = useSelector((state: RootState) => state.latex);
-  const nowLatexInfo = totalLatex.filter((latex) => latex.id === currentTab)[0];
+  const { mathfield } = useSelector((state: RootState) => state.latex);
+  const { currentTabInfo } = useCurrentTab();
 
   const initmathInput = (mathField: MathField) => {
     dispatch(initLatex(mathField));
@@ -19,7 +20,7 @@ const useContent = () => {
   };
 
   return {
-    nowLatexInfo,
+    currentTabInfo,
     initmathInput,
     onChangeHandler,
     onClickHandler,
