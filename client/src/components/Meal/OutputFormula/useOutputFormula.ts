@@ -13,7 +13,7 @@ const useContent = () => {
     dispatch(initLatex(mathField));
   };
   const onChangeHandler = (mathField: MathField) => {
-    dispatch(editLatex(mathField.latex()));
+    dispatch(editLatex({ latex: mathField.latex() }));
   };
   const onClickHandler = () => {
     if (mathfield) mathfield.focus();

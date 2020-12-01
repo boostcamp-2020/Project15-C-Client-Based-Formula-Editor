@@ -7,7 +7,7 @@ const useTextAreaItem = () => {
   const { currentTabInfo } = useCurrentTab();
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    dispatch(editLatex(e.target.value));
+    dispatch(editLatex({ latex: e.target.value }));
   };
 
   return { currentTabInfo, onChangeHandler };

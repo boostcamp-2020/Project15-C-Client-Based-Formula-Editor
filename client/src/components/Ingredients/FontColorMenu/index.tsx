@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { CompactPicker } from 'react-color';
 import { useDispatch } from 'react-redux';
-import { changeFontColor } from '@contexts/latex';
+import { editLatex } from '@contexts/latex';
 import { useSelector } from 'react-redux';
 import { RootState } from '@contexts/index';
 
@@ -22,8 +22,9 @@ function FontColor() {
   const dispatch = useDispatch();
 
   const handleChangeComplete = (fontColor: any) => {
-    dispatch(changeFontColor(fontColor.hex));
+    dispatch(editLatex({ fontColor: fontColor.hex }));
   };
+
   return (
     <FontContainer>
       <CompactPicker color={currentFontColor} onChange={handleChangeComplete} />

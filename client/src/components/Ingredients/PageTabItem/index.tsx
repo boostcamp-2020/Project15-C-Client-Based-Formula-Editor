@@ -1,7 +1,6 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import { Label, Menu } from 'semantic-ui-react';
-import { changeTab, removeTab, TabInfo } from '../../../contexts/latex';
+import { TabInfo } from '../../../contexts/latex';
 import useMenuItem from './usePageTabItem';
 
 interface MenuItemProps {
