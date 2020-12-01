@@ -5,7 +5,7 @@ const useFormulaList = () => {
   const formulaRef = useRef<null | HTMLUListElement>(null);
   const containerRef = useRef<null | HTMLDivElement>(null);
   const timer = useRef<any>(null);
-  const [nowHeader, setNowHeader] = useState<string>('');
+  const [nowHeader, setNowHeader] = useState('');
   const [nowFormulas, setNowFormula] = useState<LatexContent[]>([]);
 
   const displayFormula = () => {
