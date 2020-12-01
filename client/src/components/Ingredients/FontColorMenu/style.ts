@@ -11,7 +11,7 @@ export const FontColorPicker = styled.input`
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 99999;
+  z-index: 9999;
 
   &:hover {
     cursor: pointer;
@@ -25,5 +25,5 @@ export const FontColorDiv = styled.div<ColorDiv>`
   top: 0;
   left: 0;
   background-color: red;
-  z-index: 99999;
+  z-index: 9999;
 `;
