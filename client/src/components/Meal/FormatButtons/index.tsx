@@ -9,9 +9,9 @@ function TemplateButtons() {
   const fontSizeHandler = () => {
     setFontSizeState(!fontSizeState);
   };
-  const [fontColoreState, setFontColorState] = useState(false);
-  const fontColorHandler = () => {
-    setFontColorState(!fontColoreState);
+  const [FontColorState, setFontColorState] = useState(false);
+  const FontColorHandler = () => {
+    setFontColorState(!FontColorState);
   };
   return (
     <>
@@ -19,8 +19,8 @@ function TemplateButtons() {
         <Button.Group basic>
           <Button icon="text height" onClick={fontSizeHandler} />
           {fontSizeState && <FontSizeList />}
-          <Button icon="tint" onClick={fontColorHandler} />
-          {fontColoreState && <FontColor handler={fontColorHandler} />}
+          <Button icon="tint" onClick={FontColorHandler} />
+          {FontColorState && <FontColor />}
         </Button.Group>{' '}
         <Button.Group basic>
           <Button icon="align left" />

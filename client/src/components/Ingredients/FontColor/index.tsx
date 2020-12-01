@@ -1,14 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
-import { ChromePicker } from 'react-color';
-
-interface FontColorType {
-  background: string;
-}
-
-interface FontColorComponent {
-  handler: () => void;
-}
+import { CompactPicker } from 'react-color';
+import { useDispatch } from 'react-redux';
+import { changeFontColor } from '@contexts/latex';
+import { useSelector } from 'react-redux';
+import { RootState } from '@contexts/index';
 
 export const FontContainer = styled.div`
   margin: 0;
@@ -20,14 +16,17 @@ export const FontContainer = styled.div`
   line-height: 0;
 `;
 
-function FontColor({ handler }: FontColorComponent) {
-  const [colorState, setColorState] = useState<string>('#000');
-  const handleChangeComplete = (color: any) => {
-    setColorState(color.hex);
+function FontColor() {
+  const { currentTab, totalLatex } = useSelector((state: RootState) => state.latex);
+  const currentFontColor = totalLatex[currentTab].fontColor;
+  const dispatch = useDispatch();
+
+  const handleChangeComplete = (fontColor: any) => {
+    dispatch(changeFontColor(fontColor.hex));
   };
   return (
     <FontContainer>
-      <ChromePicker color={colorState} onChangeComplete={handleChangeComplete} />;
+      <CompactPicker color={currentFontColor} onChange={handleChangeComplete} />
     </FontContainer>
   );
 }

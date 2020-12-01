@@ -10,10 +10,10 @@ function OutputFormula() {
   const { currentTab, totalLatex } = useSelector((state: RootState) => state.latex);
 
   const currentFontSize = totalLatex[currentTab].fontSize;
-  console.log('cur: ', currentFontSize);
+  const currentFontColor = totalLatex[currentTab].fontColor;
   return (
     <S.OutputFormulaWrapper onClick={onClickHandler}>
-      <S.OutputFormulaBox fontSize={currentFontSize}>
+      <S.OutputFormulaBox fontSize={currentFontSize} fontColor={currentFontColor}>
         <EditableMathField
           mathquillDidMount={initmathInput}
           latex={nowLatexInfo.latex}

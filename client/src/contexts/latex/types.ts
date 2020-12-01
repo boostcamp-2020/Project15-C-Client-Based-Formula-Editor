@@ -1,5 +1,12 @@
 import { MathField } from 'boost-mathquill';
-import { addTab, changeTab, editLatex, removeTab, changeFontSize } from './actions';
+import {
+  addTab,
+  changeTab,
+  editLatex,
+  removeTab,
+  changeFontSize,
+  changeFontColor,
+} from './actions';
 import { initLatex } from './actions';
 
 export interface TabInfo {
@@ -16,7 +23,8 @@ export type LatexAction =
   | ReturnType<typeof addTab>
   | ReturnType<typeof changeTab>
   | ReturnType<typeof removeTab>
-  | ReturnType<typeof changeFontSize>;
+  | ReturnType<typeof changeFontSize>
+  | ReturnType<typeof changeFontColor>;
 
 export interface LatexState {
   maxId: number;

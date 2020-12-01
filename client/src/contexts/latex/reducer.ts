@@ -6,13 +6,14 @@ import {
   CHANGE_TAB,
   REMOVE_TAB,
   CHANGE_FONTSIZE,
+  CHANGE_FONTCOLOR,
 } from './actions';
 const initTotalLatex = (id: number): TabInfo => {
   return {
     id,
     latex: '',
     fontSize: '11',
-    fontColor: 'black',
+    fontColor: '#000000',
     textAlign: 'left',
   };
 };
@@ -94,6 +95,18 @@ function reducer(state: LatexState = initialState, action: LatexAction): LatexSt
         }),
       };
     }
+
+    case CHANGE_FONTCOLOR: {
+      return {
+        ...state,
+        totalLatex: state.totalLatex.map((latexItem) => {
+          return latexItem.id === state.currentTab
+            ? { ...latexItem, fontColor: action.payload }
+            : latexItem;
+        }),
+      };
+    }
+
     default:
       return state;
   }
