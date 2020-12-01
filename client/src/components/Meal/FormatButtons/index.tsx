@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from 'semantic-ui-react';
 import FontSizeMenu from '@ingredients/FontSizeMenu';
 import FontColorMenu from '@ingredients/FontColorMenu';
@@ -7,8 +7,10 @@ import * as S from './style';
 
 function TemplateButtons() {
   const {
+    sizeRef,
     sizeMenu,
     toggleSizeMenu,
+    colorRef,
     colorMenu,
     toggleColorMenu,
     alignHandler,
@@ -19,10 +21,17 @@ function TemplateButtons() {
     <>
       <S.TemplateButtonsContainer>
         <Button.Group basic>
-          <Button icon="text height" onClick={() => toggleSizeMenu()} />
+          {/* <S.CololrDiv ref={sizeRef}> */}
+          <div ref={sizeRef}>
+            <Button icon="text height" onClick={toggleSizeMenu} />
+          </div>
           {sizeMenu && <FontSizeMenu toggleSizeMenu={toggleSizeMenu} />}
-          <Button icon="tint" onClick={toggleColorMenu} />
-          {colorMenu && <FontColorMenu />}
+          {/* </S.CololrDiv> */}
+
+          <S.CololrDiv ref={colorRef}>
+            <Button icon="tint" />
+            <FontColorMenu />
+          </S.CololrDiv>
         </Button.Group>{' '}
         <Button.Group basic>
           <Button icon="align left" onClick={() => alignHandler('left')} />
