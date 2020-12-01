@@ -1,5 +1,9 @@
 import styled from '@emotion/styled';
 
+interface ColorDiv {
+  toggle: boolean;
+}
+
 export const FontColorPicker = styled.input`
   opacity: 0;
   position: absolute;
@@ -12,4 +16,14 @@ export const FontColorPicker = styled.input`
   &:hover {
     cursor: pointer;
   }
+`;
+
+export const FontColorDiv = styled.div<ColorDiv>`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: red;
+  z-index: 99999;
 `;

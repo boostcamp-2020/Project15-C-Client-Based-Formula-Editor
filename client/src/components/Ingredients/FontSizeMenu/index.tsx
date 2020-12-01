@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Icon } from 'semantic-ui-react';
 import { FONT_SIZE_LISTS } from '@constants/constants';
 import * as S from './style';

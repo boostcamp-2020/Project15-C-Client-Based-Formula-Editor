@@ -21,6 +21,7 @@ function TemplateButtons() {
         <Button.Group basic>
           <Button icon="text height" onClick={() => toggleSizeMenu()} />
           {sizeMenu && <FontSizeMenu toggleSizeMenu={toggleSizeMenu} />}
+
           <S.CololrDiv>
             <Button icon="tint" />
             <FontColorMenu />
