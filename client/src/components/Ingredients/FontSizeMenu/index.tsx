@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon } from 'semantic-ui-react';
 import { FONT_SIZE_LISTS } from '@constants/constants';
 import * as S from './style';
-import useFontSizeList from './useFontSizeList';
+import useFontSizeMenu from './useFontSizeMenu';
 
 export interface FontSizeListType {
   size: string;
@@ -13,7 +13,7 @@ export interface FontSizeMenuProps {
 }
 
 function FontSizeList({ toggleSizeMenu }: FontSizeMenuProps) {
-  const { clickHandler } = useFontSizeList({ toggleSizeMenu });
+  const { clickHandler } = useFontSizeMenu({ toggleSizeMenu });
 
   return (
     <S.FontContainer>
@@ -25,8 +25,8 @@ function FontSizeList({ toggleSizeMenu }: FontSizeMenuProps) {
               clickHandler(index, sizeList.size);
             }}
           >
-            <span>{sizeList.size}</span>
-            <span>{sizeList.checked && <Icon name="check" />}</span>
+            <S.FontSizeText>{sizeList.size}</S.FontSizeText>
+            <S.FontSizeClicked>{sizeList.checked && <Icon name="check" />}</S.FontSizeClicked>
           </S.FontWapper>
         );
       })}

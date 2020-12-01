@@ -21,8 +21,10 @@ function TemplateButtons() {
         <Button.Group basic>
           <Button icon="text height" onClick={() => toggleSizeMenu()} />
           {sizeMenu && <FontSizeMenu toggleSizeMenu={toggleSizeMenu} />}
-          <Button icon="tint" onClick={toggleColorMenu} />
-          {colorMenu && <FontColorMenu />}
+          <S.CololrDiv>
+            <Button icon="tint" />
+            <FontColorMenu />
+          </S.CololrDiv>
         </Button.Group>{' '}
         <Button.Group basic>
           <Button icon="align left" onClick={() => alignHandler('left')} />

@@ -4,7 +4,7 @@ import { changeFontSize } from '@contexts/latex';
 import { FONT_SIZE_LISTS } from '@constants/constants';
 import { FontSizeListType, FontSizeMenuProps } from './index';
 
-const useFontSizeList = ({ toggleSizeMenu }: FontSizeMenuProps) => {
+const useFontSizeMenu = ({ toggleSizeMenu }: FontSizeMenuProps) => {
   const dispatch = useDispatch();
   const [stateList, setStateList] = useState<FontSizeListType[]>(FONT_SIZE_LISTS);
   const clickHandler = (clickIndex: number, fontSize: string) => {
@@ -22,4 +22,4 @@ const useFontSizeList = ({ toggleSizeMenu }: FontSizeMenuProps) => {
   };
 };
 
-export default useFontSizeList;
+export default useFontSizeMenu;
