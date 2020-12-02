@@ -1,6 +1,7 @@
 import React from 'react';
 import TextAreaItem from '../../Ingredients/TextAreaItem';
 import { Tab } from 'semantic-ui-react';
+import DictionaryTab from '../DictionaryTab';
 import * as S from './style';
 
 const panes = [
@@ -22,9 +23,7 @@ const panes = [
   },
   {
     menuItem: '수식사전',
-    render: function tabContent() {
-      return <Tab.Pane>수식찾기 리스트</Tab.Pane>;
-    },
+    render: () => <DictionaryTab />,
   },
   {
     menuItem: '즐겨찾기',
