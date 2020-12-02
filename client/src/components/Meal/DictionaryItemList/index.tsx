@@ -1,23 +1,28 @@
 import React from 'react';
 import DictionaryItem from '@ingredients/DictionaryItem';
+import { MenuLatex } from '@constants/latex-dictionary';
 import * as S from './style';
 
 interface DictionaryItemListProps {
   searchWord: string;
-  searchedContent: any;
-  currentMenu: any;
+  searchedContent: MenuLatex[];
+  selectedContent: MenuLatex[];
 }
-function DictionaryItemList({ searchWord, searchedContent, currentMenu }: DictionaryItemListProps) {
+
+function DictionaryItemList({
+  searchWord,
+  searchedContent,
+  selectedContent,
+}: DictionaryItemListProps) {
   return (
     <S.DictionaryItemList>
       {searchWord &&
-        searchedContent.map((item: any, index: any) => (
-          <DictionaryItem key={index} latex={item.latex} />
+        searchedContent.map((dictionary: MenuLatex, index: number) => (
+          <DictionaryItem key={index} latex={dictionary.latex} />
         ))}
-
       {!searchWord &&
-        currentMenu.content.map((item: any, index: any) => (
-          <DictionaryItem key={index} latex={item.latex} />
+        selectedContent.map((dictionary: MenuLatex, index: number) => (
+          <DictionaryItem key={index} latex={dictionary.latex} />
         ))}
     </S.DictionaryItemList>
   );

@@ -1,31 +1,34 @@
 import React from 'react';
 import DictionaryMenuItem from '@ingredients/DictionaryMenuItem';
+import { DICTIONARY_MENU_TITLE } from '@constants/latex-dictionary';
 import * as S from './style';
 
 interface DictionaryHeaderProps {
-  MENU_TITLE: any;
-  onSelectHandler: any;
-  onSearchHandler: any;
-  searchWord: any;
-  menuItem: any;
+  menuTitle: string;
+  searchWord: string;
+  onSelectHandler: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onSearchHandler: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 function DictionaryHeader({
-  MENU_TITLE,
+  menuTitle,
+  searchWord,
   onSelectHandler,
   onSearchHandler,
-  searchWord,
-  menuItem,
 }: DictionaryHeaderProps) {
   return (
     <S.DictionaryHeader>
-      <S.DictionaryMenu onChange={onSelectHandler} value={menuItem}>
-        {Object.keys(MENU_TITLE).map((key, index) => (
-          <DictionaryMenuItem title={MENU_TITLE[key]} />
+      <S.DictionaryMenu onChange={onSelectHandler} value={menuTitle}>
+        {Object.keys(DICTIONARY_MENU_TITLE).map((title, index) => (
+          <DictionaryMenuItem title={DICTIONARY_MENU_TITLE[title]} key={index} />
         ))}
       </S.DictionaryMenu>
 
-      <S.DictionarySearch onChange={onSearchHandler} value={searchWord} />
+      <S.DictionarySearch
+        onChange={onSearchHandler}
+        value={searchWord}
+        placeholder="🔍검색어를 입력해주세요"
+      />
     </S.DictionaryHeader>
   );
 }

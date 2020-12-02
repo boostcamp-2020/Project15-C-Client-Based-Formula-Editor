@@ -10,6 +10,7 @@ interface DictionaryItemProps {
 
 function DictionaryItem({ latex }: DictionaryItemProps) {
   const { mathfield } = useSelector((state: RootState) => state.latex);
+
   const onClick = () => {
     mathfield?.write(latex);
   };
