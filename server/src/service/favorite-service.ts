@@ -1,7 +1,14 @@
+import { getCustomRepository } from 'typeorm';
+import FavoriteRepository from '../repository/favorite-repository';
+
 class FavoriteService {
   static instance: FavoriteService;
 
-  // TODO. constructor() {}
+  private favoriteRepository: FavoriteRepository;
+
+  constructor() {
+    this.favoriteRepository = getCustomRepository(FavoriteRepository);
+  }
 
   static getInstance(): FavoriteService {
     if (!FavoriteService.instance) {
@@ -10,8 +17,9 @@ class FavoriteService {
     return FavoriteService.instance;
   }
 
-  async getFavorites() {
-    // TODO. DB 로직
+  async getFavorites(userId: number) {
+    const favorites = await this.favoriteRepository.find({ user: { id: userId } });
+    return favorites;
   }
 }
 
