@@ -1,7 +1,7 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response } from 'express';
 import FavoriteService from '../service/favorite-service';
-import { ValidateType, isValidateType } from '../utils/validator';
-import { STATUS_CODE, ERROR_MESSAGE } from '../utils/constant';
+import { ValidateType, isValidateType } from '@utils/validator';
+import { STATUS_CODE, ERROR_MESSAGE } from '@utils/constant';
 
 const FavoriteController = {
   async getFavoritesByUserId(req: Request, res: Response) {

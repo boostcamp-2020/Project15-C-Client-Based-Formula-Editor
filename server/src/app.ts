@@ -4,7 +4,7 @@ import { createConnection, Connection } from 'typeorm';
 import express, { Express } from 'express';
 import cors from 'cors';
 import logger from 'morgan';
-import indexRouter from './router/index';
+import indexRouter from '@router/index';
 
 export default class Application {
   app: Express;

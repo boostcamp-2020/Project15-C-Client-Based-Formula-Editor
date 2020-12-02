@@ -1,5 +1,5 @@
 import { getCustomRepository } from 'typeorm';
-import FavoriteRepository from '../repository/favorite-repository';
+import FavoriteRepository from '@repository/favorite-repository';
 
 export interface CreateParams {
   title: string;

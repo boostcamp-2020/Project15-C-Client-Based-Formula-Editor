@@ -1,6 +1,6 @@
 import { EntityRepository, Repository } from 'typeorm';
-import { Favorite } from '../entity/Favorite';
-import { CreateParams } from '../service/favorite-service';
+import { Favorite } from '@entity/Favorite';
+import { CreateParams } from '@service/favorite-service';
 
 @EntityRepository(Favorite)
 export default class FavoriteRepository extends Repository<Favorite> {
