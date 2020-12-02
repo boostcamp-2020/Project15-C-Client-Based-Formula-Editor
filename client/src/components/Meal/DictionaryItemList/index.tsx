@@ -2,14 +2,23 @@ import React from 'react';
 import DictionaryItem from '@ingredients/DictionaryItem';
 import * as S from './style';
 
-function DictionaryItemList({ searchWord, searchedContent, currentMenu }) {
+interface DictionaryItemListProps {
+  searchWord: string;
+  searchedContent: any;
+  currentMenu: any;
+}
+function DictionaryItemList({ searchWord, searchedContent, currentMenu }: DictionaryItemListProps) {
   return (
     <S.DictionaryItemList>
       {searchWord &&
-        searchedContent.map((item, index) => <DictionaryItem key={index} latex={item.latex} />)}
+        searchedContent.map((item: any, index: any) => (
+          <DictionaryItem key={index} latex={item.latex} />
+        ))}
 
       {!searchWord &&
-        currentMenu.content.map((item, index) => <DictionaryItem key={index} latex={item.latex} />)}
+        currentMenu.content.map((item: any, index: any) => (
+          <DictionaryItem key={index} latex={item.latex} />
+        ))}
     </S.DictionaryItemList>
   );
 }

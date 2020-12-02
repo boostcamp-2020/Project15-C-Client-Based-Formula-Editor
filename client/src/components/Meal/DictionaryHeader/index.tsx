@@ -2,7 +2,21 @@ import React from 'react';
 import DictionaryMenuItem from '@ingredients/DictionaryMenuItem';
 import * as S from './style';
 
-function DictionaryHeader({ MENU_TITLE, onSelectHandler, onSearchHandler, searchWord, menuItem }) {
+interface DictionaryHeaderProps {
+  MENU_TITLE: any;
+  onSelectHandler: any;
+  onSearchHandler: any;
+  searchWord: any;
+  menuItem: any;
+}
+
+function DictionaryHeader({
+  MENU_TITLE,
+  onSelectHandler,
+  onSearchHandler,
+  searchWord,
+  menuItem,
+}: DictionaryHeaderProps) {
   return (
     <S.DictionaryHeader>
       <S.DictionaryMenu onChange={onSelectHandler} value={menuItem}>

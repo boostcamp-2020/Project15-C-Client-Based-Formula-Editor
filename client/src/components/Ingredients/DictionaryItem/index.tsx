@@ -4,7 +4,11 @@ import { useSelector } from 'react-redux';
 import { RootState } from '@/contexts';
 import * as S from './style';
 
-function DictionaryItem({ latex }) {
+interface DictionaryItemProps {
+  latex: string;
+}
+
+function DictionaryItem({ latex }: DictionaryItemProps) {
   const { mathfield } = useSelector((state: RootState) => state.latex);
   const onClick = () => {
     mathfield?.write(latex);

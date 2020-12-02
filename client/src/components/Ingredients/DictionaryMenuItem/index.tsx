@@ -1,7 +1,11 @@
 import React from 'react';
 import * as S from './style';
 
-function DictionaryMenuItem({ title }) {
+interface DictionaryMenuItemProps {
+  title: string;
+}
+
+function DictionaryMenuItem({ title }: DictionaryMenuItemProps) {
   return <S.DictionaryMenuItem value={title}>{title}</S.DictionaryMenuItem>;
 }
 
