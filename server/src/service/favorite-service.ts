@@ -1,6 +1,12 @@
 import { getCustomRepository } from 'typeorm';
 import FavoriteRepository from '../repository/favorite-repository';
 
+export interface CreateParams {
+  title: string;
+  latex: string;
+  userId: number;
+}
+
 class FavoriteService {
   static instance: FavoriteService;
 
@@ -17,9 +23,17 @@ class FavoriteService {
     return FavoriteService.instance;
   }
 
-  async getFavorites(userId: number) {
-    const favorites = await this.favoriteRepository.find({ user: { id: userId } });
+  async getFavoritesByUserId(userId: number) {
+    const favorites = await this.favoriteRepository.getByUserId(userId);
     return favorites;
+  }
+
+  async createFavorites({ latex, title, userId }: CreateParams) {
+    return await this.favoriteRepository.createAndSave({ title, latex, userId });
+  }
+
+  async deleteFavorites(id: number) {
+    await this.favoriteRepository.delete(id);
   }
 }
 
