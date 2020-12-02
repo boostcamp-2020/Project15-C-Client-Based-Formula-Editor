@@ -1,5 +1,6 @@
 import React from 'react';
 import TextAreaItem from '../../Ingredients/TextAreaItem';
+import FavoriteTab from '@meal/FavoriteTab';
 import { Tab } from 'semantic-ui-react';
 import * as S from './style';
 
@@ -29,7 +30,7 @@ const panes = [
   {
     menuItem: '즐겨찾기',
     render: function tabContent() {
-      return <Tab.Pane>즐겨찾기 리스트</Tab.Pane>;
+      return <FavoriteTab />;
     },
   },
 ];
