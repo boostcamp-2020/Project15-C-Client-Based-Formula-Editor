@@ -3,6 +3,7 @@
     "jsx": "react",
     "target": "es5",
     "module": "commonjs",
+    "lib": ["ES2020", "DOM"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
