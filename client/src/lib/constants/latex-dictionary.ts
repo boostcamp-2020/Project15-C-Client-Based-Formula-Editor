@@ -2,7 +2,7 @@ interface MenuTitle {
   [key: string]: string;
 }
 
-export const MENU_TITLE: MenuTitle = {
+export const DICTIONARY_MENU_TITLE: MenuTitle = {
   polynomial: '다항식과 비례식',
   equation: '방정식과 부등식',
   location: '좌표 평면',
@@ -17,7 +17,7 @@ export const MENU_TITLE: MenuTitle = {
 
 export const LATEX_DICTIONARY = [
   {
-    menu: MENU_TITLE.polynomial,
+    menu: DICTIONARY_MENU_TITLE.polynomial,
     content: [
       {
         latex: 'a^{ 2 }+2ab+b^{ 2 }=\\left( a+b \\right)^{2}',
@@ -87,7 +87,7 @@ export const LATEX_DICTIONARY = [
     ],
   },
   {
-    menu: MENU_TITLE.equation,
+    menu: DICTIONARY_MENU_TITLE.equation,
     content: [
       { latex: 'ax^{2}+bx+c=0', title: '이차방정식' },
       { latex: 'x=\\frac {-bpm sqrt {b^{ 2 }-4ac}}{2a}', title: '근의 공식' },
@@ -125,7 +125,7 @@ export const LATEX_DICTIONARY = [
     ],
   },
   {
-    menu: MENU_TITLE.location,
+    menu: DICTIONARY_MENU_TITLE.location,
     content: [
       {
         latex: 'PQ=sqrt {left( x_{ 2 }-x_{ 1 } \\right)^{2}+left( y_{ 2 }-y_{ 1 } \\right)^{2}}',
@@ -151,7 +151,7 @@ export const LATEX_DICTIONARY = [
     ],
   },
   {
-    menu: MENU_TITLE.geometric,
+    menu: DICTIONARY_MENU_TITLE.geometric,
     content: [
       {
         latex: '\\frac {a}{sinA}=\\frac {b}{sinB}=\\frac {c}{sinC}=2R',
@@ -228,7 +228,7 @@ export const LATEX_DICTIONARY = [
     ],
   },
   {
-    menu: MENU_TITLE.function,
+    menu: DICTIONARY_MENU_TITLE.function,
     content: [
       {
         latex:
@@ -357,7 +357,7 @@ export const LATEX_DICTIONARY = [
     ],
   },
   {
-    menu: MENU_TITLE.limit,
+    menu: DICTIONARY_MENU_TITLE.limit,
     content: [
       {
         latex: 'a^{ x }=bLeftrightarrow x=log_{ a }bquad left( a>0,a\\neq 1,b>0 \\right) ',
@@ -387,7 +387,7 @@ export const LATEX_DICTIONARY = [
     ],
   },
   {
-    menu: MENU_TITLE.differential,
+    menu: DICTIONARY_MENU_TITLE.differential,
     content: [
       {
         latex:
@@ -489,7 +489,7 @@ export const LATEX_DICTIONARY = [
     ],
   },
   {
-    menu: MENU_TITLE.statistics,
+    menu: DICTIONARY_MENU_TITLE.statistics,
     content: [
       {
         latex:
@@ -530,7 +530,7 @@ export const LATEX_DICTIONARY = [
     ],
   },
   {
-    menu: MENU_TITLE.matrix,
+    menu: DICTIONARY_MENU_TITLE.matrix,
     content: [
       {
         latex:
@@ -586,7 +586,7 @@ export const LATEX_DICTIONARY = [
     ],
   },
   {
-    menu: MENU_TITLE.sequence,
+    menu: DICTIONARY_MENU_TITLE.sequence,
     content: [
       {
         latex: ' { a }{ n }=a+left( n-1 \\right)d ',

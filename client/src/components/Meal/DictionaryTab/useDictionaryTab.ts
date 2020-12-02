@@ -1,19 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
-import { LATEX_DICTIONARY, MENU_TITLE } from '@constants/latex-dictionary';
+import useInput from '@hooks/useInput';
+import useSelect from '@hooks/useSelect';
+import { LATEX_DICTIONARY, DICTIONARY_MENU_TITLE } from '@constants/latex-dictionary';
 
 const useDictionaryTab = () => {
-  const [menuItem, setMenuItem] = useState(MENU_TITLE.polynomial);
-  const [searchWord, setSearchWord] = useState('');
-  const currentMenu = LATEX_DICTIONARY.filter((item) => item.menu === menuItem)[0];
+  const [menuTitle, onChangeMenuTitle] = useSelect(DICTIONARY_MENU_TITLE.polynomial);
+  const [searchWord, onChangeSearchWord, clearWord] = useInput('');
+  const currentMenu = LATEX_DICTIONARY.filter((item) => item.menu === menuTitle)[0];
   const [searchedContent, setSearchedContent] = useState<any[]>([]);
   let timer = useRef<any>();
 
-  const onSelectHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setMenuItem(e.target.value);
-    setSearchWord('');
+  const onSelectHandler = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    onChangeMenuTitle(event);
+    clearWord();
   };
-  const onSearchHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchWord(e.target.value);
+  const onSearchHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    onChangeSearchWord(event);
   };
 
   useEffect(() => {
@@ -32,9 +34,9 @@ const useDictionaryTab = () => {
 
   return {
     currentMenu,
+    menuTitle,
     onSearchHandler,
     onSelectHandler,
-    menuItem,
     searchWord,
     searchedContent,
   };
