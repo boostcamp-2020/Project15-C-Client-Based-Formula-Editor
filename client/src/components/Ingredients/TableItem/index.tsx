@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Table, Button } from 'semantic-ui-react';
+import { Header, Table, Button, Label } from 'semantic-ui-react';
 import * as S from './style';
 
 interface DataType {
@@ -9,10 +9,8 @@ interface DataType {
 }
 
 interface TableItemType {
-  headerTttle: string;
+  headerTitle: string;
   headerLatex: string;
-  title: string;
-  latex: string;
   data: DataType[];
 }
 
@@ -20,24 +18,28 @@ const removeHandler = (id: number) => {
   console.log(id, '제거하기');
 };
 
-function TableItem({ headerTttle, headerLatex, title, latex, data }: TableItemType) {
+function TableItem({ headerTitle, headerLatex, data }: TableItemType) {
   const dataList = data.map((item, index) => (
     <Table.Row key={index}>
       <Table.Cell width={1}>
         <Header.Content>{item.title}</Header.Content>
       </Table.Cell>
-      <Table.Cell width={3}>
-        {item.latex}
-        <Button circular color="teal" icon="remove circle" onClick={() => removeHandler(item.id)} />
+      <Table.Cell width={4}>
+        <S.TableContainer>
+          <span>{item.latex}</span>
+          <Label size="mini" color="teal" onClick={() => removeHandler(item.id)}>
+            X
+          </Label>
+        </S.TableContainer>
       </Table.Cell>
     </Table.Row>
   ));
 
   return (
-    <Table basic="very" celled collapsing>
+    <Table basic="very" celled collapsing fixed unstackable>
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell>{headerTttle}</Table.HeaderCell>
+          <Table.HeaderCell>{headerTitle}</Table.HeaderCell>
           <Table.HeaderCell>{headerLatex}</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
