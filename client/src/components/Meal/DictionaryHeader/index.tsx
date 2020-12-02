@@ -21,14 +21,8 @@ function DictionaryHeader({
     <S.DictionaryHeader>
       <S.DictionaryMenu onChange={onSelectHandler} value={menuItem}>
         {Object.keys(MENU_TITLE).map((key, index) => (
-          //   <S.DictionaryMenuItem key={index} value={MENU_TITLE[key]}>
-          //     {MENU_TITLE[key]}
-          //   </S.DictionaryMenuItem>
           <DictionaryMenuItem title={MENU_TITLE[key]} />
         ))}
-        {/* <S.DictionaryMenuItem></S.DictionaryMenuItem>
-          <S.DictionaryMenuItem></S.DictionaryMenuItem>
-          <S.DictionaryMenuItem></S.DictionaryMenuItem> */}
       </S.DictionaryMenu>
 
       <S.DictionarySearch onChange={onSearchHandler} value={searchWord} />
