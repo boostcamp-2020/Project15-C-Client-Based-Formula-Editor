@@ -1,6 +1,8 @@
 import React from 'react';
-import { Header, Table, Button, Label } from 'semantic-ui-react';
+import { Header, Table, Label } from 'semantic-ui-react';
+import useTextAreaItem from './useTableItem';
 import * as S from './style';
+import { getFavorites } from '../../../lib/apis/favorite';
 
 interface DataType {
   id: number;
@@ -14,11 +16,12 @@ interface TableItemType {
   data: DataType[];
 }
 
-const removeHandler = (id: number) => {
-  console.log(id, '제거하기');
+const removeHandler = async (id: number) => {
+  console.log('지우기');
 };
 
 function TableItem({ headerTitle, headerLatex, data }: TableItemType) {
+  const { onChangeHandler } = useTextAreaItem();
   const dataList = data.map((item, index) => (
     <Table.Row key={index}>
       <Table.Cell width={1}>
@@ -26,10 +29,12 @@ function TableItem({ headerTitle, headerLatex, data }: TableItemType) {
       </Table.Cell>
       <Table.Cell width={4}>
         <S.TableContainer>
-          <span>{item.latex}</span>
-          <Label size="mini" color="teal" onClick={() => removeHandler(item.id)}>
-            X
-          </Label>
+          <S.TableSpan onClick={() => onChangeHandler(item.latex)}>{item.latex}</S.TableSpan>
+          <S.TableWrapper>
+            <Label size="mini" color="teal" onClick={() => removeHandler(item.id)}>
+              X
+            </Label>
+          </S.TableWrapper>
         </S.TableContainer>
       </Table.Cell>
     </Table.Row>
