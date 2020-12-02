@@ -861,7 +861,6 @@ const SYMBOL_HEADER: LatexHeader[] = [
         image: '⋒',
         latex: `\\Cap`,
       },
-
       {
         image: '⋓',
         latex: `\\Cup`,
@@ -876,7 +875,7 @@ const SYMBOL_HEADER: LatexHeader[] = [
       },
       {
         image: '⊔',
-        latex: `\\wedge`,
+        latex: `\\sqcup`,
       },
       {
         image: '∧',
@@ -1009,7 +1008,7 @@ const SYMBOL_HEADER: LatexHeader[] = [
       },
       {
         image: '∅',
-        latex: `\\dotminus`,
+        latex: `\\varphi`,
       },
     ],
   },
@@ -1073,7 +1072,7 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\xi`,
       },
       {
-        image: 'ο', // X
+        image: 'ο',
         latex: `\\omikron`,
       },
       {
@@ -1113,11 +1112,11 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\omega`,
       },
       {
-        image: 'Α', // X
+        image: 'Α',
         latex: `\\Alpha`,
       },
       {
-        image: 'Β', // X
+        image: 'Β',
         latex: `\\Beta`,
       },
       {
@@ -1129,15 +1128,15 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\Delta`,
       },
       {
-        image: 'Ε', // X
+        image: 'Ε',
         latex: `\\Epsilon`,
       },
       {
-        image: 'Ζ', // X
+        image: 'Ζ',
         latex: `\\Zeta`,
       },
       {
-        image: 'Η', // X
+        image: 'Η',
         latex: `\\Eta`,
       },
       {
@@ -1145,11 +1144,11 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\Theta`,
       },
       {
-        image: 'Ι', // X
+        image: 'Ι',
         latex: `\\Iota`,
       },
       {
-        image: 'Κ', // X
+        image: 'Κ',
         latex: `\\Kappa`,
       },
       {
@@ -1157,11 +1156,11 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\Lambda`,
       },
       {
-        image: 'Μ', // X
+        image: 'Μ',
         latex: `\\Mu`,
       },
       {
-        image: 'Ν', // X
+        image: 'Ν',
         latex: `\\Nu`,
       },
       {
@@ -1169,7 +1168,7 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\Xi`,
       },
       {
-        image: 'Ο', // X
+        image: 'Ο',
         latex: `\\Omikron`,
       },
       {
@@ -1177,7 +1176,7 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\Pi`,
       },
       {
-        image: 'Ρ', // X
+        image: 'Ρ',
         latex: `\\Rho`,
       },
       {
@@ -1185,7 +1184,7 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\Sigma`,
       },
       {
-        image: 'Τ', // X
+        image: 'Τ',
         latex: `\\Tau`,
       },
       {
@@ -1197,7 +1196,7 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\Phi`,
       },
       {
-        image: 'Χ', // X
+        image: 'Χ',
         latex: `\\Chi`,
       },
       {
@@ -1242,23 +1241,23 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\forall`,
       },
       {
-        image: 'ð', // X
+        image: 'ð',
         latex: `\\eth`,
       },
       {
-        image: 'ℊ', // X
+        image: 'ℊ',
         latex: `\\g`,
       },
       {
-        image: '℩', // X
+        image: '℩',
         latex: `\\variota`,
       },
       {
-        image: 'ι', // X
+        image: 'ι',
         latex: `\\i`,
       },
       {
-        image: 'j', // X
+        image: 'j',
         latex: `\\j`,
       },
       {
@@ -1274,15 +1273,15 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\hbar`,
       },
       {
-        image: 'ơ', // X
+        image: 'ơ',
         latex: `\\varnothing`,
       },
       {
-        image: 'ℱ', // X
+        image: 'ℱ',
         latex: `\\F`,
       },
       {
-        image: 'ℒ', // X
+        image: 'ℒ',
         latex: `\\L`,
       },
       {
@@ -1290,7 +1289,7 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\partial`,
       },
       {
-        image: '∁', // X
+        image: '∁',
         latex: `\\complement`,
       },
       {
@@ -1302,31 +1301,31 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\wp`,
       },
       {
-        image: 'ℬ', // X
+        image: 'ℬ',
         latex: `\\B`,
       },
       {
-        image: 'ℇ', // X
+        image: 'ℇ',
         latex: `\\E`,
       },
       {
-        image: '𝕳', // X, 클릭 시 \mathbb{H} 라고 나오고 모양 좀 다름
-        latex: `\\H`, // 클릭시 나오는 latex와 입력 latex가 다름
+        image: '𝕳',
+        latex: `\\H`,
       },
       {
-        image: '℧', // X
+        image: '℧',
         latex: `\\mho`,
       },
       {
-        image: 'Å', //보류, 클릭시 \text\AA 라고 나오고 모양 좀 다름
-        latex: `\\AA`, // 클릭시 나오는 latex와 입력 latex가 다름
+        image: 'Å',
+        latex: `\\AA`,
       },
       {
-        image: 'ℰ', // X
+        image: 'ℰ',
         latex: `\\Ep`,
       },
       {
-        image: '℮', // X
+        image: '℮',
         latex: `\\e`,
       },
       {
@@ -1334,88 +1333,88 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\aleph`,
       },
       {
-        image: 'ℶ', // X
+        image: 'ℶ',
         latex: `\\beth`,
       },
       {
-        image: 'ℷ', // X
+        image: 'ℷ',
         latex: `\\m`,
       },
       {
-        image: 'ℸ', // X
+        image: 'ℸ',
         latex: `\\daleth`,
       },
     ],
   },
   {
-    header: `%`, // 다 안됨
+    header: `%`,
     content: [
       {
-        image: '㎜', // X
-        latex: `\\㎜`,
+        image: '㎜',
+        latex: `\\mm `,
       },
       {
-        image: 'cm', // X
+        image: 'cm',
         latex: `\\cm`,
       },
       {
-        image: 'm', // X
+        image: 'm',
         latex: `\\meter`,
       },
       {
-        image: 'km', // X
+        image: 'km',
         latex: `\\km`,
       },
       {
-        image: 'mg', // X
+        image: 'mg',
         latex: `\\mg`,
       },
       {
-        image: 'g', // X
+        image: 'g',
         latex: `\\gram`,
       },
       {
-        image: 'kg', // X
+        image: 'kg',
         latex: `\\kg`,
       },
       {
-        image: '㎠', // X
+        image: '㎠',
         latex: `\\cmx`,
       },
       {
-        image: '㎡', // X
+        image: '㎡',
         latex: `\\mx`,
       },
       {
-        image: '㎢', // X
+        image: '㎢',
         latex: `\\kmx`,
       },
       {
-        image: '㎤', // X
+        image: '㎤',
         latex: `\\cmxx`,
       },
       {
-        image: '㎥', // X
+        image: '㎥',
         latex: `\\mxx`,
       },
       {
-        image: '㎦', // X
+        image: '㎦',
         latex: `\\kmxx`,
       },
       {
-        image: '㎗', // X
+        image: '㎗',
         latex: `\\dl`,
       },
       {
-        image: '㎖', // X
+        image: '㎖',
         latex: `\\ml`,
       },
       {
-        image: 'ℓ', // X
+        image: 'ℓ',
         latex: `\\liter`,
       },
       {
-        image: '㏄', // X
+        image: '㏄',
         latex: `\\cc`,
       },
       {
@@ -1435,15 +1434,15 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\percent`,
       },
       {
-        image: '‰', // X
+        image: '‰',
         latex: `\\permill`,
       },
       {
-        image: '‱', // X
+        image: '‱',
         latex: `\\basispoint`,
       },
       {
-        image: '°', // X
+        image: '°',
         latex: `\\cir`,
       },
     ],
@@ -1516,39 +1515,39 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: '\\swarrow',
       },
       {
-        image: '↚', // X
+        image: '↚',
         latex: '\\nleftarrow',
       },
       {
-        image: '↛', // X
+        image: '↛',
         latex: '\\nrightarrow',
       },
       {
-        image: '↮', // X
+        image: '↮',
         latex: '\\nleftrightarrow',
       },
       {
-        image: '⇍', // X
+        image: '⇍',
         latex: '\\nLeftarrow',
       },
       {
-        image: '⇏', // X
+        image: '⇏',
         latex: '\\nRightarrow',
       },
       {
-        image: '⇎', // X
+        image: '⇎',
         latex: '\\nLeftrightarrow',
       },
       {
-        image: '⇠', // X
+        image: '⇠',
         latex: '\\dashleftarrow',
       },
       {
-        image: '⇢', // X
+        image: '⇢',
         latex: '\\dasharrow',
       },
       {
-        image: '↤', // X
+        image: '↤',
         latex: '\\mapgets',
       },
       {
@@ -1564,123 +1563,123 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: '\\hookrightarrow',
       },
       {
-        image: '⇋', // X
+        image: '⇋',
         latex: '\\leftrightharpoons',
       },
       {
-        image: '⇌', // X
+        image: '⇌',
         latex: '\\rightleftharpoons',
       },
       {
-        image: '⇇', // X
+        image: '⇇',
         latex: '\\leftleftarrows',
       },
       {
-        image: '⇉', // X
+        image: '⇉',
         latex: '\\rightrightarrows',
       },
       {
-        image: '⇆', // X
+        image: '⇆',
         latex: '\\leftrightarrows',
       },
       {
-        image: '⇄', // X
-        latex: '\\leftrightarrows',
+        image: '⇄',
+        latex: '\\rightleftarrows',
       },
       {
-        image: '⇈', //x
+        image: '⇈',
         latex: '\\upuparrows',
       },
       {
-        image: '⇊', //x
+        image: '⇊',
         latex: '\\downdownarrows',
       },
       {
-        image: '↫', //x
+        image: '↫',
         latex: '\\looparrowleft',
       },
       {
-        image: '↬', //x
+        image: '↬',
         latex: '\\looparrowright',
       },
       {
-        image: '↢', //x
+        image: '↢',
         latex: '\\leftarrowtail',
       },
       {
-        image: '↣', //x
+        image: '↣',
         latex: '\\rightarrowtail',
       },
       {
-        image: '↰', //x
+        image: '↰',
         latex: '\\Lsh',
       },
       {
-        image: '↱', //x
+        image: '↱',
         latex: '\\Rsh',
       },
       {
-        image: '↲', //x
+        image: '↲',
         latex: '\\Ldsh',
       },
       {
-        image: '↳', //x
+        image: '↳',
         latex: '\\Rdsh',
       },
       {
-        image: '⇚', //x
+        image: '⇚',
         latex: '\\Lleftarrow',
       },
       {
-        image: '⇛', //x
+        image: '⇛',
         latex: '\\Rrightarrow',
       },
       {
-        image: '↞', //x
+        image: '↞',
         latex: '\\twoheadleftarrow',
       },
       {
-        image: '↠', //x
+        image: '↠',
         latex: '\\twoheadrightarrow',
       },
       {
-        image: '↶', //x
+        image: '↶',
         latex: '\\curvearrowleft',
       },
       {
-        image: '↷', //x
+        image: '↷',
         latex: '\\curvearrowright',
       },
       {
-        image: '↺', //x
+        image: '↺',
         latex: '\\circlearrowleft',
       },
       {
-        image: '↻', //x
+        image: '↻',
         latex: '\\circlearrowright',
       },
       {
-        image: '⊸', //x
+        image: '⊸',
         latex: '\\multimap',
       },
       {
-        image: '↭', //x
+        image: '↭',
         latex: '\\leftrightsquigarrow',
       },
       {
-        image: '↜', //x
+        image: '↜',
         latex: `\\leadsgets`,
       },
       {
-        image: '↝', //x
+        image: '↝',
         latex: '\\leadsto',
       },
       {
-        image: '⇜', //x
+        image: '⇜',
         latex: '\\leftsquigarrow',
       },
       {
-        image: '⇝', //x
+        image: '⇝',
         latex: '\\rightsquigarrow',
       },
     ],
@@ -1705,11 +1704,11 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\risingdotseq`,
       },
       {
-        image: '<', //x
+        image: '<',
         latex: `<`,
       },
       {
-        image: '>', //x
+        image: '>',
         latex: `>`,
       },
       {
@@ -1721,19 +1720,19 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\ge`,
       },
       {
-        image: '⋜', //x
+        image: '⋜',
         latex: `\\el`,
       },
       {
-        image: '⋝', //x
+        image: '⋝',
         latex: `\\eg`,
       },
       {
-        image: '≲', //x
+        image: '≲',
         latex: `\\lesssim`,
       },
       {
-        image: '≳', //x
+        image: '≳',
         latex: `\\gtrsim`,
       },
       {
@@ -1741,11 +1740,11 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\equiv`,
       },
       {
-        image: '∼', //x
+        image: '∼',
         latex: `\\backsim`,
       },
       {
-        image: '≃', //x
+        image: '≃',
         latex: `\\backsimeq`,
       },
       {
@@ -1801,19 +1800,19 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\succ`,
       },
       {
-        image: '≼', //x
+        image: '≼',
         latex: `\\preccurlyeq`,
       },
       {
-        image: '≽', //x
+        image: '≽',
         latex: `\\succcurlyeq`,
       },
       {
-        image: '≾', //x
+        image: '≾',
         latex: `\\precsim`,
       },
       {
-        image: '≿', //x
+        image: '≿',
         latex: `\\succsim`,
       },
       {
@@ -1841,20 +1840,20 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\dashv`,
       },
       {
-        image: '⊨', //x
+        image: '⊨',
         latex: `\\Dash`,
       },
       {
-        image: '⊩', //x
+        image: '⊩',
         latex: `\\force`,
       },
       {
-        image: '⋈', //x
+        image: '⋈',
         latex: `\\Join`,
       },
       {
-        image: '≍', //x
-        latex: `\\asymp`, //approx 로 나옴?
+        image: '≍',
+        latex: `\\asymp`,
       },
       {
         image: '∴',
@@ -1865,39 +1864,39 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\because`,
       },
       {
-        image: '⋘', //x
+        image: '⋘',
         latex: `\\lll`,
       },
       {
-        image: '⋙', //x
+        image: '⋙',
         latex: `\\ggg`,
       },
       {
-        image: '⊲', //x
+        image: '⊲',
         latex: `\\lhd`,
       },
       {
-        image: '⊳', //x
+        image: '⊳',
         latex: `\\rhd`,
       },
       {
-        image: '⊴', //x
+        image: '⊴',
         latex: `\\unlhd`,
       },
       {
-        image: '⊵', //x
+        image: '⊵',
         latex: `\\unrhd`,
       },
       {
-        image: '≖', //x
+        image: '≖',
         latex: `\\eqcirc`,
       },
       {
-        image: '≗', //x
+        image: '≗',
         latex: `\\circeq`,
       },
       {
-        image: '≜', //x
+        image: '≜',
         latex: `\\deltaeq`,
       },
       {
@@ -1905,19 +1904,19 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\doteq`,
       },
       {
-        image: '≏', //x
+        image: '≏',
         latex: `\\bumpeq`,
       },
       {
-        image: '≎', //x
+        image: '≎',
         latex: `\\Bumpeq`,
       },
       {
-        image: '⋔', //x
+        image: '⋔',
         latex: `\\pitchfork`,
       },
       {
-        image: '≬', //x
+        image: '≬',
         latex: `\\between`,
       },
       {
@@ -1937,59 +1936,59 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\ngtr`,
       },
       {
-        image: '≰', //x
+        image: '≰',
         latex: `\\nleq`,
       },
       {
-        image: '≱', //x
+        image: '≱',
         latex: `\\ngeq`,
       },
       {
-        image: '≨', //x
+        image: '≨',
         latex: `\\lneq`,
       },
       {
-        image: '≩', //x
+        image: '≩',
         latex: `\\gneq`,
       },
       {
-        image: '⋦', //x
+        image: '⋦',
         latex: `\\lnsim`,
       },
       {
-        image: '⋧', //x
+        image: '⋧',
         latex: `\\gnsim`,
       },
       {
-        image: '≢', //x
+        image: '≢',
         latex: `\\nequiv`,
       },
       {
-        image: '≁', //x
+        image: '≁',
         latex: `\\nsim`,
       },
       {
-        image: '≄', //x
+        image: '≄',
         latex: `\\nbacksimeq`,
       },
       {
-        image: '≉', //x
+        image: '≉',
         latex: `\\napprox`,
       },
       {
-        image: '≇', //x
+        image: '≇',
         latex: `\\ncong`,
       },
       {
-        image: '∉', //x
+        image: '∉',
         latex: `\\nin`,
       },
       {
-        image: '∌', //x
+        image: '∌',
         latex: `\\nni`,
       },
       {
-        image: '⊄', //  \not\subet으로 떴다가 엔터치면 \neg\subset으로바뀜
+        image: '⊄',
         latex: `\\nsubset`,
       },
       {
@@ -2005,67 +2004,67 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\nsupseteq`,
       },
       {
-        image: '⊀', //x
+        image: '⊀',
         latex: `\\nprec`,
       },
       {
-        image: '⊁', //x
+        image: '⊁',
         latex: `\\nsucc`,
       },
       {
-        image: '⋠', //x
+        image: '⋠',
         latex: `\\npreccurlyeq`,
       },
       {
-        image: '⋡', //x
+        image: '⋡',
         latex: `\\nsucccurlyeq`,
       },
       {
-        image: '⋨', //x
+        image: '⋨',
         latex: `\\nlesssim`,
       },
       {
-        image: '⋩', //x
+        image: '⋩',
         latex: `\\ngtrsim`,
       },
       {
-        image: '⋢', //x
+        image: '⋢',
         latex: `\\nsqsubseteq`,
       },
       {
-        image: '⋣', //x
+        image: '⋣',
         latex: `\\nsqsupseteq`,
       },
       {
-        image: '⊬', //x
+        image: '⊬',
         latex: `\\nvdash`,
       },
       {
-        image: '⊭', //x
+        image: '⊭',
         latex: `\\nvDash`,
       },
       {
-        image: '⊮', //x
+        image: '⊮',
         latex: `\\nVdash`,
       },
       {
-        image: '≭', //x
+        image: '≭',
         latex: `\\nasymp`,
       },
       {
-        image: '⋪', //x
+        image: '⋪',
         latex: `\\ntriangleleft`,
       },
       {
-        image: '⋫', //x
+        image: '⋫',
         latex: `\\ntriangleright`,
       },
       {
-        image: '⋬', //x
+        image: '⋬',
         latex: `\\ntrianglelefteq`,
       },
       {
-        image: '⋭', //x
+        image: '⋭',
         latex: `\\ntrianglerighteq`,
       },
       {
@@ -2073,7 +2072,7 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\nexists`,
       },
       {
-        image: '∟', //x
+        image: '∟',
         latex: `\\rightangle`,
       },
       {
@@ -2085,15 +2084,15 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: `\\measuredangle`,
       },
       {
-        image: '∢', //x
+        image: '∢',
         latex: '\\sphericalangle',
       },
       {
-        image: '⊾', //x
+        image: '⊾',
         latex: '\\rightanglearc',
       },
       {
-        image: '⊿', //x
+        image: '⊿',
         latex: '\\righttriangle ',
       },
       {
@@ -2109,23 +2108,27 @@ const SYMBOL_HEADER: LatexHeader[] = [
         latex: '\\perp',
       },
       {
-        image: '∥', //x
+        image: '∤',
         latex: '\\nmid',
       },
       {
-        image: '∦',
+        image: '∥',
         latex: '\\parallel ',
       },
       {
-        image: '♯',
+        image: '∦',
         latex: '\\nparallel ',
       },
       {
-        image: '∶', //x
+        image: '♯',
+        latex: '\\sharp ',
+      },
+      {
+        image: '∶',
         latex: '\\ratio',
       },
       {
-        image: '∷', //x
+        image: '∷',
         latex: '\\proportion',
       },
       {
