@@ -3,7 +3,7 @@ import FavoriteController from '../controllers/favorite-controller';
 
 const router = express.Router();
 
-router.get('/', FavoriteController.getFavorites);
+router.get('/:userId', FavoriteController.getFavoritesByUserId);
 // router.post('/', FavoriteController.createFavorite);
 // router.delete('/:id', FavoriteController.deleteFavorite);
 

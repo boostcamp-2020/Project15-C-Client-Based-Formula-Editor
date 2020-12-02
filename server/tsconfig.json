@@ -4,13 +4,12 @@
     "outDir": "./dist",
     "target": "es5",
     "sourceMap": true,
-
     "module": "commonjs",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-
+    "strict": true,
     "baseUrl": "."
     // "paths": {
     //   "@constants/*": ["src/common/constants/*"],
@@ -24,5 +23,8 @@
     //   "@service/*": ["src/service/*"],
     //   "@config/*":["src/common/config/*"],
     // }
-  }
+  },
+  "include": ["src/**/*"],
+  // 컴파일에서 제외되는 파일들
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }

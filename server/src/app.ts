@@ -1,8 +1,10 @@
 import 'reflect-metadata';
 import dotenv from 'dotenv';
+import { createConnection, Connection } from 'typeorm';
 import express, { Express } from 'express';
 import cors from 'cors';
 import logger from 'morgan';
+import indexRouter from './router/index';
 
 export default class Application {
   app: Express;
@@ -13,6 +15,7 @@ export default class Application {
 
   async init() {
     this.initEnv();
+    this.dbConnect();
     this.registerMiddleware();
     this.listen();
   }
@@ -22,12 +25,20 @@ export default class Application {
     dotenv.config({ path: envFile });
   }
 
+  dbConnect() {
+    createConnection()
+      .then(async (connection: Connection) =>
+        console.log('Entity connected : ', connection.isConnected)
+      )
+      .catch((err: Error) => console.log('Entity connection error : ', err));
+  }
+
   registerMiddleware() {
     this.app.use(logger('dev'));
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
     this.app.use(cors());
-    // this.app.use("/", () => ());
+    this.app.use('/api', indexRouter);
   }
 
   listen() {
@@ -39,4 +50,6 @@ export default class Application {
 }
 
 const application = new Application();
+// Connect typeORM mysql
+
 application.init();
