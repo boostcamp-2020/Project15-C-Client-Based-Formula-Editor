@@ -4,7 +4,7 @@ import useTextAreaItem from './useTableItem';
 import * as S from './style';
 import { getFavorites } from '../../../lib/apis/favorite';
 
-interface DataType {
+export interface DataType {
   id: number;
   title: string;
   latex: string;
