@@ -1,18 +1,18 @@
 import { Request, Response, NextFunction } from 'express';
 import FavoriteService from '../service/favorite-service';
 
-const StarController = {
+const FavoriteController = {
   async getFavorites(req: Request, res: Response, next: NextFunction) {
     try {
-      // TODO. StarService에서 DB Access 로직
-      // TODO. response 하는 로직
+      // TODO. Service Logic
     } catch (err) {
       next(err);
     }
   },
 
-  async createFavorite(req: Request, res: Response, next: NextFuction) {
+  async createFavorite(req: Request, res: Response, next: NextFunction) {
     try {
+      // TODO. Service Logic
     } catch (err) {
       next(err);
     }
@@ -20,10 +20,11 @@ const StarController = {
 
   async deleteFavorite(req: Request, res: Response, next: NextFunction) {
     try {
+      // TODO. Service Logic
     } catch (err) {
       next(err);
     }
   },
 };
 
-export default StarController;
+export default FavoriteController;
