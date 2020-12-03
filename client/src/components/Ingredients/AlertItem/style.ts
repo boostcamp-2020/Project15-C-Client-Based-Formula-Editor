@@ -6,7 +6,6 @@ export const AlertItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: F3F3F3;
 `;
 
 export const IconBox = styled.div`
