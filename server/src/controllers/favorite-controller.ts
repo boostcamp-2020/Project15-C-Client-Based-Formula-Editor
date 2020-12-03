@@ -9,13 +9,13 @@ const FavoriteController = {
       // todo : HTTP status Code 상수화
       const userId = Number(req.params.userId);
       if (!isValidateType(userId, ValidateType.Number)) {
-        return res.status(STATUS_CODE.clientError).json({ message: ERROR_MESSAGE.clientError });
+        return res.status(STATUS_CODE.CLIENT_ERROR).json({ message: ERROR_MESSAGE.CLIENT_ERROR });
       }
 
       const results = await FavoriteService.getInstance().getFavoritesByUserId(userId);
-      res.status(STATUS_CODE.success).json({ favorites: results });
+      res.status(STATUS_CODE.SUCCESS).json({ favorites: results });
     } catch (err) {
-      res.status(STATUS_CODE.serverError).json({ message: ERROR_MESSAGE.serverError });
+      res.status(STATUS_CODE.SERVER_ERROR).json({ message: ERROR_MESSAGE.SERVER_ERROR });
     }
   },
 
@@ -30,13 +30,13 @@ const FavoriteController = {
         !isValidateType(latex, ValidateType.String) ||
         !isValidateType(userId, ValidateType.Number)
       ) {
-        return res.status(STATUS_CODE.clientError).json({ message: ERROR_MESSAGE.clientError });
+        return res.status(STATUS_CODE.CLIENT_ERROR).json({ message: ERROR_MESSAGE.CLIENT_ERROR });
       }
 
       const result = await FavoriteService.getInstance().createFavorites({ latex, title, userId });
-      res.status(STATUS_CODE.created).json({ favorite: result });
+      res.status(STATUS_CODE.CREATED).json({ favorite: result });
     } catch (err) {
-      res.status(STATUS_CODE.serverError).json({ message: ERROR_MESSAGE.serverError });
+      res.status(STATUS_CODE.SERVER_ERROR).json({ message: ERROR_MESSAGE.SERVER_ERROR });
     }
   },
 
@@ -46,13 +46,13 @@ const FavoriteController = {
       const id = Number(req.params.id);
 
       if (!isValidateType(id, ValidateType.Number)) {
-        return res.status(STATUS_CODE.clientError).json({ message: ERROR_MESSAGE.clientError });
+        return res.status(STATUS_CODE.CLIENT_ERROR).json({ message: ERROR_MESSAGE.CLIENT_ERROR });
       }
 
       await FavoriteService.getInstance().deleteFavorites(id);
-      res.status(STATUS_CODE.success).json({ message: '즐겨찾기 삭제가 완료 되었습니다.' });
+      res.status(STATUS_CODE.SUCCESS).json({ message: '즐겨찾기 삭제가 완료 되었습니다.' });
     } catch (err) {
-      res.status(STATUS_CODE.serverError).json({ message: ERROR_MESSAGE.serverError });
+      res.status(STATUS_CODE.SERVER_ERROR).json({ message: ERROR_MESSAGE.SERVER_ERROR });
     }
   },
 };
