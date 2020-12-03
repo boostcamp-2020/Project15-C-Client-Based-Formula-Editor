@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 export const TabContainer = styled.div`
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;

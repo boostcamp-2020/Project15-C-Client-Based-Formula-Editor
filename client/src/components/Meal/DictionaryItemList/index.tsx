@@ -1,6 +1,7 @@
 import React from 'react';
 import DictionaryItem from '@ingredients/DictionaryItem';
 import { MenuLatex } from '@constants/latex-dictionary';
+import { Table } from 'semantic-ui-react';
 import * as S from './style';
 
 interface DictionaryItemListProps {
@@ -16,14 +17,21 @@ function DictionaryItemList({
 }: DictionaryItemListProps) {
   return (
     <S.DictionaryItemList>
-      {searchWord &&
-        searchedContent.map((dictionary: MenuLatex, index: number) => (
-          <DictionaryItem key={index} latex={dictionary.latex} />
-        ))}
-      {!searchWord &&
-        selectedContent.map((dictionary: MenuLatex, index: number) => (
-          <DictionaryItem key={index} latex={dictionary.latex} />
-        ))}
+      <Table celled fixed unstackable selectable>
+        <Table.Body>
+          {searchWord
+            ? searchedContent.map((dictionary: MenuLatex, index: number) => (
+                <Table.Row key={index}>
+                  <DictionaryItem latex={dictionary.latex} />
+                </Table.Row>
+              ))
+            : selectedContent.map((dictionary: MenuLatex, index: number) => (
+                <Table.Row key={index}>
+                  <DictionaryItem latex={dictionary.latex} />
+                </Table.Row>
+              ))}
+        </Table.Body>
+      </Table>
     </S.DictionaryItemList>
   );
 }

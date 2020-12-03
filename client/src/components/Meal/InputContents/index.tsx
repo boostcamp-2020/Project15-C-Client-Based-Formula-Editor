@@ -24,7 +24,10 @@ const panes = [
   },
   {
     menuItem: '수식사전',
-    render: () => <DictionaryTab />,
+    // render: () => <DictionaryTab />,
+    render: function tabContent() {
+      return <DictionaryTab />;
+    },
   },
   {
     menuItem: '즐겨찾기',
