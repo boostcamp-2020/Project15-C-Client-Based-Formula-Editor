@@ -12,7 +12,13 @@ function App() {
       <Frame
         id="iframe"
         head={[
-          // <link type="text/css" rel="stylesheet" href={chrome.runtime.getURL('/content.css')}></link>,
+          // 크롬 익스텐션
+          // <link
+          //   key={1}
+          //   type="text/css"
+          //   rel="stylesheet"
+          //   href={chrome.runtime.getURL('/content.css')}
+          // ></link>,
           <link
             rel="stylesheet"
             href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css"

@@ -6,6 +6,8 @@ import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './contexts';
 // import logger from 'redux-logger';
 // import { composeWithDevTools } from 'redux-devtools-extension';
+
+// 크롬 익스텐션
 // import '../public/root.css';
 
 // const app = document.createElement('div');
@@ -26,6 +28,7 @@ import rootReducer from './contexts';
 //     app.style.display = 'none';
 //   }
 // }
+
 //const store = createStore(rootReducer, applyMiddleware(logger));
 const store = createStore(rootReducer);
 
@@ -34,4 +37,5 @@ ReactDOM.render(
     <App />
   </Provider>,
   document.getElementById('root')
+  //app
 );
