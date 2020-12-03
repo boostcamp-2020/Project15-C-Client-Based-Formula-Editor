@@ -14,4 +14,12 @@ export const DictionaryItemList = styled.div`
   & table {
     border: none !important;
   }
+
+  & tr:hover {
+    cursor: pointer;
+  }
+
+  & span:hover {
+    cursor: pointer;
+  }
 `;
