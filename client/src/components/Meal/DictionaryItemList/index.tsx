@@ -5,31 +5,21 @@ import { Table } from 'semantic-ui-react';
 import * as S from './style';
 
 interface DictionaryItemListProps {
-  searchWord: string;
-  searchedContent: MenuLatex[];
-  selectedContent: MenuLatex[];
+  displayedContent: MenuLatex[];
+  onScroll: (e: React.UIEvent<HTMLDivElement>) => void;
+  containerRef: any;
 }
 
-function DictionaryItemList({
-  searchWord,
-  searchedContent,
-  selectedContent,
-}: DictionaryItemListProps) {
+function DictionaryItemList({ displayedContent, onScroll, containerRef }: DictionaryItemListProps) {
   return (
-    <S.DictionaryItemList>
+    <S.DictionaryItemList ref={containerRef} onScroll={onScroll}>
       <Table celled fixed unstackable selectable>
         <Table.Body>
-          {searchWord
-            ? searchedContent.map((dictionary: MenuLatex, index: number) => (
-                <Table.Row key={index}>
-                  <DictionaryItem latex={dictionary.latex} />
-                </Table.Row>
-              ))
-            : selectedContent.map((dictionary: MenuLatex, index: number) => (
-                <Table.Row key={index}>
-                  <DictionaryItem latex={dictionary.latex} />
-                </Table.Row>
-              ))}
+          {displayedContent.map((dictionary: MenuLatex, index: number) => (
+            <Table.Row key={index}>
+              <DictionaryItem latex={dictionary.latex} />
+            </Table.Row>
+          ))}
         </Table.Body>
       </Table>
     </S.DictionaryItemList>
