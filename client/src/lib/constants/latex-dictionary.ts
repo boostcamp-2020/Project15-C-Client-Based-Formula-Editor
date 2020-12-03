@@ -256,7 +256,7 @@ export const LATEX_DICTIONARY: DictionaryMenu[] = [
         title: '삼각함수의 제곱관계',
       },
       {
-        latex: 'sin\\left( 360˙ +\\theta  \\right)=sin\\theta ',
+        latex: 'sin\\left( 360\\cir +\\theta  \\right)=sin\\theta ',
         title: '삼각함수의 주기공식',
       },
       {
@@ -264,7 +264,7 @@ export const LATEX_DICTIONARY: DictionaryMenu[] = [
         title: '삼각함수의 음각공식',
       },
       {
-        latex: 'sin\\left( 360˙ -\\theta  \\right)=sin\\theta ',
+        latex: 'sin\\left( 360\\cir -\\theta  \\right)=sin\\theta ',
         title: '삼각함수의 보각공식',
       },
       {
@@ -398,95 +398,100 @@ export const LATEX_DICTIONARY: DictionaryMenu[] = [
     menu: DICTIONARY_MENU_TITLE.differential,
     content: [
       {
-        latex: '\\frac {△ y}{△ x}=\\frac {f\\left( a+△ x \\right)-f\\left( a \\right)}{△ x} ',
+        latex:
+          '\\frac {\\righttriangle y}{\\righttriangle x}=\\frac {f\\left( a+\\righttriangle x \\right)-f\\left( a \\right)}{\\righttriangle x} ',
         title: '평균 변화율',
       },
       {
-        latex: 'lim _{△ x\\to 0}{\\frac {\\righttriangl… x \\right)-fleft( a \\right)}{△ x}} ',
+        latex:
+          '\\lim _{\\righttriangle x\\to 0}{\\frac {\\righttriangle y}{\\righttriangle x}}=\\lim _{\\righttriangle x\\to 0}{\\frac {f\\left( a+\\righttriangle x \\right)-f\\left( a \\right)}{\\righttriangle x}} ',
         title: '변화율(미분계수)',
       },
       {
-        latex: 'lim _{△ x\\to 0}{\\frac {\\righttriangl… x \\right)-fleft( x \\right)}{△ x}} ',
+        latex:
+          '\\lim _{\\righttriangle x\\to 0}{\\frac {\\righttriangle y}{\\righttriangle x}}=\\lim _{\\righttriangle x\\to 0}{\\frac {f\\left( x+\\righttriangle x \\right)-f\\left( x \\right)}{\\righttriangle x}} ',
         title: '도함수',
       },
       {
-        latex: 'lim _{△ t\\to 0}{\\frac {△ y}{△ t}}=\\frac {dy}{dt} ',
+        latex:
+          '\\lim _{\\righttriangle t\\to 0}{\\frac {\\righttriangle y}{\\righttriangle t}}=\\frac {dy}{dt} ',
         title: '시각에 대한 변화율',
       },
       {
         latex:
-          "F'left( x \\right)=fleft( x \\right)Leftrightarrow int {fleft( x \\right)dx}=Fleft( x \\right)+C ",
+          'F\\left( x \\right)=f\\left( x \\right)\\Leftrightarrow \\int {f\\left( x \\right)dx}=F\\left( x \\right)+C ',
         title: '부정적분의 정의',
       },
       {
-        latex: 'int {kdx}=kx+C left( k는quad 상수 \\right) ',
+        latex: '\\int {kdx}=kx+C \\left( k는\\quad 상수 \\right) ',
         title: '부정적분의 기본공식',
       },
       {
         latex:
-          'int {x^{ n }dx}=\\frac {1}{n+1}x^{ n+1 }+Cquad left( n은quad 양의quad 정수 \\right) ',
+          '\\int {x^{ n }dx}=\\frac {1}{n+1}x^{ n+1 }+C\\quad  \\left( n은\\quad 양의\\quad 정수 \\right) ',
         title: '부정적분의 기본공식',
       },
       {
         latex:
-          'int {kcdot fleft( x \\right)dx}=kint {fleft( x \\right)dx}quad left( k는quad 상수 \\right) ',
+          '\\int {k\\cdot f\\left( x \\right)dx}=k\\int {f\\left( x \\right)dx}\\quad  \\left( k는\\quad 상수 \\right) ',
         title: '부정적분의 기본공식',
       },
       {
         latex:
-          'int {left( fleft( x \\right)pm gleft( x \\right… {gleft( x \\right)dxquad } left( 복호동순 \\right) ',
+          '\\int {\\left( f\\left( x \\right)\\pm g\\left( x \\right) \\right)dx}=\\int {f\\left( x \\right)dx}\\pm \\int {g\\left( x \\right)dx\\quad } \\left( 복호동순 \\right) ',
         title: '부정적분의 기본공식',
       },
       {
-        latex: 'int _{ a }^{ b }{ fleft( x \\right)dx }=lim { n…left( x{ k } \\right)cdot △ x } } ',
+        latex:
+          'int _{ a }^{ b }{ fleft( x \\right)dx }=lim { n…left( x{ k } \\right)cdot \\righttriangle x } } ',
         title: '정적분의 정의',
       },
       {
         latex:
-          'int { a }^{ b }{ fleft( x \\right)dx }=left[ F…{ a }^{ b }=Fleft( a \\right)-Fleft( b \\right) ',
+          '\\int _{ a }^{ b }{ f\\left( x \\right)dx }=\\lim _{ n\\to \\infty  }{ \\sum _{ k=1 }^{ n }{ f\\left( x_{ k } \\right)\\cdot \\righttriangle x } }  ',
         title: '정적분의 기본정리',
       },
       {
         latex:
-          'int _{ a }^{ b }{ kfleft( x \\right)dx }=kint _{…t( x \\right)dx }quad left( k는quad 상수 \\right) ',
+          '\\int _{ a }^{ b }{ f\\left( x \\right)dx }=\\left[ F\\left( x \\right) \\right]_{ a }^{ b }=F\\left( a \\right)-F\\left( b \\right) ',
         title: '정적분의 기본공식',
       },
       {
         latex:
-          'int _{ a }^{ b }{ left( fleft( x \\right)pm gl…}{ gleft( x \\right)dx } left( 복호동순 \\right) ',
+          '\\int _{ a }^{ b }{ kf\\left( x \\right)dx }=k\\int _{ a }^{ b }{ f\\left( x \\right)dx }\\quad  \\left( k는\\quad 상수 \\right) ',
         title: '정적분의 기본공식',
       },
       {
         latex:
-          'int _{ a }^{ b }{ fleft( x \\right)dx }=int _{ a…t)dx }+int _{ c }^{ b }{ kfleft( x \\right)dx } ',
+          '\\int _{ a }^{ b }{ \\left( f\\left( x \\right)\\pm g\\left( x \\right) \\right)dx }=\\int _{ a }^{ b }{ f\\left( x \\right)dx }\\pm \\int _{ a }^{ b }{ g\\left( x \\right)dx }\\  \\left( 복호동순 \\right)',
         title: '정적분의 기본공식',
       },
       {
         latex:
-          'lim _{ n\\to infty }{ sum _{ k=1 }^{ n }{ flef…n } } }=int _{ a }^{ b }{ fleft( x \\right)dx } ',
+          '\\int _{ a }^{ b }{ f\\left( x \\right)dx }=\\int _{ a }^{ c }{ f\\left( x \\right)dx }+\\int _{ c }^{ b }{ kf\\left( x \\right)dx } ',
         title: '무한급수와 정적분',
       },
       {
         latex:
-          'lim _{n\\to infty }^{ }sum _{k=1}^nfleft(a+\\fra… _0^pfleft(a+x\\right)dxquad left(p=b-a\\right) ',
+          '\\lim _{ n\\to \\infty }{ \\sum _{ k=1 }^{ n }{ f\\left( a+\\frac { \\left( b-a \\right)k }{ n } \\right)\\cdot \\frac { b-a }{ n } } }=\\int _{ a }^{ b }{ f\\left( x \\right)dx } ',
         title: '무한급수와 정적분',
       },
       {
         latex:
-          'lim _{ n\\to infty }{ sum _{ k=1 }^{ n }{ flef…eft( a+px \\right)dx }quad left( p=b-a \\right) ',
+          '\\lim _{ n\\to \\infty  }{ \\sum _{ k=1 }^{ n }{ f\\left( a+\\frac { pk }{ n } \\right)\\cdot \\frac { q }{ n } } }\\ =q\\int _{ a }^{ 1 }{ f\\left( a+px \\right)dx }\\quad  \\left( p=b-a \\right) ',
         title: '무한급수와 정적분',
       },
       {
-        latex: 'S=int _{ a }^{ b }{ fleft( x \\right)dx } ',
+        latex: 'S=\\int _{ a }^{ b }{ f\\left( x \\right)dx } ',
         title: 'x축과 곡선사이의 넓이',
       },
       {
-        latex: 'S=int _{ a }^{ b }{ fleft( y \\right)dy } ',
+        latex: 'S=\\int _{ a }^{ b }{ f\\left( y \\right)dy }  ',
         title: 'y축과 곡선사이의 넓이',
       },
       {
         latex:
-          'V=int _{ a }^{ b }{ pi y^{ 2 }dx }=pi int _{ a…}{ left{ fleft( x \\right) \\right} ^{ 2 }dx } ',
+          'V=\\int _{ a }^{ b }{ \\pi y^{ 2 }dx }=\\pi \\int _{ a }^{ b }{ \\left\\{ f\\left( x \\right) \\right\\} ^{ 2 }dx } ',
         title: '회전체의 부피',
       },
     ],
@@ -496,38 +501,38 @@ export const LATEX_DICTIONARY: DictionaryMenu[] = [
     content: [
       {
         latex:
-          '{ n }{ P }{ r }=nleft( n-1 \\right)left( n-2 \\right)\\times ....\\times left( n-r+1 \\right) ',
+          '_{ n }{ P }_{ r }=n\\left( n-1 \\right)\\left( n-2 \\right)\\times ....\\times \\left( n-r+1 \\right) ',
         title: '순열',
       },
       {
-        latex: '{ n }{ P }{ r }=\\frac { n! }{ left( n-r \\right)! } ',
+        latex: '_{ n }{ P }_{ r }=\\frac { n! }{ \\left( n-r \\right)! } ',
         title: '순열',
       },
-      { latex: '{ }{n}prod { }^{ }{ }{r}=n^r ', title: '중복 순열' },
+      { latex: '{ }_{n}\\prod _{ }^{ }{\\ }_{r}=n^r ', title: '중복 순열' },
       {
         latex:
-          '{ n }{ C }{ r }=\\frac { { n }{ P }{ r } }{ r! }=\\frac { n! }{ r!left( n-r \\right)! } ',
+          '_{ n }{ C }_{ r }=\\frac { _{ n }{ P }_{ r } }{ r! }=\\frac { n! }{ r!\\left( n-r \\right)! } ',
         title: '조합',
       },
-      { latex: '{n}{H}{r}= {n+r-1}{C}{r}', title: '중복 조합' },
+      { latex: '{n}{H}_{r}= _{n+r-1}{C}_{r}', title: '중복 조합' },
       {
         latex:
-          'left( a+b \\right)^{ 2 }sum { r=0 }^{ n }{ combi{ }{ n }{ C }_{ r }a^{ n-r }b^{ r } } ',
+          '\\left( a+b \\right)^{ 2 }\\sum _{ r=0 }^{ n }{ \\combi{\\ }_{ n }{ C }_{ r }a^{ n-r }b^{ r } } ',
         title: '이항정리의 일반항',
       },
       {
         latex:
-          'sigma ^{ 2 }=\\frac { 1 }{ n }sum _{ i=1 }^{ n }{…sum { i=1 }^{ n }{ { x{ i }^{ 2 } }-m^{ 2 }  ',
+          '\\sigma ^{ 2 }=\\frac { 1 }{ n }\\sum _{ i=1 }^{ n }{ \\left( x_{ i }-m \\right)^{ 2 } }=\\frac { 1 }{ n }\\sum _{ i=1 }^{ n }{ { x_{ i }^{ 2 } }-m^{ 2 } } ',
         title: '표준편차',
       },
       {
         latex:
-          'sigma ^{ 2 }=\\frac { 1 }{ N }sum _{ i=1 }^{ n }{… left( N=sum { i=1 }^{ n }{ f{ i } } \\right) ',
+          '\\sigma ^{ 2 }=\\frac { 1 }{ N }\\sum _{ i=1 }^{ n }{ \\left( x_{ i }-m \\right)^{ 2 }f_{ i } }=\\frac { 1 }{ N }\\sum _{ i=1 }^{ n }{ x_{ i }^{ 2 }f_{ i }-m^{ 2 } }\\  \\left( N=\\sum _{ i=1 }^{ n }{ f_{ i } } \\right) ',
         title: '표준편차의 계산',
       },
       {
         latex:
-          'sigma ^{ 2 }=\\frac { 1 }{ N }sum { i=1 }^{ n }{…i=1 }^{ n }{ f{ i } },quad A는quad 가평균 \\right) ',
+          '\\sigma ^{ 2 }=\\frac { 1 }{ N }\\sum _{ i=1 }^{ n }{ \\left( x_{ i }-A \\right)^{ 2 }f_{ i } }-\\left( \\frac { 1 }{ N }\\sum _{ i=1 }^{ n }{ \\left( x_{ i }^{ 2 }-A \\right)f_{ i } } \\right)^{ 2 }\\  \\left( N=\\sum _{ i=1 }^{ n }{ f_{ i } },\\quad A는\\quad 가평균 \\right) ',
         title: '표준편차의 계산',
       },
     ],
@@ -592,20 +597,20 @@ export const LATEX_DICTIONARY: DictionaryMenu[] = [
     menu: DICTIONARY_MENU_TITLE.sequence,
     content: [
       {
-        latex: ' { a }{ n }=a+left( n-1 \\right)d ',
+        latex: ' { a }{ n }=a+\\left( n-1 \\right)d ',
         title: '등차수열의 일반항',
       },
       { latex: 'x=\\frac { a+b }{ 2 } ', title: '등차중항' },
       {
-        latex: '{ 2a }{ n+1 }={ a }{ n }+{ a }{ n+2 } ',
+        latex: '{ 2a }_{ n+1 }={ a }{ n }+{ a }{ n+2 } ',
         title: '등차수열의 조건',
       },
       {
-        latex: 'S_{ n }=\\frac { nleft( a+1 \\right) }{ 2 } ',
+        latex: 'S_{ n }=\\frac { n\\left( a+1 \\right) }{ 2 } ',
         title: '등차수열의 합',
       },
       {
-        latex: 'S_{ n }=\\frac { nleft{ 2a+left( n-1 \\right)d \\right} }{ 2 } ',
+        latex: 'S_n=\\frac{n\\left\\{2a+\\left(n-1\\right)d\\right\\}}{2}',
         title: '등차수열의 합',
       },
       { latex: 'x=\\frac{2ab}{a+b}', title: '조화중항' },
@@ -614,41 +619,40 @@ export const LATEX_DICTIONARY: DictionaryMenu[] = [
         title: '조화수열의 조건',
       },
       {
-        latex: 'a_{ n }=ar^{ n-1 }quad left( 단,quad r\\neq 0 \\right) ',
+        latex: 'a_{ n }=ar^{ n-1 }\\quad  \\left( 단,\\quad r\\neq 0 \\right) ',
         title: '등비수열의 일반항',
       },
-      { latex: 'x=pm sqrt { ab } ', title: '등비중항' },
+      { latex: 'x=\\pm \\sqrt { ab } ', title: '등비중항' },
       {
-        latex: 'left( { a }{ n+1 } \\right) ^{2}=a{n}a_{n+2}',
+        latex: '\\left( { a }_{ n+1 } \\right) ^{2}=a_{n}a_{n+2}',
         title: '등비수열의 조건',
       },
       {
         latex:
-          'S_{ n }=\\frac { aleft( r^{ n }-1 \\right) }{ r-1 }quad left( 단,quad r\\n' +
-          'eq 1 \\right) ',
+          'S_{ n }=\\frac { a\\left( r^{ n }-1 \\right) }{ r-1 }\\quad  \\left( 단,\\quad r\\neq 1 \\right) ',
         title: '등비수열의 합',
       },
       {
-        latex: 'S_{ n }=naquad left( 단,quad r=1 \\right) ',
+        latex: 'S_{ n }=na\\quad \\left( 단,\\quad r=1 \\right) ',
         title: '등비수열의 합',
       },
       {
         latex:
-          'sum { k=1 }^{ n }{ k^{ 2 } }=\\frac { nleft( n+1 \\right) left( 2n+1 \\right) }{ 6 } ',
+          '\\sum _{ k=1 }^{ n }{ k^{ 2 } }=\\frac { n\\left( n+1 \\right) \\left( 2n+1 \\right)  }{ 6 } ',
         title: '거듭제곱의 합',
       },
       {
         latex:
-          'sum { k=1 }^{ n }{ k^{ 3 } }=left{ \\frac { nl…ight} ^{ 2 }=left( 1+2+3+....+n \\right) ^{ 2 } ',
+          '\\sum _{ k=1 }^{ n }{ k^{ 3 } }=\\left\\{ \\frac { n\\left( n+1 \\right)  }{ 2 } \\right\\} ^{ 2 }=\\left( 1+2+3+....+n \\right) ^{ 2 }  ',
         title: '세제곱의 합',
       },
       {
         latex:
-          'a{ n }=a{ 1 }+left( b_{ 1 }+b_{ 2 }+b_{ 3 }+...…\\right)=a_{ 1 }+sum { k=1 }^{ n-1 }{ b{ k } } ',
+          'a_{ n }=a_{ 1 }+\\left( b_{ 1 }+b_{ 2 }+b_{ 3 }+....+b_{ n-1 } \\right)=a_{ 1 }+\\sum _{ k=1 }^{ n-1 }{ b_{ k } } ',
         title: '계차수열의 원수열 일반항',
       },
       {
-        latex: 'sum { k }=\\frac { nleft( n+1 \\right) }{ 2 } ',
+        latex: '\\sum { k }=\\frac { n\\left( n+1 \\right) }{ 2 } ',
         title: '수열의 합',
       },
     ],
