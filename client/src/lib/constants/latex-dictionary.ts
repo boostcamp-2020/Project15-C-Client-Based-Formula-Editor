@@ -13,6 +13,7 @@ export interface MenuLatex {
 }
 
 export const DICTIONARY_MENU_TITLE: MenuTitle = {
+  all: '전체',
   polynomial: '다항식과 비례식',
   equation: '방정식과 부등식',
   location: '좌표 평면',

@@ -12,3 +12,5 @@ export enum AlertMessage {
   NEED_LOGIN_MESSAGE = '로그인이 필요합니다.',
   NO_LIST_MESSAGE = '항목이 없습니다.',
 }
+
+export const DISPLAY_INTERVAL = 6;

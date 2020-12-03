@@ -8,12 +8,14 @@ import * as S from './style';
 
 function DictionaryTab() {
   const {
-    currentMenu,
+    onScroll,
+    currentMenuContent,
     menuTitle,
     onSearchHandler,
     onSelectHandler,
     searchWord,
     searchedContent,
+    containerRef,
   } = useDictionaryTab();
 
   return (
@@ -26,9 +28,9 @@ function DictionaryTab() {
           onSearchHandler={onSearchHandler}
         />
         <DictionaryItemList
-          searchWord={searchWord}
-          searchedContent={searchedContent}
-          selectedContent={currentMenu.content}
+          containerRef={containerRef}
+          onScroll={onScroll}
+          displayedContent={searchWord ? searchedContent : currentMenuContent}
         />
       </S.DictionaryContainer>
     </Tab.Pane>
