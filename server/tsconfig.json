@@ -10,19 +10,15 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "strict": true,
-    "baseUrl": "."
-    // "paths": {
-    //   "@constants/*": ["src/common/constants/*"],
-    //   "@error/*": ["src/common/error/*"],
-    //   "@middleware/*": ["src/common/middleware/*"],
-    //   "@utils/*": ["src/common/utils/*"],
-    //   "@controller/*": ["src/controller/*"],
-    //   "@model/*": ["src/model/*"],
-    //   "@repository/*": ["src/repository/*"],
-    //   "@router/*": ["src/router/*"],
-    //   "@service/*": ["src/service/*"],
-    //   "@config/*":["src/common/config/*"],
-    // }
+    "baseUrl": ".",
+    "paths": {
+      "@utils/*": ["src/utils/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@entity/*": ["src/entity/*"],
+      "@repository/*": ["src/repository/*"],
+      "@router/*": ["src/router/*"],
+      "@service/*": ["src/service/*"]
+    }
   },
   "include": ["src/**/*"],
   // 컴파일에서 제외되는 파일들
