@@ -3,10 +3,10 @@ import styled from '@emotion/styled';
 export const DictionaryItemList = styled.div`
   margin-top: 13px;
   margin-right: 1px;
-  overflow: auto;
+  overflow-y: auto;
   border: 1px solid rgba(34, 36, 38, 0.15);
+  flex: 0px;
   border-radius: 7px;
-  height: 137px;
   & td {
     padding: 7px 15px !important;
   }

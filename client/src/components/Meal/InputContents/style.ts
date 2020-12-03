@@ -13,4 +13,9 @@ export const ContentsContainer = styled.div`
     padding: 7px !important;
     height: 100%;
   }
+  & > div > .active {
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+  }
 `;
