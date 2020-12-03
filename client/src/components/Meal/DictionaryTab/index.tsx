@@ -25,7 +25,6 @@ function DictionaryTab() {
           onSelectHandler={onSelectHandler}
           onSearchHandler={onSearchHandler}
         />
-
         <DictionaryItemList
           searchWord={searchWord}
           searchedContent={searchedContent}
