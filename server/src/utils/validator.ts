@@ -8,11 +8,11 @@ export enum ValidateType {
   Null = 'null',
 }
 
-export const isValidateType = (
-  target: any,
+export function isValidateType<T>(
+  target: T,
   type: ValidateType,
-  callback?: (target: any) => boolean
-) => {
+  callback?: (target: T) => boolean
+): boolean {
   if (type === ValidateType.Null && target !== null) {
     return false;
   }
@@ -21,7 +21,7 @@ export const isValidateType = (
     return false;
   }
 
-  if (type === ValidateType.Array && !Number.isFinite(target.length)) return false;
+  if (type === ValidateType.Array && !Array.isArray(target)) return false;
 
   if (
     (type === ValidateType.Object ||
@@ -35,4 +35,4 @@ export const isValidateType = (
   if (callback && !callback(target)) return false;
 
   return true;
-};
+}
