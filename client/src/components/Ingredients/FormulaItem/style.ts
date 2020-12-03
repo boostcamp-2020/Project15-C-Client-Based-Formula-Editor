@@ -4,6 +4,7 @@ interface FormulaItemStyleProps {
   isSvg: boolean;
 }
 
+//background: url(${(props) => props.image && chrome.extension.getURL(`image/${props.image}`)});
 export const FormulaItem = styled.li<FormulaItemStyleProps>`
   background: url(${(props) => `./image/${props.image}`});
   background-size: 100%;

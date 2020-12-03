@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 interface DropDownItemStyleProps {
   header?: string;
 }
-
+//background: url(${(props) => props.header && chrome.extension.getURL(`image/${props.header}`)});
 export const DropDownItemStyle = styled.button<DropDownItemStyleProps>`
   background: url(${(props) => `./image/${props.header}`});
   width: 60px;
