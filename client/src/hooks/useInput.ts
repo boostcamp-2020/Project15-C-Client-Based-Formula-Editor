@@ -10,9 +10,9 @@ const useInput = (
     setInput(event.target.value);
   }, []);
 
-  const clearInput = (): void => {
+  const clearInput = useCallback((): void => {
     setInput('');
-  };
+  }, []);
 
   return [input, onChange, clearInput];
 };
