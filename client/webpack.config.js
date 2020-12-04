@@ -2,10 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const mode = process.env.NODE_ENV || 'development';
 
-module.exports = {
-  mode,
+module.exports = (env, argv) => ({
+  mode: argv.mode,
   entry: {
     main: './src/index.tsx',
   },
@@ -76,4 +75,4 @@ module.exports = {
     stats: 'errors-only',
     historyApiFallback: true,
   },
-};
+});
