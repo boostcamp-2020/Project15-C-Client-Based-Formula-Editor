@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
+import { getImageURL } from '@utils/util';
 interface FormulaItemStyleProps {
   image?: string;
   isSvg: boolean;
 }
 
-//background: url(${(props) => props.image && chrome.extension.getURL(`image/${props.image}`)});
 export const FormulaItem = styled.li<FormulaItemStyleProps>`
-  background: url(${(props) => `./image/${props.image}`});
+  background: url(${(props) => getImageURL(props.image)});
   background-size: 100%;
   width: ${(props) => (!props.isSvg ? '35px' : props.image?.includes('b') ? '140px' : '70px')};
   height: ${(props) => (!props.isSvg ? '35px' : '70px')};

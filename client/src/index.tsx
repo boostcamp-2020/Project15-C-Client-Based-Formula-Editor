@@ -7,27 +7,32 @@ import rootReducer from './contexts';
 // import logger from 'redux-logger';
 // import { composeWithDevTools } from 'redux-devtools-extension';
 
-// 크롬 익스텐션
-// import '../public/root.css';
+function getProductionRootElement() {
+  const app = document.createElement('div');
+  app.id = 'my-extension';
+  document.body.appendChild(app);
+  app.style.display = 'none';
 
-// const app = document.createElement('div');
-// app.id = 'my-extension';
-// document.body.appendChild(app);
-// app.style.display = 'none';
+  function toggle() {
+    if (app.style.display === 'none') {
+      app.style.display = 'block';
+    } else {
+      app.style.display = 'none';
+    }
+  }
 
-// chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-//   if (request.message === 'click') {
-//     toggle();
-//   }
-// });
+  chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    if (request.message === 'click') {
+      toggle();
+    }
+  });
+  return app;
+}
 
-// function toggle() {
-//   if (app.style.display === 'none') {
-//     app.style.display = 'block';
-//   } else {
-//     app.style.display = 'none';
-//   }
-// }
+const app =
+  process.env.NODE_ENV === 'development'
+    ? document.getElementById('root')
+    : getProductionRootElement();
 
 //const store = createStore(rootReducer, applyMiddleware(logger));
 const store = createStore(rootReducer);
@@ -36,6 +41,5 @@ ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root')
-  //app
+  app
 );
