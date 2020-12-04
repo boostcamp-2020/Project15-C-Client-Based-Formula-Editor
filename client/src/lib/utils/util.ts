@@ -11,6 +11,12 @@ export function createAction<T, P>(type: T) {
   };
 }
 
+export function getImageURL(imageUrl: string | undefined) {
+  return process.env.NODE_ENV === 'development'
+    ? imageUrl && `./image/${imageUrl}`
+    : imageUrl && chrome.extension.getURL(`image/${imageUrl}`);
+}
+
 function observe() {
   const subscriber = new Set<any>();
   const subscribe = (callback: any) => {
