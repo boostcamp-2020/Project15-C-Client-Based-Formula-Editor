@@ -1,12 +1,11 @@
 import { Request, Response } from 'express';
-import FavoriteService from '../service/favorite-service';
 import { ValidateType, isValidateType } from '@utils/validator';
 import { STATUS_CODE, ERROR_MESSAGE } from '@utils/constant';
+import FavoriteService from '../service/favorite-service';
 
 const FavoriteController = {
   async getFavoritesByUserId(req: Request, res: Response) {
     try {
-      // todo : HTTP status Code 상수화
       const userId = Number(req.params.userId);
       if (!isValidateType(userId, ValidateType.Number)) {
         return res.status(STATUS_CODE.CLIENT_ERROR).json({ message: ERROR_MESSAGE.CLIENT_ERROR });
@@ -21,7 +20,6 @@ const FavoriteController = {
 
   async createFavorite(req: Request, res: Response) {
     try {
-      // TODO. Service Logic
       const { title, latex } = req.body;
       const userId = Number(req.body.userId);
 
@@ -42,7 +40,6 @@ const FavoriteController = {
 
   async deleteFavorite(req: Request, res: Response) {
     try {
-      // TODO. Service Logic
       const id = Number(req.params.id);
 
       if (!isValidateType(id, ValidateType.Number)) {
