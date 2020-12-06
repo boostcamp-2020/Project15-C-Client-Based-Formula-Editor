@@ -16,12 +16,17 @@ const initialState: LatexState = {
   currentTab: 0,
   totalLatex: [initTotalLatex(0)],
   mathfield: null,
+  mathfieldRef: null,
 };
 
 function reducer(state: LatexState = initialState, action: LatexAction): LatexState {
   switch (action.type) {
     case INIT_LATEX: {
-      return { ...state, mathfield: action.payload };
+      return {
+        ...state,
+        mathfield: action.payload.mathfield,
+        mathfieldRef: action.payload.mathfieldRef,
+      };
     }
 
     case EDIT_LATEX: {
