@@ -10,21 +10,18 @@ export const useSaveButtons = () => {
   const downloadText = () => {
     const fileName = `수식셰프${Date.now()}.txt`;
     const element = document.createElement('a');
-    element.setAttribute(
-      'href',
-      `data:text/plain; charset=utf-8,${encodeURIComponent(currentTabInfo.latex)}`
-    );
-    element.setAttribute('download', fileName);
+    element.href = `data:text/plain; charset=utf-8,${currentTabInfo.latex}`;
+    element.download = fileName;
     element.click();
   };
 
   const downloadImage = () => {
     if (mathfieldRef) {
       html2canvas(mathfieldRef).then((canvas) => {
-        const uri = canvas.toDataURL('image/png');
+        const url = canvas.toDataURL('image/png');
         const element = document.createElement('a');
+        element.href = url;
         element.download = `수식셰프${Date.now()}.png`;
-        element.href = uri;
         element.click();
       });
     }
