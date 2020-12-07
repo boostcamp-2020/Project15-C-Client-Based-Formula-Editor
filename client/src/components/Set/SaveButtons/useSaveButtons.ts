@@ -2,7 +2,7 @@ import useCurrentTab from '@hooks/useCurrentTab';
 import { useSelector } from 'react-redux';
 import { RootState } from '@contexts/index';
 import html2canvas from 'html2canvas';
-import { setToken, getToken } from '@utils/token';
+import { setToken } from '@utils/token';
 
 export const useSaveButtons = () => {
   const { currentTabInfo } = useCurrentTab();
@@ -31,9 +31,10 @@ export const useSaveButtons = () => {
   const onClickLoginHandler = async () => {
     chrome.runtime.sendMessage({ message: 'login' }, (response) => {
       const { userToken, result } = response.results;
-
       setToken(userToken);
-      const resultToken = getToken();
+
+      // TODO. Redux에 current user 저장하는 로직
+      // TODO. 여기서 말고, 즐겨찾기 탭에서, Redux에 current user가 있다면 즐겨찾기 목록 불러오는 로직
     });
   };
 
