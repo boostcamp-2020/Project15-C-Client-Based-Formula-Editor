@@ -1,3 +1,4 @@
+import { getToken, setToken } from '@utils/token';
 import { useEffect, useRef, useState } from 'react';
 import { LatexContent } from '../../../lib/constants/latex-header';
 
@@ -30,6 +31,15 @@ const useFormulaList = () => {
     clearTimeout(timer.current);
   };
 
+  const onClickLoginHandler = async () => {
+    chrome.runtime.sendMessage({ message: 'login' }, (response) => {
+      const { userToken, result } = response.results;
+
+      setToken(userToken);
+      const resultToken = getToken();
+    });
+  };
+
   useEffect(() => {
     document.body.addEventListener('mouseleave', () => {
       clearHiddenTimemout();
@@ -48,6 +58,7 @@ const useFormulaList = () => {
     clearHiddenTimemout,
     hiddenFormula,
     reserveHiddenFormula,
+    onClickLoginHandler
   };
 };
 

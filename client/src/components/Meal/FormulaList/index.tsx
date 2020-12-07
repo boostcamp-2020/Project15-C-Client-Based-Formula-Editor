@@ -17,6 +17,7 @@ function FormulaList() {
     setNowHeader,
     nowFormulas,
     setNowFormula,
+    onClickLoginHandler
   } = useFormulaList();
 
   return (
@@ -51,8 +52,10 @@ function FormulaList() {
             </DropDownItem>
           ))}
         </S.SymbolHeaderWrapper>
+        <S.UserButtonsContainer>
+            <S.LoginButton onClick={onClickLoginHandler}/>
+        </S.UserButtonsContainer>
       </S.FormulaContainer>
-
       <S.FormulaList
         ref={formulaRef}
         onMouseLeave={hiddenFormula}

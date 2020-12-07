@@ -4,7 +4,7 @@ import { Button } from 'semantic-ui-react';
 import SaveButtonsContainer from './style';
 
 function SaveButtons() {
-  const { downloadImage, downloadText, onClickLoginHandler } = useSaveButtons();
+  const { downloadImage, downloadText } = useSaveButtons();
 
   return (
     <SaveButtonsContainer>

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { getImageURL } from '@utils/util';
 
 export const FormulaContainer = styled.div`
   display: flex;
@@ -8,6 +9,17 @@ export const FormulaContainer = styled.div`
   background-color: #f3f3f3;
   height: 100%;
 `;
+
+export const UserButtonsContainer = styled.div`
+`
+
+export const LoginButton = styled.div`
+  background: url(${() => getImageURL('login.png')});
+  width: 100px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+`
 
 export const FormulaHeaderWrapper = styled.div`
   height: 100%;
