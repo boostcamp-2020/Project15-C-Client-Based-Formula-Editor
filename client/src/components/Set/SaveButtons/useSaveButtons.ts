@@ -2,6 +2,7 @@ import useCurrentTab from '@hooks/useCurrentTab';
 import { useSelector } from 'react-redux';
 import { RootState } from '@contexts/index';
 import html2canvas from 'html2canvas';
+import { setToken, getToken } from '@utils/token';
 
 export const useSaveButtons = () => {
   const { currentTabInfo } = useCurrentTab();
@@ -27,9 +28,12 @@ export const useSaveButtons = () => {
     }
   };
 
-  const onClickLoginHandler = () => {
+  const onClickLoginHandler = async () => {
     chrome.runtime.sendMessage({ message: 'login' }, (response) => {
-      console.log(response);
+      const { userToken, result } = response.results;
+
+      setToken(userToken);
+      const resultToken = getToken();
     });
   };
 
