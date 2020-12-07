@@ -5,7 +5,8 @@ import Input from '@set/Input';
 import Output from '@set/Output';
 import SaveButtons from '@set/SaveButtons';
 import { observer } from '../lib/utils/util';
-import TestComponent from './testComponent';
+import { useSelector } from 'react-redux';
+import { RootState } from '@contexts/index';
 
 const MainContainer = styled.section`
   display: flex;
@@ -24,6 +25,8 @@ const ContentsContainer = styled.div`
 `;
 
 function MainPage() {
+  const test= useSelector((state: RootState) => state.user);
+  console.log("tets:",test)
   return (
     <MainContainer onClick={observer.notify}>
       <Header />
@@ -34,7 +37,6 @@ function MainPage() {
         </ContentsContainer>
         <SaveButtons />
       </Main>
-      {/* <TestComponent /> */}
     </MainContainer>
   );
 }
