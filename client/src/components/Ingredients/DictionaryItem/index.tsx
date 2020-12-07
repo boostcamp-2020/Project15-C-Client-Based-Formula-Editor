@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticMathField } from 'boost-mathquill';
 import { useSelector } from 'react-redux';
-import { RootState } from '@/contexts';
+import { RootState } from '@contexts/index';
 import { Table } from 'semantic-ui-react';
 import * as S from './style';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import TemplateButtons from '../FormatButtons';
-import Content from '../OutputFormula';
+import OutputFormula from '../OutputFormula';
 import * as S from './style';
 
 function OutputContents() {
@@ -9,7 +9,7 @@ function OutputContents() {
       <S.ContentsHeader>
         <TemplateButtons></TemplateButtons>
       </S.ContentsHeader>
-      <Content />
+      <OutputFormula />
     </S.ContentsContainer>
   );
 }

@@ -42,8 +42,8 @@
 .mq-editable-field {
   display: -moz-inline-box;
   display: inline-block;
-  width: 400px;
-  height: 50px;
+  /* width: 400px;
+  height: 50px; */
 }
 .mq-editable-field .mq-cursor {
   border-left: 1px solid black;
@@ -59,7 +59,7 @@
 }
 .mq-editable-field,
 .mq-math-mode .mq-editable-field {
-  width: 100%;
+  /* width: 100%; */
   padding: 0 5px;
 }
 /* .mq-editable-field.mq-focused,

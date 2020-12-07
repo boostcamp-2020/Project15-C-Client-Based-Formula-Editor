@@ -47,7 +47,7 @@ const useDictionaryTab = () => {
     onChangeSearchWord(event);
   };
 
-  const debounceTimer = useRef<NodeJS.Timeout | null>(null);
+  const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
     if (debounceTimer.current) clearTimeout(debounceTimer.current);
     if (!searchWord.length) {
@@ -66,7 +66,7 @@ const useDictionaryTab = () => {
     }, 500);
   }, [searchWord]);
 
-  const throttleTimer = useRef<NodeJS.Timeout | null>(null);
+  const throttleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const onScroll = (e: React.UIEvent<HTMLDivElement>) => {
     if (!throttleTimer.current) {
       throttleTimer.current = setTimeout(() => {

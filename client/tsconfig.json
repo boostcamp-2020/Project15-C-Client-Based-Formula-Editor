@@ -10,7 +10,6 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
       "@ingredients/*": ["src/components/Ingredients/*"],
       "@meal/*": ["src/components/Meal/*"],
       "@set/*": ["src/components/Set/*"],
