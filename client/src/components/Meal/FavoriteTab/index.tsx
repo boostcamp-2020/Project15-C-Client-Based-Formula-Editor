@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '@contexts/index';
 import TableItem from '@ingredients/TableItem';
 import { Tab } from 'semantic-ui-react';
 import * as S from './style';
@@ -15,6 +17,17 @@ const data: DataType[] = [
 ];
 
 function FavoriteTab() {
+  const { data, loading, error } = useSelector((state: RootState) => state.user);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [dispatch]);
+
+  if (loading) return <div>로딩중...</div>;
+  if (error) return <div>에러 발생!</div>;
+  if (!data) return null;
+
   return (
     <Tab.Pane>
       <S.FavoriteContainer>
