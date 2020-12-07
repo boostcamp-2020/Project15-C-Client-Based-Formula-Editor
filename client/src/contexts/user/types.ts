@@ -4,7 +4,7 @@ export type UserAction = ActionType<typeof actions>;
 
 export interface UserDataType {
   userId : number;
-  favoriteLists: FavoriteList[] | null;
+  favoriteLists: FavoriteList[] | [];
 }
 
 export interface FavoriteList {
@@ -17,6 +17,6 @@ export interface UserState {
   UserFavorites:{
     loading: boolean;
     error: Error | null;
-    data : UserDataType | null;
+    data : UserDataType ;
   }
 }

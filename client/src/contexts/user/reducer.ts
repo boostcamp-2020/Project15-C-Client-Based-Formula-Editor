@@ -1,13 +1,13 @@
 import { UserAction, UserState } from './types';
 import { createReducer } from 'typesafe-actions';
-import { GET_FAVORITES, GET_FAVORITES_SUCCESS, GET_FAVORITES_ERROR } from './actions';
+import { GET_FAVORITES, GET_FAVORITES_SUCCESS, GET_FAVORITES_ERROR, DELETE_FAVORITES } from './actions';
 const initialState: UserState = {
   UserFavorites:{
     loading: false,
     error:  null,
     data : {
       userId: 0,
-      favoriteLists: null
+      favoriteLists: []
     }
   }
 };
@@ -18,7 +18,10 @@ const reducer = createReducer<UserState, UserAction>(initialState, {
     UserFavorites: {
       loading: true,
       error: null,
-      data: null
+      data : {
+        userId: 0,
+        favoriteLists: []
+      }
     }
   }),
   [GET_FAVORITES_SUCCESS]: (state, action) => ({
@@ -37,9 +40,24 @@ const reducer = createReducer<UserState, UserAction>(initialState, {
     UserFavorites: {
       loading: false,
       error: action.payload,
-      data: null
+      data: {
+        userId: 0,
+        favoriteLists: []
+      }
     }
-  })
+  }),
+  [DELETE_FAVORITES]: (state, action) => (
+    {
+    ...state,
+    UserFavorites: {
+      loading: false,
+      error: null,
+      data: {
+        userId : action.payload,
+        favoriteLists: [...state.UserFavorites.data.favoriteLists.filter(favorite=> favorite.id !== action.payload)]
+      }
+    }
+  }),
 });
 
 export default reducer;

@@ -13,5 +13,5 @@ export const deleteFavorites = createAction<typeof DELETE_FAVORITES, number>(DEL
 export const getFavoritesAsync = createAsyncAction(
     GET_FAVORITES,
     GET_FAVORITES_SUCCESS,
-    GET_FAVORITES_ERROR
+    GET_FAVORITES_ERROR,
   )<undefined, UserDataType, AxiosError>();
