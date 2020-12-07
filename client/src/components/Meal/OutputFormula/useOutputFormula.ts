@@ -1,6 +1,7 @@
 import { MathField } from 'boost-mathquill';
 import { useDispatch, useSelector } from 'react-redux';
 import { editLatex, initLatex } from '../../../contexts/latex';
+import { openModal } from '@contexts/modal';
 import { RootState } from '../../../contexts';
 import useCurrentTab from '@hooks/useCurrentTab';
 import { useRef } from 'react';
@@ -25,6 +26,10 @@ const useContent = () => {
       mathfield?.write('\\newline ');
     }
   };
+  const onClickFavoriteHandler = () => {
+    dispatch(openModal());
+  };
+
   return {
     currentTabInfo,
     initmathInput,
@@ -32,6 +37,7 @@ const useContent = () => {
     onClickHandler,
     mathfieldRef,
     onKeyDownHandler,
+    onClickFavoriteHandler,
   };
 };
 
