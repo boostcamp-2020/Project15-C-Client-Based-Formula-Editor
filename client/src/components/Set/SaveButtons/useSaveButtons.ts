@@ -27,7 +27,13 @@ export const useSaveButtons = () => {
     }
   };
 
-  return { downloadImage, downloadText };
+  const onClickLoginHandler = () => {
+    chrome.runtime.sendMessage({ message: 'login' }, (response) => {
+      console.log(response);
+    });
+  };
+
+  return { downloadImage, downloadText, onClickLoginHandler };
 };
 
 export default useSaveButtons;
