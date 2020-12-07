@@ -9,7 +9,6 @@ function SaveButtons() {
   return (
     <SaveButtonsContainer>
       <Button.Group basic vertical>
-        <Button content="로그인" onClick={onClickLoginHandler} />
         <Button content="이미지 저장" onClick={downloadImage} />
         <Button content="텍스트 저장" onClick={downloadText} />
         <Button content="화면 저장" />
