@@ -15,6 +15,7 @@
 
 .frame-root {
   height: 100%;
+  overflow: hidden;
 }
 
 .frame-content {
@@ -534,4 +535,9 @@
 .mq-math-mode .mq-matrixed-container {
   filter: progid:DXImageTransform.Microsoft.Chroma(color='white');
   margin-top: -0.1em;
+}
+.mq-newline {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

@@ -20,13 +20,18 @@ const useContent = () => {
   const onClickHandler = () => {
     if (mathfield) mathfield.focus();
   };
-
+  const onKeyDownHandler = (e: any) => {
+    if (e.key === 'Enter') {
+      mathfield?.write('\\newline ');
+    }
+  };
   return {
     currentTabInfo,
     initmathInput,
     onChangeHandler,
     onClickHandler,
     mathfieldRef,
+    onKeyDownHandler,
   };
 };
 
