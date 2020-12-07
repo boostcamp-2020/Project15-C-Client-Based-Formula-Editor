@@ -12,7 +12,7 @@ const AuthController = {
       }
 
       const results = await AuthService.getInstance().login(code);
-      res.status(STATUS_CODE.SUCCESS).json({ userData: results });
+      res.status(STATUS_CODE.SUCCESS).json({ results });
     } catch (err) {
       res.status(STATUS_CODE.SERVER_ERROR).json({ message: ERROR_MESSAGE.SERVER_ERROR });
     }

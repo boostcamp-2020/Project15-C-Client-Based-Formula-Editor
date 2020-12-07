@@ -18,5 +18,5 @@
     }
   ],
   "web_accessible_resources": ["/content.css", "image/*.svg"],
-  "permissions": ["identity"]
+  "permissions": ["identity", "storage"]
 }

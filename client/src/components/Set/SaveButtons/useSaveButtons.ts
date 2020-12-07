@@ -5,6 +5,7 @@ import html2canvas from 'html2canvas';
 import * as clipboard from 'clipboard-polyfill';
 import { ClipboardItem } from 'clipboard-polyfill';
 import React, { useState } from 'react';
+import { setToken, getToken } from '@utils/token';
 
 let timer: any;
 export const useSaveButtons = () => {
@@ -31,9 +32,12 @@ export const useSaveButtons = () => {
     }
   };
 
-  const onClickLoginHandler = () => {
+  const onClickLoginHandler = async () => {
     chrome.runtime.sendMessage({ message: 'login' }, (response) => {
-      console.log(response);
+      const { userToken, result } = response.results;
+
+      setToken(userToken);
+      const resultToken = getToken();
     });
   };
 
