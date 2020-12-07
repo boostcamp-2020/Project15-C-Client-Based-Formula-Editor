@@ -2,6 +2,8 @@ import useCurrentTab from '@hooks/useCurrentTab';
 import { useSelector } from 'react-redux';
 import { RootState } from '@contexts/index';
 import html2canvas from 'html2canvas';
+import * as clipboard from 'clipboard-polyfill';
+import { ClipboardItem } from 'clipboard-polyfill';
 
 export const useSaveButtons = () => {
   const { currentTabInfo } = useCurrentTab();
@@ -33,7 +35,20 @@ export const useSaveButtons = () => {
     });
   };
 
-  return { downloadImage, downloadText, onClickLoginHandler };
+  const clipboardHandler = () => {
+    if (mathfieldRef) {
+      html2canvas(mathfieldRef).then((canvas) => {
+        canvas.toBlob((blob) => {
+          console.log(blob);
+          if (blob) {
+            clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+          }
+        });
+      });
+    }
+  };
+
+  return { downloadImage, downloadText, onClickLoginHandler, clipboardHandler };
 };
 
 export default useSaveButtons;
