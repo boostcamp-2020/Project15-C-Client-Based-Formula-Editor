@@ -2,7 +2,7 @@
   "name": "Boost Restaurant",
   "version": "1.1",
   "manifest_version": 2,
-  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAru3yYOMuOVFuKdTfaNdW+ks1VpS1k90/w3Rjt4LGCUdhreUD6ot25tUw6xTsxelItdLrD1+dpEXmrUcgHlWLLAiqXaYpWJMXehO9OsnB9ucMALOyrjNbNSj8MuMKQpPHzFR2zN1s1wYogdFVGTRNKLA96dhQMTNPrPrdp3FeOF0f3zcBBv/7wPdo8dBOGiyDJ7XBzHATjnSMbvT3NOQ67z3iqcx+3YWaBhMzJ2yd13ftpO19Vf9VJ+zDGmRd8avunRE7TTv5ROS42Q+XzexwuA9fmilg6oVP8OsgQa4rj977BxujKgbCRE0b0LGgTSXGmwvypUFAlQvmh1FPAIFhkQIDAQAB",
+  "key": "",
   "background": {
     "scripts": ["background.js"]
   },

@@ -1,5 +1,7 @@
 const FIRST_ELEM_INDEX = 0;
 const SECOND_ELEM_INDEX = 1;
+const CLIENT_ID = '';
+const REDIRECT_URL = '';
 
 chrome.browserAction.onClicked.addListener(function (tab) {
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
@@ -15,8 +17,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       {
         url: `https://nid.naver.com/oauth2.0/authorize
 						?response_type=code
-						&client_id=p79sVFnmiJZHj7bUkgT0
-						&redirect_uri=https://hmlhleahplpekcfmioopobbdiidjophb.chromiumapp.org
+						&client_id=${CLIENT_ID}
+						&redirect_uri=${REDIRECT_URL}
 						&state=CIMqAiwWmaZxB9Yg`,
         interactive: true,
       },
