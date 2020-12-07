@@ -2,6 +2,7 @@
   "name": "Boost Restaurant",
   "version": "1.1",
   "manifest_version": 2,
+  "key": "",
   "background": {
     "scripts": ["background.js"]
   },
@@ -16,5 +17,6 @@
       "js": ["/main.js"]
     }
   ],
-  "web_accessible_resources": ["/content.css", "image/*.svg"]
+  "web_accessible_resources": ["/content.css", "image/*.svg"],
+  "permissions": ["identity"]
 }
