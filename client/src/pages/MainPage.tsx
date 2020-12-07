@@ -26,7 +26,6 @@ const ContentsContainer = styled.div`
 
 function MainPage() {
   const test= useSelector((state: RootState) => state.user);
-  console.log("tets:",test)
   return (
     <MainContainer onClick={observer.notify}>
       <Header />

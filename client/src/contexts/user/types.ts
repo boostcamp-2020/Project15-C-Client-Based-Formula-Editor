@@ -1,15 +1,22 @@
-import { userLogin } from './actions';
+import * as actions from './actions';
+import { ActionType } from 'typesafe-actions';
+export type UserAction = ActionType<typeof actions>;
 
-export type UserAction =
-  ReturnType<typeof userLogin>
-
-export interface UserState {
+export interface UserDataType {
   userId : number;
-  favoriteLists: FavoriteList[]
+  favoriteLists: FavoriteList[] | null;
 }
 
 export interface FavoriteList {
   id : number;
   latex : string;
   title : string;
+}
+
+export interface UserState {
+  UserFavorites:{
+    loading: boolean;
+    error: Error | null;
+    data : UserDataType | null;
+  }
 }

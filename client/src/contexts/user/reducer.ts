@@ -1,24 +1,45 @@
 import { UserAction, UserState } from './types';
-import { USER_LOGIN } from './actions';
-import { getFavorites } from '@lib/apis/favorite'
+import { createReducer } from 'typesafe-actions';
+import { GET_FAVORITES, GET_FAVORITES_SUCCESS, GET_FAVORITES_ERROR } from './actions';
 const initialState: UserState = {
-    userId: 0,
-    favoriteLists: []
+  UserFavorites:{
+    loading: false,
+    error:  null,
+    data : {
+      userId: 0,
+      favoriteLists: null
+    }
+  }
 };
   
-function reducer(state: UserState = initialState, action: UserAction): UserState {
-    switch (action.type) {
-      case USER_LOGIN: {
-        const userId = action.payload;
-        const getFavoriteLists = getFavorites(userId)
-        console.log("dd: ", getFavoriteLists)
-        return {
-          ...state,
-          userId: action.payload
-        };
-      }
-      default:
-        return state;
+const reducer = createReducer<UserState, UserAction>(initialState, {
+  [GET_FAVORITES]: state => ({
+    ...state,
+    UserFavorites: {
+      loading: true,
+      error: null,
+      data: null
     }
-}
+  }),
+  [GET_FAVORITES_SUCCESS]: (state, action) => ({
+    ...state,
+    UserFavorites: {
+      loading: false,
+      error: null,
+      data: {
+        userId: action.payload.userId,
+        favoriteLists: action.payload.favoriteLists
+      }
+    }
+  }),
+  [GET_FAVORITES_ERROR]: (state, action) => ({
+    ...state,
+    UserFavorites: {
+      loading: false,
+      error: action.payload,
+      data: null
+    }
+  })
+});
+
 export default reducer;

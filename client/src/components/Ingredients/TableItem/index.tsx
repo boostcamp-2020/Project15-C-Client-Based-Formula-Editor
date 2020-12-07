@@ -19,9 +19,10 @@ interface TableItemType {
 const removeHandler = async (id: number) => {
   console.log('지우기');
 };
-
 function TableItem({ headerTitle, headerLatex, data }: TableItemType) {
   const { onChangeHandler } = useTextAreaItem();
+console.log("here",data)
+  
   const dataList = data.map((item, index) => (
     <Table.Row key={index}>
       <Table.Cell width={1}>
