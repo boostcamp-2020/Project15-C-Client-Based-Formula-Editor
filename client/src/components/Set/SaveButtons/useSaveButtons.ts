@@ -1,6 +1,6 @@
 import useCurrentTab from '@hooks/useCurrentTab';
 import { useSelector } from 'react-redux';
-import { RootState } from '@/contexts';
+import { RootState } from '@contexts/index';
 import html2canvas from 'html2canvas';
 
 export const useSaveButtons = () => {
