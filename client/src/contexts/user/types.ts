@@ -5,4 +5,11 @@ export type UserAction =
 
 export interface UserState {
   userId : number;
+  favoriteLists: FavoriteList[]
+}
+
+export interface FavoriteList {
+  id : number;
+  latex : string;
+  title : string;
 }
