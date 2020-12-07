@@ -24,6 +24,7 @@
     "axios": "^0.21.0",
     "boost-mathquill": "^1.1.2",
     "emotion": "^11.0.0",
+    "html2canvas": "^1.0.0-rc.7",
     "react": "^17.0.1",
     "react-color": "^2.19.3",
     "react-dom": "^17.0.1",

@@ -20,3 +20,7 @@ export const OutputFormulaBox = styled.div<FormulaProps>`
   color: ${(props) => props.fontColor};
   text-align: ${(props) => props.textAlign};
 `;
+
+export const OutputFormulaContent = styled.span`
+  display: inline-block;
+`;

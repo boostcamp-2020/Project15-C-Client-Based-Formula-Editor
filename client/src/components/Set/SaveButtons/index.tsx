@@ -1,13 +1,16 @@
 import React from 'react';
-import SaveButtonsContainer from './style';
+import useSaveButtons from './useSaveButtons';
 import { Button } from 'semantic-ui-react';
+import SaveButtonsContainer from './style';
 
 function SaveButtons() {
+  const { downloadImage, downloadText } = useSaveButtons();
+
   return (
     <SaveButtonsContainer>
       <Button.Group basic vertical>
-        <Button content="이미지 저장" size="mini" />
-        <Button content="텍스트 저장" />
+        <Button content="이미지 저장" size="mini" onClick={downloadImage} />
+        <Button content="텍스트 저장" onClick={downloadText} />
         <Button content="화면 저장" />
       </Button.Group>
     </SaveButtonsContainer>

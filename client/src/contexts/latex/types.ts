@@ -24,6 +24,11 @@ export interface TabInfo {
   textAlign: string;
 }
 
+export interface InitLatex {
+  mathfield: MathField | null;
+  mathfieldRef: HTMLDivElement | null;
+}
+
 export type LatexAction =
   | ReturnType<typeof editLatex>
   | ReturnType<typeof initLatex>
@@ -39,4 +44,5 @@ export interface LatexState {
   currentTab: number;
   totalLatex: TabInfo[];
   mathfield: MathField | null;
+  mathfieldRef: HTMLDivElement | null;
 }
