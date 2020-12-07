@@ -35,8 +35,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           },
         })
           .then((res) => res.json())
-          .then((data) => console.log(JSON.stringify(data)));
-        sendResponse('success');
+          .then((data) => {
+            sendResponse(data);
+          });
       }
     );
 
