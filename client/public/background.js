@@ -13,6 +13,7 @@ chrome.browserAction.onClicked.addListener(function (tab) {
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.message === 'login') {
     //TODO. LocalStorage에 token이 저장되었는지 아닌지를 분기하는 로직
+    //TODO. state값 수정
     chrome.identity.launchWebAuthFlow(
       {
         url: `https://nid.naver.com/oauth2.0/authorize
@@ -22,6 +23,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 						&state=CIMqAiwWmaZxB9Yg`,
         interactive: true,
       },
+      // TODO. redirect_url 변수명을 좀더 구체적으로 수정
       function (redirect_url) {
         const code = redirect_url.split('code=')[SECOND_ELEM_INDEX].split('&')[FIRST_ELEM_INDEX];
         const body = { code: code };
