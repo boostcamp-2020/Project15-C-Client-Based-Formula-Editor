@@ -1,7 +1,7 @@
 const FIRST_ELEM_INDEX = 0;
 const SECOND_ELEM_INDEX = 1;
-const CLIENT_ID = 'afZlrdeElIEyteCB_f0Z';
-const REDIRECT_URL = 'http://127.0.0.1:3000/api/auth/login';
+const CLIENT_ID = '';
+const REDIRECT_URL = '';
 
 chrome.browserAction.onClicked.addListener(function (tab) {
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
