@@ -4,11 +4,13 @@ import { RootState } from '@contexts/index';
 import html2canvas from 'html2canvas';
 import * as clipboard from 'clipboard-polyfill';
 import { ClipboardItem } from 'clipboard-polyfill';
+import React, { useState } from 'react';
 
+let timer: any;
 export const useSaveButtons = () => {
   const { currentTabInfo } = useCurrentTab();
   const { mathfieldRef } = useSelector((state: RootState) => state.latex);
-
+  const [message, setMessage] = useState(false);
   const downloadText = () => {
     const fileName = `수식셰프${Date.now()}.txt`;
     const element = document.createElement('a');
@@ -36,10 +38,10 @@ export const useSaveButtons = () => {
   };
 
   const clipboardHandler = () => {
+    messageHandler();
     if (mathfieldRef) {
       html2canvas(mathfieldRef).then((canvas) => {
         canvas.toBlob((blob) => {
-          console.log(blob);
           if (blob) {
             clipboard.write([new ClipboardItem({ 'image/png': blob })]);
           }
@@ -48,7 +50,14 @@ export const useSaveButtons = () => {
     }
   };
 
-  return { downloadImage, downloadText, onClickLoginHandler, clipboardHandler };
+  const messageHandler = () => {
+    setMessage(true);
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      setMessage(false);
+    }, 2500);
+  };
+  return { downloadImage, downloadText, onClickLoginHandler, clipboardHandler, message };
 };
 
 export default useSaveButtons;
