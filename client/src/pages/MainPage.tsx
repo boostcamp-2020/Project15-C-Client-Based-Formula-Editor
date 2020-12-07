@@ -6,6 +6,7 @@ import Output from '@set/Output';
 import SaveButtons from '@set/SaveButtons';
 import { observer } from '../lib/utils/util';
 import TestComponent from './testComponent';
+import FavoriteModal from '@meal/FavoriteModal';
 
 const MainContainer = styled.section`
   display: flex;
@@ -26,6 +27,7 @@ const ContentsContainer = styled.div`
 function MainPage() {
   return (
     <MainContainer onClick={observer.notify}>
+      <FavoriteModal />
       <Header />
       <Main>
         <ContentsContainer>
