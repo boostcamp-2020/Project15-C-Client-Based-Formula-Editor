@@ -10,9 +10,9 @@ function OutputFormula() {
     onChangeHandler,
     onClickHandler,
     mathfieldRef,
+    onKeyDownHandler,
   } = useContent();
   const { latex, fontSize, fontColor, textAlign } = currentTabInfo;
-
   return (
     <S.OutputFormulaWrapper onClick={onClickHandler}>
       <S.OutputFormulaBox fontSize={fontSize} fontColor={fontColor} textAlign={textAlign}>
@@ -21,6 +21,7 @@ function OutputFormula() {
             mathquillDidMount={initmathInput}
             latex={latex}
             onChange={onChangeHandler}
+            onKeyDown={onKeyDownHandler}
           />
         </S.OutputFormulaContent>
       </S.OutputFormulaBox>
