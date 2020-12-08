@@ -1,3 +1,6 @@
+import { useDispatch } from 'react-redux';
+import { userLogin } from '@contexts/user';
+import { getToken, setToken } from '@utils/token';
 import { useEffect, useRef, useState } from 'react';
 import { LatexContent } from '../../../lib/constants/latex-header';
 
@@ -5,6 +8,7 @@ const useFormulaList = () => {
   const formulaRef = useRef<null | HTMLUListElement>(null);
   const containerRef = useRef<null | HTMLDivElement>(null);
   const timer = useRef<any>(null);
+  const dispatch = useDispatch();
   const [nowHeader, setNowHeader] = useState('');
   const [nowFormulas, setNowFormula] = useState<LatexContent[]>([]);
 
@@ -30,6 +34,16 @@ const useFormulaList = () => {
     clearTimeout(timer.current);
   };
 
+  const onClickLoginHandler = async () => {
+    chrome.runtime.sendMessage({ message: 'login' }, (response) => {
+      const { userToken, result } = response.results;
+      setToken(userToken);
+      const resultToken = getToken();
+      // todo : 연결해보기
+      dispatch(userLogin(1))
+    });
+  };
+
   useEffect(() => {
     document.body.addEventListener('mouseleave', () => {
       clearHiddenTimemout();
@@ -48,6 +62,7 @@ const useFormulaList = () => {
     clearHiddenTimemout,
     hiddenFormula,
     reserveHiddenFormula,
+    onClickLoginHandler
   };
 };
 

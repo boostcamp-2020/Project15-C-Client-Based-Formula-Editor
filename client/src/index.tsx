@@ -4,8 +4,9 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './contexts';
-// import logger from 'redux-logger';
-// import { composeWithDevTools } from 'redux-devtools-extension';
+import logger from 'redux-logger';
+import ReduxThunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 function getProductionRootElement() {
   const app = document.createElement('div');
@@ -34,8 +35,8 @@ const app =
     ? document.getElementById('root')
     : getProductionRootElement();
 
-//const store = createStore(rootReducer, applyMiddleware(logger));
-const store = createStore(rootReducer);
+
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(ReduxThunk, logger)));
 
 ReactDOM.render(
   <Provider store={store}>

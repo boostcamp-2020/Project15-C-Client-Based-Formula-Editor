@@ -18,6 +18,7 @@
       "@utils/*": ["src/lib/utils/*"],
       "@contexts/*": ["src/contexts/*"],
       "@hooks/*": ["src/hooks/*"],
+      "@lib/*": ["src/lib/*"],
       "@test/*": ["src/__test__/*"]
     }
   },

@@ -1,9 +1,11 @@
 import React from 'react';
 import { Header, Table, Label } from 'semantic-ui-react';
+import { useDispatch } from 'react-redux';
 import useTextAreaItem from './useTableItem';
 import * as S from './style';
 import { getFavorites } from '../../../lib/apis/favorite';
-
+import { deleteFavorites } from '@contexts/user/actions'
+import {deleteFavorite} from '@lib/apis/favorite'
 export interface DataType {
   id: number;
   title: string;
@@ -16,12 +18,14 @@ interface TableItemType {
   data: DataType[];
 }
 
-const removeHandler = async (id: number) => {
-  console.log('지우기');
-};
 
 function TableItem({ headerTitle, headerLatex, data }: TableItemType) {
   const { onChangeHandler } = useTextAreaItem();
+  const dispatch = useDispatch();
+  const removeHandler = async (id: number) => {
+    dispatch(deleteFavorites(id))
+    await deleteFavorite(2)
+  };
   const dataList = data.map((item, index) => (
     <Table.Row key={index}>
       <Table.Cell width={1}>

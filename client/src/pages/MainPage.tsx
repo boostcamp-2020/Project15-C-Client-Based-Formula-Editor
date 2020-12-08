@@ -5,7 +5,6 @@ import Input from '@set/Input';
 import Output from '@set/Output';
 import SaveButtons from '@set/SaveButtons';
 import { observer } from '../lib/utils/util';
-import TestComponent from './testComponent';
 import FavoriteModal from '@meal/FavoriteModal';
 
 const MainContainer = styled.section`
@@ -36,7 +35,6 @@ function MainPage() {
         </ContentsContainer>
         <SaveButtons />
       </Main>
-      {/* <TestComponent /> */}
     </MainContainer>
   );
 }

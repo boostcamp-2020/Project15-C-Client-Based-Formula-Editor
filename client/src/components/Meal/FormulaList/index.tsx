@@ -1,7 +1,7 @@
 import React from 'react';
-import DropDownItem from '../../Ingredients/DropDownItem';
-import { FORMULA_HEADER, SYMBOL_HEADER } from '../../../lib/constants/latex-header';
-import FormulaItem from '../../Ingredients/FormulaItem';
+import DropDownItem from '@ingredients/DropDownItem';
+import { FORMULA_HEADER, SYMBOL_HEADER } from '@lib/constants/latex-header';
+import FormulaItem from '@ingredients/FormulaItem';
 import useFormulaList from './useFormulaList';
 import * as S from './style';
 
@@ -17,6 +17,7 @@ function FormulaList() {
     setNowHeader,
     nowFormulas,
     setNowFormula,
+    onClickLoginHandler
   } = useFormulaList();
 
   return (
@@ -51,8 +52,10 @@ function FormulaList() {
             </DropDownItem>
           ))}
         </S.SymbolHeaderWrapper>
+        <S.UserButtonsContainer>
+            <S.LoginButton onClick={onClickLoginHandler}/>
+        </S.UserButtonsContainer>
       </S.FormulaContainer>
-
       <S.FormulaList
         ref={formulaRef}
         onMouseLeave={hiddenFormula}

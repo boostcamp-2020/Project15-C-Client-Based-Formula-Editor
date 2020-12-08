@@ -1,12 +1,13 @@
 import { combineReducers } from 'redux';
 // import user from './user';
 import latex from './latex';
+import user from './user';
 import modal from './modal';
 
 const rootReducer = combineReducers({
   latex,
+  user,
   modal,
-  // user,
 });
 
 // 루트 리듀서를 내보내주세요.
