@@ -25,6 +25,7 @@ const ContentsContainer = styled.div`
 `;
 
 function MainPage() {
+  console.log('token:', getToken());
   return (
     <MainContainer onClick={observer.notify}>
       <FavoriteModal />
