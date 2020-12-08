@@ -4,7 +4,7 @@ import { RootState } from '@contexts/index';
 import html2canvas from 'html2canvas';
 import * as clipboard from 'clipboard-polyfill';
 import { ClipboardItem } from 'clipboard-polyfill';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { setToken, getToken } from '@utils/token';
 import useToggle from '@hooks/useToggle';
 
@@ -13,6 +13,8 @@ export const useSaveButtons = () => {
   const { currentTabInfo } = useCurrentTab();
   const { mathfieldRef } = useSelector((state: RootState) => state.latex);
   const [message, onToggleMessage] = useToggle(false);
+  const [imageUrl, setImageUrl] = useState('');
+
   const downloadText = () => {
     const fileName = `수식셰프${Date.now()}.txt`;
     const element = document.createElement('a');
@@ -53,7 +55,48 @@ export const useSaveButtons = () => {
       onToggleMessage();
     }, 2500);
   };
-  return { downloadImage, downloadText, clipboardHandler, message };
+
+  const createQrcode = () => {
+    if (!process.env.Client_ID) return;
+    const clientId: string = process.env.Client_ID;
+
+    if (mathfieldRef) {
+      html2canvas(mathfieldRef).then((canvas) => {
+        canvas.toBlob((blob) => {
+          if (!blob) return;
+          const formData = new FormData();
+          formData.append('image', blob);
+          fetch('https://api.imgur.com/3/image', {
+            method: 'post',
+            headers: {
+              Authorization: clientId,
+              Accept: 'application/json',
+            },
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((response) => {
+              setImageUrl(response.data.link);
+            });
+        });
+      });
+    }
+  };
+
+  const saveHandler = () => {
+    console.log('이미지저장');
+  };
+
+  return {
+    downloadImage,
+    downloadText,
+    clipboardHandler,
+    message,
+    createQrcode,
+    imageUrl,
+    setImageUrl,
+    saveHandler,
+  };
 };
 
 export default useSaveButtons;
