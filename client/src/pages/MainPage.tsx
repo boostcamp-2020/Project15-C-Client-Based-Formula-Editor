@@ -6,6 +6,7 @@ import Output from '@set/Output';
 import SaveButtons from '@set/SaveButtons';
 import { observer } from '../lib/utils/util';
 import FavoriteModal from '@meal/FavoriteModal';
+import { getToken } from '@utils/token';
 
 const MainContainer = styled.section`
   display: flex;

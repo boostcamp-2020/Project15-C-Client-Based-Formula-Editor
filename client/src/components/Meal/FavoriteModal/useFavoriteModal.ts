@@ -11,9 +11,11 @@ const useFavoriteModal = () => {
     dispatch(closeModal());
   };
 
-  const onClickRegister = async (props: FavoriteItem) => {
+  const onClickRegister = async (props: FavoriteItem, clearTitle: () => void) => {
     const newFavoriteItem = await favoriteAPI.createFavorite(props);
-    dispatch(createFavorites({ id: 5, title: 'hello', latex: '//sqrt' }));
+    dispatch(createFavorites(newFavoriteItem));
+    clearTitle();
+    dispatch(closeModal());
   };
 
   return {

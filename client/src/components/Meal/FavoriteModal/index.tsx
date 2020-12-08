@@ -33,7 +33,7 @@ function FavoriteModal() {
               <ButtonItem
                 title={'등록'}
                 handler={() => {
-                  onClickRegister({ userId, title, latex: currentTabInfo.latex });
+                  onClickRegister({ userId, title, latex: currentTabInfo.latex }, clearTitle);
                 }}
               />
             </S.ModalButtons>

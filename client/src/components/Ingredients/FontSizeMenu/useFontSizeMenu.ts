@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { editLatex } from '@contexts/latex';
 import { FONT_SIZE_LISTS } from '@constants/constants';

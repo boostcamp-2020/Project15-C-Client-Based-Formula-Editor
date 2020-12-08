@@ -38,11 +38,10 @@ class AuthService {
     if (!user) {
       user = await UserService.getInstance().createUser({ email, nickname, profile_image });
     }
-    const result = { userId: user.id };
 
     return {
       userToken,
-      result,
+      userId: user.id,
     };
   }
 }

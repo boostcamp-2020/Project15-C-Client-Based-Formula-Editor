@@ -9,6 +9,7 @@ import { RootState } from '@contexts/index';
 
 import { userLogin, userLogout } from '@contexts/user';
 import { getToken, setToken } from '@utils/token';
+import { Loader } from 'semantic-ui-react';
 
 function FormulaList() {
   const {
@@ -32,22 +33,12 @@ function FormulaList() {
     chrome.runtime.sendMessage({ message: 'login' }, (response) => {
       const { userToken, userId } = response.results;
       setToken(userToken);
-
-      // todo : 연결해보기
       dispatch(userLogin(userId));
     });
   };
   const onClickLogoutHandler = async () => {
     chrome.storage.sync.clear();
     dispatch(userLogout());
-
-    chrome.runtime.sendMessage({ message: 'logout' }, (response) => {
-      const { userToken, userId } = response.results;
-      setToken(userToken);
-
-      // todo : 연결해보기
-      dispatch(userLogin(userId));
-    });
   };
 
   return (
