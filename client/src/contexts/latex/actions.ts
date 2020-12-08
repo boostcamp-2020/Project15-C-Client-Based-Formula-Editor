@@ -1,7 +1,5 @@
-import { MathField } from 'boost-mathquill';
 import { createAction } from '@utils/util';
 import { EditTabInfo, InitLatex } from './types';
-//TODO: 리팩토링 하기
 
 export const EDIT_LATEX = 'latex/EDIT';
 export const INIT_LATEX = 'latex/INIT';

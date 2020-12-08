@@ -9,24 +9,31 @@ import { NEED_LOGIN_ICON, NO_LIST_ICON, AlertMessage } from '@constants/constant
 import { getFavoritesThunk } from '@contexts/user';
 
 function FavoriteTab() {
-  const { data, loading, error } = useSelector((state: RootState) => state.user.UserFavorites);
   const dispatch = useDispatch();
+  const { userInfo, loading, error } = useSelector((state: RootState) => state.user);
+  const { userId } = userInfo;
 
   useEffect(() => {
-    dispatch(getFavoritesThunk(1));
+    if (userId) {
+      dispatch(getFavoritesThunk(userId));
+    }
   }, [dispatch]);
 
   if (loading) return <div>로딩중...</div>;
   if (error) return <div>에러 발생!</div>;
-
-  if (!data?.favoriteLists) return null;
-  const newData = data.favoriteLists;
-  // <AlertItem icon={NO_LIST_ICON} message={AlertMessage.NO_LIST_MESSAGE} />
+  if (!userInfo?.favoriteLists) return null;
+  const { favoriteLists } = userInfo;
 
   return (
     <Tab.Pane>
       <S.FavoriteContainer>
-        <TableItem headerTitle={'Title'} headerLatex={'Latex'} data={newData} />
+        {!userId ? (
+          <AlertItem icon={NEED_LOGIN_ICON} message={AlertMessage.NEED_LOGIN_MESSAGE} />
+        ) : !favoriteLists.length ? (
+          <AlertItem icon={NO_LIST_ICON} message={AlertMessage.NO_LIST_MESSAGE} />
+        ) : (
+          <TableItem headerTitle={'Title'} headerLatex={'Latex'} data={favoriteLists} />
+        )}
       </S.FavoriteContainer>
     </Tab.Pane>
   );

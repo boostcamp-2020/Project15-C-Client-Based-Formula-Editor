@@ -6,13 +6,12 @@ export const setToken = (userToken: string): void => {
   });
 };
 
-export const getToken = (): string | null => {
-  let userToken = null;
-  chrome.storage.sync.get(['userToken'], function (result) {
-    userToken = result['userToken'];
+export const getToken = () => {
+  return new Promise((resolve, reject) => {
+    chrome.storage.sync.get([USER_TOKEN], function (result) {
+      resolve(result[USER_TOKEN]);
+    });
   });
-
-  return userToken;
 };
 
 // TODO. export const removeToken = () => {chrome.storage.sync.remove(['usetToken'], function () {});};

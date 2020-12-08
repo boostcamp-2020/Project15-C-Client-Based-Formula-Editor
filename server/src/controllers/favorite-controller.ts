@@ -24,9 +24,9 @@ const FavoriteController = {
       const userId = Number(req.body.userId);
 
       if (
-        !isValidateType(title, ValidateType.String) ||
-        !isValidateType(latex, ValidateType.String) ||
-        !isValidateType(userId, ValidateType.Number)
+        !isValidateType(title, ValidateType.String)
+        || !isValidateType(latex, ValidateType.String)
+        || !isValidateType(userId, ValidateType.Number)
       ) {
         return res.status(STATUS_CODE.CLIENT_ERROR).json({ message: ERROR_MESSAGE.CLIENT_ERROR });
       }
