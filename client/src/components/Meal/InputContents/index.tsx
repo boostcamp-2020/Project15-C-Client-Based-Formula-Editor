@@ -17,12 +17,6 @@ const panes = [
     },
   },
   {
-    menuItem: '그리기',
-    render: function tabContent() {
-      return <Tab.Pane>그리기 판</Tab.Pane>;
-    },
-  },
-  {
     menuItem: '수식사전',
     // render: () => <DictionaryTab />,
     render: function tabContent() {
@@ -33,6 +27,12 @@ const panes = [
     menuItem: '즐겨찾기',
     render: function tabContent() {
       return <FavoriteTab />;
+    },
+  },
+  {
+    menuItem: '계산기',
+    render: function tabContent() {
+      return <Tab.Pane>그리기 판</Tab.Pane>;
     },
   },
 ];
