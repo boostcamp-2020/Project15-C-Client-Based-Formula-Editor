@@ -53,7 +53,7 @@ export const useSaveButtons = () => {
       onToggleMessage();
     }, 2500);
   };
-  return { downloadImage, downloadText, onClickLoginHandler, clipboardHandler, message };
+  return { downloadImage, downloadText, clipboardHandler, message };
 };
 
 export default useSaveButtons;
