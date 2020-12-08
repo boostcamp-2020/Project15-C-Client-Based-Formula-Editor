@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import { createConnection, Connection } from 'typeorm';
 import express, { Express } from 'express';
 import cors from 'cors';
+import path from 'path';
 import logger from 'morgan';
 import indexRouter from '@router/index';
 
@@ -35,10 +36,20 @@ export default class Application {
 
   registerMiddleware() {
     this.app.use(logger('dev'));
+    this.app.set('views', path.join(__dirname, 'views'));
+    this.app.set('view engine', 'pug');
+
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
     this.app.use(cors());
     this.app.use('/api', indexRouter);
+    this.app.get('/:url', (req, res) => {
+      const { url } = req.params;
+
+      res.render('index', {
+        url,
+      });
+    });
   }
 
   listen() {
