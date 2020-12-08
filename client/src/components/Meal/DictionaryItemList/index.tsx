@@ -22,17 +22,6 @@ function DictionaryItemList({ displayedContent, onScroll, containerRef }: Dictio
           ))}
         </Table.Body>
       </Table>
-      {/* <S.t>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-      </S.t> */}
     </S.DictionaryItemList>
   );
 }

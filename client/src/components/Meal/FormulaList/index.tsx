@@ -77,7 +77,10 @@ function FormulaList() {
           </S.SymbolHeaderWrapper>
         </S.HeaderWraaper>
         {userId ? (
-          <S.LogoutButton onClick={onClickLogoutHandler} />
+          <div>
+            <S.LogoutButton onClick={onClickLogoutHandler} />
+            <span>Get Started</span>
+          </div>
         ) : (
           <S.LoginButton onClick={onClickLoginHandler} />
         )}
