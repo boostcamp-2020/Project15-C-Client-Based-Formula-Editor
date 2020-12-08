@@ -2,7 +2,6 @@ import React from 'react';
 import * as S from './style';
 import { Icon } from 'semantic-ui-react';
 import { AlertMessage } from '@constants/constants';
-
 interface AlertItemProps {
   icon: any;
   message: AlertMessage;

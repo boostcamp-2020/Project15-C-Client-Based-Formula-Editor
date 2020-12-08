@@ -25,7 +25,7 @@ module.exports = (env, argv) => ({
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.png|jpg|gif|svg$/,
+        test: /\.png|jpg|gif|svg|ttf|woff|woff2|eot|ttf|otf$/,
         loader: 'url-loader',
         options: {
           name: '[name].[ext]?[hash]',
@@ -60,6 +60,7 @@ module.exports = (env, argv) => ({
         { from: './public/manifest.json', to: './' },
         { from: './public/icon.png', to: './' },
         { from: './public/content.css', to: './' },
+        { from: './public/test.css', to: './' },
         { from: './public/image', to: './image' },
       ],
     }),
