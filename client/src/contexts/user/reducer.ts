@@ -1,63 +1,56 @@
 import { UserAction, UserState } from './types';
-import { createReducer } from 'typesafe-actions';
-import { GET_FAVORITES, GET_FAVORITES_SUCCESS, GET_FAVORITES_ERROR, DELETE_FAVORITES } from './actions';
+import {
+  GET_FAVORITES_REQUEST,
+  GET_FAVORITES_SUCCESS,
+  GET_FAVORITES_FAILURE,
+  DELETE_FAVORITES,
+} from './actions';
+
 const initialState: UserState = {
-  UserFavorites:{
-    loading: false,
-    error:  null,
-    data : {
-      userId: 0,
-      favoriteLists: []
-    }
-  }
+  loading: false,
+  error: null,
+  userInfo: {
+    userId: null,
+    favoriteLists: [],
+  },
 };
-  
-const reducer = createReducer<UserState, UserAction>(initialState, {
-  [GET_FAVORITES]: state => ({
-    ...state,
-    UserFavorites: {
-      loading: true,
-      error: null,
-      data : {
-        userId: 0,
-        favoriteLists: []
-      }
-    }
-  }),
-  [GET_FAVORITES_SUCCESS]: (state, action) => ({
-    ...state,
-    UserFavorites: {
-      loading: false,
-      error: null,
-      data: {
-        userId: action.payload.userId,
-        favoriteLists: action.payload.favoriteLists
-      }
-    }
-  }),
-  [GET_FAVORITES_ERROR]: (state, action) => ({
-    ...state,
-    UserFavorites: {
-      loading: false,
-      error: action.payload,
-      data: {
-        userId: 0,
-        favoriteLists: []
-      }
-    }
-  }),
-  [DELETE_FAVORITES]: (state, action) => (
-    {
-    ...state,
-    UserFavorites: {
-      loading: false,
-      error: null,
-      data: {
-        userId : action.payload,
-        favoriteLists: [...state.UserFavorites.data.favoriteLists.filter(favorite=> favorite.id !== action.payload)]
-      }
-    }
-  }),
-});
+
+function reducer(state: UserState = initialState, action: UserAction): UserState {
+  switch (action.type) {
+    case GET_FAVORITES_REQUEST:
+      return {
+        ...state,
+        loading: true,
+        error: null,
+      };
+    case GET_FAVORITES_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        error: null,
+        userInfo: action.payload,
+      };
+    case GET_FAVORITES_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+    case DELETE_FAVORITES:
+      return {
+        ...state,
+        loading: false,
+        error: null,
+        userInfo: {
+          userId: action.payload,
+          favoriteLists: [
+            ...state.userInfo.favoriteLists.filter((favorite) => favorite.id !== action.payload),
+          ],
+        },
+      };
+    default:
+      return state;
+  }
+}
 
 export default reducer;

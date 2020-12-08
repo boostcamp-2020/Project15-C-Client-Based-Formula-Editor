@@ -81,36 +81,6 @@ function reducer(state: LatexState = initialState, action: LatexAction): LatexSt
       };
     }
 
-    // case CHANGE_FONTSIZE: {
-    //   return {
-    //     ...state,
-    //     totalLatex: state.totalLatex.map((latexItem) => {
-    //       return latexItem.id === state.currentTab
-    //         ? { ...latexItem, fontSize: action.payload }
-    //         : latexItem;
-    //     }),
-    //   };
-    // }
-    // case CHANGE_FONTCOLOR: {
-    //   return {
-    //     ...state,
-    //     totalLatex: state.totalLatex.map((latexItem) => {
-    //       return latexItem.id === state.currentTab
-    //         ? { ...latexItem, fontColor: action.payload }
-    //         : latexItem;
-    //     }),
-    //   };
-    // }
-    // case CHANGE_TEXTALIGN: {
-    //   return {
-    //     ...state,
-    //     totalLatex: state.totalLatex.map((latexItem) => {
-    //       return latexItem.id === state.currentTab
-    //         ? { ...latexItem, textAlign: action.payload }
-    //         : latexItem;
-    //     }),
-    //   };
-    // }
     default:
       return state;
   }

@@ -1,11 +1,5 @@
 import { MathField } from 'boost-mathquill';
-import {
-  addTab,
-  changeTab,
-  editLatex,
-  removeTab,
-  initLatex
-} from './actions';
+import { addTab, changeTab, editLatex, removeTab, initLatex } from './actions';
 
 export interface EditTabInfo {
   latex?: string;
