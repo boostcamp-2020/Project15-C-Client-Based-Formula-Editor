@@ -22,9 +22,6 @@ const useFormulaList = () => {
   };
 
   const hiddenFormulaOnPage = useCallback((target: HTMLElement) => {
-    console.log(target.closest('div'));
-    console.log(formulaHeaderRef.current);
-    console.log(symbolHeaderRef.current);
     if (
       target.closest('div') !== formulaHeaderRef.current &&
       target.closest('div') !== symbolHeaderRef.current
