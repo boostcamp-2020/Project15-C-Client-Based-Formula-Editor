@@ -84,7 +84,13 @@ export const useSaveButtons = () => {
   };
 
   const saveHandler = () => {
-    console.log('이미지저장');
+    const element: any = document.getElementById('iframe');
+    const url = element.contentDocument.querySelector('canvas').toDataURL('image/png');
+    const ankerElement = document.createElement('a');
+    ankerElement.href = url;
+    ankerElement.download = `QRCODE${Date.now()}.png`;
+    ankerElement.click();
+    setImageUrl('');
   };
 
   return {
