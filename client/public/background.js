@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const FIRST_ELEM_INDEX = 0;
 const SECOND_ELEM_INDEX = 1;
 const CLIENT_ID = '';
@@ -12,7 +13,7 @@ chrome.browserAction.onClicked.addListener(function (tab) {
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.message === 'login') {
-    //TODO. LocalStorage에 token이 저장되었는지 아닌지를 분기하는 로직
+    //TODO. LocalStorage에 token이 저장되었는지 아닌지 체크하는 로직
     //TODO. state값 수정
     chrome.identity.launchWebAuthFlow(
       {

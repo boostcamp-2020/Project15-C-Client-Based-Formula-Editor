@@ -5,8 +5,7 @@ import Input from '@set/Input';
 import Output from '@set/Output';
 import SaveButtons from '@set/SaveButtons';
 import { observer } from '../lib/utils/util';
-import { useSelector } from 'react-redux';
-import { RootState } from '@contexts/index';
+import FavoriteModal from '@meal/FavoriteModal';
 
 const MainContainer = styled.section`
   display: flex;
@@ -25,9 +24,9 @@ const ContentsContainer = styled.div`
 `;
 
 function MainPage() {
-  const test= useSelector((state: RootState) => state.user);
   return (
     <MainContainer onClick={observer.notify}>
+      <FavoriteModal />
       <Header />
       <Main>
         <ContentsContainer>

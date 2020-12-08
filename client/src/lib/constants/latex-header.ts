@@ -150,7 +150,7 @@ const FORMULA_HEADER: LatexHeader[] = [
       },
       {
         image: `/4/11.svg`,
-        latex: `\\left\\lceil \\right\\rceil _{ }^{ }`,
+        latex: `\\lceil\\combi{}\\rceil\\frac{}{}`,
       },
       {
         image: `/4/12.svg`,
@@ -162,7 +162,7 @@ const FORMULA_HEADER: LatexHeader[] = [
       },
       {
         image: `/4/14-b.svg`,
-        latex: `\\int _{\\ }^{\\ }f\\left(x\\right)dx}`,
+        latex: `\\int _{\\ }^{\\ }f\\left(x\\right)dx`,
       },
       {
         image: `/4/15-b.svg`,
@@ -256,7 +256,7 @@ const FORMULA_HEADER: LatexHeader[] = [
       },
       {
         image: `/6/3.svg`,
-        latex: `\\left\{\\combi{ }\\right\\}`,
+        latex: `\\left\\{\\combi{ }\\right\\}`,
       },
       {
         image: `/6/4.svg`,
@@ -264,11 +264,11 @@ const FORMULA_HEADER: LatexHeader[] = [
       },
       {
         image: `/6/5.svg`,
-        latex: `\\left\\lfloor \\combi{ }\\right\\rfloor `,
+        latex: `\\lfloor \\combi{ }\\rfloor `,
       },
       {
         image: `/6/6.svg`,
-        latex: `\\left\\lceil \\combi{ }\\right\\rceil `,
+        latex: `\\lceil \\combi{ }\\rceil `,
       },
       {
         image: `/6/7.svg`,
@@ -719,27 +719,27 @@ const FORMULA_HEADER: LatexHeader[] = [
     content: [
       {
         image: `/11/1.svg`,
-        latex: `\\begin{matrix}&\\end{matrix}`,
+        latex: `\\ccr{ }{ }`,
       },
       {
         image: `/11/2.svg`,
-        latex: `\\begin{matrix}\\\\\\end{matrix}`,
+        latex: `\\crr{ }{ }`,
       },
       {
         image: `/11/3.svg`,
-        latex: `\\begin{matrix}&\\\\&\\end{matrix}`,
+        latex: `\\ccrr{ }{ }{ }{ }`,
       },
       {
         image: `/11/4.svg`,
-        latex: `\\begin{matrix}&&\\\\&&\\end{matrix}`,
+        latex: `\\cccrr{ }{ }{ }{ }{ }{ }`,
       },
       {
         image: `/11/5.svg`,
-        latex: `\\begin{matrix}&\\\\&\\\\&\\end{matrix}`,
+        latex: `\\ccrrr{ }{ }{ }{ }{ }{ }`,
       },
       {
         image: `/11/6.svg`,
-        latex: `\\begin{matrix}&&\\\\&&\\\\&&\\end{matrix}`,
+        latex: `\\cccrrr{ }{ }{ }{ }{ }{ }{ }{ }{ }`,
       },
       {
         image: `/11/7.svg`,
