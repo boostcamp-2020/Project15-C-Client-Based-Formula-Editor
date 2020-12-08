@@ -17,7 +17,7 @@ function FavoriteModal() {
         <S.FavoriteModalContainer>
           <S.FavoriteModalOverlay onClick={onClickModalClosed} />
           <S.FavoriteModalWrapper>
-            <S.ModalTitle>Register Favorite</S.ModalTitle>
+            <S.ModalTitle>즐겨찾기 등록</S.ModalTitle>
             <S.ModalContent>
               <S.ContentLabel>Title</S.ContentLabel>
               <input type="text"></input>
@@ -25,8 +25,8 @@ function FavoriteModal() {
               <S.LatexBox>{currentTabInfo.latex}</S.LatexBox>
             </S.ModalContent>
             <S.ModalButtons>
-              <ButtonItem title={'cancel'} handler={onClickModalClosed} />
-              <ButtonItem title={'register'} handler={onClickRegister} />
+              <ButtonItem title={'취소'} handler={onClickModalClosed} />
+              <ButtonItem title={'등록'} handler={onClickRegister} />
             </S.ModalButtons>
           </S.FavoriteModalWrapper>
         </S.FavoriteModalContainer>
