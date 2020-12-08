@@ -1,9 +1,11 @@
+/* eslint-disable camelcase */
 import UserRepository from '@repository/user-repository';
 import { getCustomRepository } from 'typeorm';
 
 export interface CreateParams {
   email: string;
   nickname: string;
+  profile_image: string;
 }
 
 class UserService {
@@ -27,8 +29,8 @@ class UserService {
     return user;
   }
 
-  async createUser({ email, nickname }: CreateParams) {
-    const newUser = await this.userRepository.insertUesr({ email, nickname });
+  async createUser({ email, nickname, profile_image }: CreateParams) {
+    const newUser = await this.userRepository.insertUesr({ email, nickname, profile_image });
     return newUser;
   }
 }

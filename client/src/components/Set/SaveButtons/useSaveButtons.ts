@@ -36,9 +36,10 @@ export const useSaveButtons = () => {
   const onClickLoginHandler = async () => {
     chrome.runtime.sendMessage({ message: 'login' }, (response) => {
       const { userToken, result } = response.results;
-
       setToken(userToken);
-      const resultToken = getToken();
+
+      // TODO. Redux에 current user 저장하는 로직
+      // TODO. 여기서 말고, 즐겨찾기 탭에서, Redux에 current user가 있다면 즐겨찾기 목록 불러오는 로직
     });
   };
 

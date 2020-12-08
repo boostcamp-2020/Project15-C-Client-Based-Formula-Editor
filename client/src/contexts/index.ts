@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 // import user from './user';
 import latex from './latex';
+import modal from './modal';
 
 const rootReducer = combineReducers({
   latex,
+  modal,
   // user,
 });
 
