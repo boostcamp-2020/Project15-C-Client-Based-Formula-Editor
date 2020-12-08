@@ -3,23 +3,36 @@ import { getImageURL } from '@utils/util';
 
 export const FormulaContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   border-top: 1px solid #d4d4d5;
   border-bottom: 1px solid #d4d4d5;
   background-color: #f3f3f3;
   height: 100%;
 `;
+export const HeaderWraaper = styled.div`
+  display: flex;
+`;
+export const Logo = styled.div`
+  width: 100px;
+  background-color: darkblue;
+`;
 
-export const UserButtonsContainer = styled.div`
-`
+export const UserButtonsContainer = styled.div``;
 
 export const LoginButton = styled.div`
   background: url(${() => getImageURL('login.png')});
   width: 100px;
-  height: 50px;
+  height: 30px;
   background-size: contain;
   background-repeat: no-repeat;
-`
+`;
+export const LogoutButton = styled.div`
+  background: url(${() => getImageURL('logout.png')});
+  width: 100px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+`;
 
 export const FormulaHeaderWrapper = styled.div`
   height: 100%;

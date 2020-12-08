@@ -1,5 +1,7 @@
 import { UserAction, UserState } from './types';
 import {
+  USER_LOGIN,
+  USER_LOGOUT,
   GET_FAVORITES_REQUEST,
   GET_FAVORITES_SUCCESS,
   GET_FAVORITES_FAILURE,
@@ -17,6 +19,19 @@ const initialState: UserState = {
 
 function reducer(state: UserState = initialState, action: UserAction): UserState {
   switch (action.type) {
+    case USER_LOGIN:
+      return {
+        ...state,
+        userInfo: {
+          ...state.userInfo,
+          userId: action.payload,
+        },
+      };
+    case USER_LOGOUT:
+      return {
+        ...state,
+        userInfo: initialState.userInfo,
+      };
     case GET_FAVORITES_REQUEST:
       return {
         ...state,

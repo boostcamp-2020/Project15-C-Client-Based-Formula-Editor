@@ -1,4 +1,6 @@
 import {
+  userLogin,
+  userLogout,
   getFavoritesRequest,
   getFavoritesSuccess,
   getFavoritesFailure,
@@ -6,6 +8,8 @@ import {
 } from './actions';
 
 export type UserAction =
+  | ReturnType<typeof userLogin>
+  | ReturnType<typeof userLogout>
   | ReturnType<typeof getFavoritesRequest>
   | ReturnType<typeof getFavoritesSuccess>
   | ReturnType<typeof getFavoritesFailure>
