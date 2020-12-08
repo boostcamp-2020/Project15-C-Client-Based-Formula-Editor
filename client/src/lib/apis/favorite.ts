@@ -1,10 +1,5 @@
 import { API } from './common';
-
-interface FavoriteBody {
-  title: string;
-  latex: string;
-  userId: number;
-}
+import { FavoriteItem } from '@contexts/user/types';
 
 const favoriteAPI = {
   getFavorites: async (id: number) => {
@@ -23,7 +18,7 @@ const favoriteAPI = {
       console.error(error);
     }
   },
-  createFavorite: async (body: FavoriteBody) => {
+  createFavorite: async (body: FavoriteItem) => {
     try {
       const response = await API.post(`/favorite`, body);
       return response.data;

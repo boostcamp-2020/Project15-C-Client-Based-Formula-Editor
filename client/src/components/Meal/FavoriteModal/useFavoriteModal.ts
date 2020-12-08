@@ -1,5 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { closeModal } from '@contexts/modal';
+import { createFavorites } from '@contexts/user';
+import { FavoriteItem } from '@contexts/user/types';
+import favoriteAPI from '@lib/apis/favorite';
 
 const useFavoriteModal = () => {
   const dispatch = useDispatch();
@@ -8,7 +11,10 @@ const useFavoriteModal = () => {
     dispatch(closeModal());
   };
 
-  const onClickRegister = () => {};
+  const onClickRegister = async (props: FavoriteItem) => {
+    const newFavoriteItem = await favoriteAPI.createFavorite(props);
+    dispatch(createFavorites(newFavoriteItem));
+  };
 
   return {
     onClickModalClosed,

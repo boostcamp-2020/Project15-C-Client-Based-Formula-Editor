@@ -4,6 +4,7 @@ import {
   getFavoritesRequest,
   getFavoritesSuccess,
   getFavoritesFailure,
+  createFavorites,
   deleteFavorites,
 } from './actions';
 
@@ -13,10 +14,12 @@ export type UserAction =
   | ReturnType<typeof getFavoritesRequest>
   | ReturnType<typeof getFavoritesSuccess>
   | ReturnType<typeof getFavoritesFailure>
+  | ReturnType<typeof createFavorites>
   | ReturnType<typeof deleteFavorites>;
 
-export interface FavoriteList {
-  id: number;
+export interface FavoriteItem {
+  userId?: number | null;
+  id?: number;
   latex: string;
   title: string;
 }
@@ -29,5 +32,5 @@ export interface UserState {
 
 export interface UserDataType {
   userId: number | null;
-  favoriteLists: FavoriteList[];
+  favoriteLists: FavoriteItem[];
 }
