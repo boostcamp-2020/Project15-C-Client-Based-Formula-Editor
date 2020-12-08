@@ -28,11 +28,17 @@ export const OutputFormulaContent = styled.span`
   display: inline-block;
 `;
 
-export const StartButtonBox = styled.div`
+export const StarButtonBox = styled.div`
   position: absolute;
   top: 0;
   right: 0;
   margin-top: 5px;
   margin-right: 3px;
   z-index: 2;
+  & i {
+    color: #f7d100;
+    cursor: pointer;
+    //color: #FEE100;
+    //밑이 카카오톡 색
+  }
 `;

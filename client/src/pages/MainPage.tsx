@@ -6,6 +6,7 @@ import Output from '@set/Output';
 import SaveButtons from '@set/SaveButtons';
 import { observer } from '../lib/utils/util';
 import FavoriteModal from '@meal/FavoriteModal';
+import { getToken } from '@utils/token';
 
 const MainContainer = styled.section`
   display: flex;
@@ -24,6 +25,7 @@ const ContentsContainer = styled.div`
 `;
 
 function MainPage() {
+  console.log('token:', getToken());
   return (
     <MainContainer onClick={observer.notify}>
       <FavoriteModal />

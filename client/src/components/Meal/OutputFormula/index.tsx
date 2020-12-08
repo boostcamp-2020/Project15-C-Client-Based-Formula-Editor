@@ -1,6 +1,8 @@
 import React from 'react';
 import { EditableMathField } from 'boost-mathquill';
-import { Button } from 'semantic-ui-react';
+import { Icon } from 'semantic-ui-react';
+import { useSelector } from 'react-redux';
+import { RootState } from '@contexts/index';
 import useContent from './useOutputFormula';
 import * as S from './style';
 
@@ -14,15 +16,18 @@ function OutputFormula() {
     onKeyDownHandler,
     onClickFavoriteHandler,
   } = useContent();
-
   const { latex, fontSize, fontColor, textAlign } = currentTabInfo;
+  const { userInfo } = useSelector((state: RootState) => state.user);
+  const { userId } = userInfo;
 
   return (
     <S.OutputFormulaWrapper onClick={onClickHandler}>
       <S.OutputFormulaBox fontSize={fontSize} fontColor={fontColor} textAlign={textAlign}>
-        <S.StartButtonBox>
-          <Button circular icon="star" size="mini" onClick={onClickFavoriteHandler} />
-        </S.StartButtonBox>
+        {userId && (
+          <S.StarButtonBox>
+            <Icon name={'star'} size="big" onClick={onClickFavoriteHandler} />
+          </S.StarButtonBox>
+        )}
         <S.OutputFormulaContent ref={mathfieldRef}>
           <EditableMathField
             mathquillDidMount={initmathInput}
