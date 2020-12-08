@@ -4,14 +4,15 @@ import { RootState } from '@contexts/index';
 import html2canvas from 'html2canvas';
 import * as clipboard from 'clipboard-polyfill';
 import { ClipboardItem } from 'clipboard-polyfill';
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { setToken, getToken } from '@utils/token';
+import useToggle from '@hooks/useToggle';
 
-let timer: any;
 export const useSaveButtons = () => {
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { currentTabInfo } = useCurrentTab();
   const { mathfieldRef } = useSelector((state: RootState) => state.latex);
-  const [message, setMessage] = useState(false);
+  const [message, onToggleMessage] = useToggle(false);
   const downloadText = () => {
     const fileName = `수식셰프${Date.now()}.txt`;
     const element = document.createElement('a');
@@ -55,10 +56,10 @@ export const useSaveButtons = () => {
   };
 
   const messageHandler = () => {
-    setMessage(true);
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      setMessage(false);
+    onToggleMessage();
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = setTimeout(() => {
+      onToggleMessage();
     }, 2500);
   };
   return { downloadImage, downloadText, onClickLoginHandler, clipboardHandler, message };
