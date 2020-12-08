@@ -7,6 +7,7 @@ import { ClipboardItem } from 'clipboard-polyfill';
 import React, { useRef, useState } from 'react';
 import { setToken, getToken } from '@utils/token';
 import useToggle from '@hooks/useToggle';
+import { BASE_URL } from '@lib/apis/common';
 
 export const useSaveButtons = () => {
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -76,11 +77,20 @@ export const useSaveButtons = () => {
           })
             .then((response) => response.json())
             .then((response) => {
-              setImageUrl(response.data.link);
+              //여기서 백이랑 통신을 해서 서버사이드렌더링된 HTML페이지 URL를 받아와 여기에 넣는다.
+              const imageUrl =
+                BASE_URL.substring(0, BASE_URL.length - 3) + getUrlParse(response.data.link);
+              setImageUrl(imageUrl);
             });
         });
       });
     }
+  };
+
+  const getUrlParse = (url: string) => {
+    const startIndex = url.lastIndexOf('/') + 1;
+    const endIndex = url.lastIndexOf('.');
+    return url.substring(startIndex, endIndex);
   };
 
   const saveHandler = () => {
