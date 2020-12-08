@@ -1,12 +1,11 @@
-import { useDispatch } from 'react-redux';
-import { useEffect, useRef, useState } from 'react';
+import { observer } from '@utils/util';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { LatexContent } from '../../../lib/constants/latex-header';
 
 const useFormulaList = () => {
   const formulaRef = useRef<null | HTMLUListElement>(null);
-  const containerRef = useRef<null | HTMLDivElement>(null);
-  const timer = useRef<any>(null);
-  const dispatch = useDispatch();
+  const formulaHeaderRef = useRef<null | HTMLDivElement>(null);
+  const symbolHeaderRef = useRef<null | HTMLDivElement>(null);
   const [nowHeader, setNowHeader] = useState('');
   const [nowFormulas, setNowFormula] = useState<LatexContent[]>([]);
 
@@ -22,34 +21,32 @@ const useFormulaList = () => {
     }
   };
 
-  const reserveHiddenFormula = () => {
-    timer.current = setTimeout(() => {
+  const hiddenFormulaOnPage = useCallback((target: HTMLElement) => {
+    console.log(target.closest('div'));
+    console.log(formulaHeaderRef.current);
+    console.log(symbolHeaderRef.current);
+    if (
+      target.closest('div') !== formulaHeaderRef.current &&
+      target.closest('div') !== symbolHeaderRef.current
+    ) {
       hiddenFormula();
-    }, 600);
-  };
-
-  const clearHiddenTimemout = () => {
-    clearTimeout(timer.current);
-  };
+    }
+  }, []);
 
   useEffect(() => {
-    document.body.addEventListener('mouseleave', () => {
-      clearHiddenTimemout();
-      hiddenFormula();
-    });
+    observer.subscribe(hiddenFormulaOnPage);
   }, []);
 
   return {
     formulaRef,
-    containerRef,
+    formulaHeaderRef,
+    symbolHeaderRef,
     nowFormulas,
     setNowFormula,
     nowHeader,
     setNowHeader,
     displayFormula,
-    clearHiddenTimemout,
     hiddenFormula,
-    reserveHiddenFormula,
   };
 };
 
