@@ -9,9 +9,11 @@ export const FormulaContainer = styled.div`
   background-color: #f3f3f3;
   height: 100%;
 `;
+
 export const HeaderWraaper = styled.div`
   display: flex;
 `;
+
 export const Logo = styled.div`
   width: 100px;
   background-color: darkblue;
@@ -26,6 +28,7 @@ export const LoginButton = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
 `;
+
 export const LogoutButton = styled.div`
   background: url(${() => getImageURL('logout.png')});
   width: 100px;
