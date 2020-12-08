@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
 const FIRST_ELEM_INDEX = 0;
 const SECOND_ELEM_INDEX = 1;
-const CLIENT_ID = 'GMTenVOALk8XWg66w0xt';
-const REDIRECT_URL = 'https://hmlhleahplpekcfmioopobbdiidjophb.chromiumapp.org';
+const CLIENT_ID = '';
+const REDIRECT_URL = '';
 
 chrome.browserAction.onClicked.addListener(function (tab) {
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
