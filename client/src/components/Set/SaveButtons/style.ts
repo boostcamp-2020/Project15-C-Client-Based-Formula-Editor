@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-const SaveButtonsContainer = styled.div`
+export const SaveButtonsContainer = styled.div`
   display: flex;
   align-items: center;
   margin-left: 7px;
@@ -13,4 +13,10 @@ const SaveButtonsContainer = styled.div`
   padding-bottom: 10px;
 `;
 
-export default SaveButtonsContainer;
+export const MessageContainer = styled.div`
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 50%;
+`;
