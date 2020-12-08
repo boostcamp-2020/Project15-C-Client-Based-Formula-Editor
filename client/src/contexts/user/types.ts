@@ -1,22 +1,29 @@
-import * as actions from './actions';
-import { ActionType } from 'typesafe-actions';
-export type UserAction = ActionType<typeof actions>;
+import {
+  getFavoritesRequest,
+  getFavoritesSuccess,
+  getFavoritesFailure,
+  deleteFavorites,
+} from './actions';
 
-export interface UserDataType {
-  userId : number;
-  favoriteLists: FavoriteList[] | [];
-}
+export type UserAction =
+  | ReturnType<typeof getFavoritesRequest>
+  | ReturnType<typeof getFavoritesSuccess>
+  | ReturnType<typeof getFavoritesFailure>
+  | ReturnType<typeof deleteFavorites>;
 
 export interface FavoriteList {
-  id : number;
-  latex : string;
-  title : string;
+  id: number;
+  latex: string;
+  title: string;
 }
 
 export interface UserState {
-  UserFavorites:{
-    loading: boolean;
-    error: Error | null;
-    data : UserDataType ;
-  }
+  loading: boolean;
+  error: Error | null;
+  userInfo: UserDataType;
+}
+
+export interface UserDataType {
+  userId: number | null;
+  favoriteLists: FavoriteList[];
 }
