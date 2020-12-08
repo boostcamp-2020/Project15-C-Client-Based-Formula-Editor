@@ -33,10 +33,12 @@ const AuthController = {
       const jwtSecret = JWT_SECRET === undefined ? '1a2s3d4f5g' : JWT_SECRET;
 
       const token = req.headers.authorization;
+      console.log('token: ', token);
       if (token) {
         const decodedToken = jwt.verify(token, jwtSecret);
         const { email } = decodedToken as userInfo;
         const user = await UserService.getInstance().getUser(email);
+        console.log('user: ', user);
         if (user) {
           return next();
         }

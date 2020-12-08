@@ -66,7 +66,7 @@ function reducer(state: UserState = initialState, action: UserAction): UserState
         loading: false,
         error: null,
         userInfo: {
-          userId: action.payload,
+          ...state.userInfo,
           favoriteLists: [
             ...state.userInfo.favoriteLists.filter((favorite) => favorite.id !== action.payload),
           ],
