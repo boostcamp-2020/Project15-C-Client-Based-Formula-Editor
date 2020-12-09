@@ -3,8 +3,10 @@ import styled from '@emotion/styled';
 export const MenuBarContainer = styled.div`
   height: 100%;
   width: 100%;
-  background: green;
+  border-top: 1px solid #d4d4d5;
+  background: #f3f3f3;
   display: flex;
+  justify-content: space-around;
 `;
 
 export const OutputWrapper = styled.div`
@@ -12,14 +14,16 @@ export const OutputWrapper = styled.div`
 `;
 export const ButtonWrapper = styled.div`
   & div {
-    height: 100%;
+    height: 80px;
+    margin-top: 10px !important;
   }
   & div > button {
     height: 100%;
-    padding: 10px !important;
+    padding: 27px 10px 10px 10px !important;
     align-self: center;
     & i {
       font-size: 2em;
+      margin-top: 10px !important;
     }
   }
 `;
@@ -30,15 +34,21 @@ export const IconWrapper = styled.div`
   }
 `;
 
+export const TextAreaItemWrapper = styled.div`
+  width: 30%;
+  margin: 10px;
+`;
+
 export const Logo = styled.div`
   height: 100%;
   width: 65px;
   margin-left: 20px;
+  margin-right: 10px;
 `;
 
 export const LogoImg = styled.img`
-  margin-top: 5px;
   width: 65px;
+  margin-top: 15px;
 `;
 
 export const Img = styled.img`

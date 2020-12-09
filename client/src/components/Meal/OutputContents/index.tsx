@@ -9,7 +9,7 @@ function OutputContents() {
       <S.ContentsHeader>
         <TemplateButtons></TemplateButtons>
       </S.ContentsHeader>
-      <OutputFormula />
+      <OutputFormula border={'1px solid #d4d4d5'} />
     </S.ContentsContainer>
   );
 }

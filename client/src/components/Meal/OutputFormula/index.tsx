@@ -7,8 +7,13 @@ import useOutputFormula from './useOutputFormula';
 import * as S from './style';
 import useModal from '@hooks/useModal';
 import FavoriteModal from '@meal/FavoriteModal';
+export interface OutputFormulaProps {
+  backgroundColor?: string;
+  padding?: string;
+  border?: string;
+}
 
-function OutputFormula() {
+function OutputFormula({ backgroundColor, padding, border }: OutputFormulaProps) {
   const {
     initmathInput,
     currentTabInfo,
@@ -24,8 +29,13 @@ function OutputFormula() {
 
   return (
     <>
-      <S.OutputFormulaWrapper onClick={onClickHandler}>
-        <S.OutputFormulaBox fontSize={fontSize} fontColor={fontColor} textAlign={textAlign}>
+      <S.OutputFormulaWrapper onClick={onClickHandler} border={border} padding={padding}>
+        <S.OutputFormulaBox
+          backgroundColor={backgroundColor}
+          fontSize={fontSize}
+          fontColor={fontColor}
+          textAlign={textAlign}
+        >
           {userId && (
             <S.StarButtonBox>
               <Icon name={'star'} size="big" onClick={toggleModal} />

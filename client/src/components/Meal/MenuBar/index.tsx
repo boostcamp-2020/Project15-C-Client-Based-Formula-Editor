@@ -1,7 +1,7 @@
 import React from 'react';
 import TextAreaItem from '@ingredients/TextAreaItem';
 import OutputFormula from '@meal/OutputFormula';
-import { Button } from 'semantic-ui-react';
+import { Button, Icon } from 'semantic-ui-react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@contexts/index';
@@ -30,9 +30,11 @@ function MenuBar() {
       <S.Logo>
         <S.LogoImg src="/image/logo.png" />
       </S.Logo>
-      <TextAreaItem width={'30%'} />
+      <S.TextAreaItemWrapper>
+        <TextAreaItem width={'100%'} />
+      </S.TextAreaItemWrapper>
       <S.OutputWrapper>
-        <OutputFormula />
+        <OutputFormula backgroundColor={'white'} padding={'10px'} border={'none'} />
       </S.OutputWrapper>
       <S.ButtonWrapper>
         <Button.Group basic size="massive">
@@ -40,13 +42,13 @@ function MenuBar() {
           <Button icon="file image outline" size="massive" />
           <Button icon="qrcode" size="massive" />
           <Button icon="tv" size="massive" />
+          {userId ? (
+            <Button icon="user" size="massive" />
+          ) : (
+            <Button icon="user outline" size="massive" />
+          )}
         </Button.Group>
       </S.ButtonWrapper>
-      {userId ? (
-        <S.Img src="image/logout.png" onClick={onClickLogoutHandler} />
-      ) : (
-        <S.Img src="image/login.png" onClick={onClickLoginHandler} />
-      )}
     </S.MenuBarContainer>
   );
 }
