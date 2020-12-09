@@ -5,7 +5,6 @@ import Input from '@set/Input';
 import Output from '@set/Output';
 import SaveButtons from '@set/SaveButtons';
 import { observer } from '../lib/utils/util';
-import FavoriteModal from '@meal/FavoriteModal';
 import TestComponet from './TestComponet';
 
 const MainContainer = styled.section`
@@ -34,7 +33,6 @@ function MainPage() {
   if (!isLoading) return <TestComponet />;
   return (
     <MainContainer onClick={observer.notify}>
-      <FavoriteModal />
       <Header />
       <Main>
         <ContentsContainer>
