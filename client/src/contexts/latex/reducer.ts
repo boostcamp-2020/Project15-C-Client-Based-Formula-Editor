@@ -5,7 +5,7 @@ const initTotalLatex = (id: number): TabInfo => {
   return {
     id,
     latex: '',
-    fontSize: '15',
+    fontSize: '20',
     fontColor: '#000000',
     textAlign: 'left',
   };

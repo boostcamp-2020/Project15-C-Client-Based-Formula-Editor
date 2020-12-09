@@ -1,16 +1,35 @@
 import React, { useState } from 'react';
 import useSaveButtons from './useSaveButtons';
-import { Button, Message } from 'semantic-ui-react';
+import { Button, Message, Dimmer, Loader, Image, Segment } from 'semantic-ui-react';
 import * as S from './style';
+import useModal from '@hooks/useModal';
+import QRcode from 'qrcode.react';
 
 function SaveButtons() {
-  const { downloadImage, downloadText, clipboardHandler, message } = useSaveButtons();
-
+  const {
+    downloadImage,
+    downloadText,
+    clipboardHandler,
+    message,
+    imageUrl,
+    createQrcode,
+    setImageUrl,
+    saveHandler,
+  } = useSaveButtons();
+  const createHandler = () => {
+    createQrcode();
+    toggleModal();
+  };
+  const closeHandler = () => {
+    setImageUrl('');
+  };
+  const [toggleModal, Modal] = useModal({ closeHandler, saveHandler });
   return (
     <S.SaveButtonsContainer>
       <Button.Group basic vertical>
         <Button content="이미지 저장" onClick={downloadImage} />
         <Button content="텍스트 저장" onClick={downloadText} />
+        <Button content="QR코드" onClick={createHandler} />
         <Button content="화면 적용" onClick={clipboardHandler} />
       </Button.Group>
       {message && (
@@ -23,6 +42,16 @@ function SaveButtons() {
           </Message>
         </S.MessageContainer>
       )}
+      <Modal>
+        <>
+          <QRcode value={imageUrl} />
+          {!imageUrl && (
+            <Dimmer active inverted>
+              <Loader size="large">Loading</Loader>
+            </Dimmer>
+          )}
+        </>
+      </Modal>
     </S.SaveButtonsContainer>
   );
 }

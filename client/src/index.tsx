@@ -35,7 +35,6 @@ const app =
     ? document.getElementById('root')
     : getProductionRootElement();
 
-
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(ReduxThunk, logger)));
 
 ReactDOM.render(
