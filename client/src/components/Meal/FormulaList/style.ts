@@ -10,9 +10,11 @@ export const FormulaContainer = styled.div`
   height: 100%;
   align-items: center;
 `;
+
 export const HeaderWraaper = styled.div`
   display: flex;
 `;
+
 export const Logo = styled.div`
   width: 140px;
   height: 100%;
@@ -35,6 +37,7 @@ export const LoginButton = styled.div`
   cursor: pointer;
   background-position-y: center;
 `;
+
 export const LogoutButton = styled.div`
   background: url(./image/logout2.png);
   width: 200px;
