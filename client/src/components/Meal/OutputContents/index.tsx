@@ -1,6 +1,6 @@
 import React from 'react';
-import TemplateButtons from '../FormatButtons';
-import OutputFormula from '../OutputFormula';
+import TemplateButtons from '@meal/FormatButtons';
+import OutputFormula from '@meal/OutputFormula';
 import * as S from './style';
 
 function OutputContents() {
