@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useSaveButtons from './useSaveButtons';
-import { Button, Message, Dimmer, Loader, Image, Segment } from 'semantic-ui-react';
+import QrCode from '@ingredients/QrCode';
+import { Button, Message } from 'semantic-ui-react';
 import * as S from './style';
-import useModal from '@hooks/useModal';
-import QRcode from 'qrcode.react';
 
 function SaveButtons() {
   const {
@@ -12,18 +11,10 @@ function SaveButtons() {
     clipboardHandler,
     message,
     imageUrl,
-    createQrcode,
-    setImageUrl,
-    saveHandler,
+    Modal,
+    createHandler,
   } = useSaveButtons();
-  const createHandler = () => {
-    createQrcode();
-    toggleModal();
-  };
-  const closeHandler = () => {
-    setImageUrl('');
-  };
-  const [toggleModal, Modal] = useModal({ closeHandler, saveHandler });
+
   return (
     <S.SaveButtonsContainer>
       <Button.Group basic vertical>
@@ -43,14 +34,7 @@ function SaveButtons() {
         </S.MessageContainer>
       )}
       <Modal>
-        <>
-          <QRcode value={imageUrl} />
-          {!imageUrl && (
-            <Dimmer active inverted>
-              <Loader size="large">Loading</Loader>
-            </Dimmer>
-          )}
-        </>
+        <QrCode imageUrl={imageUrl} />
       </Modal>
     </S.SaveButtonsContainer>
   );

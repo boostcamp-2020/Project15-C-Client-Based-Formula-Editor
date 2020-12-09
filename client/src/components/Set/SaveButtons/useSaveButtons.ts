@@ -8,6 +8,7 @@ import React, { useRef, useState } from 'react';
 import { setToken, getToken } from '@utils/token';
 import useToggle from '@hooks/useToggle';
 import { BASE_URL } from '@lib/apis/common';
+import useModal from '@hooks/useModal';
 
 export const useSaveButtons = () => {
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -103,6 +104,15 @@ export const useSaveButtons = () => {
     setImageUrl('');
   };
 
+  const createHandler = () => {
+    createQrcode();
+    toggleModal();
+  };
+  const closeHandler = () => {
+    setImageUrl('');
+  };
+  const [toggleModal, Modal] = useModal({ closeHandler, saveHandler, needButton: true });
+
   return {
     downloadImage,
     downloadText,
@@ -112,6 +122,8 @@ export const useSaveButtons = () => {
     imageUrl,
     setImageUrl,
     saveHandler,
+    createHandler,
+    Modal,
   };
 };
 
