@@ -1,6 +1,25 @@
 import styled from '@emotion/styled';
 
-const header = styled.div`
+export const HeaderContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #d4d4d5;
+  border-bottom: 1px solid #d4d4d5;
+  background-color: #f3f3f3;
+  width: 100%;
   height: 74px;
+  align-items: center;
+  position: relative;
 `;
-export default header;
+
+export const Logo = styled.div`
+  height: 100%;
+  width: 65px;
+  margin-left: 20px;
+`;
+
+export const LogoImg = styled.img`
+  margin-top: 5px;
+  height: 90%;
+  width: 65px;
+`;

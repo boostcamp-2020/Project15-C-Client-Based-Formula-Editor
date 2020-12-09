@@ -1,12 +1,16 @@
 import React from 'react';
 import FormulaList from '@meal/FormulaList';
-import HeaderContainer from './style';
+import * as S from './style';
+import { getImageURL } from '@utils/util';
 
 function Header() {
   return (
-    <HeaderContainer>
+    <S.HeaderContainer>
+      <S.Logo>
+        <S.LogoImg src={getImageURL('logo.png')} />
+      </S.Logo>
       <FormulaList />
-    </HeaderContainer>
+    </S.HeaderContainer>
   );
 }
 
