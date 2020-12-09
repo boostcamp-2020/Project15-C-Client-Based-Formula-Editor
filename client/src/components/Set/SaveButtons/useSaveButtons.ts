@@ -1,21 +1,26 @@
 import useCurrentTab from '@hooks/useCurrentTab';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@contexts/index';
 import html2canvas from 'html2canvas';
 import * as clipboard from 'clipboard-polyfill';
 import { ClipboardItem } from 'clipboard-polyfill';
-import React, { useRef, useState } from 'react';
-import { setToken, getToken } from '@utils/token';
+import { useRef, useState } from 'react';
+import { setToken } from '@utils/token';
 import useToggle from '@hooks/useToggle';
 import { BASE_URL } from '@lib/apis/common';
 import useModal from '@hooks/useModal';
+import { userLogin, userLogout } from '@contexts/user';
 
 export const useSaveButtons = () => {
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const { currentTabInfo } = useCurrentTab();
-  const { mathfieldRef } = useSelector((state: RootState) => state.latex);
+  const dispatch = useDispatch();
   const [message, onToggleMessage] = useToggle(false);
   const [imageUrl, setImageUrl] = useState('');
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const { currentTabInfo } = useCurrentTab();
+  const { mathfieldRef } = useSelector((state: RootState) => state.latex);
+  const { userInfo } = useSelector((state: RootState) => state.user);
+  const { userId } = userInfo;
 
   const downloadText = () => {
     const fileName = `수식셰프${Date.now()}.txt`;
@@ -108,22 +113,37 @@ export const useSaveButtons = () => {
     createQrcode();
     toggleModal();
   };
+
   const closeHandler = () => {
     setImageUrl('');
   };
+
   const [toggleModal, Modal] = useModal({ closeHandler, saveHandler, needButton: true });
+
+  const onClickLoginHandler = async () => {
+    chrome.runtime.sendMessage({ message: 'login' }, (response) => {
+      const { userToken, userId } = response.results;
+      setToken(userToken);
+      dispatch(userLogin(userId));
+    });
+  };
+
+  const onClickLogoutHandler = async () => {
+    chrome.storage.sync.clear();
+    dispatch(userLogout());
+  };
 
   return {
     downloadImage,
     downloadText,
     clipboardHandler,
     message,
-    createQrcode,
     imageUrl,
-    setImageUrl,
-    saveHandler,
     createHandler,
     Modal,
+    onClickLoginHandler,
+    onClickLogoutHandler,
+    userId,
   };
 };
 
