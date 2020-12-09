@@ -3,6 +3,21 @@ import useToggle from './useToggle';
 import { Button } from 'semantic-ui-react';
 import styled from '@emotion/styled';
 
+interface Props {
+  children?: React.ReactChild;
+  width?: 'mini' | 'big';
+}
+
+interface ModalType {
+  saveHandler?: (e: React.MouseEvent<HTMLElement>) => void | Promise<void>;
+  closeHandler?: (e: React.MouseEvent<HTMLElement>) => void;
+  needButton?: boolean;
+}
+
+interface ModalStyleProps {
+  width: 'mini' | 'big';
+}
+
 const Screen = styled.div`
   width: 100%;
   height: 100vh;
@@ -16,14 +31,14 @@ const Screen = styled.div`
   z-index: 5;
 `;
 
-const ModalContainer = styled.div`
+const ModalContainer = styled.div<ModalStyleProps>`
   z-index: 6;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  width: 20%;
+  width: ${(props) => (props.width === 'mini' ? '20% ' : '40%')};
   min-width: 250px;
   min-height: 150px;
   display: flex;
@@ -35,11 +50,6 @@ const ModalContainer = styled.div`
   & .content_wrapper {
     width: 100%;
     margin-bottom: 1rem;
-    text-align: center;
-    & .screen_title {
-      font-weight: bold;
-      font-size: 1rem;
-    }
     & .screen_content {
       font-size: 1em;
     }
@@ -57,20 +67,10 @@ const ModalContainer = styled.div`
   }
 `;
 
-interface Props {
-  children?: React.ReactChild;
-}
-
-interface ModalType {
-  title?: string;
-  saveHandler?: (e: React.MouseEvent<HTMLElement>) => void;
-  closeHandler?: (e: React.MouseEvent<HTMLElement>) => void;
-}
-
 const useModal = ({
-  title,
   saveHandler,
   closeHandler,
+  needButton = false,
 }: ModalType): [() => void, ({ children }: Props) => JSX.Element] => {
   const [modalState, onToggModal] = useToggle(false);
   const onSaveHandler = (e: React.MouseEvent<HTMLElement>) => {
@@ -85,22 +85,21 @@ const useModal = ({
     onToggModal();
   };
 
-  function CheckScreen({ children }: Props): JSX.Element {
+  function Modal({ children, width = 'mini' }: Props): JSX.Element {
     return (
       <>
         {modalState && (
           <>
-            <ModalContainer>
-              <div className="content_wrapper">
-                {title && <div className="screen_title">{title}</div>}
-                {children}
-              </div>
-              <div className="button_wrapper">
-                <Button onClick={onSaveHandler} positive>
-                  Save
-                </Button>
-                <Button onClick={onCloseHandler}>Cancel</Button>
-              </div>
+            <ModalContainer width={width}>
+              <div className="content_wrapper">{children}</div>
+              {needButton && (
+                <div className="button_wrapper">
+                  <Button onClick={onSaveHandler} positive>
+                    Save
+                  </Button>
+                  <Button onClick={onCloseHandler}>Cancel</Button>
+                </div>
+              )}
             </ModalContainer>
             <Screen onClick={onCloseHandler} />
           </>
@@ -108,6 +107,6 @@ const useModal = ({
       </>
     );
   }
-  return [onToggModal, CheckScreen];
+  return [onToggModal, Modal];
 };
 export default useModal;

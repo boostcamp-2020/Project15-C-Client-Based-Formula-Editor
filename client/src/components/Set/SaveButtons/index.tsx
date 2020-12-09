@@ -16,17 +16,9 @@ function SaveButtons() {
     clipboardHandler,
     message,
     imageUrl,
-    createQrcode,
-    setImageUrl,
-    saveHandler,
+    Modal,
+    createHandler,
   } = useSaveButtons();
-  const createHandler = () => {
-    createQrcode();
-    toggleModal();
-  };
-  const closeHandler = () => {
-    setImageUrl('');
-  };
 
   const { userInfo } = useSelector((state: RootState) => state.user);
   const { userId } = userInfo;
@@ -46,6 +38,7 @@ function SaveButtons() {
   };
 
   const [toggleModal, Modal] = useModal({ closeHandler, saveHandler });
+
   return (
     <S.SaveButtonsContainer>
       {userId ? (
@@ -57,7 +50,7 @@ function SaveButtons() {
       <Button.Group basic vertical>
         <Button content="이미지 저장" onClick={downloadImage} />
         <Button content="텍스트 저장" onClick={downloadText} />
-        <Button content="QR코드" onClick={createHandler} />
+        <Button content="QR코드 생성" onClick={createHandler} />
         <Button content="화면 적용" onClick={clipboardHandler} />
       </Button.Group>
       {message && (
@@ -71,14 +64,7 @@ function SaveButtons() {
         </S.MessageContainer>
       )}
       <Modal>
-        <>
-          <QRcode value={imageUrl} />
-          {!imageUrl && (
-            <Dimmer active inverted>
-              <Loader size="large">Loading</Loader>
-            </Dimmer>
-          )}
-        </>
+        <QrCode imageUrl={imageUrl} />
       </Modal>
     </S.SaveButtonsContainer>
   );
