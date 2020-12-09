@@ -2,8 +2,9 @@ import styled from '@emotion/styled';
 
 export const SaveButtonsContainer = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-left: 7px;
+  margin-right: 7px;
   height: 100%;
   flex-basis: 135px;
   flex-shrink: 0;
@@ -19,4 +20,14 @@ export const MessageContainer = styled.div`
   left: 0;
   right: 0;
   width: 50%;
+`;
+
+export const Img = styled.img`
+  border: 0.1px solid #d4d4d5;
+  border-radius: 5px;
+  margin-top: 6px;
+  width: 114px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
