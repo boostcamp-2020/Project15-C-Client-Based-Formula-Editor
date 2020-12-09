@@ -25,13 +25,13 @@ const ContentsContainer = styled.div`
 `;
 
 function MainPage() {
-  const [isLoading, setLoading] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(true);
-    }, 3000);
-  }, []);
-  if (!isLoading) return <TestComponet />;
+  // const [isLoading, setLoading] = useState(false);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(true);
+  //   }, 3000);
+  // }, []);
+  // if (!isLoading) return <TestComponet />;
   return (
     <MainContainer onClick={observer.notify}>
       <FavoriteModal />
