@@ -6,19 +6,16 @@ import FormulaItem from '@ingredients/FormulaItem';
 import useFormulaList from './useFormulaList';
 import * as S from './style';
 import { RootState } from '@contexts/index';
-
 import { userLogin, userLogout } from '@contexts/user';
-import { getToken, setToken } from '@utils/token';
-import { Loader } from 'semantic-ui-react';
+import { setToken } from '@utils/token';
 
 function FormulaList() {
   const {
     formulaRef,
-    containerRef,
+    formulaHeaderRef,
+    symbolHeaderRef,
     displayFormula,
-    clearHiddenTimemout,
     hiddenFormula,
-    reserveHiddenFormula,
     nowHeader,
     setNowHeader,
     nowFormulas,
@@ -36,6 +33,7 @@ function FormulaList() {
       dispatch(userLogin(userId));
     });
   };
+
   const onClickLogoutHandler = async () => {
     chrome.storage.sync.clear();
     dispatch(userLogout());
@@ -43,31 +41,34 @@ function FormulaList() {
 
   return (
     <>
-      <S.FormulaContainer
-        ref={containerRef}
-        className="formula_container"
-        onMouseLeave={reserveHiddenFormula}
-      >
+      <S.FormulaContainer>
         <S.Logo />
 
         <S.HeaderWraaper>
-          <S.FormulaHeaderWrapper>
+          <S.FormulaHeaderWrapper ref={formulaHeaderRef}>
             {FORMULA_HEADER.map((latex, index) => (
               <DropDownItem
                 latex={latex}
                 key={index}
-                onMouseOver={displayFormula}
+                formulaList={formulaRef}
+                onHiddenFormula={hiddenFormula}
+                onDisplayFormula={displayFormula}
+                nowHeader={nowHeader}
                 setNowHeader={setNowHeader}
                 setNowFormula={setNowFormula}
               ></DropDownItem>
             ))}
           </S.FormulaHeaderWrapper>
-          <S.SymbolHeaderWrapper>
+
+          <S.SymbolHeaderWrapper ref={symbolHeaderRef}>
             {SYMBOL_HEADER.map((latex, index) => (
               <DropDownItem
                 latex={latex}
                 key={index}
-                onMouseOver={displayFormula}
+                formulaList={formulaRef}
+                onHiddenFormula={hiddenFormula}
+                onDisplayFormula={displayFormula}
+                nowHeader={nowHeader}
                 setNowHeader={setNowHeader}
                 setNowFormula={setNowFormula}
               >
@@ -76,6 +77,7 @@ function FormulaList() {
             ))}
           </S.SymbolHeaderWrapper>
         </S.HeaderWraaper>
+
         {userId ? (
           <div>
             <S.LogoutButton onClick={onClickLogoutHandler} />
@@ -85,13 +87,8 @@ function FormulaList() {
           <S.LoginButton onClick={onClickLoginHandler} />
         )}
       </S.FormulaContainer>
-      <S.FormulaList
-        ref={formulaRef}
-        onMouseLeave={hiddenFormula}
-        onMouseOver={clearHiddenTimemout}
-        length={nowFormulas.length}
-        header={nowHeader}
-      >
+
+      <S.FormulaList ref={formulaRef} length={nowFormulas.length} header={nowHeader}>
         {nowFormulas.map((latexInfo, index) => (
           <FormulaItem
             key={index}

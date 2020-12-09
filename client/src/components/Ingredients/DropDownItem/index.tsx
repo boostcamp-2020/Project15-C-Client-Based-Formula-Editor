@@ -1,9 +1,13 @@
-import React, { ReactChildren } from 'react';
+import React, { ReactChildren, useRef } from 'react';
 import { LatexHeader, LatexContent } from '../../../lib/constants/latex-header';
 import * as S from './style';
+
 interface DropDownItemProps {
   children?: ReactChildren | string;
-  onMouseOver: (e: React.MouseEvent) => void;
+  formulaList: React.MutableRefObject<HTMLUListElement | null>;
+  onDisplayFormula: () => void;
+  onHiddenFormula: () => void;
+  nowHeader: string;
   setNowHeader: (header: string) => void;
   setNowFormula: (formula: LatexContent[]) => void;
   latex: LatexHeader;
@@ -11,21 +15,40 @@ interface DropDownItemProps {
 
 function DropDownItem({
   children,
-  onMouseOver,
   latex,
+  formulaList,
+  nowHeader,
+  onDisplayFormula,
+  onHiddenFormula,
   setNowHeader,
   setNowFormula,
 }: DropDownItemProps) {
-  const customMouseOver = (e: React.MouseEvent) => {
-    onMouseOver(e);
+  const itemRef = useRef<null | HTMLButtonElement>(null);
+
+  const onClickDropDownItem = () => {
+    if (!formulaList.current) return;
+
+    if (nowHeader !== latex.header) {
+      onDisplayFormula();
+    } else {
+      if (formulaList.current.style.display === 'none') {
+        onDisplayFormula();
+      } else {
+        onHiddenFormula();
+        if (itemRef.current) itemRef.current.blur();
+      }
+    }
     setNowFormula(latex.content);
     setNowHeader(latex.header);
   };
 
-  if (children) {
-    return <S.DropDownItemStyle onMouseOver={customMouseOver}>{children}</S.DropDownItemStyle>;
-  }
-  return <S.DropDownItemStyle header={latex.header} onMouseOver={customMouseOver} />;
+  return children ? (
+    <S.DropDownItemStyle ref={itemRef} onClick={onClickDropDownItem}>
+      {children}
+    </S.DropDownItemStyle>
+  ) : (
+    <S.DropDownItemStyle ref={itemRef} onClick={onClickDropDownItem} header={latex.header} />
+  );
 }
 
 export default DropDownItem;
