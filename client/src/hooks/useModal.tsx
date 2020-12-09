@@ -50,10 +50,6 @@ const ModalContainer = styled.div<ModalStyleProps>`
   & .content_wrapper {
     width: 100%;
     margin-bottom: 1rem;
-    & .screen_title {
-      font-weight: bold;
-      font-size: 1rem;
-    }
     & .screen_content {
       font-size: 1em;
     }
