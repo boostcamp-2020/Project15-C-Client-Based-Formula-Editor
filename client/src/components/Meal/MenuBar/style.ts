@@ -13,6 +13,7 @@ export const OutputWrapper = styled.div`
   width: 30%;
 `;
 export const ButtonWrapper = styled.div`
+  margin-right: 10px;
   & div {
     height: 80px;
     margin-top: 10px !important;

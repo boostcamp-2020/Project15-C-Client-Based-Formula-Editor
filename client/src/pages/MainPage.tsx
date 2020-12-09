@@ -26,7 +26,10 @@ const ContentsContainer = styled.div`
   padding: 10px;
 `;
 const IconWrapper = styled.div`
-  text-align: center;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -2px;
   & i {
     cursor: pointer;
     margin: 0;
@@ -49,7 +52,7 @@ function MainPage() {
   return (
     <MainContainer onClick={observer.notify}>
       <IconWrapper>
-        <Icon name="caret square down" size="big" onClick={onToggle} />
+        <Icon name="caret square down" color="grey" size="big" onClick={onToggle} />
       </IconWrapper>
       <Header />
       <Main>

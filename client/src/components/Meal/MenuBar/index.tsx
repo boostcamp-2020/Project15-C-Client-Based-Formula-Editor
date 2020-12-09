@@ -38,7 +38,7 @@ function MenuBar() {
       </S.OutputWrapper>
       <S.ButtonWrapper>
         <Button.Group basic size="massive">
-          <Button icon="file text outline" size="massive" />
+          <Button icon="file text" size="massive" />
           <Button icon="file image outline" size="massive" />
           <Button icon="qrcode" size="massive" />
           <Button icon="tv" size="massive" />

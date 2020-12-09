@@ -4,12 +4,14 @@ export const ResizeHeaderContainer = styled.div`
   height: 100px;
   position: absolute;
   width: 100%;
-  bottom: 30px;
+  bottom: 28px;
 `;
 
 export const IconWrapper = styled.div`
-  text-align: center;
   height: 30px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -3px;
   & i {
     cursor: pointer;
     margin: 0;
