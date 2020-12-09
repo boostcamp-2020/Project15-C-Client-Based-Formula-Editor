@@ -22,6 +22,7 @@ export const OutputFormulaBox = styled.div<FormulaProps>`
   font-size: ${(props) => props.fontSize}px;
   color: ${(props) => props.fontColor};
   text-align: ${(props) => props.textAlign};
+  overflow-x: auto;
 `;
 
 export const OutputFormulaContent = styled.span`
