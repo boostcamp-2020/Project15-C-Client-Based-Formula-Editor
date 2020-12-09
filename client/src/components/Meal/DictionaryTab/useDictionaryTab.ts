@@ -92,7 +92,6 @@ const useDictionaryTab = () => {
     onSelectHandler,
     searchWord,
     searchedContent,
-    onChangeSearchWord,
   };
 };
 

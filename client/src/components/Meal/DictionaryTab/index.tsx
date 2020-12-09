@@ -16,7 +16,6 @@ function DictionaryTab() {
     searchWord,
     searchedContent,
     containerRef,
-    onChangeSearchWord,
   } = useDictionaryTab();
 
   return (
@@ -27,8 +26,6 @@ function DictionaryTab() {
           searchWord={searchWord}
           onSelectHandler={onSelectHandler}
           onSearchHandler={onSearchHandler}
-          onChangeSearchWord={onChangeSearchWord}
-          displayedContent={searchWord ? searchedContent : currentMenuContent}
         />
         <DictionaryItemList
           containerRef={containerRef}
