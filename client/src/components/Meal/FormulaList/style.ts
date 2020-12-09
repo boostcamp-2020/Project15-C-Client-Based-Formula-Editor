@@ -12,15 +12,26 @@ export const FormulaContainer = styled.div`
 `;
 
 export const HeaderWraaper = styled.div`
+  /* margin-left: -80px; */
+
   display: flex;
 `;
 
 export const Logo = styled.div`
-  width: 140px;
+  height: 100%;
+  width: 65px;
+  margin-left: 20px;
+  /* width: 140px;
   height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
-  background: url(${() => getImageURL('logo.png')});
+  background: url(${() => getImageURL('logo.png')}); */
+`;
+
+export const LogoImg = styled.img`
+  margin-top: 5px;
+  height: 90%;
+  width: 65px;
 `;
 
 export const UserButtonsContainer = styled.div``;
@@ -52,6 +63,7 @@ export const LogoutButton = styled.div`
 `;
 
 export const FormulaHeaderWrapper = styled.div`
+  margin-left: auto;
   height: 100%;
   display: flex;
   align-items: center;
@@ -63,9 +75,13 @@ export const FormulaHeaderWrapper = styled.div`
   overflow-y: hidden;
   white-space: nowrap;
   padding-right: 20px;
+  & button {
+    min-width: 60px;
+  }
 `;
 
 export const SymbolHeaderWrapper = styled.div`
+  margin-right: auto;
   height: 100%;
   display: flex;
   align-items: center;
