@@ -28,7 +28,7 @@ function OutputFormula() {
         <S.OutputFormulaBox fontSize={fontSize} fontColor={fontColor} textAlign={textAlign}>
           {userId && (
             <S.StarButtonBox>
-              <Icon name={'star'} size="big" onClick={toggleModal} />
+              <Icon name={'star'} size="large" onClick={toggleModal} />
             </S.StarButtonBox>
           )}
           <S.OutputFormulaContent ref={mathfieldRef}>
