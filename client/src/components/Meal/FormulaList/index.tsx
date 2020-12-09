@@ -3,6 +3,7 @@ import DropDownItem from '@ingredients/DropDownItem';
 import { FORMULA_HEADER, SYMBOL_HEADER } from '@lib/constants/latex-header';
 import FormulaItem from '@ingredients/FormulaItem';
 import useFormulaList from './useFormulaList';
+import { getImageURL } from '@utils/util';
 import * as S from './style';
 
 function FormulaList() {
@@ -22,7 +23,7 @@ function FormulaList() {
     <>
       <S.FormulaContainer>
         <S.Logo>
-          <S.LogoImg src="/image/logo.png" />
+          <S.LogoImg src={getImageURL('logo.png')} />
         </S.Logo>
 
         <S.FormulaHeaderWrapper ref={formulaHeaderRef}>

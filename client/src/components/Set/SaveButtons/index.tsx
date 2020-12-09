@@ -3,6 +3,7 @@ import useSaveButtons from './useSaveButtons';
 import { Button, Message } from 'semantic-ui-react';
 import QrCode from '@ingredients/QrCode';
 import * as S from './style';
+import { getImageURL } from '@utils/util';
 
 function SaveButtons() {
   const {
@@ -21,9 +22,9 @@ function SaveButtons() {
   return (
     <S.SaveButtonsContainer>
       {userId ? (
-        <S.Img src="image/logout.png" onClick={onClickLogoutHandler} />
+        <S.Img src={getImageURL('logout.png')} onClick={onClickLogoutHandler} />
       ) : (
-        <S.Img src="image/login.png" onClick={onClickLoginHandler} />
+        <S.Img src={getImageURL('login.png')} onClick={onClickLoginHandler} />
       )}
 
       <Button.Group basic vertical>
