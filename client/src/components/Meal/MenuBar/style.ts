@@ -61,3 +61,11 @@ export const Img = styled.img`
     cursor: pointer;
   }
 `;
+
+export const MessageContainer = styled.div`
+  position: fixed;
+  margin: 10px auto;
+  left: 0;
+  right: 0;
+  width: 50%;
+`;
