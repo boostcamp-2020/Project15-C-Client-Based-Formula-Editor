@@ -29,9 +29,10 @@ function FavoriteModal() {
               <S.LatexBox>{currentTabInfo.latex}</S.LatexBox>
             </S.ModalContent>
             <S.ModalButtons>
-              <ButtonItem title={'취소'} handler={onClickModalClosed} />
+              <ButtonItem title={'취소'} handler={onClickModalClosed} color={'red'} />
               <ButtonItem
                 title={'등록'}
+                color={'green'}
                 handler={() => {
                   onClickRegister({ userId, title, latex: currentTabInfo.latex }, clearTitle);
                 }}

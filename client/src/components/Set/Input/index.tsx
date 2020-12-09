@@ -1,6 +1,6 @@
 import React from 'react';
-import PageTab from '../../Meal/PageTab';
-import InputContents from '../../Meal/InputContents';
+import PageTab from '@meal/PageTab';
+import InputContents from '@meal/InputContents';
 import * as S from './style';
 
 function InputArea() {

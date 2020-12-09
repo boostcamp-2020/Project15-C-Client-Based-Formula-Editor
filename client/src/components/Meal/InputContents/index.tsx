@@ -1,5 +1,5 @@
 import React from 'react';
-import TextAreaItem from '../../Ingredients/TextAreaItem';
+import TextAreaItem from '@ingredients/TextAreaItem';
 import FavoriteTab from '@meal/FavoriteTab';
 import { Tab } from 'semantic-ui-react';
 import DictionaryTab from '../DictionaryTab';

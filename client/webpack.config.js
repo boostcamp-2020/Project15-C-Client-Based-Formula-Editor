@@ -26,7 +26,7 @@ module.exports = (env, argv) => ({
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.png|jpg|gif|svg$/,
+        test: /\.png|jpg|gif|svg|ttf|woff|woff2|eot|ttf|otf$/,
         loader: 'url-loader',
         options: {
           name: '[name].[ext]?[hash]',

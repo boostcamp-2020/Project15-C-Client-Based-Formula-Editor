@@ -24,8 +24,8 @@ function App() {
           ></link>,
           <link
             rel="stylesheet"
-            href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css"
-            key={2}
+            href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.0/dist/semantic.min.css"
+            key={3}
           />,
         ]}
       >

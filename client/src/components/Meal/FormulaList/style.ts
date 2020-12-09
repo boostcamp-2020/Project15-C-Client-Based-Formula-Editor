@@ -3,11 +3,12 @@ import { getImageURL } from '@utils/util';
 
 export const FormulaContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   border-top: 1px solid #d4d4d5;
   border-bottom: 1px solid #d4d4d5;
   background-color: #f3f3f3;
   height: 100%;
+  align-items: center;
 `;
 
 export const HeaderWraaper = styled.div`
@@ -15,26 +16,39 @@ export const HeaderWraaper = styled.div`
 `;
 
 export const Logo = styled.div`
-  width: 100px;
-  background-color: darkblue;
+  width: 140px;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background: url(${() => getImageURL('logo.png')});
 `;
 
 export const UserButtonsContainer = styled.div``;
 
 export const LoginButton = styled.div`
-  background: url(${() => getImageURL('login.png')});
-  width: 100px;
-  height: 30px;
+  background: url(./image/login2.png);
+  width: 200px;
+  height: 50px;
   background-size: contain;
   background-repeat: no-repeat;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-position-y: center;
 `;
 
 export const LogoutButton = styled.div`
-  background: url(${() => getImageURL('logout.png')});
-  width: 100px;
-  height: 30px;
+  background: url(./image/logout2.png);
+  width: 200px;
+  height: 50px;
   background-size: contain;
   background-repeat: no-repeat;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-position-y: center;
 `;
 
 export const FormulaHeaderWrapper = styled.div`
