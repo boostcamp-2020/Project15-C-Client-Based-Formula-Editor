@@ -3,7 +3,7 @@ import { EditableMathField } from 'boost-mathquill';
 import { Icon } from 'semantic-ui-react';
 import { useSelector } from 'react-redux';
 import { RootState } from '@contexts/index';
-import useContent from './useOutputFormula';
+import useOutputFormula from './useOutputFormula';
 import * as S from './style';
 import useModal from '@hooks/useModal';
 import FavoriteModal from '@meal/FavoriteModal';
@@ -16,7 +16,7 @@ function OutputFormula() {
     onClickHandler,
     mathfieldRef,
     onKeyDownHandler,
-  } = useContent();
+  } = useOutputFormula();
   const { latex, fontSize, fontColor, textAlign } = currentTabInfo;
   const { userInfo } = useSelector((state: RootState) => state.user);
   const { userId } = userInfo;
@@ -26,7 +26,7 @@ function OutputFormula() {
     <>
       <S.OutputFormulaWrapper onClick={onClickHandler}>
         <S.OutputFormulaBox fontSize={fontSize} fontColor={fontColor} textAlign={textAlign}>
-          {!userId && (
+          {userId && (
             <S.StarButtonBox>
               <Icon name={'star'} size="big" onClick={toggleModal} />
             </S.StarButtonBox>
