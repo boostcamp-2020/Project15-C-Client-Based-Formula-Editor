@@ -14,14 +14,6 @@ export const SaveButtonsContainer = styled.div`
   padding-bottom: 10px;
 `;
 
-export const MessageContainer = styled.div`
-  position: fixed;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  width: 50%;
-`;
-
 export const Img = styled.img`
   border: 0.1px solid #d4d4d5;
   border-radius: 5px;
