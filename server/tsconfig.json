@@ -18,7 +18,8 @@
       "@repository/*": ["src/repository/*"],
       "@router/*": ["src/router/*"],
       "@service/*": ["src/service/*"]
-    }
+    },
+    "typeRoots": ["src/types"]
   },
   "include": ["src/**/*"],
   // 컴파일에서 제외되는 파일들

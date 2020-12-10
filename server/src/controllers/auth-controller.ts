@@ -5,7 +5,7 @@ import jwt from 'jsonwebtoken';
 import AuthService from '../service/auth-service';
 import UserService from '../service/user-service';
 
-interface userInfo {
+export interface userInfo {
   email: string;
   nickname: string;
   profileImage: string;
@@ -27,19 +27,35 @@ const AuthController = {
     }
   },
 
+  async autoLogin(req: Request, res: Response) {
+    try {
+      const user = req.user;
+      if (user?.userId) {
+        return res.status(200).json({ results: { userId: user.userId } });
+      }
+
+      return res
+        .status(STATUS_CODE.UNAUTHORIZED)
+        .json({ message: ERROR_MESSAGE.UNAUTHORIZED_ERROR });
+    } catch (error) {
+      console.error(error);
+      return res.status(STATUS_CODE.SERVER_ERROR).json({ message: ERROR_MESSAGE.SERVER_ERROR });
+    }
+  },
+
   async authCheck(req: Request, res: Response, next: NextFunction) {
     try {
       const { JWT_SECRET } = process.env;
       const jwtSecret = JWT_SECRET === undefined ? '1a2s3d4f5g' : JWT_SECRET;
 
       const token = req.headers.authorization;
-      console.log('token: ', token);
       if (token) {
         const decodedToken = jwt.verify(token, jwtSecret);
         const { email } = decodedToken as userInfo;
         const user = await UserService.getInstance().getUser(email);
-        console.log('user: ', user);
+
         if (user) {
+          req.user = { userId: Number(user.userId) };
           return next();
         }
       }

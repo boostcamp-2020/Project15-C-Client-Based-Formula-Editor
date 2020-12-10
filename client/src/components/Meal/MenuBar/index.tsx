@@ -35,7 +35,7 @@ function MenuBar({ onToggle }: ResizeHeaderProps) {
           <S.LabelIcon>➕</S.LabelIcon>
           <S.LabelText className="globalFont">입력</S.LabelText>
         </S.LabelWrapper>
-        <TextAreaItem width={'100%'} />
+        <TextAreaItem size={'mini'} />
       </S.TextAreaItemWrapper>
       <S.OutputWrapper>
         <S.LabelWrapper>

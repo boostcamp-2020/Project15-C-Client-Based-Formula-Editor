@@ -725,6 +725,10 @@ const FORMULA_HEADER: LatexHeader[] = [
         image: `/11/14.svg`,
         latex: `\\begin{pmatrix}a_{11}&a_{12}\\\\a_{21}&a_{22}\\end{pmatrix}`,
       },
+      {
+        image: `/11/13.svg`,
+        latex: `matrixInsert`,
+      },
     ],
   },
 ];

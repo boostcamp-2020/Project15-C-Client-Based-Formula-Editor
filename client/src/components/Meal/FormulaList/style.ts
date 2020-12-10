@@ -1,13 +1,12 @@
 import styled from '@emotion/styled';
-import { getImageURL } from '@utils/util';
 
 export const FormulaContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-self: center;
-  width: 90%;
+  width: 100%;
   height: 100%;
+  padding-right: 65px;
 `;
 
 export const HeaderWraaper = styled.div`
@@ -47,6 +46,10 @@ export const SymbolHeaderWrapper = styled.div`
     background-size: contain;
   }
   padding-left: 10px;
+
+  @media screen and (max-width: 780px) {
+    display: none;
+  }
 `;
 
 interface FormulaListFrops {
@@ -68,6 +71,8 @@ export const FormulaList = styled.ul<FormulaListFrops>`
   max-height: 142px;
   position: absolute;
   top: 70px;
+  left: 50%;
+  transform: translate(-50%);
   margin: 10px auto;
   padding: 0;
   border: 1px solid #bdbdbd;
