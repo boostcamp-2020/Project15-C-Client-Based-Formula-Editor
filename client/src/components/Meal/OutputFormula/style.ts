@@ -7,4 +7,6 @@ export const OutputFormulaWrapper = styled.div<OutputFormulaProps>`
   height: 100%;
   padding: ${(props) => (props.padding ? '10px' : '7px')};
   position: relative;
+  display: flex;
+  flex-direction: column;
 `;
