@@ -1,13 +1,13 @@
 import RecommendItem from '@ingredients/RecommendItem';
 import React from 'react';
-import { TextArea, RecommendContainer } from './style';
 import useTextAreaItem from './useTextAreaItem';
+import * as S from './style';
 
-export interface TextAreaItemProps {
-  width: string;
+interface TextAreaItem {
+  size?: 'mini' | 'big';
 }
 
-function TextAreaItem({ width }: TextAreaItemProps) {
+function TextAreaItem({ size = 'big' }: TextAreaItem) {
   const {
     currentTabInfo,
     onChangeHandler,
@@ -15,28 +15,38 @@ function TextAreaItem({ width }: TextAreaItemProps) {
     onKeyPress,
     recommend,
     clearAndCloseRecommend,
+    maxNumber,
+    onScroll,
   } = useTextAreaItem();
 
   return (
-    <>
-      <TextArea value={currentTabInfo.latex} onChange={onChangeHandler} onKeyDown={onKeyPress} width={width} />
-      {isShow && (
-        <RecommendContainer>
-          추천
-          <ul>
-            {recommend.map((item, index) => (
-              <RecommendItem
-                key={`${item.latex}${index}`}
-                currentLatex={currentTabInfo.latex}
-                clearAndCloseRecommend={clearAndCloseRecommend}
-                latex={item.latex}
-                image={item.image}
-              />
-            ))}
-          </ul>
-        </RecommendContainer>
+    <S.TextAreaContainer>
+      <S.TextArea
+        value={currentTabInfo.latex}
+        onChange={onChangeHandler(size)}
+        onKeyDown={onKeyPress}
+        isShow={isShow}
+      />
+      {size === 'big' && isShow && (
+        <>
+          <S.Divider></S.Divider>
+          <S.RecommendContainer>
+            <span>추천 Tex</span>
+            <ul onScroll={onScroll}>
+              {recommend.slice(0, maxNumber).map((item, index) => (
+                <RecommendItem
+                  key={`${item.latex}${index}`}
+                  currentLatex={currentTabInfo.latex}
+                  clearAndCloseRecommend={clearAndCloseRecommend}
+                  latex={item.latex}
+                  image={item.image}
+                />
+              ))}
+            </ul>
+          </S.RecommendContainer>
+        </>
       )}
-    </>
+    </S.TextAreaContainer>
   );
 }
 
