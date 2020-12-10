@@ -5,7 +5,7 @@ export const setToken = (userToken: string): void => {
 };
 
 export const getToken = () => {
-  return new Promise((resolve, reject) => {
+  return new Promise<string>((resolve, reject) => {
     chrome.storage.sync.get([USER_TOKEN], function (result) {
       resolve(result[USER_TOKEN]);
     });
