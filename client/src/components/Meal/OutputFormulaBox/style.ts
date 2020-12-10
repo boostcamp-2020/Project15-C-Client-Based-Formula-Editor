@@ -22,8 +22,8 @@ export const StarButtonBox = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  margin-top: 5px;
-  margin-right: 3px;
+  margin-top: 6px;
+  margin-right: 1px;
   z-index: 2;
   & i {
     color: #f7d100;

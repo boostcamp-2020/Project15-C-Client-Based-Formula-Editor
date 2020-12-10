@@ -6,6 +6,7 @@ import { RootState } from '@contexts/index';
 import { OutputFormulaProps } from '@meal/OutputFormula/index';
 import useOutputFormulaBox from './useOutputFormulaBox';
 import * as S from './style';
+import useToggle from '@hooks/useToggle';
 
 function OutputFormulaBox({ width, backgroundColor, toggleModal }: OutputFormulaProps) {
   const {
@@ -19,7 +20,15 @@ function OutputFormulaBox({ width, backgroundColor, toggleModal }: OutputFormula
   const { latex, fontSize, fontColor, textAlign } = currentTabInfo;
   const { userInfo } = useSelector((state: RootState) => state.user);
   const { userId } = userInfo;
-
+  const [star, , setToggleStar] = useToggle(false);
+  const onMouseHandler = () => {
+    console.log('True');
+    setToggleStar(true);
+  };
+  const onMouseLeaveHandler = () => {
+    console.log('False');
+    setToggleStar(false);
+  };
   return (
     <S.OutputFormulaBox
       width={width}
@@ -28,11 +37,6 @@ function OutputFormulaBox({ width, backgroundColor, toggleModal }: OutputFormula
       fontColor={fontColor}
       textAlign={textAlign}
     >
-      {userId && (
-        <S.StarButtonBox>
-          <Icon name={'star'} size="large" onClick={toggleModal} />
-        </S.StarButtonBox>
-      )}
       <S.OutputFormulaContent ref={mathfieldRef}>
         <EditableMathField
           mathquillDidMount={initmathInput}
@@ -41,6 +45,15 @@ function OutputFormulaBox({ width, backgroundColor, toggleModal }: OutputFormula
           onKeyDown={onKeyDownHandler}
         />
       </S.OutputFormulaContent>
+      {/* {userId && ( */}
+      <S.StarButtonBox onMouseMove={onMouseHandler} onMouseLeave={onMouseLeaveHandler}>
+        {star ? (
+          <Icon name={'star'} size="large" onClick={toggleModal} />
+        ) : (
+          <Icon name={'star outline'} size="large" onClick={toggleModal} />
+        )}
+      </S.StarButtonBox>
+      {/* )} */}
     </S.OutputFormulaBox>
   );
 }
