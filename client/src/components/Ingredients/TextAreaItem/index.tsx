@@ -19,7 +19,12 @@ function TextAreaItem({ width }: TextAreaItemProps) {
 
   return (
     <>
-      <TextArea value={currentTabInfo.latex} onChange={onChangeHandler} onKeyDown={onKeyPress} width={width} />
+      <TextArea
+        value={currentTabInfo.latex}
+        onChange={onChangeHandler}
+        onKeyDown={onKeyPress}
+        width={width}
+      />
       {isShow && (
         <RecommendContainer>
           추천
