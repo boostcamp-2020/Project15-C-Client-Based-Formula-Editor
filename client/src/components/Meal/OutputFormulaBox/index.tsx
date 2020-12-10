@@ -7,7 +7,7 @@ import { OutputFormulaProps } from '@meal/OutputFormula/index';
 import useOutputFormulaBox from './useOutputFormulaBox';
 import * as S from './style';
 
-function OutputFormulaBox({ backgroundColor, toggleModal }: OutputFormulaProps) {
+function OutputFormulaBox({ width, backgroundColor, toggleModal }: OutputFormulaProps) {
   const {
     initmathInput,
     currentTabInfo,
@@ -22,6 +22,7 @@ function OutputFormulaBox({ backgroundColor, toggleModal }: OutputFormulaProps) 
 
   return (
     <S.OutputFormulaBox
+      width={width}
       backgroundColor={backgroundColor}
       fontSize={fontSize}
       fontColor={fontColor}

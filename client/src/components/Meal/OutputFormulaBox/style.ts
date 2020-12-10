@@ -1,13 +1,8 @@
 import styled from '@emotion/styled';
+import { OutputFormulaProps } from '@meal/OutputFormula/index';
 
-interface FormulaProps {
-  fontSize?: string;
-  fontColor?: string;
-  textAlign?: string;
-  backgroundColor?: string;
-}
-
-export const OutputFormulaBox = styled.div<FormulaProps>`
+export const OutputFormulaBox = styled.div<OutputFormulaProps>`
+  width: ${(props) => props.width};
   position: relative;
   border: 1px solid #bdbdbd;
   height: 100%;

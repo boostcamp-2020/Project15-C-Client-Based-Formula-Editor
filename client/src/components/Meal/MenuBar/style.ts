@@ -9,8 +9,11 @@ export const MenuBarContainer = styled.div`
   justify-content: space-around;
 `;
 
-export const TextAreaLabel = styled.div`
+export const LabelWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 70px;
+  min-width: 50px;
   padding: 10px;
   text-align: center;
   font-weight: bold;
@@ -22,16 +25,21 @@ export const TextAreaLabel = styled.div`
   align-items: center;
 `;
 
+export const LabelIcon = styled.div``;
+
+export const LabelText = styled.div``;
+
 export const OutputWrapper = styled.div`
   width: 30%;
+  margin: 10px;
   display: flex;
 `;
 
 export const ButtonWrapper = styled.div`
   margin-right: 10px;
+  padding-top: 10px;
   & div {
     height: 50px;
-    margin-top: 10px !important;
   }
   & div > button {
     height: 100%;
@@ -77,9 +85,42 @@ export const Img = styled.img`
   }
 `;
 
+export const IconInfoWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: fixed;
+  bottom: 70px;
+  height: auto;
+  background-color: #f3f3f3;
+  font-size: 20px !important;
+  padding: 10px;
+  border-radius: 0.5em;
+  border: 1px solid #dddddd;
+  :after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 20px;
+    top: 39px;
+    right: auto;
+    width: 20px;
+    height: 20px;
+    background: #f3f3f3;
+    border-bottom: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+`;
+
 export const MessageContainer = styled.div`
   position: fixed;
-  margin: 10px auto;
+  margin: 0px auto;
   left: 0;
   right: 0;
   width: 50%;

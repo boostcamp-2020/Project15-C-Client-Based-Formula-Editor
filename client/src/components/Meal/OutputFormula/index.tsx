@@ -9,6 +9,10 @@ export interface OutputFormulaProps {
   backgroundColor?: string;
   padding?: string;
   border?: string;
+  width?: string;
+  fontSize?: string;
+  fontColor?: string;
+  textAlign?: string;
   toggleModal?: () => void;
 }
 
@@ -20,7 +24,7 @@ function OutputFormula({ backgroundColor, padding, border }: OutputFormulaProps)
   return (
     <>
       <S.OutputFormulaWrapper onClick={onClickHandler} border={border} padding={padding}>
-        <OutputFormulaBox backgroundColor={backgroundColor} toggleModal={toggleModal} />
+        <OutputFormulaBox toggleModal={toggleModal} />
       </S.OutputFormulaWrapper>
       <Modal width="big">
         <FavoriteModal onToggle={toggleModal} />
