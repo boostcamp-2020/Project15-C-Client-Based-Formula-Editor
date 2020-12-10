@@ -1,10 +1,11 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import Frame, { FrameContextConsumer } from 'react-frame-component';
 import MainPage from './pages/MainPage';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import useToggle from '@hooks/useToggle';
 import styled from '@emotion/styled';
+import { checkLogin } from '@utils/util';
 
 interface ExtensionProps {
   height: string;
@@ -29,6 +30,9 @@ const Extension = styled.div<ExtensionProps>`
 `;
 function App() {
   const [toggle, onToggle] = useToggle(false);
+  useEffect(() => {
+    checkLogin();
+  }, []);
   return (
     <Extension height={toggle ? '80px' : '35%'} minHeight={toggle ? '' : '200px'}>
       <Frame
