@@ -28,3 +28,16 @@ export const FormulaItem = styled.li<FormulaItemStyleProps>`
     font-size: 1.5rem;
   }
 `;
+
+export const InsertWrapper = styled.div`
+  width: 210px;
+  height: 70px;
+  border-right: 0.5px solid #d5d5d5;
+
+  &:hover {
+    background-size: 120%;
+    border: 0.5px solid black;
+    filter: invert(63%) sepia(13%) saturate(2335%) hue-rotate(87deg) brightness(91%) contrast(83%);
+    font-size: 1.5rem;
+  }
+`;
