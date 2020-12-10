@@ -23,7 +23,6 @@ const Test3 = styled.div`
   justify-content: center;
 `;
 const TestComponet = () => {
-  console.log('hi');
   return (
     <Test3>
       <Test2 />
