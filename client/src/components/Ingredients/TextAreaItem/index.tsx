@@ -3,7 +3,11 @@ import React from 'react';
 import useTextAreaItem from './useTextAreaItem';
 import * as S from './style';
 
-function TextAreaItem() {
+interface TextAreaItem {
+  size?: 'mini' | 'big';
+}
+
+function TextAreaItem({ size = 'big' }: TextAreaItem) {
   const {
     currentTabInfo,
     onChangeHandler,
@@ -19,11 +23,11 @@ function TextAreaItem() {
     <S.TextAreaContainer>
       <S.TextArea
         value={currentTabInfo.latex}
-        onChange={onChangeHandler}
+        onChange={onChangeHandler(size)}
         onKeyDown={onKeyPress}
         isShow={isShow}
       />
-      {isShow && (
+      {size === 'big' && isShow && (
         <>
           <S.Divider></S.Divider>
           <S.RecommendContainer>

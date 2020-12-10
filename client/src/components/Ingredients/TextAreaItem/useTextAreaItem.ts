@@ -42,8 +42,8 @@ const useTextAreaItem = () => {
 
   const debouncedRecommendLatex = useDebounce<[string]>(recommendLatex, 200);
 
-  const onChangeHandler = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    if (isShow) {
+  const onChangeHandler = (size: 'mini' | 'big') => (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    if (size === 'big' && isShow) {
       debouncedRecommendLatex(e.target.value);
     }
     dispatch(editLatex({ latex: e.target.value }));
