@@ -10,9 +10,6 @@ interface ResizeHeaderProps {
 function ResizeHeader({ onToggle }: ResizeHeaderProps) {
   return (
     <S.ResizeHeaderContainer>
-      <S.IconWrapper>
-        <Icon name="caret up" color="grey" size="big" onClick={onToggle} />
-      </S.IconWrapper>
       <MenuBar />
     </S.ResizeHeaderContainer>
   );

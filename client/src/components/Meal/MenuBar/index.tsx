@@ -64,6 +64,8 @@ function MenuBar() {
           })}
         </Button.Group>
       </S.ButtonWrapper>
+      <Button icon="minus square outline" size="massive" />
+
       {message && (
         <S.MessageContainer>
           <Message positive>
