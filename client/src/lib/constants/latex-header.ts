@@ -6,7 +6,7 @@ interface LatexHeader {
 
 interface LatexContent {
   image: string;
-  latex: string | any;
+  latex: string;
 }
 
 const FORMULA_HEADER: LatexHeader[] = [
