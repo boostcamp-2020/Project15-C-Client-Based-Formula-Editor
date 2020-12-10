@@ -3,11 +3,7 @@ import React from 'react';
 import useTextAreaItem from './useTextAreaItem';
 import * as S from './style';
 
-export interface TextAreaItemProps {
-  width: string;
-}
-
-function TextAreaItem({ width }: TextAreaItemProps) {
+function TextAreaItem() {
   const {
     currentTabInfo,
     onChangeHandler,
@@ -20,7 +16,7 @@ function TextAreaItem({ width }: TextAreaItemProps) {
   } = useTextAreaItem();
 
   return (
-    <S.TextAreaContainer width={width}>
+    <S.TextAreaContainer>
       <S.TextArea
         value={currentTabInfo.latex}
         onChange={onChangeHandler}

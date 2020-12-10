@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
-import { TextAreaItemProps } from './index';
 
-export const TextAreaContainer = styled.div<TextAreaItemProps>`
+export const TextAreaContainer = styled.div`
   display: flex;
-  width: ${(props) => props.width};
+  width: 100%;
   height: 100%;
   border: 1px solid #bdbdbd;
+  background-color: white;
   padding: 10px;
   position: relative;
 `;
