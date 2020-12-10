@@ -6,16 +6,6 @@ export const OUTPUT_ICON = '✖️';
 
 export const OUTPUT_TEXT = '출력';
 
-export const ICON_SIZE = {
-  mini: 'mini',
-  tiny: 'tiny',
-  small: 'small',
-  large: 'large',
-  big: 'big',
-  huge: 'huge',
-  massive: 'massive',
-};
-
 export const TAB_LIMIT = 4;
 
 export const FONT_SIZE_LISTS = [

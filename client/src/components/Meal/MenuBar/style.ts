@@ -15,23 +15,6 @@ export const OutputWrapper = styled.div`
   display: flex;
 `;
 
-export const ButtonWrapper = styled.div`
-  padding-top: 10px;
-  & div > button {
-    height: 100%;
-    padding: 15px 10px 10px 10px !important;
-    align-self: center;
-    & i {
-      font-size: 1.5em;
-    }
-  }
-  & div > div {
-    height: 60px;
-  }
-  & div > div > div {
-    height: 50px;
-  }
-`;
 export const IconWrapper = styled.div`
   width: 50px;
   & i {
@@ -67,4 +50,22 @@ export const MessageContainer = styled.div`
   left: 0;
   right: 0;
   width: 50%;
+`;
+
+export const ButtonWrapper = styled.div`
+  padding-top: 10px;
+  & div > button {
+    height: 100%;
+    padding: 15px 10px 10px 10px !important;
+    align-self: center;
+    & i {
+      font-size: 1.5em;
+    }
+  }
+  & div > div {
+    height: 60px;
+  }
+  & div > div > div {
+    height: 50px;
+  }
 `;

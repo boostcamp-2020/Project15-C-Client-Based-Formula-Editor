@@ -1,16 +1,16 @@
 import React from 'react';
 import { Button, Message } from 'semantic-ui-react';
 import { ResizeHeaderProps } from '@set/ResizeHeader';
-import useMenuBar from './useMenuBar';
-import QrCode from '@ingredients/QrCode';
 import { getImageURL } from '@utils/util';
-import IconMessage from '@ingredients/IconMessage';
-import * as S from './style';
+import QrCode from '@ingredients/QrCode';
+import useMenuBar from './useMenuBar';
 import MenuBarInput from '@meal/MenuBarInput';
 import MenuBarOutput from '@meal/MenuBarOutput';
+import MenuBarButtons from '@meal/MenuBarButtons';
+import * as S from './style';
 
 function MenuBar({ onToggle }: ResizeHeaderProps) {
-  const { MenuBarSaveButtons, message, Modal, imageUrl } = useMenuBar();
+  const { message, Modal, imageUrl } = useMenuBar();
 
   return (
     <S.MenuBarContainer>
@@ -19,21 +19,7 @@ function MenuBar({ onToggle }: ResizeHeaderProps) {
       </S.Logo>
       <MenuBarInput />
       <MenuBarOutput />
-      <S.ButtonWrapper>
-        <Button.Group basic size="massive">
-          {MenuBarSaveButtons.map((Button, index) => {
-            return (
-              <IconMessage
-                title={Button.title}
-                iconName={Button.iconName}
-                size={Button.size}
-                key={index}
-                onClickHandler={Button.onClickHandler}
-              />
-            );
-          })}
-        </Button.Group>
-      </S.ButtonWrapper>
+      <MenuBarButtons />
       <S.ButtonWrapper>
         <Button.Group basic size="massive">
           <Button icon="sort" size="massive" onClick={onToggle} />
