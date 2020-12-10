@@ -3,7 +3,7 @@ import { LatexContent } from '@constants/latex-header';
 import { getImageURL } from '@utils/util';
 import { useDispatch } from 'react-redux';
 import { editLatex } from '@contexts/latex';
-
+import * as S from './style';
 interface RecmmendItem extends LatexContent {
   currentLatex: string;
   clearAndCloseRecommend: () => void;
@@ -20,12 +20,12 @@ function RecommendItem({ latex, image, currentLatex, clearAndCloseRecommend }: R
   };
 
   return (
-    <li onClick={onClick}>
-      <span>{latex}</span>
-      <span>
+    <S.RecommendWrapper onClick={onClick}>
+      <S.RecommendLatexWrapper>{latex}</S.RecommendLatexWrapper>
+      <S.RecommendImageWrapper>
         <img src={getImageURL(image)}></img>
-      </span>
-    </li>
+      </S.RecommendImageWrapper>
+    </S.RecommendWrapper>
   );
 }
 
