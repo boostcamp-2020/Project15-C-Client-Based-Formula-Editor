@@ -132,8 +132,9 @@ export const useSaveButtons = () => {
 
   const checkLogin = async () => {
     const token = await getToken();
+    console.log('token: ', token);
     if (!token) return;
-    const response = await API.post('/autologin', undefined, {
+    const response = await API.post('/auth/autologin', '', {
       headers: {
         Authorization: token,
       },
