@@ -27,22 +27,6 @@ const AuthController = {
     }
   },
 
-  async autoLogin(req: Request, res: Response) {
-    try {
-      const user = req.user;
-      if (user?.userId) {
-        return res.status(200).json({ results: { userId: user.userId } });
-      }
-
-      return res
-        .status(STATUS_CODE.UNAUTHORIZED)
-        .json({ message: ERROR_MESSAGE.UNAUTHORIZED_ERROR });
-    } catch (error) {
-      console.error(error);
-      return res.status(STATUS_CODE.SERVER_ERROR).json({ message: ERROR_MESSAGE.SERVER_ERROR });
-    }
-  },
-
   async authCheck(req: Request, res: Response, next: NextFunction) {
     try {
       const { JWT_SECRET } = process.env;
@@ -53,9 +37,8 @@ const AuthController = {
         const decodedToken = jwt.verify(token, jwtSecret);
         const { email } = decodedToken as userInfo;
         const user = await UserService.getInstance().getUser(email);
-
         if (user) {
-          req.user = { userId: Number(user.userId) };
+          req.user = { userId: user.id };
           return next();
         }
       }
@@ -63,6 +46,22 @@ const AuthController = {
         .status(STATUS_CODE.UNAUTHORIZED)
         .json({ message: ERROR_MESSAGE.UNAUTHORIZED_ERROR });
     } catch (err) {
+      return res.status(STATUS_CODE.SERVER_ERROR).json({ message: ERROR_MESSAGE.SERVER_ERROR });
+    }
+  },
+
+  async autoLogin(req: Request, res: Response) {
+    try {
+      const { user } = req;
+      if (user?.userId) {
+        return res.status(200).json({ results: { userId: user.userId } });
+      }
+
+      return res
+        .status(STATUS_CODE.UNAUTHORIZED)
+        .json({ message: ERROR_MESSAGE.UNAUTHORIZED_ERROR });
+    } catch (error) {
+      console.error(error);
       return res.status(STATUS_CODE.SERVER_ERROR).json({ message: ERROR_MESSAGE.SERVER_ERROR });
     }
   },
