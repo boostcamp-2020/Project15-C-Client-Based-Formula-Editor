@@ -1,16 +1,18 @@
 import styled from '@emotion/styled';
+import { OutputFormulaProps } from './index';
 
 interface FormulaProps {
   fontSize?: string;
   fontColor?: string;
   textAlign?: string;
+  backgroundColor?: string;
 }
 
-export const OutputFormulaWrapper = styled.div`
-  border: 1px solid #d4d4d5;
+export const OutputFormulaWrapper = styled.div<OutputFormulaProps>`
+  border: ${(props) => props.border};
   border-radius: 0 5px 5px 5px;
   height: 100%;
-  padding: 7px;
+  padding: ${(props) => (props.padding ? '10px' : '7px')};
   position: relative;
 `;
 
@@ -22,6 +24,8 @@ export const OutputFormulaBox = styled.div<FormulaProps>`
   font-size: ${(props) => props.fontSize}px;
   color: ${(props) => props.fontColor};
   text-align: ${(props) => props.textAlign};
+  background: ${(props) => props.backgroundColor && props.backgroundColor};
+  overflow-x: auto;
 `;
 
 export const OutputFormulaContent = styled.span`

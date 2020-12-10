@@ -475,22 +475,6 @@ const FORMULA_HEADER: LatexHeader[] = [
         latex: `\\bbar{ }`,
       },
       {
-        image: `/8/12.svg`,
-        latex: `\\overbrace{ }{\\ }`,
-      },
-      {
-        image: `/8/13.svg`,
-        latex: `\\underbrace{\\ }{ }`,
-      },
-      {
-        image: `/8/14.svg`,
-        latex: `\\overbrace{ }{ }`,
-      },
-      {
-        image: `/8/15.svg`,
-        latex: `\\underbrace{ }{ }`,
-      },
-      {
         image: `/8/16.svg`,
         latex: `\\overleftarrow{ }`,
       },
@@ -503,24 +487,8 @@ const FORMULA_HEADER: LatexHeader[] = [
         latex: `\\overleftrightarrow{ }`,
       },
       {
-        image: `/8/19.svg`,
-        latex: `\\overleftharpoonup{ }`,
-      },
-      {
-        image: `/8/20.svg`,
-        latex: `\\overrightharpoonup{ }`,
-      },
-      {
-        image: `/8/21.svg`,
-        latex: `\\overline { }`,
-      },
-      {
         image: `/8/22.svg`,
         latex: `\\underline { }`,
-      },
-      {
-        image: `/8/23.svg`,
-        latex: `\\boxed{ }`,
       },
       {
         image: `/8/24.svg`,
@@ -719,35 +687,27 @@ const FORMULA_HEADER: LatexHeader[] = [
     content: [
       {
         image: `/11/1.svg`,
-        latex: `\\ccr{ }{ }`,
+        latex: `\\begin{matrix}&\\end{matrix}`,
       },
       {
         image: `/11/2.svg`,
-        latex: `\\crr{ }{ }`,
+        latex: `\\begin{matrix}\\\\\\end{matrix}`,
       },
       {
         image: `/11/3.svg`,
-        latex: `\\ccrr{ }{ }{ }{ }`,
+        latex: `\\begin{matrix}&\\\\&\\end{matrix}`,
       },
       {
         image: `/11/4.svg`,
-        latex: `\\cccrr{ }{ }{ }{ }{ }{ }`,
+        latex: `\\begin{matrix}&&\\\\&&\\end{matrix}`,
       },
       {
         image: `/11/5.svg`,
-        latex: `\\ccrrr{ }{ }{ }{ }{ }{ }`,
+        latex: `\\begin{matrix}&\\\\&\\\\&\\end{matrix}`,
       },
       {
         image: `/11/6.svg`,
-        latex: `\\cccrrr{ }{ }{ }{ }{ }{ }{ }{ }{ }`,
-      },
-      {
-        image: `/11/7.svg`,
-        latex: `\\begin{cases}\\\\\\end{cases}`,
-      },
-      {
-        image: `/11/8.svg`,
-        latex: `\\begin{cases}\\\\\\\\\\end{cases}`,
+        latex: `\\begin{matrix}&&\\\\&&\\\\&&\\end{matrix}`,
       },
       {
         image: `/11/9.svg`,
@@ -760,14 +720,6 @@ const FORMULA_HEADER: LatexHeader[] = [
       {
         image: `/11/11.svg`,
         latex: `\\begin{vmatrix}&\\\\&\\end{vmatrix}`,
-      },
-      {
-        image: `/11/12.svg`,
-        latex: `행추가`,
-      },
-      {
-        image: `/11/13.svg`,
-        latex: `열추가`,
       },
       {
         image: `/11/14.svg`,

@@ -3,7 +3,11 @@ import React from 'react';
 import { TextArea, RecommendContainer } from './style';
 import useTextAreaItem from './useTextAreaItem';
 
-function TextAreaItem() {
+export interface TextAreaItemProps {
+  width: string;
+}
+
+function TextAreaItem({ width }: TextAreaItemProps) {
   const {
     currentTabInfo,
     onChangeHandler,
@@ -15,7 +19,7 @@ function TextAreaItem() {
 
   return (
     <>
-      <TextArea value={currentTabInfo.latex} onChange={onChangeHandler} onKeyDown={onKeyPress} />
+      <TextArea value={currentTabInfo.latex} onChange={onChangeHandler} onKeyDown={onKeyPress} width={width} />
       {isShow && (
         <RecommendContainer>
           추천
