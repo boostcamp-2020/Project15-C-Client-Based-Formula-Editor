@@ -13,4 +13,9 @@ export enum AlertMessage {
   NO_LIST_MESSAGE = '항목이 없습니다.',
 }
 
+export enum LoginMessage {
+  LOGIN_SUCCESS = '로그인에 성공하였습니다.',
+  LOGIN_FAUILRE = '로그인에 실패하였습니다.',
+}
+export const MESSAGE_TIME = 2500;
 export const DISPLAY_INTERVAL = 6;
