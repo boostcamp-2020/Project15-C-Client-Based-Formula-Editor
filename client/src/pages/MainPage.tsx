@@ -25,18 +25,6 @@ const ContentsContainer = styled.div`
   width: 100%;
   padding: 10px;
 `;
-const IconWrapper = styled.div`
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: -2px;
-  & i {
-    cursor: pointer;
-    margin: 0;
-    padding: 0;
-    line-height: 0px;
-  }
-`;
 
 function MainPage() {
   // const [isLoading, setLoading] = useState(false);
@@ -47,13 +35,10 @@ function MainPage() {
   // }, []);
   // if (!isLoading) return <TestComponet />;
 
-  const [toggle, onToggle, setToggle] = useToggle(false);
+  const [toggle, onToggle] = useToggle(false);
   if (toggle) return <ResizeHeader onToggle={onToggle} />;
   return (
     <MainContainer onClick={observer.notify}>
-      <IconWrapper>
-        <Icon name="caret square down" color="grey" size="big" onClick={onToggle} />
-      </IconWrapper>
       <Header />
       <Main>
         <ContentsContainer>

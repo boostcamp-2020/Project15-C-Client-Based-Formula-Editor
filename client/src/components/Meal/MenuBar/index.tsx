@@ -2,14 +2,14 @@ import React from 'react';
 import TextAreaItem from '@ingredients/TextAreaItem';
 import OutputFormulaBox from '@meal/OutputFormulaBox';
 import { Button, Message } from 'semantic-ui-react';
-
+import { ResizeHeaderProps } from '@set/ResizeHeader';
 import useSaveButtons from '@set/SaveButtons/useSaveButtons';
 import QrCode from '@ingredients/QrCode';
 
 import * as S from './style';
 import IconMessage from '@ingredients/IconMessage';
 
-function MenuBar() {
+function MenuBar({ onToggle }: ResizeHeaderProps) {
   const {
     message,
     Modal,
@@ -64,7 +64,11 @@ function MenuBar() {
           })}
         </Button.Group>
       </S.ButtonWrapper>
-      <Button icon="minus square outline" size="massive" />
+      <S.ButtonWrapper>
+        <Button.Group basic size="massive">
+          <Button icon="window minimize" size="massive" onClick={onToggle} />
+        </Button.Group>
+      </S.ButtonWrapper>
 
       {message && (
         <S.MessageContainer>
