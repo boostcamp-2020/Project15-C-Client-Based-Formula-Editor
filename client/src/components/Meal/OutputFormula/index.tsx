@@ -38,7 +38,7 @@ function OutputFormula({ backgroundColor, padding, border }: OutputFormulaProps)
         >
           {userId && (
             <S.StarButtonBox>
-              <Icon name={'star'} size="big" onClick={toggleModal} />
+              <Icon name={'star'} size="large" onClick={toggleModal} />
             </S.StarButtonBox>
           )}
           <S.OutputFormulaContent ref={mathfieldRef}>

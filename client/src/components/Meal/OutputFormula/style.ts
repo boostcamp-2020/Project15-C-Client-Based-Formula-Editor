@@ -25,6 +25,7 @@ export const OutputFormulaBox = styled.div<FormulaProps>`
   color: ${(props) => props.fontColor};
   text-align: ${(props) => props.textAlign};
   background: ${(props) => props.backgroundColor && props.backgroundColor};
+  overflow-x: auto;
 `;
 
 export const OutputFormulaContent = styled.span`

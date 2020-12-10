@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import App from './App';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import rootReducer from './contexts';
 import logger from 'redux-logger';
 import ReduxThunk from 'redux-thunk';
@@ -35,7 +35,12 @@ const app =
     ? document.getElementById('root')
     : getProductionRootElement();
 
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(ReduxThunk, logger)));
+const middleware =
+  process.env.NODE_ENV === 'development'
+    ? composeWithDevTools(applyMiddleware(ReduxThunk, logger))
+    : compose(applyMiddleware(ReduxThunk));
+
+const store = createStore(rootReducer, middleware);
 
 ReactDOM.render(
   <Provider store={store}>

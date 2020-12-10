@@ -542,3 +542,31 @@
 .mq-newline {
   display: block;
 }
+
+.mq-root-block {
+  padding-top: 2px;
+}
+
+.mq-matrix {
+  vertical-align: middle;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+}
+.mq-matrix table {
+  width: auto;
+  border-bottom: none;
+  border-spacing: 3px;
+  border-collapse: separate;
+}
+
+.mq-matrix table > mq-rows-1 {
+  vertical-align: middle;
+  margin-bottom: 1px;
+}
+
+.mq-matrix td {
+  border: none;
+  width: auto; /* defensive resets */
+  padding: 0.1em 0.3em;
+  vertical-align: baseline;
+}

@@ -36,32 +36,6 @@ export const LogoImg = styled.img`
 
 export const UserButtonsContainer = styled.div``;
 
-export const LoginButton = styled.div`
-  background: url(./image/login2.png);
-  width: 200px;
-  height: 50px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding: 0.3rem;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  background-position-y: center;
-`;
-
-export const LogoutButton = styled.div`
-  background: url(./image/logout2.png);
-  width: 200px;
-  height: 50px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding: 0.3rem;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  background-position-y: center;
-`;
-
 export const FormulaHeaderWrapper = styled.div`
   margin-left: auto;
   height: 100%;
