@@ -1,15 +1,19 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react';
-import useMenuBar from '@meal/MenuBar/useMenuBar';
 import IconMessage from '@ingredients/IconMessage';
+import { Button } from 'semantic-ui-react';
 import * as S from './style';
 
-function MenuBarButtons() {
-  const { MenuBarSaveButtons } = useMenuBar();
+interface MenuBarSaveButtonsProps {
+  title: string;
+  iconName: string;
+  size: string;
+  onClickHandler: () => void;
+}
+function MenuBarButtons({ MenuBarSaveButtons }: any) {
   return (
     <S.ButtonWrapper>
       <Button.Group basic size={'massive'}>
-        {MenuBarSaveButtons.map((Button, index) => {
+        {MenuBarSaveButtons.map((Button: any, index: number) => {
           return (
             <IconMessage
               title={Button.title}

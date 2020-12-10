@@ -22,11 +22,9 @@ function OutputFormulaBox({ isMenuBar, width, backgroundColor, toggleModal }: Ou
   const { userId } = userInfo;
   const [star, , setToggleStar] = useToggle(false);
   const onMouseHandler = () => {
-    console.log('True');
     setToggleStar(true);
   };
   const onMouseLeaveHandler = () => {
-    console.log('False');
     setToggleStar(false);
   };
   return (
