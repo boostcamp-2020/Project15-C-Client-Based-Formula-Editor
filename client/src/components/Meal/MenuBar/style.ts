@@ -36,7 +36,6 @@ export const OutputWrapper = styled.div`
 `;
 
 export const ButtonWrapper = styled.div`
-  margin-right: 10px;
   padding-top: 10px;
   & div {
     height: 50px;

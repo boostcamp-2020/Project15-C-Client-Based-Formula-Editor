@@ -23,3 +23,19 @@ export const LogoImg = styled.img`
   height: 90%;
   width: 65px;
 `;
+
+export const ButtonWrapper = styled.div`
+  margin-right: 20px;
+  & div {
+    height: 50px;
+  }
+  & div > button {
+    height: 100%;
+    padding: 15px 10px 10px 10px !important;
+    align-self: center;
+    & i {
+      padding-top: 3px;
+      font-size: 2em;
+    }
+  }
+`;

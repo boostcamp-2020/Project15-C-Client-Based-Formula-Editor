@@ -66,7 +66,7 @@ function MenuBar({ onToggle }: ResizeHeaderProps) {
       </S.ButtonWrapper>
       <S.ButtonWrapper>
         <Button.Group basic size="massive">
-          <Button icon="window minimize" size="massive" onClick={onToggle} />
+          <Button icon="sort" size="massive" onClick={onToggle} />
         </Button.Group>
       </S.ButtonWrapper>
 

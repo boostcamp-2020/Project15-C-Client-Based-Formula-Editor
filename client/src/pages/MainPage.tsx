@@ -39,7 +39,7 @@ function MainPage() {
   if (toggle) return <ResizeHeader onToggle={onToggle} />;
   return (
     <MainContainer onClick={observer.notify}>
-      <Header />
+      <Header onToggle={onToggle} />
       <Main>
         <ContentsContainer>
           <Input />
