@@ -7,13 +7,21 @@ import SaveButtons from '@set/SaveButtons';
 import { observer } from '../lib/utils/util';
 import ResizeHeader from '@set/ResizeHeader';
 import TestComponet from './TestComponet';
-import { Icon } from 'semantic-ui-react';
 import useToggle from '@hooks/useToggle';
 
 const MainContainer = styled.section`
   display: flex;
   flex-direction: column;
+  animation: slidein 0.5s;
   height: 100%;
+  @keyframes slidein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `;
 const Main = styled.div`
   height: 100%;

@@ -1,21 +1,19 @@
 import styled from '@emotion/styled';
 
 export const ResizeHeaderContainer = styled.div`
-  height: 70px;
+  height: auto;
   position: absolute;
   width: 100%;
   bottom: 0;
+  animation: slidein 0.5s;
+  @keyframes slidein {
+    from {
+      opacity: 0;
+      scale: 0;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
 `;
-
-// export const IconWrapper = styled.div`
-//   height: 30px;
-//   display: flex;
-//   justify-content: center;
-//   margin-bottom: -3px;
-//   & i {
-//     cursor: pointer;
-//     margin: 0;
-//     padding: 0;
-//     line-height: 0px;
-//   }
-// `;
