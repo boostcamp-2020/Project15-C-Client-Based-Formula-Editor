@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 
-function useDebounce<T extends any[]>(callback: (...prams: T) => void, time: number) {
+function useDebounce<T extends any[]>(callback: (...params: T) => void, time: number) {
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   return (...params: T) => {
     if (timer.current) clearTimeout(timer.current);
