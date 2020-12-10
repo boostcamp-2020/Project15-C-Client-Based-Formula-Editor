@@ -3,12 +3,34 @@ import Frame, { FrameContextConsumer } from 'react-frame-component';
 import MainPage from './pages/MainPage';
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
-// Todo : 나중에 수정 필요 !
-import '../public/root.css';
+import useToggle from '@hooks/useToggle';
+import styled from '@emotion/styled';
 
+interface ExtensionProps {
+  height: string;
+  minHeight?: string;
+}
+const Extension = styled.div<ExtensionProps>`
+  width: 100%;
+  height: ${(props) => props.height};
+  min-height: ${(props) => props.minHeight};
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 10000;
+  & iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  & iframe body {
+    height: 100%;
+  }
+`;
 function App() {
+  const [toggle, onToggle] = useToggle(false);
   return (
-    <div id="my-extension">
+    <Extension height={toggle ? '80px' : '35%'} minHeight={toggle ? '' : '200px'}>
       <Frame
         id="iframe"
         head={[
@@ -43,13 +65,13 @@ function App() {
             });
             return (
               <CacheProvider value={cache}>
-                <MainPage />
+                <MainPage toggle={toggle} onToggle={onToggle} />
               </CacheProvider>
             );
           }}
         </FrameContextConsumer>
       </Frame>
-    </div>
+    </Extension>
   );
 }
 

@@ -37,9 +37,6 @@ export const OutputWrapper = styled.div`
 
 export const ButtonWrapper = styled.div`
   padding-top: 10px;
-  & div {
-    height: 60px;
-  }
   & div > button {
     height: 100%;
     padding: 15px 10px 10px 10px !important;
@@ -49,6 +46,9 @@ export const ButtonWrapper = styled.div`
     }
   }
   & div > div {
+    height: 60px;
+  }
+  & div > div > div {
     height: 50px;
   }
 `;
@@ -73,8 +73,8 @@ export const Logo = styled.div`
 `;
 
 export const LogoImg = styled.img`
-  width: 65px;
-  margin-top: 5px;
+  width: 60px;
+  margin-top: 10px;
 `;
 
 export const Img = styled.img`

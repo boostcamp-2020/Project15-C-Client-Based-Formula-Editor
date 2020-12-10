@@ -19,7 +19,7 @@ function IconMessage({ title, iconName, size, onClickHandler }: IconMessageProps
   };
   return (
     <S.IconMessageContainer>
-      {message && (
+      {!message && (
         <S.IconMessageWrapper>
           <S.IconMessageTitle>{title}</S.IconMessageTitle>
         </S.IconMessageWrapper>
