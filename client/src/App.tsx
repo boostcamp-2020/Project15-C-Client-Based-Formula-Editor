@@ -5,7 +5,10 @@ import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import useToggle from '@hooks/useToggle';
 import styled from '@emotion/styled';
-import { checkLogin } from '@utils/util';
+import { getToken } from '@utils/token';
+import { API } from '@apis/common';
+import { userLogin } from '@contexts/user';
+import { useDispatch } from 'react-redux';
 
 interface ExtensionProps {
   height: string;
@@ -30,6 +33,20 @@ const Extension = styled.div<ExtensionProps>`
 `;
 function App() {
   const [toggle, onToggle] = useToggle(false);
+  const dispatch = useDispatch();
+  const checkLogin = async () => {
+    const token = await getToken();
+    console.log('token: ', token);
+    if (!token) return;
+    const response = await API.post('/auth/autologin', '', {
+      headers: {
+        Authorization: token,
+      },
+    });
+
+    const { userId } = response.data.results;
+    dispatch(userLogin(userId));
+  };
   useEffect(() => {
     checkLogin();
   }, []);

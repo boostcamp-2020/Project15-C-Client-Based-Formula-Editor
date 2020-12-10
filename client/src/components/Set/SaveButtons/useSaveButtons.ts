@@ -130,24 +130,6 @@ export const useSaveButtons = () => {
     dispatch(userLogout());
   };
 
-  // const checkLogin = async () => {
-  //   const token = await getToken();
-  //   console.log('token: ', token);
-  //   if (!token) return;
-  //   const response = await API.post('/auth/autologin', '', {
-  //     headers: {
-  //       Authorization: token,
-  //     },
-  //   });
-
-  //   const { userId } = response.data.results;
-  //   dispatch(userLogin(userId));
-  // };
-
-  // useEffect(() => {
-  //   checkLogin();
-  // }, []);
-
   return {
     downloadImage,
     downloadText,
