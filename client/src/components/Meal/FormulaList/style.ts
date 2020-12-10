@@ -57,7 +57,7 @@ interface FormulaListFrops {
 export const FormulaList = styled.ul<FormulaListFrops>`
   display: none;
   flex-wrap: wrap;
-  max-width: ${(props) =>
+  width: ${(props) =>
     props.header.includes('svg')
       ? props.length > 20
         ? '712px'
