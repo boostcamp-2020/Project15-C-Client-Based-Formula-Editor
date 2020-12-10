@@ -38,9 +38,11 @@ const ModalContainer = styled.div<ModalStyleProps>`
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  width: ${(props) => (props.width === 'mini' ? '20% ' : '40%')};
+  width: ${(props) => (props.width === 'mini' ? '15% ' : '40%')};
   min-width: 250px;
+  max-width: 450px;
   min-height: 150px;
+  max-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
