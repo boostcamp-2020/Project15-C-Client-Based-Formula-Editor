@@ -3,44 +3,21 @@ import { getImageURL } from '@utils/util';
 
 export const FormulaContainer = styled.div`
   display: flex;
-  justify-content: space-around;
-  border-top: 1px solid #d4d4d5;
-  border-bottom: 1px solid #d4d4d5;
-  background-color: #f3f3f3;
-  height: 100%;
+  justify-content: center;
   align-items: center;
+  justify-self: center;
+  width: 90%;
+  height: 100%;
 `;
 
 export const HeaderWraaper = styled.div`
-  /* margin-left: -80px; */
-
   display: flex;
 `;
-
-export const Logo = styled.div`
-  height: 100%;
-  width: 65px;
-  margin-left: 20px;
-  /* width: 140px;
-  height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background: url(${() => getImageURL('logo.png')}); */
-`;
-
-export const LogoImg = styled.img`
-  margin-top: 5px;
-  height: 90%;
-  width: 65px;
-`;
-
-export const UserButtonsContainer = styled.div``;
 
 export const FormulaHeaderWrapper = styled.div`
-  margin-left: auto;
-  height: 100%;
   display: flex;
   align-items: center;
+  height: 100%;
   border-right: 1px solid #d4d4d5;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -55,10 +32,9 @@ export const FormulaHeaderWrapper = styled.div`
 `;
 
 export const SymbolHeaderWrapper = styled.div`
-  margin-right: auto;
-  height: 100%;
   display: flex;
   align-items: center;
+  height: 100%;
   margin-left: 3px;
   border-left: 1px solid #d4d4d5;
   border-top-right-radius: 10px;
@@ -81,7 +57,6 @@ interface FormulaListFrops {
 export const FormulaList = styled.ul<FormulaListFrops>`
   display: none;
   flex-wrap: wrap;
-  // TODO: 반응형으로 브라우저 좌우 크기 줄어들 때 크기 다 constants에 상수화
   max-width: ${(props) =>
     props.header.includes('svg')
       ? props.length > 20
@@ -91,7 +66,8 @@ export const FormulaList = styled.ul<FormulaListFrops>`
       ? '712px'
       : '702px'};
   max-height: 142px;
-  position: relative;
+  position: absolute;
+  top: 70px;
   margin: 10px auto;
   padding: 0;
   border: 1px solid #bdbdbd;

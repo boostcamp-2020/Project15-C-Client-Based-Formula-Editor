@@ -10,6 +10,7 @@ import useToggle from '@hooks/useToggle';
 import { BASE_URL } from '@lib/apis/common';
 import useModal from '@hooks/useModal';
 import { userLogin, userLogout } from '@contexts/user';
+import axios from 'axios';
 
 export const useSaveButtons = () => {
   const dispatch = useDispatch();
@@ -69,25 +70,20 @@ export const useSaveButtons = () => {
 
     if (mathfieldRef) {
       html2canvas(mathfieldRef).then((canvas) => {
-        canvas.toBlob((blob) => {
+        canvas.toBlob(async (blob) => {
           if (!blob) return;
           const formData = new FormData();
           formData.append('image', blob);
-          fetch('https://api.imgur.com/3/image', {
-            method: 'post',
+
+          const response = await axios.post('https://api.imgur.com/3/image', formData, {
             headers: {
               Authorization: clientId,
               Accept: 'application/json',
             },
-            body: formData,
-          })
-            .then((response) => response.json())
-            .then((response) => {
-              //여기서 백이랑 통신을 해서 서버사이드렌더링된 HTML페이지 URL를 받아와 여기에 넣는다.
-              const imageUrl =
-                BASE_URL.substring(0, BASE_URL.length - 3) + getUrlParse(response.data.link);
-              setImageUrl(imageUrl);
-            });
+          });
+          const { data } = response.data;
+          const imageUrl = BASE_URL.substring(0, BASE_URL.length - 3) + getUrlParse(data.link);
+          setImageUrl(imageUrl);
         });
       });
     }

@@ -22,10 +22,6 @@ function FormulaList() {
   return (
     <>
       <S.FormulaContainer>
-        <S.Logo>
-          <S.LogoImg src={getImageURL('logo.png')} />
-        </S.Logo>
-
         <S.FormulaHeaderWrapper ref={formulaHeaderRef}>
           {FORMULA_HEADER.map((latex, index) => (
             <DropDownItem
@@ -57,7 +53,6 @@ function FormulaList() {
             </DropDownItem>
           ))}
         </S.SymbolHeaderWrapper>
-        <S.Logo />
       </S.FormulaContainer>
 
       <S.FormulaList ref={formulaRef} length={nowFormulas.length} header={nowHeader}>

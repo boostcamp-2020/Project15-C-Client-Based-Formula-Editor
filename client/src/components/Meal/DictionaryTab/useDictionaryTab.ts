@@ -1,8 +1,9 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import useInput from '@hooks/useInput';
 import useSelect from '@hooks/useSelect';
 import { LATEX_DICTIONARY, DICTIONARY_MENU_TITLE, MenuLatex } from '@constants/latex-dictionary';
 import { DISPLAY_INTERVAL } from '@constants/constants';
+import useThrottle from '@hooks/useThrottle';
 
 const useDictionaryTab = () => {
   const [menuTitle, onChangeMenuTitle, setMenuTitle] = useSelect(DICTIONARY_MENU_TITLE.all);
@@ -66,26 +67,22 @@ const useDictionaryTab = () => {
     }, 500);
   }, [searchWord]);
 
-  const throttleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const onScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    if (!throttleTimer.current) {
-      throttleTimer.current = setTimeout(() => {
-        const target = e.target as HTMLDivElement;
-        const scrollHeight = target.scrollHeight;
-        const scrollTop = target.scrollTop;
-        const clientHieght = target.clientHeight;
+    const target = e.target as HTMLDivElement;
+    const scrollHeight = target.scrollHeight;
+    const scrollTop = target.scrollTop;
+    const clientHieght = target.clientHeight;
 
-        if (scrollTop + clientHieght >= scrollHeight - 20 && maxNumber < allMenu.current.length) {
-          setMaxNumber((number) => number + DISPLAY_INTERVAL);
-        }
-        throttleTimer.current = null;
-      }, 300);
+    if (scrollTop + clientHieght >= scrollHeight - 20 && maxNumber < allMenu.current.length) {
+      setMaxNumber((number) => number + DISPLAY_INTERVAL);
     }
   };
 
+  const throttleOnScroll = useThrottle(onScroll, 300);
+
   return {
     containerRef,
-    onScroll,
+    onScroll: throttleOnScroll,
     currentMenuContent,
     menuTitle,
     onSearchHandler,
