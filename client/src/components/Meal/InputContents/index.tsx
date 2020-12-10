@@ -11,7 +11,7 @@ const panes = [
     render: function tabContent() {
       return (
         <Tab.Pane>
-          <TextAreaItem></TextAreaItem>
+          <TextAreaItem width="100%"></TextAreaItem>
         </Tab.Pane>
       );
     },
