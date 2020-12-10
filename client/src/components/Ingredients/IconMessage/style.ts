@@ -9,7 +9,7 @@ export const IconMessageWrapper = styled.div`
   font-weight: bold;
   margin-bottom: 10px;
   position: fixed;
-  bottom: 70px;
+  bottom: 80px;
   height: auto;
   background-color: #f3f3f3;
   font-size: 20px !important;
@@ -35,4 +35,6 @@ export const IconMessageWrapper = styled.div`
   }
 `;
 
-export const IconMessageTitle = styled.span``;
+export const IconMessageTitle = styled.span`
+  color: lightslategrey;
+`;

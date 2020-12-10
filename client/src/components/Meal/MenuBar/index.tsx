@@ -33,14 +33,14 @@ function MenuBar({ onToggle }: ResizeHeaderProps) {
       <S.TextAreaItemWrapper>
         <S.LabelWrapper>
           <S.LabelIcon>➕</S.LabelIcon>
-          <S.LabelText>입력</S.LabelText>
+          <S.LabelText className="globalFont">입력</S.LabelText>
         </S.LabelWrapper>
         <TextAreaItem width={'100%'} />
       </S.TextAreaItemWrapper>
       <S.OutputWrapper>
         <S.LabelWrapper>
           <S.LabelIcon>✖️</S.LabelIcon>
-          <S.LabelText>출력</S.LabelText>
+          <S.LabelText className="globalFont">출력</S.LabelText>
         </S.LabelWrapper>
         <OutputFormulaBox
           isMenuBar={true}

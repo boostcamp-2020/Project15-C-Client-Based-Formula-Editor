@@ -13,7 +13,7 @@ function AlertItem({ icon, message }: AlertItemProps) {
       <S.IconBox>
         <Icon name={icon} size="huge" />
       </S.IconBox>
-      <S.MessageBox>{message}</S.MessageBox>
+      <S.MessageBox className="globalFont">{message}</S.MessageBox>
     </S.AlertItemContainer>
   );
 }
