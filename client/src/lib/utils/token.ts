@@ -1,9 +1,7 @@
 const USER_TOKEN = 'USER_TOKEN';
 
 export const setToken = (userToken: string): void => {
-  chrome.storage.sync.set({ USER_TOKEN: userToken }, function () {
-    console.log('Value is set to ' + userToken);
-  });
+  chrome.storage.sync.set({ USER_TOKEN: userToken }, function () {});
 };
 
 export const getToken = () => {
@@ -13,5 +11,3 @@ export const getToken = () => {
     });
   });
 };
-
-// TODO. export const removeToken = () => {chrome.storage.sync.remove(['usetToken'], function () {});};
