@@ -1,8 +1,8 @@
-export const INPUT_ICON = '➕';
+export const INPUT_ICON = '✏️';
 
 export const INPUT_TEXT = '입력';
 
-export const OUTPUT_ICON = '✖️';
+export const OUTPUT_ICON = '📑';
 
 export const OUTPUT_TEXT = '출력';
 
