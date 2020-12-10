@@ -27,6 +27,12 @@ function App() {
             href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.0/dist/semantic.min.css"
             key={3}
           />,
+          <link rel="preconnect" href="https://fonts.gstatic.com" key={5} />,
+          <link
+            key={6}
+            href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+          ></link>,
         ]}
       >
         <FrameContextConsumer>

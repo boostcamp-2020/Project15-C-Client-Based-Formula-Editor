@@ -1,18 +1,15 @@
 import React from 'react';
 import TextAreaItem from '@ingredients/TextAreaItem';
-import OutputFormula from '@meal/OutputFormula';
+import OutputFormulaBox from '@meal/OutputFormulaBox';
 import { Button, Message } from 'semantic-ui-react';
-
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '@contexts/index';
+import { ResizeHeaderProps } from '@set/ResizeHeader';
 import useSaveButtons from '@set/SaveButtons/useSaveButtons';
 import QrCode from '@ingredients/QrCode';
 
 import * as S from './style';
+import IconMessage from '@ingredients/IconMessage';
 
-function MenuBar() {
-  const { userInfo } = useSelector((state: RootState) => state.user);
-  const { userId } = userInfo;
+function MenuBar({ onToggle }: ResizeHeaderProps) {
   const {
     message,
     Modal,
@@ -21,33 +18,59 @@ function MenuBar() {
     downloadText,
     createHandler,
     clipboardHandler,
-    onClickLogoutHandler,
-    onClickLoginHandler,
   } = useSaveButtons();
+  const MenuBarSaveButtons = [
+    { title: '이미지 저장', iconName: 'image', size: 'massize', onClickHandler: downloadImage },
+    { title: '텍스트 저장', iconName: 'file text', size: 'massize', onClickHandler: downloadText },
+    { title: 'QR코드 생성', iconName: 'qrcode', size: 'massize', onClickHandler: createHandler },
+    { title: '화면 적용', iconName: 'tv', size: 'massize', onClickHandler: clipboardHandler },
+  ];
   return (
     <S.MenuBarContainer>
       <S.Logo>
         <S.LogoImg src="/image/logo.png" />
       </S.Logo>
       <S.TextAreaItemWrapper>
+        <S.LabelWrapper>
+          <S.LabelIcon>➕</S.LabelIcon>
+          <S.LabelText className="globalFont">입력</S.LabelText>
+        </S.LabelWrapper>
         <TextAreaItem size={'mini'} />
       </S.TextAreaItemWrapper>
       <S.OutputWrapper>
-        <OutputFormula backgroundColor={'white'} padding={'10px'} border={'none'} />
+        <S.LabelWrapper>
+          <S.LabelIcon>✖️</S.LabelIcon>
+          <S.LabelText className="globalFont">출력</S.LabelText>
+        </S.LabelWrapper>
+        <OutputFormulaBox
+          isMenuBar={true}
+          width={'100%'}
+          backgroundColor={'white'}
+          padding={'10px'}
+          border={'none'}
+        />
       </S.OutputWrapper>
       <S.ButtonWrapper>
         <Button.Group basic size="massive">
-          <Button icon="file image outline" size="massive" onClick={downloadImage} />
-          <Button icon="file text" size="massive" onClick={downloadText} />
-          <Button icon="qrcode" size="massive" onClick={createHandler} />
-          <Button icon="tv" size="massive" onClick={clipboardHandler} />
-          {userId ? (
-            <Button icon="user" size="massive" onClick={onClickLogoutHandler} />
-          ) : (
-            <Button icon="user outline" size="massive" onClick={onClickLoginHandler} />
-          )}
+          {MenuBarSaveButtons.map((Button, index) => {
+            return (
+              <IconMessage
+                title={Button.title}
+                iconName={Button.iconName}
+                size={Button.size}
+                key={index}
+                onClickHandler={Button.onClickHandler}
+              />
+            );
+          })}
         </Button.Group>
       </S.ButtonWrapper>
+      <S.ButtonWrapper>
+        <Button.Group basic size="massive">
+          <Button icon="sort" size="massive" onClick={onToggle} />
+        </Button.Group>
+      </S.ButtonWrapper>
+
       {message && (
         <S.MessageContainer>
           <Message positive>

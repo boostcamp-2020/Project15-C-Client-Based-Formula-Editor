@@ -7,13 +7,21 @@ import SaveButtons from '@set/SaveButtons';
 import { observer } from '../lib/utils/util';
 import ResizeHeader from '@set/ResizeHeader';
 import TestComponet from './TestComponet';
-import { Icon } from 'semantic-ui-react';
 import useToggle from '@hooks/useToggle';
 
 const MainContainer = styled.section`
   display: flex;
   flex-direction: column;
+  animation: slidein 0.5s;
   height: 100%;
+  @keyframes slidein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `;
 const Main = styled.div`
   height: 100%;
@@ -25,18 +33,6 @@ const ContentsContainer = styled.div`
   width: 100%;
   padding: 10px;
 `;
-const IconWrapper = styled.div`
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: -2px;
-  & i {
-    cursor: pointer;
-    margin: 0;
-    padding: 0;
-    line-height: 0px;
-  }
-`;
 
 function MainPage() {
   // const [isLoading, setLoading] = useState(false);
@@ -47,14 +43,11 @@ function MainPage() {
   // }, []);
   // if (!isLoading) return <TestComponet />;
 
-  const [toggle, onToggle, setToggle] = useToggle(false);
+  const [toggle, onToggle] = useToggle(false);
   if (toggle) return <ResizeHeader onToggle={onToggle} />;
   return (
     <MainContainer onClick={observer.notify}>
-      <IconWrapper>
-        <Icon name="caret square down" color="grey" size="big" onClick={onToggle} />
-      </IconWrapper>
-      <Header />
+      <Header onToggle={onToggle} />
       <Main>
         <ContentsContainer>
           <Input />
