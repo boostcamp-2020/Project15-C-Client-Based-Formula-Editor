@@ -1,45 +1,54 @@
 import styled from '@emotion/styled';
-import { TextAreaItemProps } from './index';
 
-export const TextArea = styled.textarea<TextAreaItemProps>`
-  width: ${(props) => props.width};
+export const TextAreaContainer = styled.div`
+  display: flex;
+  width: 100%;
   height: 100%;
-  resize: none;
   border: 1px solid #bdbdbd;
+  background-color: white;
   padding: 10px;
+  position: relative;
+`;
+interface TextAreaProps {
+  isShow: boolean;
+}
+export const TextArea = styled.textarea<TextAreaProps>`
+  width: ${(props) => (props.isShow ? '70%' : '100%')};
+  height: 100%;
+  border: none;
+  resize: none;
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const RecommendContainer = styled.div`
-  width: 20%;
-  height: 50%;
-  border: 1px solid black;
+  width: 30%;
+  height: 90%;
+  position: absolute;
+  top: 9px;
+  right: 0;
   border-radius: 5px;
   background: white;
-  position: fixed;
-  top: 75%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-
+  overflow: hidden;
+  text-align: center;
+  & > span {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
   & ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
     width: 100%;
     height: 90%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0;
     overflow-y: auto;
-
-    & li {
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-
-      & img {
-        width: 80%;
-      }
-    }
   }
+`;
+
+export const Divider = styled.div`
+  height: 100%;
+  border-right: 1px solid #bdbdbd;
 `;

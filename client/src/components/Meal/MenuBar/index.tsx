@@ -30,7 +30,7 @@ function MenuBar() {
         <S.LogoImg src="/image/logo.png" />
       </S.Logo>
       <S.TextAreaItemWrapper>
-        <TextAreaItem width={'100%'} />
+        <TextAreaItem size={'mini'} />
       </S.TextAreaItemWrapper>
       <S.OutputWrapper>
         <OutputFormula backgroundColor={'white'} padding={'10px'} border={'none'} />

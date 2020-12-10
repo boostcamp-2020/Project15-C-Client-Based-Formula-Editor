@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 
 export const HeaderContainer = styled.div`
   display: flex;
-  justify-content: space-around;
   border-top: 1px solid #d4d4d5;
   border-bottom: 1px solid #d4d4d5;
   background-color: #f3f3f3;
