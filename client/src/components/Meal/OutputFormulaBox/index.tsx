@@ -8,7 +8,7 @@ import useOutputFormulaBox from './useOutputFormulaBox';
 import * as S from './style';
 import useToggle from '@hooks/useToggle';
 
-function OutputFormulaBox({ width, backgroundColor, toggleModal }: OutputFormulaProps) {
+function OutputFormulaBox({ isMenuBar, width, backgroundColor, toggleModal }: OutputFormulaProps) {
   const {
     initmathInput,
     currentTabInfo,
@@ -45,15 +45,15 @@ function OutputFormulaBox({ width, backgroundColor, toggleModal }: OutputFormula
           onKeyDown={onKeyDownHandler}
         />
       </S.OutputFormulaContent>
-      {/* {userId && ( */}
-      <S.StarButtonBox onMouseMove={onMouseHandler} onMouseLeave={onMouseLeaveHandler}>
-        {star ? (
-          <Icon name={'star'} size="large" onClick={toggleModal} />
-        ) : (
-          <Icon name={'star outline'} size="large" onClick={toggleModal} />
-        )}
-      </S.StarButtonBox>
-      {/* )} */}
+      {userId && !isMenuBar && (
+        <S.StarButtonBox onMouseMove={onMouseHandler} onMouseLeave={onMouseLeaveHandler}>
+          {star ? (
+            <Icon name={'star'} size="large" onClick={toggleModal} />
+          ) : (
+            <Icon name={'star outline'} size="large" onClick={toggleModal} />
+          )}
+        </S.StarButtonBox>
+      )}
     </S.OutputFormulaBox>
   );
 }

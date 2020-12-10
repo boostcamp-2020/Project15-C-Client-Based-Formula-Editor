@@ -6,6 +6,7 @@ import FavoriteModal from '@meal/FavoriteModal';
 import OutputFormulaBox from '@meal/OutputFormulaBox/index';
 
 export interface OutputFormulaProps {
+  isMenuBar?: boolean;
   backgroundColor?: string;
   padding?: string;
   border?: string;
@@ -24,7 +25,7 @@ function OutputFormula({ backgroundColor, padding, border }: OutputFormulaProps)
   return (
     <>
       <S.OutputFormulaWrapper onClick={onClickHandler} border={border} padding={padding}>
-        <OutputFormulaBox toggleModal={toggleModal} />
+        <OutputFormulaBox isMenuBar={false} toggleModal={toggleModal} />
       </S.OutputFormulaWrapper>
       <Modal width="big">
         <FavoriteModal onToggle={toggleModal} />

@@ -43,6 +43,7 @@ function MenuBar({ onToggle }: ResizeHeaderProps) {
           <S.LabelText>출력</S.LabelText>
         </S.LabelWrapper>
         <OutputFormulaBox
+          isMenuBar={true}
           width={'100%'}
           backgroundColor={'white'}
           padding={'10px'}
