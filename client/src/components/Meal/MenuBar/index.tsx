@@ -30,6 +30,7 @@ function MenuBar() {
         <S.LogoImg src="/image/logo.png" />
       </S.Logo>
       <S.TextAreaItemWrapper>
+        <S.TextAreaLabel>📝 입력</S.TextAreaLabel>
         <TextAreaItem width={'100%'} />
       </S.TextAreaItemWrapper>
       <S.OutputWrapper>

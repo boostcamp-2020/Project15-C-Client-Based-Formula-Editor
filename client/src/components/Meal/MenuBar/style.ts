@@ -9,22 +9,36 @@ export const MenuBarContainer = styled.div`
   justify-content: space-around;
 `;
 
+export const TextAreaLabel = styled.div`
+  width: 70px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #d4d4d5;
+  border-right: none;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const OutputWrapper = styled.div`
   width: 30%;
+  display: flex;
 `;
+
 export const ButtonWrapper = styled.div`
   margin-right: 10px;
   & div {
-    height: 80px;
+    height: 50px;
     margin-top: 10px !important;
   }
   & div > button {
     height: 100%;
-    padding: 27px 10px 10px 10px !important;
+    padding: 15px 10px 10px 10px !important;
     align-self: center;
     & i {
-      font-size: 2em;
-      margin-top: 10px !important;
+      font-size: 1.5em;
     }
   }
 `;
@@ -38,6 +52,7 @@ export const IconWrapper = styled.div`
 export const TextAreaItemWrapper = styled.div`
   width: 30%;
   margin: 10px;
+  display: flex;
 `;
 
 export const Logo = styled.div`
@@ -49,7 +64,7 @@ export const Logo = styled.div`
 
 export const LogoImg = styled.img`
   width: 65px;
-  margin-top: 15px;
+  margin-top: 5px;
 `;
 
 export const Img = styled.img`

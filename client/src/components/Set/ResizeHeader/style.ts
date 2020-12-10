@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const ResizeHeaderContainer = styled.div`
-  height: 100px;
+  height: 70px;
   position: absolute;
   width: 100%;
   bottom: 28px;
