@@ -1,6 +1,6 @@
 # 부스토랑
 
->수식 셰프는 크롬 브라우저 확장프로그램을 통해 웹 사이트 어느 곳에서나 수식편집기 서비스를 제공합니다!
+>수식 셰프는 크롬 확장프로그램을 통해 웹 사이트 어느 곳에서나 사용할 수 있는 수식편집기 서비스를 제공합니다!
 <p align="center"><img src="https://user-images.githubusercontent.com/60457112/99751593-dd35b180-2b25-11eb-886d-65bb2e2ecaf4.png"/></p>
 
 <p align="center">
@@ -22,7 +22,7 @@
 
 ## 📌 Introduce
 
-### [간단한 다운로드를 통해 수식 셰프를 경험해보세요!](https://store.whale.naver.com/search/%EC%88%98%EC%8B%9D%20%EC%85%B0%ED%94%84)
+> ### [간단한 다운로드를 통해 수식 셰프를 경험해보세요!](https://store.whale.naver.com/search/%EC%88%98%EC%8B%9D%20%EC%85%B0%ED%94%84)
 ### 기능 1
 ### 기능 2
 실시간으로 브라우저 위에서 수식을 입력하고, 그리며 화면에 적용할 수 있습니다.
