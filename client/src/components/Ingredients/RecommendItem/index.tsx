@@ -21,7 +21,9 @@ function RecommendItem({ latex, image, currentLatex, clearAndCloseRecommend }: R
 
   return (
     <S.RecommendWrapper onClick={onClick}>
-      <S.RecommendLatexWrapper>{latex}</S.RecommendLatexWrapper>
+      <S.RecommendLatexWrapper>
+        <span>{latex}</span>
+      </S.RecommendLatexWrapper>
       <S.RecommendImageWrapper>
         <img src={getImageURL(image)}></img>
       </S.RecommendImageWrapper>

@@ -45,7 +45,7 @@ export const ModalContent = styled.div`
   padding: 20px 0px;
 
   input {
-    height: 25px;
+    height: 30px;
     font-size: 15px;
     outline: none;
     border: 1px solid #bcbec0;
@@ -64,7 +64,7 @@ export const ContentLabel = styled.div`
 
 export const LatexBox = styled.div`
   border: 1px solid #bcbec0;
-  height: 45px;
+  height: 65px;
   font-size: 15px;
   font-weight: normal;
   padding: 10px;

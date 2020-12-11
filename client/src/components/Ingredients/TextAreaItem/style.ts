@@ -23,11 +23,13 @@ export const TextArea = styled.textarea<TextAreaProps>`
 `;
 
 export const RecommendContainer = styled.div`
-  width: 30%;
+  border: 1px solid #a6a6a6;
+  width: 190px;
   height: 90%;
   position: absolute;
   top: 9px;
   right: 0;
+  margin-right: 10px;
   border-radius: 5px;
   background: white;
   overflow: hidden;
@@ -51,4 +53,10 @@ export const RecommendContainer = styled.div`
 export const Divider = styled.div`
   height: 100%;
   border-right: 1px solid #bdbdbd;
+`;
+
+export const Span = styled.div`
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 15px;
 `;
