@@ -1,6 +1,6 @@
 # 부스토랑
 
->수식 셰프는 웨일 브라우저 확장프로그램을 통해 웹 사이트 어느 곳에서나 수식편집기 서비스를 제공합니다!
+>수식 셰프는 크롬 브라우저 확장프로그램을 통해 웹 사이트 어느 곳에서나 수식편집기 서비스를 제공합니다!
 <p align="center"><img src="https://user-images.githubusercontent.com/60457112/99751593-dd35b180-2b25-11eb-886d-65bb2e2ecaf4.png"/></p>
 
 <p align="center">
