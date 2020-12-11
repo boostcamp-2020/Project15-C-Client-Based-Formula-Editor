@@ -11,7 +11,6 @@ export const CalculatorInputWrapper = styled.div`
   justify-content: space-between;
   height: 100%;
   flex-basis: 50%;
-  border: 1px solid green;
   overflow-x: auto;
 
   .active-angle {
@@ -52,17 +51,14 @@ export const CalculatorOutputWrapper = styled.div`
   justify-content: space-between;
   flex-basis: 50%;
   height: 100%;
-  border: 1px solid green;
 `;
 
 export const OutputOperation = styled.div`
-  border: 1px solid blue;
   width: 100%;
   height: 30px;
 `;
 
 export const OutputResult = styled.button`
-  border: 1px solid purple;
   width: 100%;
   height: 30px;
   &: hover {
