@@ -12,18 +12,25 @@
   <img src="https://img.shields.io/badge/emotion-11.0.0-pink?logo=emotion"/>
 </p>
 
-### 🏠 [HomePage URL]()
+### 📩 [Download URL]()
+
+### 📺 [Demo Video]()
 
 ### 📷 [프로젝트 실행 화면]()
 
 ### 📚 [Wiki 보러가기](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki)
 
-## 📌 프로젝트 소개
+## 📌 Introduce
 
 ### [간단한 다운로드를 통해 수식 셰프를 경험해보세요!](https://store.whale.naver.com/search/%EC%88%98%EC%8B%9D%20%EC%85%B0%ED%94%84)
+### 기능 1
+### 기능 2
 실시간으로 브라우저 위에서 수식을 입력하고, 그리며 화면에 적용할 수 있습니다.
 
-## 📺 Demo Video
+
+## 🔥 Challenge
+### 도전 1
+### 도전 2
 
 ## ⚒️ Tech Stack
 
@@ -36,18 +43,18 @@
 ```
 🗃 Project Folder  
 📁server  
-├── app.js  
-├── 📁bin  
-│   └── www  
-├── 📁config  
-├── 📁models  
-├── 📁controllers  
-├── 📁services  
-├── 📁routes
-│   ├── 📁user
-│   └── 📁favorite
-└── 📁loaders
-└── 📁utils
+├── app.js
+├── 📁src  
+│   ├── 📁controllers 
+│   ├── 📁entity
+│   ├── 📁repository
+│   ├── 📁router
+│   │   ├── 📁user
+│   │   └── 📁favorite
+│   ├── 📁service
+│   ├── 📁types
+│   ├── 📁utils  
+│   └──📁views
 └── 📁__tests__  
 ```
 
@@ -61,22 +68,28 @@
   ```
   📁client  
   ├── 📁public
+  │   ├── 📁image    
+  │   ├── background.js  
+  │   ├── content.css
+  │   ├── icon.png
+  │   ├── manifest.json
   │   └── index.html
   └── 📁src
       ├── App
       ├── 📁components  
       │   ├── index.tsx   
       │   ├── style.ts
-      │   └── (폴더명).ts
+      │   └── use(폴더명).ts
       ├── 📁contexts
       │   ├── index.ts   
       │   ├── 📁latex
       │   └── 📁user
+      ├── 📁hooks
       ├── 📁lib  
-      │   ├── 📁hooks
+      │   ├── 📁apis
       │   ├── 📁constants
-      │   ├── 📁utils
-      │   └── 📁apis
+      │   └── 📁utils
+      ├── 📁pages
       └── 📁__tests__  
   ```
   
