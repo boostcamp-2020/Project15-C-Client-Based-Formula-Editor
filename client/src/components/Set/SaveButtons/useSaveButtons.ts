@@ -12,10 +12,12 @@ import useModal from '@hooks/useModal';
 import { userLogin, userLogout } from '@contexts/user';
 import { API } from '@lib/apis/common';
 import axios from 'axios';
+import { LoginMessage, MESSAGE_TIME } from '@constants/constants';
 
 export const useSaveButtons = () => {
   const dispatch = useDispatch();
   const [message, onToggleMessage] = useToggle(false);
+  const [loginMessage, setLoginMessage] = useState<LoginMessage | ''>('');
   const [imageUrl, setImageUrl] = useState('');
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -62,7 +64,7 @@ export const useSaveButtons = () => {
     if (timer.current) clearTimeout(timer.current);
     timer.current = setTimeout(() => {
       onToggleMessage();
-    }, 2500);
+    }, MESSAGE_TIME);
   };
 
   const createQrcode = () => {
@@ -119,9 +121,20 @@ export const useSaveButtons = () => {
 
   const onClickLoginHandler = async () => {
     chrome.runtime.sendMessage({ message: 'login' }, (response) => {
-      const { userToken, userId } = response.results;
-      setToken(userToken);
-      dispatch(userLogin(userId));
+      if (response.error) {
+        setLoginMessage(LoginMessage.LOGIN_FAUILRE);
+      }
+
+      if (response.results) {
+        const { userToken, userId } = response.results;
+        setToken(userToken);
+        dispatch(userLogin(userId));
+        setLoginMessage(LoginMessage.LOGIN_SUCCESS);
+      }
+
+      setTimeout(() => {
+        setLoginMessage('');
+      }, MESSAGE_TIME);
     });
   };
 
@@ -153,6 +166,7 @@ export const useSaveButtons = () => {
     downloadText,
     clipboardHandler,
     message,
+    loginMessage,
     imageUrl,
     createHandler,
     Modal,
