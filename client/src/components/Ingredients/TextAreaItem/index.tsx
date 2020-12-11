@@ -4,15 +4,16 @@ import useTextAreaItem from './useTextAreaItem';
 import * as S from './style';
 
 interface TextAreaItem {
-  size?: 'mini' | 'big';
+  size: string;
 }
 
-function TextAreaItem({ size = 'big' }: TextAreaItem) {
+function TextAreaItem({ size }: TextAreaItem) {
   const {
     currentTabInfo,
     onChangeHandler,
     isShow,
-    onKeyPress,
+    onKeyDown,
+    onKeyUp,
     recommend,
     clearAndCloseRecommend,
     maxNumber,
@@ -24,14 +25,15 @@ function TextAreaItem({ size = 'big' }: TextAreaItem) {
       <S.TextArea
         value={currentTabInfo.latex}
         onChange={onChangeHandler(size)}
-        onKeyDown={onKeyPress}
+        onKeyDown={onKeyDown}
+        onKeyUp={onKeyUp}
         isShow={isShow}
       />
       {size === 'big' && isShow && (
         <>
-          <S.Divider></S.Divider>
+          {/* <S.Divider></S.Divider> */}
           <S.RecommendContainer>
-            <span>추천 Tex</span>
+            <S.Span>Tex Recommendation</S.Span>
             <ul onScroll={onScroll}>
               {recommend.slice(0, maxNumber).map((item, index) => (
                 <RecommendItem

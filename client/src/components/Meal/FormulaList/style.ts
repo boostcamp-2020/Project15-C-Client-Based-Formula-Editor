@@ -6,7 +6,8 @@ export const FormulaContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  padding-right: 65px;
+  overflow-x: auto;
+  overflow-y: hidden;
 `;
 
 export const HeaderWraaper = styled.div`
@@ -44,12 +45,13 @@ export const SymbolHeaderWrapper = styled.div`
   white-space: nowrap;
   & button {
     background-size: contain;
+    min-width: 60px;
   }
   padding-left: 10px;
-
+  /* 
   @media screen and (max-width: 780px) {
     display: none;
-  }
+  } */
 `;
 
 interface FormulaListFrops {

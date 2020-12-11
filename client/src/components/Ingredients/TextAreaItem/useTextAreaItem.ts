@@ -19,7 +19,7 @@ const useTextAreaItem = () => {
     setRecommend([]);
   }, []);
 
-  const onKeyPress = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+  const onKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     const target = e.target as HTMLTextAreaElement;
     if (e.key === 'Backspace' && target.value[target.value.length - 1] === '@') {
       return clearAndCloseRecommend();
@@ -28,6 +28,13 @@ const useTextAreaItem = () => {
     if (e.key === 'Enter') return clearAndCloseRecommend();
     if (e.key === '@') {
       setIsShow(true);
+    }
+  };
+
+  const onKeyUp = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    const target = e.target as HTMLTextAreaElement;
+    if (e.key === 'Backspace' && !target.value.includes('@')) {
+      return clearAndCloseRecommend();
     }
   };
 
@@ -42,7 +49,7 @@ const useTextAreaItem = () => {
 
   const debouncedRecommendLatex = useDebounce<[string]>(recommendLatex, 200);
 
-  const onChangeHandler = (size: 'mini' | 'big') => (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const onChangeHandler = (size: string) => (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     if (size === 'big' && isShow) {
       debouncedRecommendLatex(e.target.value);
     }
@@ -66,7 +73,8 @@ const useTextAreaItem = () => {
     currentTabInfo,
     onChangeHandler,
     isShow,
-    onKeyPress,
+    onKeyDown,
+    onKeyUp,
     recommend,
     clearAndCloseRecommend,
     maxNumber,

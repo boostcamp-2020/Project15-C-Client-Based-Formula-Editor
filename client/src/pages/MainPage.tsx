@@ -7,7 +7,6 @@ import SaveButtons from '@set/SaveButtons';
 import { observer } from '../lib/utils/util';
 import ResizeHeader from '@set/ResizeHeader';
 import TestComponet from './TestComponet';
-import useToggle from '@hooks/useToggle';
 
 const MainContainer = styled.section`
   display: flex;
@@ -34,7 +33,11 @@ const ContentsContainer = styled.div`
   padding: 10px;
 `;
 
-function MainPage() {
+interface MainPageProps {
+  toggle: boolean;
+  onToggle: () => void;
+}
+function MainPage({ toggle, onToggle }: MainPageProps) {
   // const [isLoading, setLoading] = useState(false);
   // useEffect(() => {
   //   setTimeout(() => {
@@ -43,7 +46,6 @@ function MainPage() {
   // }, []);
   // if (!isLoading) return <TestComponet />;
 
-  const [toggle, onToggle] = useToggle(false);
   if (toggle) return <ResizeHeader onToggle={onToggle} />;
   return (
     <MainContainer onClick={observer.notify}>
