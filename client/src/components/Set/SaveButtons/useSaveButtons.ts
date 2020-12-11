@@ -77,15 +77,19 @@ export const useSaveButtons = () => {
           const formData = new FormData();
           formData.append('image', blob);
 
-          const response = await axios.post('https://api.imgur.com/3/image', formData, {
-            headers: {
-              Authorization: clientId,
-              Accept: 'application/json',
-            },
-          });
-          const { data } = response.data;
-          const imageUrl = BASE_URL.substring(0, BASE_URL.length - 3) + getUrlParse(data.link);
-          setImageUrl(imageUrl);
+          try {
+            const response = await axios.post('https://api.imgur.com/3/image', formData, {
+              headers: {
+                Authorization: clientId,
+                Accept: 'application/json',
+              },
+            });
+            const { data } = response.data;
+            const imageUrl = BASE_URL.substring(0, BASE_URL.length - 3) + getUrlParse(data.link);
+            setImageUrl(imageUrl);
+          } catch (error) {
+            console.error(error);
+          }
         });
       });
     }
