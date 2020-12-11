@@ -1,13 +1,15 @@
 const USER_TOKEN = 'USER_TOKEN';
 
 export const setToken = (userToken: string): void => {
-  chrome.storage.sync.set({ USER_TOKEN: userToken }, function () {});
+  if (chrome.storage) chrome.storage.sync.set({ USER_TOKEN: userToken }, function () {});
 };
 
 export const getToken = () => {
   return new Promise<string>((resolve, reject) => {
-    chrome.storage.sync.get([USER_TOKEN], function (result) {
-      resolve(result[USER_TOKEN]);
-    });
+    if (chrome.storage) {
+      chrome.storage.sync.get([USER_TOKEN], function (result) {
+        resolve(result[USER_TOKEN]);
+      });
+    }
   });
 };
