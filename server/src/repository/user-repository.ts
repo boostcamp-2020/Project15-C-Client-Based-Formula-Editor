@@ -8,8 +8,8 @@ export default class UserRepository extends Repository<User> {
     return this.findOne({ userId: email });
   }
 
-  insertUesr({ email, nickname, profile_image }: CreateParams) {
-    const newUser = this.create({ userId: email, nickName: nickname, profileUrl: profile_image });
+  insertUesr({ email }: CreateParams) {
+    const newUser = this.create({ userId: email });
     return this.manager.save(newUser);
   }
 }
