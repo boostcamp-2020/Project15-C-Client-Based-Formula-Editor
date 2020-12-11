@@ -11,7 +11,7 @@ const panes = [
     render: function tabContent() {
       return (
         <Tab.Pane>
-          <TextAreaItem />
+          <TextAreaItem size={'big'} />
         </Tab.Pane>
       );
     },

@@ -1,6 +1,6 @@
 import useToggle from '@hooks/useToggle';
 import React from 'react';
-import { Button } from 'semantic-ui-react';
+import { Button, Icon, Label } from 'semantic-ui-react';
 import * as S from './style';
 interface IconMessageProps {
   title: string;
@@ -19,11 +19,11 @@ function IconMessage({ title, iconName, size, onClickHandler }: IconMessageProps
   };
   return (
     <S.IconMessageContainer>
-      {message && (
+      {/* {!message && (
         <S.IconMessageWrapper>
           <S.IconMessageTitle>{title}</S.IconMessageTitle>
         </S.IconMessageWrapper>
-      )}
+      )} */}
       <Button
         icon={iconName}
         size={size}

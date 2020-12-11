@@ -1,10 +1,8 @@
 import styled from '@emotion/styled';
 
 export const ResizeHeaderContainer = styled.div`
-  height: auto;
-  position: absolute;
+  height: 100%;
   width: 100%;
-  bottom: 0;
   animation: slidein 0.5s;
   @keyframes slidein {
     from {

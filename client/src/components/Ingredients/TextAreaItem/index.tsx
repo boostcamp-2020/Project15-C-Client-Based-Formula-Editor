@@ -4,10 +4,10 @@ import useTextAreaItem from './useTextAreaItem';
 import * as S from './style';
 
 interface TextAreaItem {
-  size?: 'mini' | 'big';
+  size: string;
 }
 
-function TextAreaItem({ size = 'big' }: TextAreaItem) {
+function TextAreaItem({ size }: TextAreaItem) {
   const {
     currentTabInfo,
     onChangeHandler,

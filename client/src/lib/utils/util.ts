@@ -1,5 +1,9 @@
 import { Action } from 'redux';
 import React from 'react';
+import { getToken } from './token';
+import { API } from '@apis/common';
+import { userLogin } from '@contexts/user';
+
 export function createAction<T, P>(type: T): (payload: P) => Action<T> & { payload: P };
 export function createAction<T>(type: T): () => Action<T>;
 export function createAction<T, P>(type: T) {

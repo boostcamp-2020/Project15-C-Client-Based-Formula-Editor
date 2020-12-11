@@ -9,7 +9,6 @@ interface ModelType {
 
 function ModalItem({ modalState, handler }: ModelType) {
   const a: any = document.querySelector('#iframe');
-  console.log(a);
   return (
     <Modal
       size={'mini'}

@@ -4,13 +4,12 @@ import { RootState } from '@contexts/index';
 import html2canvas from 'html2canvas';
 import * as clipboard from 'clipboard-polyfill';
 import { ClipboardItem } from 'clipboard-polyfill';
-import { useEffect, useRef, useState } from 'react';
-import { getToken, setToken } from '@utils/token';
+import { useRef, useState } from 'react';
+import { setToken } from '@utils/token';
 import useToggle from '@hooks/useToggle';
 import { BASE_URL } from '@lib/apis/common';
 import useModal from '@hooks/useModal';
 import { userLogin, userLogout } from '@contexts/user';
-import { API } from '@lib/apis/common';
 import axios from 'axios';
 import { LoginMessage, MESSAGE_TIME } from '@constants/constants';
 
@@ -142,24 +141,6 @@ export const useSaveButtons = () => {
     chrome.storage.sync.clear();
     dispatch(userLogout());
   };
-
-  const checkLogin = async () => {
-    const token = await getToken();
-    console.log('token: ', token);
-    if (!token) return;
-    const response = await API.post('/auth/autologin', '', {
-      headers: {
-        Authorization: token,
-      },
-    });
-
-    const { userId } = response.data.results;
-    dispatch(userLogin(userId));
-  };
-
-  useEffect(() => {
-    checkLogin();
-  }, []);
 
   return {
     downloadImage,
