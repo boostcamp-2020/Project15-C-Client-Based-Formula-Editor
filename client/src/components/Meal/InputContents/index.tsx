@@ -1,8 +1,9 @@
 import React from 'react';
+import { Tab } from 'semantic-ui-react';
 import TextAreaItem from '@ingredients/TextAreaItem';
 import FavoriteTab from '@meal/FavoriteTab';
-import { Tab } from 'semantic-ui-react';
-import DictionaryTab from '../DictionaryTab';
+import DictionaryTab from '@meal/DictionaryTab';
+import CaculatorTab from '@meal/CalculatorTab';
 import * as S from './style';
 
 const panes = [
@@ -18,7 +19,6 @@ const panes = [
   },
   {
     menuItem: '수식사전',
-    // render: () => <DictionaryTab />,
     render: function tabContent() {
       return <DictionaryTab />;
     },
@@ -32,7 +32,7 @@ const panes = [
   {
     menuItem: '계산기',
     render: function tabContent() {
-      return <Tab.Pane>그리기 판</Tab.Pane>;
+      return <CaculatorTab />;
     },
   },
 ];
