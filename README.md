@@ -21,16 +21,19 @@
 ### 📚 [Wiki 보러가기](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki)
 
 ## 📌 Introduce
-
-> ### [간단한 다운로드를 통해 수식 셰프를 경험해보세요!](https://store.whale.naver.com/search/%EC%88%98%EC%8B%9D%20%EC%85%B0%ED%94%84)
-### 기능 1
-### 기능 2
-실시간으로 브라우저 위에서 수식을 입력하고, 그리며 화면에 적용할 수 있습니다.
-
+> [간단한 다운로드를 통해 수식 셰프를 경험해보세요!](https://store.whale.naver.com/search/%EC%88%98%EC%8B%9D%20%EC%85%B0%ED%94%84)
+### 1. 다양한 수식들을 편집할 수 있고, Latex 문법을 사용할 수 있습니다!
+### 2. 수식 사전을 이용해서 다양한 수식 템플릿을 적용할 수 있습니다!
+### 3. 즐겨찾기 기능을 통해 나만의 수식을 등록하고 이용할 수 있습니다! (네이버 로그인 필요)
+### 3. 작성한 수식을 이미지 파일, 텍스트 파일, QR Code 등 다양한 형태로 저장이 가능합니다!
+### 4. 클립보드 저장을 이용해 한글 파일이나 웹 문서 파일에 바로 적용할 수 있습니다!
 
 ## 🔥 Challenge
-### 도전 1
-### 도전 2
+### React + Typescript + Chromium Extension Boiler Plate 환경 구축
+### 크롬 확장프로그램 개발 도전
+### Mathquill 오픈 소스 수정해보기
+### TypeORM 적용해보기
+### 렌더링 최적화 고민
 
 ## ⚒️ Tech Stack
 
