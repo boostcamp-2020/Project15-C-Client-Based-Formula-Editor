@@ -7,6 +7,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/javascript-ES6+-yellow?logo=javascript"/>
+  <img src="https://img.shields.io/badge/typescript-v4.0.5-blue?logo=typescript"/>
   <img src="https://img.shields.io/badge/react-17.0.1-1cf?logo=react"/>
   <img src="https://img.shields.io/badge/redux-4.0.5-purple?logo=redux"/>
   <img src="https://img.shields.io/badge/node.js-v15.2.1-green?logo=node.js"/>
