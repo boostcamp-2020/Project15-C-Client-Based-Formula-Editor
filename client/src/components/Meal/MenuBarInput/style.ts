@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const TextAreaItemWrapper = styled.div`
-  width: 30%;
+  width: 35%;
   margin: 10px;
   display: flex;
 `;
