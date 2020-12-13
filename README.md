@@ -31,7 +31,7 @@
 > 링크를 누르면 유튜브 페이지로 이동합니다
 
 ### ⚙️ 주요 기능
-**1. 수식 편집 지원**
+#### 1. 수식 편집 지원
 - 적분, 삼각함수, 행렬 등의 **다양한 수식**을 지원
 - **키보드** 및 **GUI 입력** 지원
 
@@ -56,14 +56,12 @@
 - 확장프로그램 **최소화 모드** 지원
 - '**@'** 입력 시, **수식 추천** 기능 지원
 
-
-## 🔥 기술 특장점
-### ⚒️ 기술 스택
+## 📌 기술 스택
 ![1](https://user-images.githubusercontent.com/60457112/102003331-35d52480-3d49-11eb-8b28-a69653ca5e7b.jpg)
 **Front-End** : React, Typescript, Redux, Emotion, Webpack & Babel, Mathquill Library  
 **Back-End** : Express, Typescript, Mysql2, TypeORM, NCloud
 
-### 🌈 기술 특장점
+## 📌 기술 특장점
 ### ⚙️ Chrome, Whale Extension 환경 개발
 > 🔗[리액트 + 타입스크립트로 크롬 확장프로그램 적용하기](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki/%EB%A6%AC%EC%95%A1%ED%8A%B8---%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-=-%ED%81%AC%EB%A1%AC-%ED%99%95%EC%9E%A5%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EB%A7%8C%EB%93%A4%EA%B8%B0!)  
 
