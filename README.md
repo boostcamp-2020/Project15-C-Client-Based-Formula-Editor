@@ -98,9 +98,9 @@ MathQuill 라이브러리는 Tag로 그려진 수식들을 직접 수정할 수 
 각각의 컴포넌트 폴더 안에는 크게 **index.tsx**, **style.ts**, **useComponent.ts**로 나누어 코드를 작성하였습니다.
 
 ```
-- index.tsx : **view 부분**을 rendering 해주는 코드 작성
-- style.ts : emotion 라이브러리를 이용하여 컴포넌트 기반 **스타일 코드** 작성
-- useComponent.ts : 해당 컴포넌트에 필요한 **logic 코드** 작성
+- index.tsx : view 부분을 rendering 해주는 코드 작성
+- style.ts : emotion 라이브러리를 이용하여 컴포넌트 기반 스타일 코드 작성
+- useComponent.ts : 해당 컴포넌트에 필요한 logic 코드 작성
 ```
 
 ---
@@ -134,6 +134,8 @@ React 프로젝트가 커질 때 심해질 수 있는 **Prop Drilling** 현상�
 - useDebounce : Debounce와 관련 있는 로직을 담당하는 hooks
 - useThrottle : Throttle과 관련 있는 로직을 담당하는 hooks
 ```
+
+---
 
 ## 🗂 Directory
 
