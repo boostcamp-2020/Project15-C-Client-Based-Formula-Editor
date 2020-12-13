@@ -1,7 +1,7 @@
 # 부스토랑
 
->수식 셰프는 크롬 확장프로그램을 통해 웹 사이트 어느 곳에서나 사용할 수 있는 수식편집기 서비스를 제공합니다!
-<p align="center"><img src="https://user-images.githubusercontent.com/60457112/99751593-dd35b180-2b25-11eb-886d-65bb2e2ecaf4.png"/></p>
+> 수식 셰프는 **크롬 확장프로그램**을 통해 **어느 웹 사이트**에서나 수식을 **편집**하고, **적용**할 수 있는 서비스를 제공합니다. **일회성**이 강한 기존 수식 편집기의 단점을 보완하여 **지속가능한 수식 편집 서비스**를 제공하는 것을 목표로 프로젝트를 진행하였습니다.
+<p align="center"><img src="https://user-images.githubusercontent.com/60457112/102003187-569c7a80-3d47-11eb-8412-3103461df502.gif"/></p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/javascript-ES6+-yellow?logo=javascript"/>
@@ -22,6 +22,7 @@
 
 ## 📌 Introduce
 > [간단한 다운로드를 통해 수식 셰프를 경험해보세요!](https://store.whale.naver.com/search/%EC%88%98%EC%8B%9D%20%EC%85%B0%ED%94%84)
+
 ### 1. 다양한 수식들을 편집할 수 있고, Latex 문법을 사용할 수 있습니다!
 ### 2. 수식 사전을 이용해서 다양한 수식 템플릿을 적용할 수 있습니다!
 ### 3. 즐겨찾기 기능을 통해 나만의 수식을 등록하고 이용할 수 있습니다! (네이버 로그인 필요)
