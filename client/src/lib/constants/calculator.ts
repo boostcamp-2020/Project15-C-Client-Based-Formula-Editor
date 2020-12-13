@@ -3,6 +3,7 @@ const OPERATORS = ['+', '-', '*', '/'];
 const POWER = 'POWER(';
 const FACTORIAL = 'FACTORIAL';
 
+let flag = false;
 let operationArray: (string | number)[] = [];
 let formulaArray: (boolean | string | number)[] = [];
 let RADIAN = true;
@@ -410,6 +411,7 @@ const calculator = (
   setOutputResult: any
 ) => {
   const { name, symbol, formula, type } = button;
+  flag = false;
   switch (type) {
     case 'operator':
       operationArray.push(symbol);
@@ -460,6 +462,7 @@ const calculator = (
       }
       break;
     case 'calculate':
+      flag = true;
       let formulaStr = formulaArray.join('');
 
       // fix power & factorial
@@ -503,4 +506,4 @@ const calculator = (
   setOutputOperation(operationArray.join(''));
 };
 
-export { calculatorButtons, calculator };
+export { calculatorButtons, calculator, flag };
