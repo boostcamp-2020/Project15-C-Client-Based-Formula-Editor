@@ -62,7 +62,7 @@
 **Back-End** : Express, Typescript, Mysql2, TypeORM, NCloud
 
 ## 📌 기술 특장점
-### ⚙️ Chrome, Whale Extension 환경 개발
+### ✔️ Chrome, Whale Extension 환경 개발
 > 🔗[리액트 + 타입스크립트로 크롬 확장프로그램 적용하기](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki/%EB%A6%AC%EC%95%A1%ED%8A%B8---%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-=-%ED%81%AC%EB%A1%AC-%ED%99%95%EC%9E%A5%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EB%A7%8C%EB%93%A4%EA%B8%B0!)  
 
 웹 사이트 **어느 곳에서나 수식을 편집**하고, 편집한 수식을 쉽게 사용할 수 있는 서비스를 제공하기 위해 **Chrome Extension** 환경을 선택하게 되었습니다.   
@@ -70,7 +70,7 @@
 
 ---
 
-### 📚 오픈소스 수정 후, NPM 모듈 재배포 
+### ✔️ 오픈소스 수정 후, NPM 모듈 재배포 
 > 🔗 [나만의 모듈을 NPM 사이트에 직접 배포해보기](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki/%EB%82%98%EB%A7%8C%EC%9D%98-%EB%AA%A8%EB%93%88%EC%9D%84-NPM-%EC%82%AC%EC%9D%B4%ED%8A%B8%EC%97%90-%EC%A7%81%EC%A0%91-%EB%B0%B0%ED%8F%AC%ED%95%B4%EB%B3%B4%EA%B8%B0)  
 > 🔗 [React-Mathquill 라이브러리 분석](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki/React-Mathquill-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EB%B6%84%EC%84%9D)  
 > 🔗 [boost-mathquill link](https://www.npmjs.com/package/boost-mathquill)  
@@ -83,7 +83,7 @@ MathQuill 라이브러리는 Tag로 그려진 수식들을 직접 수정할 수 
 
 ---
 
-### 📁 컴포넌트 및 폴더 구조 설계
+### ✔️ 컴포넌트 및 폴더 구조 설계
 
 여러 React 디자인 패턴이 존재하지만, 이미 존재하는 디자인 패턴의 장점을 합쳐 **저희 팀만의 폴더 구조**를 고민하고 설계 해보았습니다.
 
@@ -105,7 +105,7 @@ MathQuill 라이브러리는 Tag로 그려진 수식들을 직접 수정할 수 
 
 ---
 
-### ⚛️ Redux를 활용한 상태 관리
+### ✔️ Redux를 활용한 상태 관리
 > 🔗 [TypeScript + React에 Redux 적용하기](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki/TypeScript---React%EC%97%90-Redux-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)  
 > 🔗 [TypeScript Redux에서 createAction 만들어보기](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki/TypeScript-Redux%EC%97%90%EC%84%9C-createAction-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EA%B8%B0)  
 
@@ -117,7 +117,7 @@ React 프로젝트가 커질 때 심해질 수 있는 **Prop Drilling** 현상�
 
 ---
  
-### 🔍 Custom Hooks를 통해 재사용성 높이기
+### ✔️ Custom Hooks를 통해 재사용성 높이기
 > 🔗 [Custom Hooks 생성기](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki/useDebounce,-useThrottle)  
 
 프로젝트를 진행하는 과정에서, **hooks**와 관련된 중복 코드가 많다는 사실을 알게 되었습니다.
