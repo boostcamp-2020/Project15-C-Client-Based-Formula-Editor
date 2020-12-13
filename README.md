@@ -8,11 +8,13 @@
 <p align="center">
   <img src="https://img.shields.io/badge/javascript-ES6+-yellow?logo=javascript"/>
   <img src="https://img.shields.io/badge/typescript-v4.0.5-blue?logo=typescript"/>
-  <img src="https://img.shields.io/badge/react-17.0.1-1cf?logo=react"/>
-  <img src="https://img.shields.io/badge/redux-4.0.5-purple?logo=redux"/>
   <img src="https://img.shields.io/badge/node.js-v15.2.1-green?logo=node.js"/>
   <img src="https://img.shields.io/badge/mysql-v5.7.32-blue?logo=mysql"/>
+  <img src="https://img.shields.io/badge/react-17.0.1-1cf?logo=react"/>
+  <img src="https://img.shields.io/badge/redux-4.0.5-purple?logo=redux"/>
   <img src="https://img.shields.io/badge/emotion-11.0.0-pink?logo=emotion"/>
+  <img src="https://img.shields.io/badge/Webpack-v4.44.1-%238DD6F9?logo=webpack"/>
+  <img src="https://img.shields.io/badge/Babel-v7.12.1-%23F9DC3E?logo=Babel"/>
 </p>
 
 ### 📩 [Download URL]()
