@@ -58,8 +58,8 @@
 
 ## 📌 기술 스택
 ![1](https://user-images.githubusercontent.com/60457112/102003331-35d52480-3d49-11eb-8b28-a69653ca5e7b.jpg)
-**Front-End** : React, Typescript, Redux, Emotion, Webpack & Babel, Mathquill Library  
-**Back-End** : Express, Typescript, Mysql2, TypeORM, NCloud
+### Front-End : React, Typescript, Redux, Emotion, Webpack & Babel, Mathquill Library  
+### Back-End : Express, Typescript, Mysql2, TypeORM, NCloud
 
 ## 📌 기술 특장점
 ### ✔️ Chrome, Whale Extension 환경 개발
