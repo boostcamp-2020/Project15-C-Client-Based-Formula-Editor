@@ -1,6 +1,4 @@
 # 부스토랑
-
-> [간단한 다운로드를 통해 수식 셰프를 경험해보세요!]()  
   
 <p align="center"><img src="https://user-images.githubusercontent.com/60457112/102003187-569c7a80-3d47-11eb-8412-3103461df502.gif" title="수식 셰프"/></p>
 
@@ -19,7 +17,9 @@
   <img src="https://img.shields.io/badge/Babel-v7.12.1-%23F9DC3E?logo=Babel"/>
 </p>
 
-### 📩 [Download URL]()
+### 📩 Download URL
+- 🔗 크롬 확장프로그램 다운 (검수중)
+- 🐳 웨일 확장프로그램 다운 (검수중)
 
 ### 📷 [프로젝트 실행 화면]()
 
