@@ -33,22 +33,7 @@ const Extension = styled.div<ExtensionProps>`
 `;
 function App() {
   const [toggle, onToggle] = useToggle(false);
-  const dispatch = useDispatch();
-  const checkLogin = async () => {
-    const token = await getToken();
-    if (!token) return;
-    const response = await API.post('/auth/autologin', '', {
-      headers: {
-        Authorization: token,
-      },
-    });
 
-    const { userId } = response.data.results;
-    dispatch(userLogin(userId));
-  };
-  useEffect(() => {
-    checkLogin();
-  }, []);
   return (
     <Extension height={toggle ? '80px' : '35%'} minHeight={toggle ? '' : '200px'}>
       <Frame

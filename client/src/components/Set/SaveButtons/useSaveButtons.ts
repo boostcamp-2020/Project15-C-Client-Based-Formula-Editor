@@ -123,31 +123,6 @@ export const useSaveButtons = () => {
 
   const [toggleModal, Modal] = useModal({ closeHandler, saveHandler, needButton: true });
 
-  const onClickLoginHandler = async () => {
-    chrome.runtime.sendMessage({ message: 'login' }, (response) => {
-      if (response.error) {
-        setLoginMessage(LoginMessage.LOGIN_FAUILRE);
-      }
-
-      if (response.results) {
-        const { userToken, userId } = response.results;
-        setToken(userToken);
-        dispatch(userLogin(userId));
-        dispatch(getFavoritesThunk(userId));
-        setLoginMessage(LoginMessage.LOGIN_SUCCESS);
-      }
-
-      setTimeout(() => {
-        setLoginMessage('');
-      }, MESSAGE_TIME);
-    });
-  };
-
-  const onClickLogoutHandler = async () => {
-    chrome.storage.sync.clear();
-    dispatch(userLogout());
-  };
-
   return {
     downloadImage,
     downloadText,
@@ -157,8 +132,6 @@ export const useSaveButtons = () => {
     imageUrl,
     createHandler,
     Modal,
-    onClickLoginHandler,
-    onClickLogoutHandler,
     userId,
   };
 };

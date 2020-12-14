@@ -17,19 +17,11 @@ function SaveButtons() {
     imageUrl,
     Modal,
     createHandler,
-    onClickLoginHandler,
-    onClickLogoutHandler,
     userId,
   } = useSaveButtons();
 
   return (
     <S.SaveButtonsContainer>
-      {userId ? (
-        <S.Img src={getImageURL('logout.png')} onClick={onClickLogoutHandler} />
-      ) : (
-        <S.Img src={getImageURL('login.png')} onClick={onClickLoginHandler} />
-      )}
-
       <Button.Group basic vertical>
         <Button content="이미지 저장" onClick={downloadImage} />
         <Button content="텍스트 저장" onClick={downloadText} />
