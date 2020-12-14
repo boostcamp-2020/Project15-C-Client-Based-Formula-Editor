@@ -34,7 +34,7 @@ function SaveButtons() {
         <Button content="이미지 저장" onClick={downloadImage} />
         <Button content="텍스트 저장" onClick={downloadText} />
         <Button content="QR코드 생성" onClick={createHandler} />
-        <Button content="화면 적용" onClick={clipboardHandler} />
+        <Button content="클립보드 복사" onClick={clipboardHandler} />
       </Button.Group>
 
       {message && (

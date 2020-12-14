@@ -2,10 +2,10 @@ import React from 'react';
 import { Header, Table, Label } from 'semantic-ui-react';
 import { useDispatch } from 'react-redux';
 import useTextAreaItem from './useTableItem';
-import * as S from './style';
 import { deleteFavorites } from '@contexts/user/actions';
 import favoriteAPI from '@lib/apis/favorite';
 import { FavoriteItem } from '@contexts/user/types';
+import * as S from './style';
 
 interface TableItemType {
   headerTitle: string;
@@ -32,7 +32,7 @@ function TableItem({ headerTitle, headerLatex, data }: TableItemType) {
         <S.TableContainer>
           <S.TableSpan onClick={() => onChangeHandler(item.latex)}>{item.latex}</S.TableSpan>
           <S.TableWrapper>
-            <Label size="mini" color="teal" onClick={() => removeHandler(item.id)}>
+            <Label size="mini" onClick={() => removeHandler(item.id)}>
               X
             </Label>
           </S.TableWrapper>

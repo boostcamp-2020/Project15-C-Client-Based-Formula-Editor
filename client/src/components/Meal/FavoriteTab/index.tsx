@@ -26,7 +26,8 @@ function FavoriteTab() {
         <Loading size={'mini'} />
       </Tab.Pane>
     );
-  if (error || !userInfo?.favoriteLists) return <Tab.Pane>에러 발생!</Tab.Pane>;
+  if (error || !userInfo?.favoriteLists)
+    return <AlertItem icon={NO_LIST_ICON} message={AlertMessage.NO_LIST_MESSAGE} />;
   const { favoriteLists } = userInfo;
 
   return (

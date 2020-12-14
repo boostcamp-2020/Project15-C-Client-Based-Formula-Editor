@@ -21,7 +21,7 @@ function MenuBar({ onToggle }: ResizeHeaderProps) {
   const MenuBarSaveButtons = [
     { title: '이미지 저장', iconName: 'image', size: 'massive', onClickHandler: downloadImage },
     { title: '텍스트 저장', iconName: 'file text', size: 'massive', onClickHandler: downloadText },
-    { title: '화면 적용', iconName: 'tv', size: 'massive', onClickHandler: clipboardHandler },
+    { title: '클립보드 복사', iconName: 'tv', size: 'massive', onClickHandler: clipboardHandler },
   ];
   return (
     <S.MenuBarContainer>

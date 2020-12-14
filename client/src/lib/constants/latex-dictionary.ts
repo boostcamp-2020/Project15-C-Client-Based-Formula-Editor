@@ -385,7 +385,7 @@ export const LATEX_DICTIONARY: DictionaryMenu[] = [
       },
       { latex: 'log_{ a }b=\\frac {1}{log_{ b }a} ', title: '밑의 변환공식' },
       {
-        latex: 'lim _{x\\to 0}\\frac {sinx}{x}=1 ',
+        latex: '\\lim _{x\\to 0}\\frac {sinx}{x}=1 ',
         title: '삼각함수의 극한의 기본',
       },
       {
