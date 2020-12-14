@@ -4,8 +4,6 @@ import { getCustomRepository } from 'typeorm';
 
 export interface CreateParams {
   email: string;
-  nickname: string;
-  profile_image: string;
 }
 
 class UserService {
@@ -29,8 +27,8 @@ class UserService {
     return user;
   }
 
-  async createUser({ email, nickname, profile_image }: CreateParams) {
-    const newUser = await this.userRepository.insertUesr({ email, nickname, profile_image });
+  async createUser({ email }: CreateParams) {
+    const newUser = await this.userRepository.insertUesr({ email });
     return newUser;
   }
 }

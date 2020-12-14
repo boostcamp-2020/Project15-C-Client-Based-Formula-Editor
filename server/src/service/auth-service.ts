@@ -31,12 +31,12 @@ class AuthService {
       },
     });
 
-    const { email, nickname, profile_image } = userData.response;
-    const payload = { email, nickname, profile_image };
+    const { email } = userData.response;
+    const payload = { email };
     const userToken = jwt.sign(payload, jwtSecret);
     let user = await UserService.getInstance().getUser(email);
     if (!user) {
-      user = await UserService.getInstance().createUser({ email, nickname, profile_image });
+      user = await UserService.getInstance().createUser({ email });
     }
 
     return {
