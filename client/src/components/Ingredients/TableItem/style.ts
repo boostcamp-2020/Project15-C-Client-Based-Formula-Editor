@@ -7,6 +7,10 @@ export const TableContainer = styled.div`
     &:hover {
       cursor: pointer;
     }
+    & .ui.mini.label {
+      background: rgb(215, 111, 126) !important;
+      color: white !important;
+    }
   }
 `;
 

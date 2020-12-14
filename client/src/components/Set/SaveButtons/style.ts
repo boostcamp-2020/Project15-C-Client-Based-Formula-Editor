@@ -19,6 +19,7 @@ export const Img = styled.img`
   border-radius: 5px;
   margin-top: 6px;
   width: 114px;
+  height: 44px;
   &:hover {
     cursor: pointer;
   }

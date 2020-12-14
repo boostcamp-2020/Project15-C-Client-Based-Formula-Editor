@@ -21,7 +21,7 @@ const useCalculatorTab = () => {
 
   const onClickOutputHandler = (e: React.MouseEvent) => {
     if (mathfield) {
-      mathfield.write((<HTMLButtonElement>e.target).innerText);
+      mathfield.write(outputOperation);
     }
   };
 
