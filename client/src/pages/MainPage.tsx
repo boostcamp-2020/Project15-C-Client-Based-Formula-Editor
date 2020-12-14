@@ -6,7 +6,7 @@ import Output from '@set/Output';
 import SaveButtons from '@set/SaveButtons';
 import { observer } from '../lib/utils/util';
 import ResizeHeader from '@set/ResizeHeader';
-import TestComponet from './TestComponet';
+import Loading from '@ingredients/Loading';
 
 const MainContainer = styled.section`
   display: flex;
@@ -38,13 +38,13 @@ interface MainPageProps {
   onToggle: () => void;
 }
 function MainPage({ toggle, onToggle }: MainPageProps) {
-  // const [isLoading, setLoading] = useState(false);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(true);
-  //   }, 3000);
-  // }, []);
-  // if (!isLoading) return <TestComponet />;
+  const [isLoading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+  if (isLoading) return <Loading size={'big'} />;
 
   if (toggle) return <ResizeHeader onToggle={onToggle} />;
   return (

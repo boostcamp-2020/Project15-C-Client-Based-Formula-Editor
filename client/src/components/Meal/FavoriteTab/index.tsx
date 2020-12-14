@@ -3,10 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@contexts/index';
 import TableItem from '@ingredients/TableItem';
 import { Tab } from 'semantic-ui-react';
-import * as S from './style';
 import AlertItem from '@ingredients/AlertItem';
 import { NEED_LOGIN_ICON, NO_LIST_ICON, AlertMessage } from '@constants/constants';
 import { getFavoritesThunk } from '@contexts/user';
+import Loading from '@ingredients/Loading';
+import * as S from './style';
 
 function FavoriteTab() {
   const dispatch = useDispatch();
@@ -19,9 +20,13 @@ function FavoriteTab() {
     }
   }, [dispatch]);
 
-  if (loading) return <div>로딩중...</div>;
-  if (error) return <div>에러 발생!</div>;
-  if (!userInfo?.favoriteLists) return null;
+  if (loading)
+    return (
+      <Tab.Pane>
+        <Loading size={'mini'} />
+      </Tab.Pane>
+    );
+  if (error || !userInfo?.favoriteLists) return <Tab.Pane>에러 발생!</Tab.Pane>;
   const { favoriteLists } = userInfo;
 
   return (
