@@ -22,7 +22,6 @@ export const DICTIONARY_MENU_TITLE: MenuTitle = {
   limit: '극한과 로그',
   differential: '미분/적분/벡터',
   statistics: '확률/통계',
-  matrix: '행렬',
   sequence: '수열',
 };
 
@@ -442,11 +441,7 @@ export const LATEX_DICTIONARY: DictionaryMenu[] = [
           '\\int {\\left( f\\left( x \\right)\\pm g\\left( x \\right) \\right)dx}=\\int {f\\left( x \\right)dx}\\pm \\int {g\\left( x \\right)dx\\quad } \\left( 복호동순 \\right) ',
         title: '부정적분의 기본공식',
       },
-      {
-        latex:
-          'int _{ a }^{ b }{ fleft( x \\right)dx }=lim { n…left( x{ k } \\right)cdot \\righttriangle x } } ',
-        title: '정적분의 정의',
-      },
+
       {
         latex:
           '\\int _{ a }^{ b }{ f\\left( x \\right)dx }=\\lim _{ n\\to \\infty  }{ \\sum _{ k=1 }^{ n }{ f\\left( x_{ k } \\right)\\cdot \\righttriangle x } }  ',
@@ -535,62 +530,6 @@ export const LATEX_DICTIONARY: DictionaryMenu[] = [
         latex:
           '\\sigma ^{ 2 }=\\frac { 1 }{ N }\\sum _{ i=1 }^{ n }{ \\left( x_{ i }-A \\right)^{ 2 }f_{ i } }-\\left( \\frac { 1 }{ N }\\sum _{ i=1 }^{ n }{ \\left( x_{ i }^{ 2 }-A \\right)f_{ i } } \\right)^{ 2 }\\  \\left( N=\\sum _{ i=1 }^{ n }{ f_{ i } },\\quad A는\\quad 가평균 \\right) ',
         title: '표준편차의 계산',
-      },
-    ],
-  },
-  {
-    menu: DICTIONARY_MENU_TITLE.matrix,
-    content: [
-      {
-        latex:
-          'A=\\begin{pmatrix}{ { a }{ 11 } }&{ { a }{ 12 } }… } &{ { a }{ 22 }+ { b }{ 22 } }end{pmatrix} ',
-        title: '행렬의 합',
-      },
-      {
-        latex:
-          'A=\\begin{pmatrix}{ { a }{ 11 } }&{ { a }{ 12 } }… } }&{ { a }{ 22 }- { b }{ 22 } }end{pmatrix} ',
-        title: '행렬의 차',
-      },
-      {
-        latex:
-          'A=\\begin{pmatrix}{ { a }{ 11 } }&{ { a }{ 12 }… { ka }{ 21 } }&{ { ka }{ 22 } }end{pmatrix} ',
-        title: '행렬의 곱',
-      },
-      {
-        latex:
-          '\\begin{pmatrix}{ a }&{ b }end{pmatrix}\\begin{pmat…x}{ x }{ y }end{pmatrix}=left( ax+by \\right) ',
-        title: '행렬의 곱(1x2와 2x1)',
-      },
-      {
-        latex:
-          '\\begin{pmatrix}{ a }&{ b }end{pmatrix}\\begin{pmat…=\\begin{pmatrix}{ ax+by }&{ au+bv }end{pmatrix} ',
-        title: '행렬의 곱(1x2와 2x2)',
-      },
-      {
-        latex:
-          '\\begin{pmatrix}{ a }{ b }end{pmatrix}\\begin{pma…matrix}{ ax }&{ ay }{ bx }&{ by }end{pmatrix} ',
-        title: '행렬의 곱(2x1와 1x2)',
-      },
-      {
-        latex:
-          '\\begin{pmatrix}{ a }&{ b }{ c }&{ d }end{pmatri…\\begin{pmatrix}{ ax+by }{ cx+dy }end{pmatrix} ',
-        title: '행렬의 곱(2x2와 2x1)',
-      },
-      {
-        latex:
-          '\\begin{pmatrix}{ a }&{ b }{ c }&{ d }end{pmatri…by }&{ au+bv }{ cx+dy }&{ cu+dv }end{pmatrix} ',
-        title: '행렬의 곱(2x2와 2x2)',
-      },
-      {
-        latex:
-          '\\begin{pmatrix}{ a }&{ b }&{ c }{ d }&{ e }&{ f …+bv+cw }{ dx+ey+fz }&{ du+ev+fw }end{pmatrix} ',
-        title: '행렬의 곱(2x3과 3x2)',
-      },
-      {
-        latex:
-          'A=\\begin{pmatrix}{ a }&{ b }{ c }&{ d }end{pmat…d{pmatrix} left( 단,quad ad-bc\\n' +
-          'eq 0 \\right) ',
-        title: '역행렬',
       },
     ],
   },

@@ -19,9 +19,9 @@ const useCalculatorTab = () => {
     });
   };
 
-  const onClickOutputHandler = (e: React.MouseEvent<HTMLButtonElement | MouseEvent>) => {
+  const onClickOutputHandler = (e: React.MouseEvent) => {
     if (mathfield) {
-      mathfield.write((<HTMLButtonElement>e.target).value);
+      mathfield.write((<HTMLButtonElement>e.target).innerText);
     }
   };
 

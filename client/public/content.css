@@ -1,4 +1,10 @@
-a, button, textarea, select, input, option, .globalFont{
+a,
+button,
+textarea,
+select,
+input,
+option,
+.globalFont {
   font-family: 'Noto Sans KR', sans-serif !important;
 }
 
@@ -200,7 +206,7 @@ a, button, textarea, select, input, option, .globalFont{
   margin: 0;
 }
 .mq-math-mode big {
-  font-size: 200%;
+  font-size: 150%;
 }
 .mq-math-mode .mq-int > big {
   display: inline-block;
@@ -573,4 +579,32 @@ a, button, textarea, select, input, option, .globalFont{
   width: auto; /* defensive resets */
   padding: 0.1em 0.3em;
   vertical-align: baseline;
+}
+
+.mq-custom {
+  display: block;
+  margin-top: -8px;
+  margin-bottom: -4px;
+}
+
+.mq-custom_2 {
+  display: block;
+  margin-top: -4px;
+  margin-bottom: -4px;
+}
+
+.mq-limit {
+  text-align: center;
+  vertical-align: middle;
+  margin: 2px;
+}
+.mq-limit .mq-lim {
+  display: block;
+  font-size: 70%;
+}
+.mq-limit .mq-approaches {
+  font-size: 50%;
+  float: right; /* take out of normal flow to manipulate baseline */
+  width: 100%;
+  display: block;
 }

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Tab } from 'semantic-ui-react';
+import { Tab, TextArea } from 'semantic-ui-react';
 import useCalculatorTab from './useCalculatorTab';
-import { calculatorButtons } from '@constants/calculator';
+import { calculatorButtons, flag } from '@constants/calculator';
+import { Button, Ref } from 'semantic-ui-react';
 import * as S from './style';
 
 function CalculatorTab() {
@@ -17,9 +18,9 @@ function CalculatorTab() {
   const createButtonItems = (row: number, col = 8) => (
     <S.ButtonRow>
       {calculatorButtons.slice(row * col, (row + 1) * col).map((button, index) => (
-        <S.ButtonItem key={index} id={button.name}>
+        <Button key={index} id={button.name}>
           {button.symbol}
-        </S.ButtonItem>
+        </Button>
       ))}
     </S.ButtonRow>
   );
@@ -29,16 +30,18 @@ function CalculatorTab() {
       <S.CalculatorContainer>
         <S.CalculatorInputWrapper onClick={(e) => onClickHandler(e)}>
           <S.ButtonRow>
-            <S.ButtonItem ref={radRef} id={calculatorButtons[0].name} className="active-angle">
-              {calculatorButtons[0].symbol}
-            </S.ButtonItem>
-            <S.ButtonItem ref={degRef} id={calculatorButtons[1].name}>
-              {calculatorButtons[1].symbol}
-            </S.ButtonItem>
+            <Ref innerRef={radRef}>
+              <Button id={calculatorButtons[0].name} className="active-angle">
+                {calculatorButtons[0].symbol}
+              </Button>
+            </Ref>
+            <Ref innerRef={degRef}>
+              <Button id={calculatorButtons[1].name}>{calculatorButtons[1].symbol}</Button>
+            </Ref>
             {calculatorButtons.slice(2, 8).map((button, index) => (
-              <S.ButtonItem key={index} id={button.name}>
+              <Button key={index} id={button.name}>
                 {button.symbol}
-              </S.ButtonItem>
+              </Button>
             ))}
           </S.ButtonRow>
           {createButtonItems(1)}
@@ -47,10 +50,16 @@ function CalculatorTab() {
           {createButtonItems(4)}
         </S.CalculatorInputWrapper>
         <S.CalculatorOutputWrapper>
-          <S.OutputOperation>{outputOperation}</S.OutputOperation>
-          <S.OutputResult value={outputResult} onClick={(e) => onClickOutputHandler(e)}>
-            {outputResult}
-          </S.OutputResult>
+          <S.OutputOperation
+            readOnly
+            value={flag ? outputOperation + '=' + outputResult : outputOperation}
+          />
+          <Button
+            content={outputResult}
+            onClick={onClickOutputHandler}
+            icon="right arrow"
+            labelPosition="right"
+          />
         </S.CalculatorOutputWrapper>
       </S.CalculatorContainer>
     </Tab.Pane>

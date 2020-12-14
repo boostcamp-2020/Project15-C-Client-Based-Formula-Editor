@@ -521,19 +521,19 @@ const FORMULA_HEADER: LatexHeader[] = [
       },
       {
         image: `/9/4.svg`,
-        latex: `\\lim _{ }^{ }\\combi{ }`,
+        latex: `\\lim _{ }\\combi{ }`,
       },
       {
         image: `/9/5.svg`,
-        latex: `\\lim _{\\combi{ }\\to \\combi{ }}^{ }\\combi{ }`,
+        latex: `\\lim _{\\combi{ }\\to \\combi{ }}\\combi{ }`,
       },
       {
         image: `/9/6.svg`,
-        latex: `\\min _{ }^{ }\\combi{ }`,
+        latex: `\\min _{ }\\combi{ }`,
       },
       {
         image: `/9/7.svg`,
-        latex: `\\max _{ }^{ }\\combi{ }`,
+        latex: `\\max _{ }\\combi{ }`,
       },
       {
         image: `/9/8.svg`,
@@ -541,23 +541,23 @@ const FORMULA_HEADER: LatexHeader[] = [
       },
       {
         image: `/9/9.svg`,
-        latex: `\\lim _{n\\to \\infty }^{ }\\combi{ }`,
+        latex: `\\lim _{n\\to \\infty }\\combi{ }`,
       },
       {
         image: `/9/11.svg`,
-        latex: `\\lim _{\\righttriangle x\\to 0}^{ }\\frac{\\righttriangle y}{\\righttriangle x}`,
+        latex: `\\lim _{\\righttriangle x\\to 0}\\frac{\\righttriangle y}{\\righttriangle x}`,
       },
       {
         image: `/9/10-b.svg`,
-        latex: `\\lim _{n\\to \\infty }^{ }\\left(a_n\\pm b_n\\right)`,
+        latex: `\\lim _{n\\to \\infty }\\left(a_n\\pm b_n\\right)`,
       },
       {
         image: `/9/12-b.svg`,
-        latex: `\\lim _{n\\to \\infty }^{ }\\left(1+\\frac{1}{n}\\right)^n`,
+        latex: `\\lim _{n\\to \\infty }\\left(1+\\frac{1}{n}\\right)^n`,
       },
       {
         image: `/9/13-b.svg`,
-        latex: `\\lim _{n\\to \\infty }^{ }\\sum _{k=1}^n\\combi{ }`,
+        latex: `\\lim _{n\\to \\infty }\\sum _{k=1}^n\\combi{ }`,
       },
     ],
   },
@@ -593,44 +593,12 @@ const FORMULA_HEADER: LatexHeader[] = [
         latex: `\\deltaequal `,
       },
       {
-        image: `/10/8.svg`,
-        latex: `\\xleftarrow {\\ }{ }`,
-      },
-      {
-        image: `/10/9.svg`,
-        latex: `\\xrightarrow {\\ }{ }`,
-      },
-      {
-        image: `/10/10.svg`,
-        latex: `\\xleftarrow { }{\\ }`,
-      },
-      {
-        image: `/10/11.svg`,
-        latex: `\\xrightarrow { }{\\ }`,
-      },
-      {
         image: `/10/12.svg`,
         latex: `\\xleftarrow { }{ }`,
       },
       {
         image: `/10/13.svg`,
         latex: `\\xrightarrow { }{ }`,
-      },
-      {
-        image: `/10/14.svg`,
-        latex: `\\Xleftarrow {\\ }{ }`,
-      },
-      {
-        image: `/10/15.svg`,
-        latex: `\\Xrightarrow {\\ }{ }`,
-      },
-      {
-        image: `/10/16.svg`,
-        latex: `\\Xleftarrow { }{\\ }`,
-      },
-      {
-        image: `/10/17.svg`,
-        latex: `\\Xrightarrow { }{\\ }`,
       },
       {
         image: `/10/18.svg`,
@@ -641,45 +609,17 @@ const FORMULA_HEADER: LatexHeader[] = [
         latex: `\\Xrightarrow { }{ }`,
       },
       {
-        image: `/10/20.svg`,
-        latex: `\\xleftrightarrow {\\ }{ }`,
-      },
-      {
-        image: `/10/21.svg`,
-        latex: `\\xleftrightarrow { }{\\ }`,
-      },
-      {
         image: `/10/22.svg`,
         latex: `\\xleftrightarrow { }{ }`,
-      },
-      {
-        image: `/10/23.svg`,
-        latex: `\\Xleftrightarrow {\\ }{ }`,
-      },
-      {
-        image: `/10/24.svg`,
-        latex: `\\Xleftrightarrow { }{\\ }`,
       },
       {
         image: `/10/25.svg`,
         latex: `\\Xleftrightarrow { }{ }`,
       },
-      // {
-      //   image: `/10/26.svg`,
-      //   latex: `\\xrightarrow {yields}{\\ }`,
-      // },
       {
         image: `/10/27.svg`,
         latex: `\\xrightarrow {\\triangle }{\\ }`,
       },
-      // {
-      //   image: `/10/28.svg`,
-      //   latex: `\\xleftrightarrow {전개}{인수분해}`,
-      // },
-      // {
-      //   image: `/10/29.svg`,
-      //   latex: `\\Xrightarrow {부정}{\\ }`,
-      // },
     ],
   },
   {
