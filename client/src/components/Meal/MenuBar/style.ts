@@ -53,6 +53,7 @@ export const MessageContainer = styled.div`
 
 export const ButtonWrapper = styled.div`
   padding-top: 10px;
+  margin-left: 10px;
   & div > button {
     height: 100%;
     padding: 15px 10px 10px 10px !important;

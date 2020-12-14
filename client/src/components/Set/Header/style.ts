@@ -24,7 +24,7 @@ export const LogoImg = styled.img`
 `;
 
 export const ButtonWrapper = styled.div`
-  margin-right: 20px;
+  margin: 0px 20px;
   & div {
     height: 50px;
   }

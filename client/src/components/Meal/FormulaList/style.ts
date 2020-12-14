@@ -78,7 +78,7 @@ export const FormulaList = styled.ul<FormulaListFrops>`
   margin: 10px auto;
   padding: 0;
   border: 1px solid #bdbdbd;
-  background: #eaeaea;
+  background: #f6f8fa;
   overflow-y: auto;
   z-index: 99999;
   list-style: none;

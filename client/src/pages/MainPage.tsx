@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import Header from '../components/Set/Header';
 import styled from '@emotion/styled';
 import Input from '@set/Input';
+import Header from '@set/Header';
 import Output from '@set/Output';
-import SaveButtons from '@set/SaveButtons';
-import { observer } from '../lib/utils/util';
-import ResizeHeader from '@set/ResizeHeader';
 import Loading from '@ingredients/Loading';
+import SaveButtons from '@set/SaveButtons';
+import ResizeHeader from '@set/ResizeHeader';
+
+import { observer } from '@utils/util';
 
 const MainContainer = styled.section`
   display: flex;
@@ -22,10 +23,12 @@ const MainContainer = styled.section`
     }
   }
 `;
+
 const Main = styled.div`
   height: 100%;
   display: flex;
 `;
+
 const ContentsContainer = styled.div`
   height: 100%;
   display: flex;
@@ -37,6 +40,7 @@ interface MainPageProps {
   toggle: boolean;
   onToggle: () => void;
 }
+
 function MainPage({ toggle, onToggle }: MainPageProps) {
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {

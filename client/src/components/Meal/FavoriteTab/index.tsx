@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '@contexts/index';
 import TableItem from '@ingredients/TableItem';
-import { Tab } from 'semantic-ui-react';
 import AlertItem from '@ingredients/AlertItem';
+import { Tab } from 'semantic-ui-react';
+import { RootState } from '@contexts/index';
 import { NEED_LOGIN_ICON, NO_LIST_ICON, AlertMessage } from '@constants/constants';
 import { getFavoritesThunk } from '@contexts/user';
 import Loading from '@ingredients/Loading';

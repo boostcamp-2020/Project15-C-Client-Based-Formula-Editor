@@ -1,8 +1,8 @@
+import { useCallback, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { editLatex } from '@contexts/latex';
-import useToggle from '@hooks/useToggle';
-import { useCallback, useEffect, useRef } from 'react';
 import { observer } from '@utils/util';
+import useToggle from '@hooks/useToggle';
 
 const useFormatButtons = () => {
   const dispatch = useDispatch();
@@ -41,9 +41,6 @@ const useFormatButtons = () => {
     colorRef,
     sizeMenu,
     toggleSizeMenu,
-    setSizeMenu,
-    colorMenu,
-    toggleColorMenu,
     alignHandler,
     clearHandler,
   };

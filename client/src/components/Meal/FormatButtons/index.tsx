@@ -5,29 +5,24 @@ import FontColorMenu from '@ingredients/FontColorMenu';
 import useFormatButtons from './useFormatButtons';
 import * as S from './style';
 
-function TemplateButtons() {
+function FormatButtons() {
   const {
     sizeRef,
     sizeMenu,
     toggleSizeMenu,
     colorRef,
-    colorMenu,
-    toggleColorMenu,
     alignHandler,
     clearHandler,
   } = useFormatButtons();
 
   return (
     <>
-      <S.TemplateButtonsContainer>
+      <S.FormatButtonsContainer>
         <Button.Group basic>
-          {/* <S.CololrDiv ref={sizeRef}> */}
           <div ref={sizeRef}>
             <Button icon="text height" onClick={toggleSizeMenu} />
           </div>
           {sizeMenu && <FontSizeMenu toggleSizeMenu={toggleSizeMenu} />}
-          {/* </S.CololrDiv> */}
-
           <S.CololrDiv ref={colorRef}>
             <Button icon="tint" />
             <FontColorMenu />
@@ -41,9 +36,9 @@ function TemplateButtons() {
         <Button.Group basic>
           <Button icon="eraser" onClick={clearHandler} />
         </Button.Group>
-      </S.TemplateButtonsContainer>
+      </S.FormatButtonsContainer>
     </>
   );
 }
 
-export default TemplateButtons;
+export default FormatButtons;

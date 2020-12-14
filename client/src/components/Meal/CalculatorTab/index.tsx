@@ -55,7 +55,7 @@ function CalculatorTab() {
             value={flag ? outputOperation + '=' + outputResult : outputOperation}
           />
           <Button
-            content={'값 적용'}
+            content={<div>값 적용</div>}
             onClick={onClickOutputHandler}
             icon="right arrow"
             labelPosition="right"
