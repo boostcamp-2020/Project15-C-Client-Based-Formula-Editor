@@ -2,9 +2,9 @@ import styled from '@emotion/styled';
 
 export const HeaderContainer = styled.div`
   display: flex;
-  border-top: 1px solid #d4d4d5;
-  border-bottom: 1px solid #d4d4d5;
-  background-color: #f3f3f3;
+  border-top: 1px solid #e1e4e8;
+  border-bottom: 1px solid #e1e4e8;
+  background-color: #f6f8fa;
   width: 100%;
   height: 74px;
   align-items: center;
