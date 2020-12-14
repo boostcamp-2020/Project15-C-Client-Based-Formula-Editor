@@ -22,6 +22,8 @@ export const LabelWrapper = styled.div`
   align-items: center;
 `;
 
-export const LabelIcon = styled.div``;
+export const LabelIcon = styled.div`
+  padding-left: 4px;
+`;
 
 export const LabelText = styled.div``;
