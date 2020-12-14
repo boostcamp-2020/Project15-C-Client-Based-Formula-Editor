@@ -59,7 +59,7 @@ export const CalculatorOutputWrapper = styled.div`
   height: 100%;
 
   & .ui.labeled.icon.button {
-    padding-right: 20px !important;
+    padding-right: 40px !important;
     width: 100%;
   }
 `;
