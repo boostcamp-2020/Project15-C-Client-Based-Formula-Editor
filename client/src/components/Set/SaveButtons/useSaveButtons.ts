@@ -12,6 +12,7 @@ import useModal from '@hooks/useModal';
 import { userLogin, userLogout } from '@contexts/user';
 import axios from 'axios';
 import { LoginMessage, MESSAGE_TIME } from '@constants/constants';
+import { getFavoritesThunk } from '@contexts/user';
 
 export const useSaveButtons = () => {
   const dispatch = useDispatch();
@@ -132,6 +133,7 @@ export const useSaveButtons = () => {
         const { userToken, userId } = response.results;
         setToken(userToken);
         dispatch(userLogin(userId));
+        dispatch(getFavoritesThunk(userId));
         setLoginMessage(LoginMessage.LOGIN_SUCCESS);
       }
 
