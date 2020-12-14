@@ -4,7 +4,7 @@ export const MenuBarContainer = styled.div`
   height: 100%;
   width: 100%;
   border-top: 1px solid #d4d4d5;
-  background: #f3f3f3;
+  background: #f6f8fa;
   display: flex;
   justify-content: space-around;
 `;
