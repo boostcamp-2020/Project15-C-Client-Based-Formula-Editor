@@ -123,19 +123,19 @@ const calculatorButtons: ButtonType[] = [
   {
     name: 'acos',
     symbol: 'acos',
-    formula: 'inv_trigo(Math.acos,',
+    formula: 'invTrigo(Math.acos,',
     type: 'trigo_function',
   },
   {
     name: 'asin',
     symbol: 'asin',
-    formula: 'inv_trigo(Math.asin,',
+    formula: 'invTrigo(Math.asin,',
     type: 'trigo_function',
   },
   {
     name: 'atan',
     symbol: 'atan',
-    formula: 'inv_trigo(Math.atan,',
+    formula: 'invTrigo(Math.atan,',
     type: 'trigo_function',
   },
   {
@@ -256,99 +256,103 @@ const calculatorButtons: ButtonType[] = [
   },
 ];
 
-const powerBaseGetter = (formula: (boolean | string | number)[], POWER_SEARCH_RESULT: number[]) => {
-  const powers_bases: any[] = [];
+const powerBaseGetter = (
+  formulaArray: (boolean | string | number)[],
+  powerSearchResult: number[]
+) => {
+  const powersBases: any[] = [];
 
-  POWER_SEARCH_RESULT.forEach((power_index) => {
+  powerSearchResult.forEach((powerIndex) => {
     const base = [];
-    let parentheses_count = 0;
-    let previous_index = power_index - 1;
+    let parenthesesCount = 0;
+    let previousIndex = powerIndex - 1;
 
-    while (previous_index >= 0) {
-      if (formula[previous_index] === '(') parentheses_count--;
-      if (formula[previous_index] === ')') parentheses_count++;
+    while (previousIndex >= 0) {
+      if (formulaArray[previousIndex] === '(') parenthesesCount--;
+      if (formulaArray[previousIndex] === ')') parenthesesCount++;
 
-      let is_operator = false;
+      let isOperator = false;
       OPERATORS.forEach((OPERATOR) => {
-        if (formula[previous_index] === OPERATOR) is_operator = true;
+        if (formulaArray[previousIndex] === OPERATOR) isOperator = true;
       });
-      const is_power = formula[previous_index] == POWER;
 
-      if ((is_operator && parentheses_count === 0) || is_power) break;
+      const isPower = formulaArray[previousIndex] == POWER;
 
-      base.unshift(formula[previous_index]);
-      previous_index--;
+      if ((isOperator && parenthesesCount === 0) || isPower) break;
+
+      base.unshift(formulaArray[previousIndex]);
+      previousIndex--;
     }
 
-    powers_bases.push(base.join(''));
+    powersBases.push(base.join(''));
   });
 
-  return powers_bases;
+  return powersBases;
 };
 
 const factorialNumberGetter = (
-  formula: (boolean | string | number)[],
-  FACTORIAL_SEARCH_RESULT: number[]
+  formulaArray: (boolean | string | number)[],
+  factorialSeachResult: number[]
 ) => {
   const numbers: any[] = [];
-  let factorial_sequence = 0;
+  let factorialSequence = 0;
 
-  FACTORIAL_SEARCH_RESULT.forEach((factorial_index) => {
+  factorialSeachResult.forEach((factorialIndex) => {
     const number = [];
-    const next_index = factorial_index + 1;
-    const next_input = formula[next_index];
+    const nextIndex = factorialIndex + 1;
+    const nextInput = formulaArray[nextIndex];
 
-    if (next_input === FACTORIAL) {
-      factorial_sequence += 1;
+    if (nextInput === FACTORIAL) {
+      factorialSequence += 1;
       return;
     }
 
-    const first_factorial_index = factorial_index - factorial_sequence;
+    const firstFactorialIndex = factorialIndex - factorialSequence;
 
-    let previous_index = first_factorial_index - 1;
-    let parentheses_count = 0;
+    let previousIndex = firstFactorialIndex - 1;
+    let parenthesesCount = 0;
 
-    while (previous_index >= 0) {
-      if (formula[previous_index] === '(') parentheses_count--;
-      if (formula[previous_index] === ')') parentheses_count++;
+    while (previousIndex >= 0) {
+      if (formulaArray[previousIndex] === '(') parenthesesCount--;
+      if (formulaArray[previousIndex] === ')') parenthesesCount++;
 
-      let is_operator = false;
+      let isOperator = false;
       OPERATORS.forEach((OPERATOR) => {
-        if (formula[previous_index] === OPERATOR) is_operator = true;
+        if (formulaArray[previousIndex] === OPERATOR) isOperator = true;
       });
 
-      if (is_operator && parentheses_count === 0) break;
+      if (isOperator && parenthesesCount === 0) break;
 
-      number.unshift(formula[previous_index]);
-      previous_index--;
+      number.unshift(formulaArray[previousIndex]);
+      previousIndex--;
     }
 
-    const number_str = number.join('');
+    const numberStr = number.join('');
     const factorial = 'factorial(';
-    const close_parenthesis = ')';
-    const times = factorial_sequence + 1;
+    const closeParenthesis = ')';
+    const times = factorialSequence + 1;
 
-    const toReplace = number_str + FACTORIAL.repeat(times);
-    const replacement = factorial.repeat(times) + number_str + close_parenthesis.repeat(times);
+    const toReplace = numberStr + FACTORIAL.repeat(times);
+    const replacement = factorial.repeat(times) + numberStr + closeParenthesis.repeat(times);
 
     numbers.push({
       toReplace: toReplace,
       replacement: replacement,
     });
 
-    factorial_sequence = 0;
+    factorialSequence = 0;
   });
 
   return numbers;
 };
 
 const search = (array: (boolean | string | number)[], keyword: string): number[] => {
-  const search_result: number[] = [];
+  const searchResult: number[] = [];
   array.forEach((element, index) => {
-    if (element === keyword) search_result.push(index);
+    if (element === keyword) searchResult.push(index);
   });
 
-  return search_result;
+  return searchResult;
 };
 
 const factorial = (num: number) => {
@@ -396,7 +400,7 @@ const trigo = (callback: any, angle: number) => {
   return callback(angle);
 };
 
-const inv_trigo = (callback: any, value: any) => {
+const invTrigo = (callback: any, value: number) => {
   let angle = callback(value);
   if (!RADIAN) angle = (angle * 180) / Math.PI;
   return angle;
@@ -437,8 +441,8 @@ const calculator = (
         operationArray.push('2)');
         formulaArray.push('2)');
       } else {
-        operationArray.push('(' + symbol);
-        formulaArray.push('(' + formula);
+        operationArray.push(symbol + '(');
+        formulaArray.push(formula + '(');
       }
       break;
     case 'key':
@@ -463,11 +467,11 @@ const calculator = (
       let formulaStr = formulaArray.join('');
 
       // fix power & factorial
-      const POWER_SEARCH_RESULT = search(formulaArray, POWER);
-      const FACTORIAL_SEARCH_RESULT = search(formulaArray, FACTORIAL);
+      const powerSearchResult = search(formulaArray, POWER);
+      const factorialSeachResult = search(formulaArray, FACTORIAL);
 
       // get power base and replace with right formula
-      const BASES = powerBaseGetter(formulaArray, POWER_SEARCH_RESULT);
+      const BASES = powerBaseGetter(formulaArray, powerSearchResult);
       BASES.forEach((base) => {
         const toReplace = base + POWER;
         const replacement = 'Math.pow(' + base + ',';
@@ -476,7 +480,7 @@ const calculator = (
       });
 
       // get factorial number and replace with right formula
-      const NUMBERS = factorialNumberGetter(formulaArray, FACTORIAL_SEARCH_RESULT);
+      const NUMBERS = factorialNumberGetter(formulaArray, factorialSeachResult);
 
       NUMBERS.forEach((factorial) => {
         formulaStr = formulaStr.replace(factorial.toReplace, factorial.replacement);
