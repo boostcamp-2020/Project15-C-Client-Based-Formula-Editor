@@ -4,12 +4,12 @@ import { CreateParams } from '@service/user-service';
 
 @EntityRepository(User)
 export default class UserRepository extends Repository<User> {
-  findUser(iat: string) {
-    return this.findOne({ iat });
+  findUser(userId: string) {
+    return this.findOne({ userId });
   }
 
-  insertUesr({ email, iat }: CreateParams) {
-    const newUser = this.create({ email, iat });
+  insertUesr({ email, userId }: CreateParams) {
+    const newUser = this.create({ email, userId });
     return this.manager.save(newUser);
   }
 }

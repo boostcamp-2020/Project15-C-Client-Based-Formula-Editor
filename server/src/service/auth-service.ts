@@ -30,13 +30,12 @@ class AuthService {
         Authorization: `Bearer ${ACCESS_TOKEN}`,
       },
     });
-
-    const { email, iat } = userData.response;
-    const payload = { email, iat };
+    const { email, id: userId } = userData.response;
+    const payload = { email, userId };
     const userToken = jwt.sign(payload, jwtSecret);
-    let user = await UserService.getInstance().getUser(iat);
+    let user = await UserService.getInstance().getUser(userId);
     if (!user) {
-      user = await UserService.getInstance().createUser({ iat, email });
+      user = await UserService.getInstance().createUser({ userId, email });
     }
 
     return {

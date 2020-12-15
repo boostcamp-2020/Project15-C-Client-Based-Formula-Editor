@@ -9,20 +9,18 @@ export interface userInfo {
   email: string;
   nickname: string;
   profileImage: string;
-  iat: string;
+  userId: string;
 }
 
 const AuthController = {
   async login(req: Request, res: Response) {
     try {
       const { code } = req.body;
-      console.log(`Code: ${code}`);
       if (!isValidateType(code, ValidateType.String)) {
         return res.status(STATUS_CODE.CLIENT_ERROR).json({ message: ERROR_MESSAGE.CLIENT_ERROR });
       }
 
       const results = await AuthService.getInstance().login(code);
-      console.log(`results: ${results}`);
       res.status(STATUS_CODE.SUCCESS).json({ results });
     } catch (err) {
       console.error('login Error' + err);
@@ -38,10 +36,10 @@ const AuthController = {
       const token = req.headers.authorization;
       if (token) {
         const decodedToken = jwt.verify(token, jwtSecret);
-        const { iat } = decodedToken as userInfo;
-        const user = await UserService.getInstance().getUser(iat);
+        const { userId } = decodedToken as userInfo;
+        const user = await UserService.getInstance().getUser(userId);
         if (user) {
-          req.user = { userId: user.id };
+          req.user = { id: user.id };
           return next();
         }
       }
@@ -57,8 +55,8 @@ const AuthController = {
   async autoLogin(req: Request, res: Response) {
     try {
       const { user } = req;
-      if (user?.userId) {
-        return res.status(200).json({ results: { userId: user.userId } });
+      if (user?.id) {
+        return res.status(200).json({ results: { userId: user.id } });
       }
 
       return res

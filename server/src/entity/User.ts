@@ -6,8 +6,8 @@ export class User {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @Column('varchar', { length: 50 })
-  iat!: string;
+  @Column('varchar', { length: 20 })
+  userId!: string;
 
   @Column('varchar', { length: 45 })
   email!: string;

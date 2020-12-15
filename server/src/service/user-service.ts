@@ -4,7 +4,7 @@ import { getCustomRepository } from 'typeorm';
 
 export interface CreateParams {
   email: string;
-  iat: string;
+  userId: string;
 }
 
 class UserService {
@@ -23,13 +23,13 @@ class UserService {
     return UserService.instance;
   }
 
-  async getUser(iat: string) {
-    const user = await this.userRepository.findUser(iat);
+  async getUser(userId: string) {
+    const user = await this.userRepository.findUser(userId);
     return user;
   }
 
-  async createUser({ email, iat }: CreateParams) {
-    const newUser = await this.userRepository.insertUesr({ email, iat });
+  async createUser({ email, userId }: CreateParams) {
+    const newUser = await this.userRepository.insertUesr({ email, userId });
     return newUser;
   }
 }
