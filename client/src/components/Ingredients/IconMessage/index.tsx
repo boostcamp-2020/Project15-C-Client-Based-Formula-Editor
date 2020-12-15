@@ -18,7 +18,7 @@ function IconMessage({ title, iconName, size, onClickHandler }: IconMessageProps
     setToggleMessage(false);
   };
   return (
-    <S.IconMessageContainer title={title}>
+    <S.IconMessageContainer title={title} data-testid="icon-message">
       <Button
         icon={iconName}
         size={size}

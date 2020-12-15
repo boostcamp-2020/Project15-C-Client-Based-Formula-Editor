@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
-import useCurrentTab from '@hooks/useCurrentTab';
 import { editLatex } from '@contexts/latex';
+import useCurrentTab from '@hooks/useCurrentTab';
 
 const useFontColorMenu = () => {
   const { currentTabInfo } = useCurrentTab();

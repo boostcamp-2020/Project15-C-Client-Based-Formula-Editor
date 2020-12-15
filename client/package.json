@@ -88,6 +88,18 @@
       "ts",
       "tsx",
       "js"
-    ]
+    ],
+    "moduleNameMapper": {
+      "@ingredients/(.*)": "<rootDir>src/components/Ingredients/$1",
+      "@meal/(.*)": "<rootDir>src/components/Meal/$1",
+      "@set/(.*)": "<rootDir>src/components/Set/$1",
+      "@apis/(.*)": "<rootDir>src/lib/apis/$1",
+      "@constants/(.*)": "<rootDir>src/lib/constants/$1",
+      "@utils/(.*)": "<rootDir>src/lib/utils/$1",
+      "@contexts/(.*)": "<rootDir>src/contexts/$1",
+      "@hooks/(.*)": "<rootDir>/src/hooks/$1",
+      "@lib/(.*)": "<rootDir>/src/lib/$1",
+      "@test/(.*)":"<rootDir>/src/__test__/$1"
+    }
   }
 }
