@@ -19,7 +19,7 @@
 
 ### 📩 Download URL
 - 🔗 크롬 확장프로그램 다운 (검수중)
-- 🐳 [웨일 확장프로그램 다운] (https://store.whale.naver.com/detail/fjifenfnigndpihijgnnaoadjodljkla)
+- 🐳 [웨일 확장프로그램 다운](https://store.whale.naver.com/detail/fjifenfnigndpihijgnnaoadjodljkla)
 
 ### 📷 [프로젝트 실행 화면]()
 
