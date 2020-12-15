@@ -73,7 +73,7 @@ const useDictionaryTab = () => {
     const scrollTop = target.scrollTop;
     const clientHieght = target.clientHeight;
 
-    if (scrollTop + clientHieght >= scrollHeight - 50 && maxNumber < allMenu.current.length) {
+    if (scrollTop + clientHieght >= scrollHeight - 80 && maxNumber < allMenu.current.length) {
       setMaxNumber((number) => number + DISPLAY_INTERVAL);
     }
   };

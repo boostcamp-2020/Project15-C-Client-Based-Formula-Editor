@@ -57,7 +57,8 @@ module.exports = (env, argv) => ({
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
-        { from: './public/background.js', to: './' },
+        { from: './public/background.whale.js', to: './' },
+        { from: './public/background.chrome.js', to: './' },
         { from: './public/manifest.json', to: './' },
         { from: './public/icon.png', to: './' },
         { from: './public/content.css', to: './' },
