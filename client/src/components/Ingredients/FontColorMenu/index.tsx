@@ -15,7 +15,6 @@ function FontColorMenu() {
         value={currentTabInfo.fontColor}
         onChange={onChangeHandeler}
       />
-      {/* <S.FontColorDiv toggle={colorMenu} onClick={closeHandler}></S.FontColorDiv> */}
     </>
   );
 }
