@@ -2,4 +2,19 @@ extends layout
 block append head
 
 block content
-  img(src= `https://i.imgur.com/${url}.png` width="50%")
+  header
+      img(class='logo' src='/icon.png' alt='수식 셰프 로고') 
+      h1 수식 셰프
+
+  section.main
+    h2 QR 코드로 이미지 보기
+    img(class='result' src= `https://i.imgur.com/${url}.png` alt='수식')
+
+  footer
+    div 제작자
+    ul
+      li 김동현
+      li 문건우
+      li 박기호
+      li 장우영
+    div in BoostCamp 2020
