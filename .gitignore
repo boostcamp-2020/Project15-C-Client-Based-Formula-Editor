@@ -4,7 +4,9 @@
 
 ### Chrome Extension ###
 manifest.json
-
+background.chrome.js
+background.whale.js
+background.js
 ### Node ###
 # Logs
 logs
