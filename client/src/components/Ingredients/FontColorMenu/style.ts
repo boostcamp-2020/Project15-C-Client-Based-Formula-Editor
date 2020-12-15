@@ -1,9 +1,5 @@
 import styled from '@emotion/styled';
 
-interface ColorDiv {
-  toggle: boolean;
-}
-
 export const FontColorPicker = styled.input`
   opacity: 0;
   position: absolute;
@@ -18,7 +14,7 @@ export const FontColorPicker = styled.input`
   }
 `;
 
-export const FontColorDiv = styled.div<ColorDiv>`
+export const FontColorDiv = styled.div`
   position: fixed;
   width: 100%;
   height: 100%;
