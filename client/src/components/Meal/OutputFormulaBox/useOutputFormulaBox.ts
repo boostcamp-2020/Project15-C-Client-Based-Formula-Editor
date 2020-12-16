@@ -14,9 +14,11 @@ const useOutputFormulaBox = () => {
   const initmathInput = (mathField: MathField) => {
     dispatch(initLatex({ mathfield: mathField, mathfieldRef: mathfieldRef.current }));
   };
+
   const onChangeHandler = (mathField: MathField) => {
     dispatch(editLatex({ latex: mathField.latex() }));
   };
+
   const onKeyDownHandler = (e: any) => {
     if (e.key === 'Enter') {
       mathfield?.write('\\newline ');

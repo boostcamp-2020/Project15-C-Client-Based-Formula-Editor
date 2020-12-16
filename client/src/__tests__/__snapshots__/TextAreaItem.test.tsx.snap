@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextAreaItem /> renders TextAreaItem 1`] = `
+<div>
+  <div
+    class="css-1579fkq"
+  >
+    <textarea
+      class="css-1kbq227"
+    />
+  </div>
+</div>
+`;
