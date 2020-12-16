@@ -27,6 +27,8 @@ export enum LoginMessage {
 export const MESSAGE_TIME = 2500;
 export const DISPLAY_INTERVAL = 6;
 
+export const CLIPBOARD_MESSAGE = '클립보드에 복사가 완료되었습니다.';
+
 export const DOWNLOAD_TEXTFILE_NAME = `수식셰프${Date.now()}.txt`;
 export const DOWNLOAD_IMAGEFILE_NAME = `수식셰프${Date.now()}.png`;
 export const DOWNLOAD_QRCODE_NAME = `QRCODE${Date.now()}.png`;

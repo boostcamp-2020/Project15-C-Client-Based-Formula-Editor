@@ -1,6 +1,6 @@
-import { observer } from '@utils/util';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { LatexContent } from '../../../lib/constants/latex-header';
+import { observer } from '@utils/util';
+import { LatexContent } from '@constants/latex-header';
 
 const useFormulaList = () => {
   const formulaRef = useRef<null | HTMLUListElement>(null);

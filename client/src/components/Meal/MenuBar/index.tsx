@@ -1,12 +1,13 @@
 import React from 'react';
-import { getImageURL } from '@utils/util';
 import { Button, Message } from 'semantic-ui-react';
+import { getImageURL } from '@utils/util';
 import { ResizeHeaderProps } from '@set/ResizeHeader';
 import QrCode from '@ingredients/QrCode';
 import MenuBarInput from '@meal/MenuBarInput';
 import MenuBarOutput from '@meal/MenuBarOutput';
 import MenuBarButtons from '@meal/MenuBarButtons';
 import useSaveButtons from '@set/SaveButtons/useSaveButtons';
+import { CLIPBOARD_MESSAGE } from '@constants/constants';
 import * as S from './style';
 
 function MenuBar({ onToggle }: ResizeHeaderProps) {
@@ -40,7 +41,7 @@ function MenuBar({ onToggle }: ResizeHeaderProps) {
       {message && (
         <S.MessageContainer>
           <Message positive>
-            <Message.Header>클립보드에 복사가 완료되었습니다.</Message.Header>
+            <Message.Header>{CLIPBOARD_MESSAGE}</Message.Header>
             <p>
               원하는 위치(커서)에 <b>Ctrl + V</b> 해보세요!
             </p>

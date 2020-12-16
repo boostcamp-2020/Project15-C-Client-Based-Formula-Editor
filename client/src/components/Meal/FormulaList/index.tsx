@@ -1,7 +1,7 @@
 import React from 'react';
 import DropDownItem from '@ingredients/DropDownItem';
-import { FORMULA_HEADER, SYMBOL_HEADER } from '@lib/constants/latex-header';
 import FormulaItem from '@ingredients/FormulaItem';
+import { FORMULA_HEADER, SYMBOL_HEADER } from '@lib/constants/latex-header';
 import useFormulaList from './useFormulaList';
 import * as S from './style';
 

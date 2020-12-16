@@ -1,6 +1,6 @@
 import React from 'react';
-import useFormulaItem, { FormulaItemProps } from './useFormulaItem';
 import { Input, Icon } from 'semantic-ui-react';
+import useFormulaItem, { FormulaItemProps } from './useFormulaItem';
 import * as S from './style';
 
 function FormulaItem({ latexInfo, hiddenFormula }: FormulaItemProps) {

@@ -1,11 +1,13 @@
 import React from 'react';
-import FormulaList from '@meal/FormulaList';
-import * as S from './style';
-import { getImageURL } from '@utils/util';
 import { Button } from 'semantic-ui-react';
+import FormulaList from '@meal/FormulaList';
+import { getImageURL } from '@utils/util';
+import * as S from './style';
+
 interface HeaderProps {
   onToggle: () => void;
 }
+
 function Header({ onToggle }: HeaderProps) {
   return (
     <S.HeaderContainer>

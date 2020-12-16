@@ -1,5 +1,5 @@
 import React, { ReactChildren, useRef } from 'react';
-import { LatexHeader, LatexContent } from '../../../lib/constants/latex-header';
+import { LatexHeader, LatexContent } from '@constants/latex-header';
 import * as S from './style';
 
 interface DropDownItemProps {
