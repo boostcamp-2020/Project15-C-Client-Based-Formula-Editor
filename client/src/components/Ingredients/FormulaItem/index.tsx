@@ -9,7 +9,6 @@ function FormulaItem({ latexInfo, hiddenFormula }: FormulaItemProps) {
     hiddenFormula,
   });
   const isSvg = latexInfo.image.includes('svg');
-
   if (isSvg) {
     return (
       <>

@@ -16,5 +16,6 @@ describe('<IconMessage />', () => {
     );
     const test = screen.getByTestId('icon-message');
     expect(test).toHaveClass('css-0');
+    expect(test).toBeVisible();
   });
 });
