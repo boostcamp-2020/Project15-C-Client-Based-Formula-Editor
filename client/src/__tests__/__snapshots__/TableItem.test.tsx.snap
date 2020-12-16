@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableItem /> renders TableItem 1`] = `
+<div>
+  <table
+    class="ui celled collapsing fixed unstackable very basic table"
+  >
+    <thead
+      class=""
+    >
+      <tr
+        class=""
+      >
+        <th
+          class=""
+        >
+          title
+        </th>
+        <th
+          class=""
+        >
+          latex
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class=""
+    >
+      <tr
+        class=""
+      >
+        <td
+          class="one wide"
+        >
+          <div
+            class="content"
+          >
+            나의 latex
+          </div>
+        </td>
+        <td
+          class="four wide"
+        >
+          <div
+            class="css-1ip1yi5"
+          >
+            <span
+              class="css-3phne6"
+            >
+              1+1
+            </span>
+            <div
+              class="css-n7fkea"
+            >
+              <div
+                class="ui mini label"
+              >
+                X
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
