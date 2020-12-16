@@ -1,24 +1,19 @@
 import React from 'react';
-import { Label, Menu } from 'semantic-ui-react';
-import { TabInfo } from '../../../contexts/latex';
+import { TabInfo } from '@contexts/latex';
 import useMenuItem from './usePageTabItem';
+import { Label, Menu } from 'semantic-ui-react';
 
 interface MenuItemProps {
   item: TabInfo;
-  currentTab: number;
+  isCurrentTab: boolean;
   index: number;
 }
 
-function PageTabItem({ item, currentTab, index }: MenuItemProps) {
+function PageTabItem({ item, isCurrentTab, index }: MenuItemProps) {
   const { handleItemClick, onRemoveTab } = useMenuItem({ item });
 
   return (
-    <Menu.Item
-      key={item.id}
-      name={'수식'}
-      active={currentTab === item.id}
-      onClick={() => handleItemClick(item.id)}
-    >
+    <Menu.Item key={item.id} name={'수식'} active={isCurrentTab} onClick={handleItemClick(item.id)}>
       <Label size="mini" color="teal" onClick={onRemoveTab}>
         X
       </Label>
@@ -27,4 +22,4 @@ function PageTabItem({ item, currentTab, index }: MenuItemProps) {
   );
 }
 
-export default PageTabItem;
+export default React.memo(PageTabItem);
