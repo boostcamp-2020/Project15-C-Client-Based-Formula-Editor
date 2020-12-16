@@ -1,18 +1,26 @@
-import useCurrentTab from '@hooks/useCurrentTab';
+import { useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '@contexts/index';
+
+import axios from 'axios';
 import html2canvas from 'html2canvas';
 import * as clipboard from 'clipboard-polyfill';
 import { ClipboardItem } from 'clipboard-polyfill';
-import { useRef, useState } from 'react';
-import { setToken } from '@utils/token';
-import useToggle from '@hooks/useToggle';
-import { BASE_URL } from '@lib/apis/common';
+
 import useModal from '@hooks/useModal';
-import { userLogin, userLogout } from '@contexts/user';
-import axios from 'axios';
-import { LoginMessage, MESSAGE_TIME } from '@constants/constants';
-import { getFavoritesThunk } from '@contexts/user';
+import useToggle from '@hooks/useToggle';
+import useCurrentTab from '@hooks/useCurrentTab';
+
+import { RootState } from '@contexts/index';
+import { setToken } from '@utils/token';
+import { BASE_URL } from '@lib/apis/common';
+import { userLogin, userLogout, getFavoritesThunk } from '@contexts/user';
+import {
+  LoginMessage,
+  MESSAGE_TIME,
+  DOWNLOAD_TEXTFILE_NAME,
+  DOWNLOAD_IMAGEFILE_NAME,
+  DOWNLOAD_QRCODE_NAME,
+} from '@constants/constants';
 
 export const useSaveButtons = () => {
   const dispatch = useDispatch();
@@ -27,10 +35,9 @@ export const useSaveButtons = () => {
   const { userId } = userInfo;
 
   const downloadText = () => {
-    const fileName = `수식셰프${Date.now()}.txt`;
     const element = document.createElement('a');
     element.href = `data:text/plain; charset=utf-8,${currentTabInfo.latex}`;
-    element.download = fileName;
+    element.download = DOWNLOAD_TEXTFILE_NAME;
     element.click();
   };
 
@@ -40,7 +47,7 @@ export const useSaveButtons = () => {
         const url = canvas.toDataURL('image/png');
         const element = document.createElement('a');
         element.href = url;
-        element.download = `수식셰프${Date.now()}.png`;
+        element.download = DOWNLOAD_IMAGEFILE_NAME;
         element.click();
       });
     }
@@ -107,7 +114,7 @@ export const useSaveButtons = () => {
     const url = element.contentDocument.querySelector('canvas').toDataURL('image/png');
     const ankerElement = document.createElement('a');
     ankerElement.href = url;
-    ankerElement.download = `QRCODE${Date.now()}.png`;
+    ankerElement.download = DOWNLOAD_QRCODE_NAME;
     ankerElement.click();
     setImageUrl('');
   };

@@ -1,11 +1,11 @@
 import React from 'react';
-import useSaveButtons from './useSaveButtons';
-import { Button, Message } from 'semantic-ui-react';
 import QrCode from '@ingredients/QrCode';
-import * as S from './style';
+import MessageItem from '@ingredients/MessageItem';
+import useSaveButtons from './useSaveButtons';
+import { Button } from 'semantic-ui-react';
 import { getImageURL } from '@utils/util';
 import { LoginMessage } from '@constants/constants';
-import MessageItem from '@ingredients/MessageItem';
+import * as S from './style';
 
 function SaveButtons() {
   const {
