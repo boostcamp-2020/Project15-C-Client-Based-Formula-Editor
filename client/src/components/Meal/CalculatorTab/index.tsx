@@ -1,8 +1,9 @@
 import React from 'react';
-import { Tab, TextArea } from 'semantic-ui-react';
 import useCalculatorTab from './useCalculatorTab';
 import { calculatorButtons, flag } from '@constants/calculator';
-import { Button, Ref } from 'semantic-ui-react';
+import CalculatorButton from '@ingredients/CalculatorButton';
+import CalculatorSymbol from '@ingredients/CalculatorSymbol';
+import { Button, Ref, Tab } from 'semantic-ui-react';
 import * as S from './style';
 
 function CalculatorTab() {
@@ -14,16 +15,6 @@ function CalculatorTab() {
     onClickHandler,
     onClickOutputHandler,
   } = useCalculatorTab();
-
-  const createButtonItems = (row: number, col = 8) => (
-    <S.ButtonRow>
-      {calculatorButtons.slice(row * col, (row + 1) * col).map((button, index) => (
-        <Button key={index} id={button.name}>
-          {button.symbol}
-        </Button>
-      ))}
-    </S.ButtonRow>
-  );
 
   return (
     <Tab.Pane>
@@ -39,15 +30,12 @@ function CalculatorTab() {
               <Button id={calculatorButtons[1].name}>{calculatorButtons[1].symbol}</Button>
             </Ref>
             {calculatorButtons.slice(2, 8).map((button, index) => (
-              <Button key={index} id={button.name}>
-                {button.symbol}
-              </Button>
+              <CalculatorSymbol key={index} name={button.name} symbol={button.symbol} />
             ))}
           </S.ButtonRow>
-          {createButtonItems(1)}
-          {createButtonItems(2)}
-          {createButtonItems(3)}
-          {createButtonItems(4)}
+          {Array.from({ length: 4 }).map((v, index) => (
+            <CalculatorButton key={index} row={index + 1} />
+          ))}
         </S.CalculatorInputWrapper>
         <S.CalculatorOutputWrapper>
           <S.OutputOperation

@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { RootState } from '../../../contexts';
+import { RootState } from '@contexts/index';
 import { useRef, useState } from 'react';
 import { calculatorButtons, calculator } from '@constants/calculator';
 
@@ -19,7 +19,7 @@ const useCalculatorTab = () => {
     });
   };
 
-  const onClickOutputHandler = (e: React.MouseEvent) => {
+  const onClickOutputHandler = () => {
     if (mathfield) {
       mathfield.write(outputResult.toString());
     }
