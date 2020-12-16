@@ -5,7 +5,6 @@ import * as S from './style';
 function FontColorMenu() {
   const { currentTabInfo, handleChangeComplete } = useFontColorMenu();
   const onChangeHandeler = useCallback((e) => handleChangeComplete(e.target.value), []);
-
   return (
     <>
       <S.FontColorPicker
@@ -15,7 +14,6 @@ function FontColorMenu() {
         value={currentTabInfo.fontColor}
         onChange={onChangeHandeler}
       />
-      {/* <S.FontColorDiv toggle={colorMenu} onClick={closeHandler}></S.FontColorDiv> */}
     </>
   );
 }

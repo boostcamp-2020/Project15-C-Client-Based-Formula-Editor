@@ -1,8 +1,8 @@
 import React, { SetStateAction, useCallback } from 'react';
 import { Icon } from 'semantic-ui-react';
 import { FONT_SIZE_LISTS } from '@constants/constants';
-import * as S from './style';
 import useFontSizeMenu from './useFontSizeMenu';
+import * as S from './style';
 
 export interface FontSizeListType {
   size: string;
@@ -25,7 +25,11 @@ function FontSizeMenu({ toggleSizeMenu }: FontSizeMenuProps) {
     <S.FontContainer ref={menuRef}>
       {FONT_SIZE_LISTS.map((sizeList: FontSizeListType, index: number) => {
         return (
-          <S.FontWapper key={index} onClick={changeSizeHandler(index, sizeList.size)}>
+          <S.FontWapper
+            key={index}
+            onClick={changeSizeHandler(index, sizeList.size)}
+            data-testid="font-size"
+          >
             <S.FontSizeText>{sizeList.size}</S.FontSizeText>
             <S.FontSizeClicked>{sizeList.checked && <Icon name="check" />}</S.FontSizeClicked>
           </S.FontWapper>
