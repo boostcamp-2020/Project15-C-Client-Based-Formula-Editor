@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../../contexts';
-import { LatexContent } from '../../../lib/constants/latex-header';
+import { RootState } from '@contexts/index';
+import { LatexContent } from '@constants/latex-header';
 
 export interface FormulaItemProps {
   latexInfo: LatexContent;
