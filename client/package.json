@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --forceExit",
+    "test": "jest --forceExit --detectOpenHandles",
     "start": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production --progress"
   },
@@ -99,7 +99,7 @@
       "@contexts/(.*)": "<rootDir>src/contexts/$1",
       "@hooks/(.*)": "<rootDir>/src/hooks/$1",
       "@lib/(.*)": "<rootDir>/src/lib/$1",
-      "@test/(.*)":"<rootDir>/src/__test__/$1"
+      "@test/(.*)": "<rootDir>/src/__test__/$1"
     }
   }
 }
