@@ -37,7 +37,7 @@ const useDictionaryTab = () => {
     clearWord();
   };
 
-  const onSearchHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const onSearchHandler = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.value === '') {
       setMenuTitle(DICTIONARY_MENU_TITLE.all);
       setMaxNumber(DISPLAY_INTERVAL);
@@ -46,7 +46,7 @@ const useDictionaryTab = () => {
       containerRef.current.scrollTo(0, 0);
     }
     onChangeSearchWord(event);
-  };
+  }, []);
 
   const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {

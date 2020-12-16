@@ -1,6 +1,6 @@
 import React from 'react';
-import DictionaryHeader from '../DictionaryHeader';
-import DictionaryItemList from '../DictionaryItemList';
+import DictionaryHeader from '@meal/DictionaryHeader';
+import DictionaryItemList from '@meal/DictionaryItemList';
 import useDictionaryTab from './useDictionaryTab';
 
 import { Tab } from 'semantic-ui-react';

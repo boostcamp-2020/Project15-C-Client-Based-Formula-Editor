@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { createFavorites } from '@contexts/user';
 import { FavoriteItem } from '@contexts/user/types';
@@ -13,9 +14,9 @@ const useFavoriteModal = (onToggle: () => void) => {
   const { userId } = userInfo;
   const [title, onChangeTitle, clearTitle] = useInput('');
 
-  const onClickModalClosed = () => {
+  const onClickModalClosed = useCallback(() => {
     onToggle();
-  };
+  }, []);
 
   const onClickRegister = async (props: FavoriteItem, clearTitle: () => void) => {
     const newFavoriteItem = await favoriteAPI.createFavorite(props);

@@ -13,7 +13,7 @@ describe('PageItem TEST', () => {
   };
 
   test('PageItem title 테스트 ', () => {
-    const { container } = render(<PageTabItem currentTab={2} index={3} item={testInfo} />);
+    const { container } = render(<PageTabItem isCurrentTab={false} index={3} item={testInfo} />);
 
     expect(container).toHaveTextContent('수식 4');
   });

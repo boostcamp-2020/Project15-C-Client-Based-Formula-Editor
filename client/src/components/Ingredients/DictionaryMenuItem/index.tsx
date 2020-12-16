@@ -9,4 +9,4 @@ function DictionaryMenuItem({ title }: DictionaryMenuItemProps) {
   return <S.DictionaryMenuItem value={title}>{title}</S.DictionaryMenuItem>;
 }
 
-export default DictionaryMenuItem;
+export default React.memo(DictionaryMenuItem);
