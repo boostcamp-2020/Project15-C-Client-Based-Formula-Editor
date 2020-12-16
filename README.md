@@ -62,7 +62,7 @@
 ### Back-End : Express, Typescript, Mysql2, TypeORM, NCloud
 
 ## 📌 기술 특장점
-[수식셰프](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki/%EC%88%98%EC%8B%9D%EC%85%B0%ED%94%84-%EA%B8%B0%EC%88%A0-%ED%8A%B9%EC%9E%A5%EC%A0%90)
+- [수식셰프](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki/%EC%88%98%EC%8B%9D%EC%85%B0%ED%94%84-%EA%B8%B0%EC%88%A0-%ED%8A%B9%EC%9E%A5%EC%A0%90)
 
 ## 🗂 Directory
 
