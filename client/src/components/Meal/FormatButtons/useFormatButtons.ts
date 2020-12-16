@@ -7,7 +7,7 @@ import useToggle from '@hooks/useToggle';
 const useFormatButtons = () => {
   const dispatch = useDispatch();
   const [sizeMenu, toggleSizeMenu, setSizeMenu] = useToggle(false);
-  const [colorMenu, toggleColorMenu, setColorMenu] = useToggle(false);
+  const [, , setColorMenu] = useToggle(false);
   const sizeRef = useRef<HTMLDivElement | null>(null);
   const colorRef = useRef<HTMLDivElement | null>(null);
 
