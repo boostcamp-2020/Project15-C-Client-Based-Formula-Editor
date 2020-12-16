@@ -21,12 +21,15 @@ function OutputFormulaBox({ isMenuBar, width, backgroundColor, toggleModal }: Ou
   const { userInfo } = useSelector((state: RootState) => state.user);
   const { userId } = userInfo;
   const [star, , setToggleStar] = useToggle(false);
+
   const onMouseHandler = () => {
     setToggleStar(true);
   };
+
   const onMouseLeaveHandler = () => {
     setToggleStar(false);
   };
+
   return (
     <S.OutputFormulaBox
       width={width}

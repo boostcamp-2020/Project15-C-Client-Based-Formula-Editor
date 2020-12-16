@@ -29,7 +29,5 @@ export const StarButtonBox = styled.div`
   & i {
     color: #f7d100;
     cursor: pointer;
-    //color: #FEE100;
-    //밑이 카카오톡 색
   }
 `;

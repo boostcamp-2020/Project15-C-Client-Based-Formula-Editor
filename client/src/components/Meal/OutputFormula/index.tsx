@@ -17,7 +17,7 @@ export interface OutputFormulaProps {
   toggleModal?: () => void;
 }
 
-function OutputFormula({ backgroundColor, padding, border }: OutputFormulaProps) {
+function OutputFormula({ padding, border }: OutputFormulaProps) {
   const { onClickHandler } = useOutputFormula();
 
   const [toggleModal, Modal] = useModal({});
