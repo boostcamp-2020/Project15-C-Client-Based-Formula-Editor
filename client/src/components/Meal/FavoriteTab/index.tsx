@@ -1,24 +1,14 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
 import TableItem from '@ingredients/TableItem';
 import AlertItem from '@ingredients/AlertItem';
-import { Tab } from 'semantic-ui-react';
-import { RootState } from '@contexts/index';
 import { NEED_LOGIN_ICON, NO_LIST_ICON, AlertMessage } from '@constants/constants';
-import { getFavoritesThunk } from '@contexts/user';
 import Loading from '@ingredients/Loading';
+import useFavoriteTab from './useFavoriteTab';
+import { Tab } from 'semantic-ui-react';
 import * as S from './style';
 
 function FavoriteTab() {
-  const dispatch = useDispatch();
-  const { userInfo, loading, error } = useSelector((state: RootState) => state.user);
-  const { userId } = userInfo;
-
-  useEffect(() => {
-    if (userId) {
-      dispatch(getFavoritesThunk(userId));
-    }
-  }, [dispatch]);
+  const { userId, userInfo, error, loading } = useFavoriteTab();
 
   if (loading)
     return (
