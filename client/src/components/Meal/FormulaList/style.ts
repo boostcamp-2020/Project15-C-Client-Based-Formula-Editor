@@ -48,10 +48,6 @@ export const SymbolHeaderWrapper = styled.div`
     min-width: 60px;
   }
   padding-left: 10px;
-  /* 
-  @media screen and (max-width: 780px) {
-    display: none;
-  } */
 `;
 
 interface FormulaListFrops {
