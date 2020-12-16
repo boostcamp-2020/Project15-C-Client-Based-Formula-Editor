@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from '../../Ingredients/ButtonItem';
-import MenuItem from '../../Ingredients/PageTabItem';
+import ButtonItem from '@ingredients/ButtonItem';
+import PageTabItem from '@ingredients/PageTabItem';
 import useTab from './usePageTab';
-import { TabContainer } from './style';
-import { Menu } from 'semantic-ui-react';
 import { TAB_LIMIT } from '@constants/constants';
+import { Menu } from 'semantic-ui-react';
+import { TabContainer } from './style';
 
 function PageTab() {
   const { addTabHandler, currentTab, totalLatex } = useTab();
@@ -14,12 +14,19 @@ function PageTab() {
       <Menu pointing vertical>
         {totalLatex.map((item, index) => {
           if (item) {
-            return <MenuItem key={item.id} item={item} index={index} currentTab={currentTab} />;
+            return (
+              <PageTabItem
+                key={item.id}
+                item={item}
+                index={index}
+                isCurrentTab={item.id === currentTab}
+              />
+            );
           }
         })}
       </Menu>
       {totalLatex.length < TAB_LIMIT && (
-        <Button icon={'plus'} size={'mini'} handler={addTabHandler}></Button>
+        <ButtonItem icon={'plus'} size={'mini'} handler={addTabHandler}></ButtonItem>
       )}
     </TabContainer>
   );
