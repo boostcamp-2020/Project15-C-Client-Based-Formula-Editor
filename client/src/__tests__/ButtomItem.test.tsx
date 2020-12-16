@@ -1,17 +1,14 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import * as React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
-import ButtonItem from '../components/Ingredients/ButtonItem/index';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import ButtonItem from '@ingredients/ButtonItem';
 
-/*
- title?: string;
-  icon?: any;
-  size?: 'big' | 'small' | 'mini' | 'tiny' | 'medium' | 'large' | 'huge' | 'massive' | undefined;
-  handler: () => void;
-  color?: any;
-*/
-test('간단한 Buttomitem ', () => {
-  const { container } = render(<ButtonItem title={'제목'} handler={() => {}} />);
+describe('Buttomitem TEST', () => {
+  test('Buttomitem Rendering TEST ', () => {
+    const { container } = render(<ButtonItem title={'제목'} icon={'star'} handler={() => {}} />);
 
-  expect(container).toHaveTextContent('제목');
+    expect(container).toHaveTextContent('제목');
+    expect(container).not.toBeEmptyDOMElement();
+  });
 });
