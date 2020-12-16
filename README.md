@@ -23,6 +23,8 @@
 
 ### 📷 [프로젝트 실행 화면]()
 
+### 📌 [기술 특장점](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki/%EC%88%98%EC%8B%9D%EC%85%B0%ED%94%84-%EA%B8%B0%EC%88%A0-%ED%8A%B9%EC%9E%A5%EC%A0%90)
+
 ### 📚 [Wiki 보러가기](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki)
 
 ## 📌 프로젝트 소개
@@ -60,9 +62,6 @@
 ![1](https://user-images.githubusercontent.com/60457112/102003331-35d52480-3d49-11eb-8b28-a69653ca5e7b.jpg)
 ### Front-End : React, Typescript, Redux, Emotion, Webpack & Babel, Mathquill Library  
 ### Back-End : Express, Typescript, Mysql2, TypeORM, NCloud
-
-## 📌 기술 특장점
-- [수식셰프](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki/%EC%88%98%EC%8B%9D%EC%85%B0%ED%94%84-%EA%B8%B0%EC%88%A0-%ED%8A%B9%EC%9E%A5%EC%A0%90)
 
 ## 🗂 Directory
 
