@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { changeTab, removeTab, TabInfo } from '../../../contexts/latex';
 
-const useMenuItem = ({ item }: { item: TabInfo }) => {
+const usePageTabItem = ({ item }: { item: TabInfo }) => {
   const dispatch = useDispatch();
 
   const handleItemClick = (id: number) => {
@@ -19,9 +19,8 @@ const useMenuItem = ({ item }: { item: TabInfo }) => {
 
   return {
     handleItemClick,
-    removeTabHandler,
     onRemoveTab,
   };
 };
 
-export default useMenuItem;
+export default usePageTabItem;
