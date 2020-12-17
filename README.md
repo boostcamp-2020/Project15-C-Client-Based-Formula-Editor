@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/badge/Babel-v7.12.1-%23F9DC3E?logo=Babel"/>
 </p>
 
-### 📩 Download URL
+### 📩 [Download URL](https://store.whale.naver.com/detail/fjifenfnigndpihijgnnaoadjodljkla)
 - 🔗 크롬 확장프로그램 다운 (검수중)
 - 🐳 [웨일 확장프로그램 다운](https://store.whale.naver.com/detail/fjifenfnigndpihijgnnaoadjodljkla)
 ### ❓ [수식 셰프 사용법](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki/%EB%8F%84%EC%9B%80%EB%A7%90)
@@ -27,7 +27,7 @@
 
 ### 📚 [Wiki 보러가기](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki)
 
-### 📺 프로젝트 시연 영상
+### 📺 [프로젝트 시연 영상]()
 > 링크를 누르면 유튜브 페이지로 이동합니다
 
 ## ⚙️ 주요 기능
