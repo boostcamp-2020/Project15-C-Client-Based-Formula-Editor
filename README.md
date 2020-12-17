@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/badge/Babel-v7.12.1-%23F9DC3E?logo=Babel"/>
 </p>
 
-#### 📩 [Download URL]()
+#### 📩 [Download URL](https://store.whale.naver.com/detail/fjifenfnigndpihijgnnaoadjodljkla)
 - 🔗 크롬 확장프로그램 다운 (검수중)
 - 🐳 [웨일 확장프로그램 다운](https://store.whale.naver.com/detail/fjifenfnigndpihijgnnaoadjodljkla)  
 
