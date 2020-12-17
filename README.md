@@ -1,8 +1,5 @@
 # 부스토랑
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
-
 <p align="center"><img src="https://user-images.githubusercontent.com/60457112/102003187-569c7a80-3d47-11eb-8412-3103461df502.gif" title="수식 셰프"/></p>
-
 
 <p align="center">
   <img src="https://img.shields.io/badge/javascript-ES6+-yellow?logo=javascript"/>
@@ -36,31 +33,45 @@
 
 ### ⚙️ 주요 기능
 
+---
+
 ### 수식 편집 지원  
 - 적분, 삼각함수, 행렬 등의 **다양한 수식**을 지원
 - **키보드** 및 **GUI 입력** 지원
 <img src="https://user-images.githubusercontent.com/60457112/102458079-114db500-4087-11eb-8e32-e1a5d828039b.gif"/>
 
+---
+
 ### 수식 추천 기능 지원
 - '**@'** 입력 시, **수식 추천** 기능 지원 
 <img src="https://user-images.githubusercontent.com/60457112/102458366-79040000-4087-11eb-9048-de2841928847.gif"/>
 
+---
 ### 수식 사전 제공
 
 <img src="https://user-images.githubusercontent.com/60457112/102458354-76a1a600-4087-11eb-9df0-ba58dda5a939.gif"/>
 
+---
+
 ### 네이버 소셜 로그인 및 즐겨찾기 기능 지원
 <img src="https://user-images.githubusercontent.com/60457112/102458359-77d2d300-4087-11eb-8493-d812ffc89435.gif"/>
+
+---
 
 ### 공학용 계산기 지원
 <img src="https://user-images.githubusercontent.com/60457112/102458350-75707900-4087-11eb-87b6-f5db9f40195a.gif"/>
 
+---
+
 ### 웹 에디터에 수식을 적용할 수 있는 클립보드 복사 기능 지원
 <img src="https://user-images.githubusercontent.com/60457112/102458367-799c9680-4087-11eb-895d-514c7ed5aafa.gif"/>
+
+---
 
 ### 최소화 기능
 <img src="https://user-images.githubusercontent.com/60457112/102458364-786b6980-4087-11eb-8528-6a801c2300fc.gif"/>
 
+---
 
 #### 1. 수식 편집 지원
 - 적분, 삼각함수, 행렬 등의 **다양한 수식**을 지원
