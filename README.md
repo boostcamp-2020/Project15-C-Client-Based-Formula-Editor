@@ -60,13 +60,14 @@
 
 ---
 
-### 웹 에디터에 수식을 적용할 수 있는 클립보드 복사 기능 지원
-<img src="https://user-images.githubusercontent.com/60457112/102458367-799c9680-4087-11eb-895d-514c7ed5aafa.gif"/>
+### 최소화 기능
+<img src="https://user-images.githubusercontent.com/60457112/102458364-786b6980-4087-11eb-8528-6a801c2300fc.gif"/>
 
 ---
 
-### 최소화 기능
-<img src="https://user-images.githubusercontent.com/60457112/102458364-786b6980-4087-11eb-8528-6a801c2300fc.gif"/>
+### 웹 에디터에 수식을 적용할 수 있는 클립보드 복사 기능 지원
+- 클립보드 복사 버튼 클릭 시, 웹 에디터 사이트에 Ctrl + v로 복사 가능!
+<img src="https://user-images.githubusercontent.com/60457112/102458367-799c9680-4087-11eb-895d-514c7ed5aafa.gif"/>
 
 ---
 
