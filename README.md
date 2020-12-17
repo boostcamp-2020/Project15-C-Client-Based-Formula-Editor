@@ -1,4 +1,5 @@
-# 부스토랑
+# 부스토랑 
+> 수식 셰프는 **크롬 확장프로그램**을 통해 **어느 웹 사이트**에서나 수식을 **편집**하고, **적용**할 수 있는 서비스를 제공합니다. **일회성**이 강한 기존 수식 편집기의 단점을 보완하여 **지속가능한 수식 편집 서비스**를 제공하는 것을 목표로 프로젝트를 진행하였습니다.
 <p align="center"><img src="https://user-images.githubusercontent.com/60457112/102003187-569c7a80-3d47-11eb-8412-3103461df502.gif" title="수식 셰프"/></p>
 
 <p align="center">
@@ -26,14 +27,10 @@
 
 ### 📚 [Wiki 보러가기](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki)
 
-## 📌 프로젝트 소개
-> 수식 셰프는 **크롬 확장프로그램**을 통해 **어느 웹 사이트**에서나 수식을 **편집**하고, **적용**할 수 있는 서비스를 제공합니다. **일회성**이 강한 기존 수식 편집기의 단점을 보완하여 **지속가능한 수식 편집 서비스**를 제공하는 것을 목표로 프로젝트를 진행하였습니다.
 ### 📺 프로젝트 시연 영상
 > 링크를 누르면 유튜브 페이지로 이동합니다
 
-### ⚙️ 주요 기능
-
----
+## ⚙️ 주요 기능
 
 ### 수식 편집 지원  
 - 적분, 삼각함수, 행렬 등의 **다양한 수식**을 지원
@@ -100,8 +97,8 @@
 
 ## 📌 기술 스택
 ![1](https://user-images.githubusercontent.com/60457112/102003331-35d52480-3d49-11eb-8b28-a69653ca5e7b.jpg)
-### Front-End : React, Typescript, Redux, Emotion, Webpack & Babel, Mathquill Library  
-### Back-End : Express, Typescript, Mysql2, TypeORM, NCloud
+#### Front-End : React, Typescript, Redux, Emotion, Webpack & Babel, Mathquill Library  
+#### Back-End : Express, Typescript, Mysql2, TypeORM, NCloud
 
 ## 🗂 Directory
 
