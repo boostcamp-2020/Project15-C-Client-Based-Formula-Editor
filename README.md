@@ -1,4 +1,7 @@
 # 부스토랑 
+
+{% include 파일명.html id="v7ierZX2fzQ&feature=youtu.be" %}  
+
 > 수식 셰프는 **크롬 확장프로그램**을 통해 **어느 웹 사이트**에서나 수식을 **편집**하고, **적용**할 수 있는 서비스를 제공합니다. **일회성**이 강한 기존 수식 편집기의 단점을 보완하여 **지속가능한 수식 편집 서비스**를 제공하는 것을 목표로 프로젝트를 진행하였습니다.
 <p align="center"><img src="https://user-images.githubusercontent.com/60457112/102003187-569c7a80-3d47-11eb-8412-3103461df502.gif" title="수식 셰프"/></p>
 
@@ -88,7 +91,7 @@
 <details>
 <summary>server</summary>
   <div markdown="1">
-    
+
 ```
 🗃 Project Folder  
 📁server  
@@ -113,7 +116,7 @@
 <details>
 <summary>client</summary>
   <div markdown="1">
-    
+
   ```
   📁client  
   ├── 📁public
@@ -141,7 +144,7 @@
       ├── 📁pages
       └── 📁__tests__  
   ```
-  
+
   </div>
 </details>
 

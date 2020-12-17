@@ -63,6 +63,8 @@ module.exports = (env, argv) => ({
         { from: './public/icon.png', to: './' },
         { from: './public/content.css', to: './' },
         { from: './public/image', to: './image' },
+        { from: './public/sementic.css', to: './' },
+        { from: './public/font', to: './font' },
       ],
     }),
     new Dotenv(),
