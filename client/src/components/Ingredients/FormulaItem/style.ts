@@ -25,7 +25,7 @@ export const FormulaItem = styled.li<FormulaItemStyleProps>`
   &:hover {
     background-size: 120%;
     border: 0.5px solid black;
-    filter: invert(63%) sepia(13%) saturate(2335%) hue-rotate(87deg) brightness(91%) contrast(83%);
+    filter: invert(55%) sepia(56%) saturate(430%) hue-rotate(302deg) brightness(86%) contrast(94%);
     font-size: 1.5rem;
   }
 `;
@@ -53,7 +53,7 @@ export const InsertWrapper = styled.div`
 
   & i:hover {
     cursor: pointer;
-    filter: invert(63%) sepia(13%) saturate(2335%) hue-rotate(87deg) brightness(91%) contrast(83%);
+    filter: invert(55%) sepia(56%) saturate(430%) hue-rotate(302deg) brightness(86%) contrast(94%);
   }
 `;
 
