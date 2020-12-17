@@ -26,6 +26,7 @@ export const StarButtonBox = styled.div`
   margin-top: 6px;
   margin-right: 1px;
   z-index: 2;
+  font-size: 1rem !important;
   & i {
     color: #f7d100;
     cursor: pointer;
