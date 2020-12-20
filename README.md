@@ -27,8 +27,10 @@
 
 #### 📚 [Wiki 보러가기](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki)
 
-## 📺 [프로젝트 시연 영상]()
-> 링크를 누르면 유튜브 페이지로 이동합니다
+## 📺 [프로젝트 홍보 영상](https://www.youtube.com/watch?v=v7ierZX2fzQ&feature=youtu.be)
+> 사진을 클릭하면 유튜브 페이지로 이동합니다   
+
+<a href="https://www.youtube.com/watch?v=v7ierZX2fzQ&feature=youtu.be"><img src="https://user-images.githubusercontent.com/60457112/102709011-f9c23680-42e9-11eb-84ac-c5e4ff1bc501.png"/></a>
 
 ## ⚙️ 주요 기능
 
