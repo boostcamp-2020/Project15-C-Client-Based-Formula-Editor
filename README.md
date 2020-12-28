@@ -18,7 +18,7 @@
 </p>
 
 #### 📩 [Download URL](https://store.whale.naver.com/detail/fjifenfnigndpihijgnnaoadjodljkla)
-- 🔗 크롬 확장프로그램 다운 (검수중)
+- 🔗 [크롬 확장프로그램 다운](https://chrome.google.com/webstore/detail/%EC%88%98%EC%8B%9D-%EC%85%B0%ED%94%84/eibfmpikelkeedfiimelafoedmaglcna/related?hl=ko&authuser=0)
 - 🐳 [웨일 확장프로그램 다운](https://store.whale.naver.com/detail/fjifenfnigndpihijgnnaoadjodljkla)  
 
 #### ❓ [수식 셰프 사용법](https://github.com/boostcamp-2020/Project15-C-Client-Based-Formula-Editor/wiki/%EB%8F%84%EC%9B%80%EB%A7%90)
